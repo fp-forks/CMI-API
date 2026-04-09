@@ -14,8 +14,7 @@ public class itemframe implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 47, info = "&eManage item frames", args = "(invisible/fixed/invulnerable/all)", tab = { "invisible%%fixed%%invulnerable%%all" }, explanation = {}, regVar = { 0, 1,
-        2 }, consoleVar = { 666 }, paccess = false, others = false)
+    @CAnnotation(info = "Manage item frames", args = "(invisible/fixed/invulnerable/all)", tab = { "invisible%%fixed%%invulnerable%%all" }, regVar = { 0, 1, 2 }, consoleVar = { 666 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

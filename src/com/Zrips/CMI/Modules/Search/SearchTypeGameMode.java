@@ -6,9 +6,10 @@ import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 
 public class SearchTypeGameMode extends SearchTypePlayerBase {
-    GameMode mode;
+    GameMode mode = null;
 
     public SearchTypeGameMode(GameMode mode) {
+        super();
     }
 
     @Override

@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerLoginEvent;
 import com.Zrips.CMI.CMI;
 
 public class NickNameListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public NickNameListener(CMI plugin) {
     }

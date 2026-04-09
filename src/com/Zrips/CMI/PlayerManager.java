@@ -4,7 +4,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.DecimalFormat;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -16,34 +15,35 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.Nullable;
 
 import com.Zrips.CMI.Containers.CMIUser;
 import com.Zrips.CMI.Containers.CMIUserAlert;
 import com.Zrips.CMI.Modules.DataBase.DBDAO.TablesFieldsType;
 import com.Zrips.CMI.Modules.DataBase.DBDAO.UserTablesFields;
+import com.Zrips.CMI.Modules.DataBase_NEW.CMITablesFieldsType;
 
 import net.Zrips.CMILib.Container.CMILocation;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class PlayerManager {
-    private int realUserCount;
-    private Map<UUID, CMIUser> users;
-    private Map<String, CMIUser> usersName;
-    private Map<Integer, CMIUser> usersIds;
-    private Map<String, List<CMIUser>> duplicateUserNames;
-    private Set<UUID> cuffed;
-    private Set<UUID> socialSpy;
-    private Set<UUID> commandSpy;
-    private Set<UUID> signSpy;
-    private HashMap<UUID, CMIUserAlert> userAlerts;
-    protected Player fakeOperator;
+    private int realUserCount = 0;
+    private Map<UUID, CMIUser> users = null;
+    private Map<String, CMIUser> usersName = null;
+    private Map<Integer, CMIUser> usersIds = null;
+    private Map<String, List<CMIUser>> duplicateUserNames = null;
+    private Set<UUID> cuffed = null;
+    private Set<UUID> socialSpy = null;
+    private Set<UUID> commandSpy = null;
+    private Set<UUID> signSpy = null;
+    private HashMap<UUID, CMIUserAlert> userAlerts = null;
+    protected Player fakeOperator = null;
     private final UUID emptyUserUUID = null;
     public static final UUID oldFakeUserUUID = null;
     private final UUID fakeUserUUID = null;
     private static final String fakeUserName = null;
-    private CMI plugin;
-    public static HashMap<UserTablesFields, Long> timer;
-    public static int timesProcessed;
+    private CMI plugin = null;
+    public static HashMap<UserTablesFields, Long> timer = null;
     public static final String mapKeySeparator = null;
     private static final String mapKeySeparatorForsave = null;
     private static final String sectionSeparator = null;
@@ -51,13 +51,13 @@ public class PlayerManager {
     public static final String lineSeparator = null;
     private static final String lineSeparatorForSave = null;
     public static final String multiSeparator = null;
-    private static Pattern kitPattern;
-    List<String> duplicates;
-    static DecimalFormat decimalFormat;
-    HashMap<UUID, CMITask> delaySSTrigger;
-    HashMap<UUID, CMITask> delayCSTrigger;
-    HashMap<UUID, CMITask> delaySignSTrigger;
-    private static List<String> hardBlackList;
+    private static Pattern kitPattern = null;
+    List<String> duplicates = null;
+    static DecimalFormat decimalFormat = null;
+    HashMap<UUID, CMITask> delaySSTrigger = null;
+    HashMap<UUID, CMITask> delayCSTrigger = null;
+    HashMap<UUID, CMITask> delaySignSTrigger = null;
+    private static List<String> hardBlackList = null;
 
     public PlayerManager(CMI plugin) {
     }
@@ -166,18 +166,22 @@ public class PlayerManager {
         return false;
     }
 
+    @Nullable
     public CMIUser getUser(OfflinePlayer player) {
         return null;
     }
 
+    @Nullable
     public CMIUser getUser(OfflinePlayer player, boolean createNew) {
         return null;
     }
 
+    @Nullable
     public CMIUser getUser(Player player) {
         return null;
     }
 
+    @Nullable
     public CMIUser getUser(UUID uuid) {
         return null;
     }
@@ -232,81 +236,19 @@ public class PlayerManager {
     public void saveUser(CMIUser user) {
     }
 
-    private void save(CMIUser user) {
-    }
-
     public PreparedStatement savePlayerToDB(CMIUser user, PreparedStatement prest, boolean addId) throws Throwable {
-        return null;
-    }
-
-    private static String filterOutForLoad(String message) {
-        return null;
-    }
-
-    private static String filterOutForSave(String message) {
-        return null;
-    }
-
-    private static PreparedStatement proccessForSaveField(PreparedStatement prest, int place, Object value, UserTablesFields field) throws Throwable {
         return null;
     }
 
     public void loadUserFromDb(ResultSet res) {
     }
 
-    private static CMILocation invertLoc(Object loc) {
-        return null;
-    }
-
+    @Deprecated
     public Object getValueFromDb(ResultSet res, TablesFieldsType fieldType, String column) {
         return null;
     }
 
-    private static List<String> getStringListFromString(String string) {
-        return null;
-    }
-
-    private static HashMap<String, Long> getStringLongMapFromString(String string) {
-        return null;
-    }
-
-    private static HashMap<String, Double> getStringDoubleMapFromString(String string) {
-        return null;
-    }
-
-    private static HashMap<String, String> getStringStringMapFromString(String string) {
-        return null;
-    }
-
-    private static HashMap<String, Integer> getStringIntMapFromString(String string) {
-        return null;
-    }
-
-    private static String convertLocationToString(CMILocation loc) {
-        return null;
-    }
-
-    private static String locationToString(CMILocation loc) {
-        return null;
-    }
-
-    private static String convertLocationToString(Location loc) {
-        return null;
-    }
-
-    private static Double fNumber(float amount) {
-        return null;
-    }
-
-    private static Double fNumber(Double amount) {
-        return null;
-    }
-
-    private static LinkedHashMap<String, CMILocation> getLocationMapFromString(String string) {
-        return null;
-    }
-
-    private static CMILocation getLocationFromString(String string) {
+    public Object getValueFromDb(ResultSet res, CMITablesFieldsType fieldType, String column) {
         return null;
     }
 

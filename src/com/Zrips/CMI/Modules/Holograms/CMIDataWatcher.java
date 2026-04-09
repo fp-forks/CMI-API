@@ -5,14 +5,15 @@ import org.bukkit.entity.Player;
 
 import net.Zrips.CMILib.Items.CMIItemStack;
 
+@Deprecated
 public class CMIDataWatcher {
-    private Integer id;
-    private Integer secId;
-    private Object stand;
-    private Location loc;
-    private CMIItemStack item;
-    private CMIHoloLineType type;
-    private boolean updatingHead;
+    private Integer id = null;
+    private Integer secId = null;
+    private Object stand = null;
+    private Location loc = null;
+    private CMIItemStack item = null;
+    private CMIHoloLineType type = null;
+    private boolean updatingHead = false;
 
     public CMIDataWatcher(Integer id, Object stand, CMIHoloLineType type) {
     }

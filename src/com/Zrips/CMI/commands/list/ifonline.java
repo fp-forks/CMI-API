@@ -14,8 +14,7 @@ public class ifonline implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&ePerform command only when player is online", args = "[playerName] (command)", tab = { "playername" }, regVar = { -100, -1 }, consoleVar = { -100,
-        -1 }, alias = true, others = false)
+    @CAnnotation(info = "Perform command only when player is online", args = "[playerName] (command)", tab = { "playername" }, regVar = { -100, -1 }, consoleVar = { -100, -1 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

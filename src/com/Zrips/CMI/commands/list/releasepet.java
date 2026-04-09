@@ -14,7 +14,7 @@ public class releasepet implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eRelease your tamed pet", args = "(-s)", tab = { "-s" }, regVar = { 0, 1 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Release your tamed pet", args = "(-s)", tab = { "-s" }, regVar = { 0, 1 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

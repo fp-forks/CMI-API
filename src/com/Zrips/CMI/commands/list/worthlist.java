@@ -14,8 +14,7 @@ public class worthlist implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 125, info = "&eCheck list of items with set sell prices", args = "(playerName) (-missing)", tab = { "playername", "-missing%%" }, regVar = { 0, 1, 2 }, consoleVar = { 1,
-        2 }, others = true)
+    @CAnnotation(info = "Check list of items with set sell prices", args = "(playerName) (-missing)", tab = { "playername", "-missing%%" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -14,8 +14,7 @@ public class lfix implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 289, info = "&eFix light in chunks around you", args = "(range) (playerName) (stop/stopall)", tab = { "halfViewRange" }, explanation = {}, regVar = { 1, 2 }, consoleVar = { 1,
-        2 }, alias = true, others = false)
+    @CAnnotation(info = "Fix light in chunks around you", args = "(range) (playerName) (stop/stopall)", tab = { "halfViewRange" }, regVar = { 1, 2 }, consoleVar = { 1, 2 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

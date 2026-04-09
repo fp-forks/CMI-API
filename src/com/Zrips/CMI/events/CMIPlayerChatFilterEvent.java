@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.Modules.ChatFilter.RuleResponse;
 
 public class CMIPlayerChatFilterEvent extends CMIPlayerCancellableEvent {
-    private RuleResponse response;
+    private RuleResponse response = null;
 
     public CMIPlayerChatFilterEvent(Player player, RuleResponse response) {
         super(player);

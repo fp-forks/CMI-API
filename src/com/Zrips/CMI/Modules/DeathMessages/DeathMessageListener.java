@@ -2,7 +2,6 @@ package com.Zrips.CMI.Modules.DeathMessages;
 
 import java.util.regex.Pattern;
 
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -10,12 +9,11 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 
 import com.Zrips.CMI.CMI;
-import com.Zrips.CMI.Containers.CMIUser;
 
 public class DeathMessageListener implements Listener {
-    private CMI plugin;
-    private static CMIDeathMsgInfo temp;
-    Pattern pattern;
+    private CMI plugin = null;
+    private static CMIDeathMsgInfo temp = null;
+    Pattern pattern = null;
 
     public DeathMessageListener(CMI plugin) {
     }
@@ -30,20 +28,6 @@ public class DeathMessageListener implements Listener {
 
     @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
     public void onQuit(PlayerDeathEvent event) {
-    }
-
-    private void processEvent(EntityDamageEvent event) {
-    }
-
-    private CMIDeathMsgInfo getKillerInfo(CMIUser user) {
-        return null;
-    }
-
-    private CMIKillerInfo getKillerInfo(Player victim, damageInformation lastDamage) {
-        return null;
-    }
-
-    private static void calculateBasePath(CMIDeathMsgInfo info) {
     }
 
     @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)

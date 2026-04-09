@@ -5,9 +5,9 @@ import org.bukkit.entity.Player;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class EndWatcher {
-    Player master;
-    Player target;
-    private CMITask saveTask;
+    Player master = null;
+    Player target = null;
+    private CMITask saveTask = null;
 
     public EndWatcher(Player player1, Player target) {
     }

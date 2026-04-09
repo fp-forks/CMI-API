@@ -14,8 +14,8 @@ public class note implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 180, info = "&eManage players notes", args = "(playerName) [add/remove/clear/list] (id/note)", tab = { "playername", "add%%remove%%clear%%list" }, regVar = {
-        -100 }, consoleVar = { -100 }, alias = true, others = true)
+    @CAnnotation(priority = 180, info = "Manage players notes", args = "(playerName) [add/remove/clear/list] (id/note)", tab = { "playername", "add%%remove%%clear%%list" }, regVar = {
+            -100 }, consoleVar = { -100 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

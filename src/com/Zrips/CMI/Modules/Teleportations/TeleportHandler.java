@@ -20,13 +20,13 @@ import com.Zrips.CMI.CMI;
 import net.Zrips.CMILib.Items.CMIMaterial;
 
 public class TeleportHandler {
-    private CMI plugin;
-    private Set<CMIMaterial> emptyBlockMap;
-    private Set<CMIMaterial> badBlockMap;
-    private HashMap<UUID, DangerousTp> badTeleports;
-    private int btprange;
-    static Method getBlockTypeId;
-    boolean enabledDouble;
+    private CMI plugin = null;
+    private Set<CMIMaterial> emptyBlockMap = null;
+    private Set<CMIMaterial> badBlockMap = null;
+    private HashMap<UUID, DangerousTp> badTeleports = null;
+    private int btprange = 0;
+    static Method getBlockTypeId = null;
+    boolean enabledDouble = false;
 
     public TeleportHandler(CMI plugin) {
     }
@@ -134,10 +134,6 @@ public class TeleportHandler {
         return false;
     }
 
-    private boolean setTeleportInvulnerability(Player player, World world) {
-        return false;
-    }
-
     public boolean needToFly(Player player) {
         return false;
     }
@@ -152,10 +148,6 @@ public class TeleportHandler {
 
     public CompletableFuture<CMITeleportFeedback> getSafeLocation(Player player, Location loc, int maxUpRange, int maxDownRange, boolean checkForProtections) {
         return null;
-    }
-
-    private static boolean isImortal(Player player) {
-        return false;
     }
 
     public static boolean hasSafeTeleport(Player player) {
@@ -174,14 +166,7 @@ public class TeleportHandler {
         return null;
     }
 
-    private boolean isValidPosition(ChunkSnapshot snap, int y, PositionRelativeData positionData) {
-        return false;
-    }
-
     public CompletableFuture<Location> getBottomLocation(Location loc) {
         return null;
-    }
-
-    private void fill() {
     }
 }

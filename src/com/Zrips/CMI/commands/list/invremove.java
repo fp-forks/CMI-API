@@ -14,7 +14,7 @@ public class invremove implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eRemove saved inventories for player", args = "(playerName) [id/all/last]", tab = { "playername" }, regVar = { 1, 2 }, consoleVar = { 2 }, alias = true, others = true)
+    @CAnnotation(info = "Remove saved inventories for player", args = "(playerName) [id/all/last]", tab = { "playername" }, regVar = { 1, 2 }, consoleVar = { 2 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

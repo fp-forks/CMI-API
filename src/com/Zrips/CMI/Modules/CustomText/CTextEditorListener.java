@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import com.Zrips.CMI.CMI;
 
 public class CTextEditorListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public CTextEditorListener(CMI plugin) {
     }

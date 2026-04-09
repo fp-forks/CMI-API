@@ -14,8 +14,8 @@ public class warn implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eWarn player", args = "[playerName] (category) (reason) (-s)", tab = { "playername", "warncategory" }, explanation = {}, regVar = { -100 }, consoleVar = {
-        -100 }, others = false)
+    @CAnnotation(info = "Warn player", args = "[playerName] (category) (reason) (-s)", tab = { "playername", "warncategory" }, explanation = {}, regVar = { -100 }, consoleVar = {
+            -100 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -19,8 +19,8 @@ public class sell implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 125, info = "&eSell items from inventory", args = "(all/blocks/hand/same/gui/material) (playerName) (-s)", tab = { "all%%blocks%%hand%%same%%gui%%playeritems%%playername",
-        "playername", "-s" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2, 3 }, others = true)
+    @CAnnotation(priority = 125, info = "Sell items from inventory", args = "(all/blocks/hand/same/gui/material) (playerName) (-s)", tab = { "all%%blocks%%hand%%same%%gui%%playeritems%%playername",
+            "playername", "-s" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

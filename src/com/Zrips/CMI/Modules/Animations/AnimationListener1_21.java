@@ -10,12 +10,12 @@ import org.bukkit.event.entity.EntityMountEvent;
 import com.Zrips.CMI.CMI;
 
 public class AnimationListener1_21 implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public AnimationListener1_21(CMI plugin) {
     }
 
-    @EventHandler(priority = EventPriority.NORMAL)
+    @EventHandler(priority = EventPriority.MONITOR)
     public void VehicleEnterEvent(EntityMountEvent event) {
     }
 

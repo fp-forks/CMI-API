@@ -5,8 +5,8 @@ import java.util.List;
 import org.bukkit.entity.Player;
 
 public class CMIAfkEnterEvent extends CMIPlayerCancellableEvent {
-    private List<String> awayTrigerCommands;
-    private AfkType type;
+    private List<String> awayTrigerCommands = null;
+    private AfkType type = null;
 
     public CMIAfkEnterEvent(Player player, List<String> awayTrigerCommands, AfkType afkType) {
         super(player);

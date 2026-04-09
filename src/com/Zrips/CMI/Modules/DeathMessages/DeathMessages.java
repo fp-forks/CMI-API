@@ -5,8 +5,8 @@ import java.util.List;
 import javax.annotation.Nonnull;
 
 public class DeathMessages {
-    private List<String> messages;
-    private String path;
+    private List<String> messages = null;
+    private String path = null;
 
     public DeathMessages(String path, List<String> messages) {
     }

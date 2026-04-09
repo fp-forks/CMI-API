@@ -12,13 +12,16 @@ import net.Zrips.CMILib.Items.CMIMaterial;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class PlayTimeManager {
-    private CMITask autoTimerBukkitId;
-    private CMI plugin;
+    private CMITask autoTimerBukkitId = null;
+    private CMI plugin = null;
     public static final Long checkIntervalMs = null;
-    protected Map<UUID, CMIPlayTime> playtimeCache;
-    SimpleDateFormat formatter;
-    Calendar calendar;
-    private Runnable autoTimer;
+    protected Map<UUID, CMIPlayTime> playtimeCache = null;
+    SimpleDateFormat formatter = null;
+    Calendar calendar = null;
+    private Runnable autoTimer = null;
+
+    public PlayTimeManager(CMI plugin) {
+    }
 
     public CMIPlayTime getCMIPlayTime(UUID uuid) {
         return null;
@@ -27,18 +30,7 @@ public class PlayTimeManager {
     public void setCMIPlayTime(UUID uuid, CMIPlayTime playTime) {
     }
 
-    public PlayTimeManager(CMI plugin) {
-    }
-
     public void stop() {
-    }
-
-    private Integer getTodaysDate() {
-        return null;
-    }
-
-    private Integer getYeastardayDate() {
-        return null;
     }
 
     Integer getWeekStartDate() {
@@ -47,10 +39,6 @@ public class PlayTimeManager {
 
     Integer getMonthStartDate() {
         return null;
-    }
-
-    private static int currentHour() {
-        return 0;
     }
 
     static Integer hourBack(int back) {
@@ -73,16 +61,24 @@ public class PlayTimeManager {
     }
 
     public static enum PlaytimeRange {
-        thishour(10, false, CMIMaterial.LIME_WOOL), hourback(19, false, CMIMaterial.GREEN_WOOL), today(11, true, CMIMaterial.LIGHT_GRAY_WOOL), yesterday(20, true, CMIMaterial.GRAY_WOOL), thisweek(13, true,
-            CMIMaterial.YELLOW_WOOL), week(22, true, CMIMaterial.BROWN_WOOL), thismonth(15, true, CMIMaterial.PINK_WOOL), month(24, true, CMIMaterial.RED_WOOL), thisyear(16, false,
-                CMIMaterial.LIGHT_BLUE_WOOL), year(25, false, CMIMaterial.BLUE_WOOL), total(40, false, CMIMaterial.WHITE_WOOL);
+        thishour(10, false, CMIMaterial.LIME_WOOL),
+        hourback(19, false, CMIMaterial.GREEN_WOOL),
+        today(11, true, CMIMaterial.LIGHT_GRAY_WOOL),
+        yesterday(20, true, CMIMaterial.GRAY_WOOL),
+        thisweek(13, true, CMIMaterial.YELLOW_WOOL),
+        week(22, true, CMIMaterial.BROWN_WOOL),
+        thismonth(15, true, CMIMaterial.PINK_WOOL),
+        month(24, true, CMIMaterial.RED_WOOL),
+        thisyear(16, false, CMIMaterial.LIGHT_BLUE_WOOL),
+        year(25, false, CMIMaterial.BLUE_WOOL),
+        total(40, false, CMIMaterial.WHITE_WOOL);
 
-        private Integer StartTime;
-        private HashMap<UUID, Long> cache = new HashMap<>();
-        private HashMap<UUID, Integer> cacheLastUpdate = new HashMap<>();
-        private int slot;
-        private boolean detailed;
-        private CMIMaterial color;
+        private Integer StartTime = null;
+        private HashMap<UUID, Long> cache = null;
+        private HashMap<UUID, Integer> cacheLastUpdate = null;
+        private int slot = 0;
+        private boolean detailed = false;
+        private CMIMaterial color = null;
 
         PlaytimeRange(int slot, boolean detailed, CMIMaterial color) {
         }

@@ -14,7 +14,7 @@ public class air implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 110, info = "&eSet players air", args = "[playerName] [amount] (-s)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 2, 3 }, others = true)
+    @CAnnotation(priority = 110, info = "Set players air", args = "[playerName] [amount] (-s)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

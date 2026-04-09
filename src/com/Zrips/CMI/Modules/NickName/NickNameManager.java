@@ -9,18 +9,19 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.CMI;
 
 public class NickNameManager {
-    private CMI plugin;
-    private HashMap<String, UUID> NickMap;
-    private String NickNameFormat;
-    private boolean DisplayNameChange;
-    private String ValidNickNameRegex;
-    private List<String> NickNameBlackList;
-    private int NickNameLengthMax;
-    private int NickNameLengthMin;
-    private String NickNamePrefix;
-    private Boolean PrefixWhenDifferent;
-    private Boolean IncludeInTabComplete;
-    private Boolean IncludeRealName;
+    private CMI plugin = null;
+    private HashMap<String, UUID> NickMap = null;
+    private String NickNameFormat = null;
+    private boolean DisplayNameChange = false;
+    private String ValidNickNameRegex = null;
+    private List<String> NickNameBlackList = null;
+    private int NickNameLengthMax = 0;
+    private int NickNameLengthMin = 0;
+    private String NickNamePrefix = null;
+    private Boolean PreventRealNames = null;
+    private Boolean PrefixWhenDifferent = null;
+    private Boolean IncludeInTabComplete = null;
+    private Boolean IncludeRealName = null;
 
     public NickNameManager(CMI plugin) {
     }
@@ -90,6 +91,10 @@ public class NickNameManager {
     }
 
     public Boolean isIncludeRealNameInTabComplete() {
+        return null;
+    }
+
+    public Boolean getPreventRealNames() {
         return null;
     }
 }

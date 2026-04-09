@@ -1,10 +1,11 @@
 package com.Zrips.CMI.Containers;
 
 public class CMIUserAlert {
-    private long until;
-    private String reason;
+    private long until = 0;
+    private String reason = null;
 
     public CMIUserAlert(long until) {
+        this(until, null);
     }
 
     public CMIUserAlert(long until, String reason) {

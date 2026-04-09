@@ -14,7 +14,7 @@ public class getbook implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eGet book", args = "[cTextName] (playerName)", tab = { "ctext", "playerName" }, regVar = { -66 }, consoleVar = { 2, 3 }, others = true)
+    @CAnnotation(info = "Get book", args = "[cTextName] (playerName)", tab = { "ctext", "playerName" }, regVar = { -66 }, consoleVar = { 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

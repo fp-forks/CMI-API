@@ -14,8 +14,8 @@ public class switchplayerdata implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eSwitch all data from one player to another", args = "[sourcePlayerName/uuid] [targetPlayerName/uuid]", explanation = {
-        "Use UUID for more accurate transfers, especially when usernames matching each other" }, tab = { "playername" }, regVar = { 2 }, consoleVar = { 2 }, others = false)
+    @CAnnotation(priority = 48, info = "Switch all data from one player to another", args = "[sourcePlayerName/uuid] [targetPlayerName/uuid]", explanation = {
+            "Use UUID for more accurate transfers, especially when usernames matching each other" }, tab = { "playername" }, regVar = { 2 }, consoleVar = { 2 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

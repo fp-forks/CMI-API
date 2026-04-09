@@ -14,8 +14,8 @@ public class resetback implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eResets players back location", args = "(playerName) (reason) (-death) (-s)", tab = { "playername", "-s%%-death" }, regVar = { -666 }, consoleVar = { -100 }, customAlias = {
-        "rback" }, others = true)
+    @CAnnotation(info = "Resets players back location", args = "(playerName) (reason) (-death) (-s)", tab = { "playername", "-s%%-death" }, regVar = { -666 }, consoleVar = { -100 }, customAlias = {
+            "rback" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

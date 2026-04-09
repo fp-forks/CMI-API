@@ -3,7 +3,7 @@ package com.Zrips.CMI.utils;
 import java.nio.file.FileStore;
 
 public class CMIDiskUsage {
-    private static FileStore FileSystem;
+    private static FileStore FileSystem = null;
 
     public static long getUsed() {
         return 0;

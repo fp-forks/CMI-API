@@ -16,17 +16,17 @@ import com.Zrips.CMI.Containers.CMIInteractType;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class SpecializedCommandManager {
-    private CMI plugin;
-    HashMap<UUID, HashMap<String, runAway>> runaway;
-    HashMap<String, runAway> globalRunaway;
-    Pattern patern;
-    private static boolean informed;
+    private CMI plugin = null;
+    HashMap<UUID, HashMap<String, runAway>> runaway = null;
+    HashMap<String, runAway> globalRunaway = null;
+    Pattern patern = null;
+    private static boolean informed = false;
     private static final Pattern PATTERN_ON_SPACE = null;
-    private int maxRepeats;
-    private static int MAX_ENTRIES;
-    public static LinkedHashMap<UUID, overflowCommands> repeatingCommands;
-    Pattern checkPattern;
-    Pattern containsPattern;
+    private int maxRepeats = 0;
+    private static int MAX_ENTRIES = 0;
+    public static LinkedHashMap<UUID, overflowCommands> repeatingCommands = null;
+    Pattern checkPattern = null;
+    Pattern containsPattern = null;
 
     public SpecializedCommandManager(CMI plugin) {
     }
@@ -35,9 +35,6 @@ public class SpecializedCommandManager {
     }
 
     public void processAliasCmdsAsPlayer(String initializer, List<String> cmds, Player player) {
-    }
-
-    private void process(String initializer, List<String> cmds, Player player, CheckStatements conditions) {
     }
 
     public void processCmds(List<String> cmds) {
@@ -59,9 +56,6 @@ public class SpecializedCommandManager {
     }
 
     public void processCmds(String initializer, List<String> cmds, Player player, CMIInteractType clickType, CommandSender sender) {
-    }
-
-    private void process(String initializer, List<String> cmds, Player player, CMIInteractType clickType, CommandSender sender) {
     }
 
     public specCommand processSpecializedCommand(String cmd) {
@@ -92,41 +86,13 @@ public class SpecializedCommandManager {
         return false;
     }
 
-    private static void processCondition(failType feedback, CheckStatements groupedConditions) {
-    }
-
-    private UUID getUUID(CommandSender sender) {
-        return null;
-    }
-
     public synchronized boolean dispatch(CommandSender sender, String commandLine) throws CommandException {
         return false;
     }
 
-    private static boolean isOpCmd(String cmd) {
-        return false;
-    }
-
-    private failType deductForCommand(Player player, List<specCommandAction> conditions) {
-        return null;
-    }
-
-    private failType canPerformCommand(String initializer, Player player, List<specCommandAction> conditions, boolean deduct, CMIInteractType clickType, CheckStatements groupedStatements,
-        boolean translate) {
-        return null;
-    }
-
-    private static boolean checkForMatch(List<String> values, String checkedValue) {
-        return false;
-    }
-
-    private static boolean checkForContains(List<String> values, String checkedValue) {
-        return false;
-    }
-
     class runAway {
-        private Long time;
-        private CMITask schedId;
+        private Long time = null;
+        private CMITask schedId = null;
 
         public runAway(Long time) {
         }
@@ -150,8 +116,8 @@ public class SpecializedCommandManager {
     }
 
     private class CheckStatements {
-        HashMap<String, Boolean> statements;
-        private String temp;
+        HashMap<String, Boolean> statements = null;
+        private String temp = null;
 
         private CheckStatements() {
         }
@@ -188,28 +154,55 @@ public class SpecializedCommandManager {
     }
 
     public enum specialisedCommand {
-        permission("perm:[value][@][?][#]!", specialisedCommandType.condition), group("group:[value][@][?][#]!", specialisedCommandType.condition), bpermission("bperm:[value][@][?][#]!",
-            specialisedCommandType.condition), money("moneycost:[value][?][#]!", specialisedCommandType.condition), exp("expcost:[value][?][#]!", specialisedCommandType.condition), hasMoney(
-                "hasmoney:[value][@][?][#]!", specialisedCommandType.condition), hasItem("hasitem:[value][@][?][#]!", specialisedCommandType.condition), hasExactItem("hasexactitem:[value][@][?][#]!",
-                    specialisedCommandType.condition), item("item:[value][?][#]!", specialisedCommandType.condition), exactItem("exactitem:[value][?][#]!", specialisedCommandType.condition), hasExp(
-                        "hasexp:[value][@][?][#]!", specialisedCommandType.condition), votes("votes:[value][@][?][#]!", specialisedCommandType.condition), cooldown("cooldown:[value][?][#]!",
-                            specialisedCommandType.condition), ucooldown("ucooldown:[value][?][#]!", specialisedCommandType.condition), gcooldown("gcooldown:[value][?][#]!",
-                                specialisedCommandType.condition), ifonline("ifonline:[value][?][#]!", specialisedCommandType.condition), ifoffline("ifoffline:[value][?][#]!",
-                                    specialisedCommandType.condition), ifempty("ifempty:[value][?][#]!", specialisedCommandType.condition), stopdelay("stopdelay:[value]!",
-                                        specialisedCommandType.condition), check("check:[value1][==|>|>=|<|<=|!=][value2][?][#]!", specialisedCommandType.condition), contains(
-                                            "contains:[value1][=>][value2][@][#]!", specialisedCommandType.condition), statement("statement:[value]!", specialisedCommandType.statement), if_(
-                                                "if:[value][@][#]!", specialisedCommandType.statement), ifhasair("ifhasair:[value][@][#]!", specialisedCommandType.condition), ifhashunger(
-                                                    "ifhashunger:[value][@][#]!", specialisedCommandType.condition), ifhashealth("ifhashealth:[value][@][#]!", specialisedCommandType.condition),
-        ifingamemode("ifingamemode:[value][@][#]!", specialisedCommandType.condition), ifinworld("ifinworld:[value][@][?][#]!", specialisedCommandType.condition), ifinportal("ifinportal:[value][@][?][#]!",
-            specialisedCommandType.condition), click("click:[value][#]!", specialisedCommandType.condition), ptarget("ptarget:[value]!", specialisedCommandType.condition), closeinv("closeinv!",
-                specialisedCommandType.subaction), ph("ph!", specialisedCommandType.subaction), ch("ch!", specialisedCommandType.subaction), msg("msg!", specialisedCommandType.action), broadcast(
-                    "broadcast!", specialisedCommandType.action), actionbar("actionbar!", specialisedCommandType.action), title("title!", specialisedCommandType.action), subtitle("subtitle!",
-                        specialisedCommandType.action), kickall("kickall!", specialisedCommandType.action), fromConsole("fromConsole!", specialisedCommandType.action), asConsole("asConsole!",
-                            specialisedCommandType.action), asFakeOp("asFakeOp!", specialisedCommandType.action), likePlayer("likePlayer!", specialisedCommandType.action), asPlayer("asPlayer!",
-                                specialisedCommandType.action), allPlayers("allPlayers!", specialisedCommandType.action);
+        permission("perm:[value][@][?][#]!", specialisedCommandType.condition),
+        group("group:[value][@][?][#]!", specialisedCommandType.condition),
+        bpermission("bperm:[value][@][?][#]!", specialisedCommandType.condition),
+        money("moneycost:[value][?][#]!", specialisedCommandType.condition),
+        exp("expcost:[value][?][#]!", specialisedCommandType.condition),
+        hasMoney("hasmoney:[value][@][?][#]!", specialisedCommandType.condition),
+        hasItem("hasitem:[value][@][?][#]!", specialisedCommandType.condition),
+        hasExactItem("hasexactitem:[value][@][?][#]!", specialisedCommandType.condition),
+        item("item:[value][?][#]!", specialisedCommandType.condition),
+        exactItem("exactitem:[value][?][#]!", specialisedCommandType.condition),
+        hasExp("hasexp:[value][@][?][#]!", specialisedCommandType.condition),
+        votes("votes:[value][@][?][#]!", specialisedCommandType.condition),
+        cooldown("cooldown:[value][?][#]!", specialisedCommandType.condition),
+        ucooldown("ucooldown:[value][?][#]!", specialisedCommandType.condition),
+        gcooldown("gcooldown:[value][?][#]!", specialisedCommandType.condition),
+        ifonline("ifonline:[value][?][#]!", specialisedCommandType.condition),
+        ifoffline("ifoffline:[value][?][#]!", specialisedCommandType.condition),
+        ifempty("ifempty:[value][?][#]!", specialisedCommandType.condition),
+        stopdelay("stopdelay:[value]!", specialisedCommandType.condition),
+        check("check:[value1][==|>|>=|<|<=|!=][value2][?][#]!", specialisedCommandType.condition),
+        contains("contains:[value1][=>][value2][@][#]!", specialisedCommandType.condition),
+        statement("statement:[value]!", specialisedCommandType.statement),
+        if_("if:[value][@][#]!", specialisedCommandType.statement),
+        ifhasair("ifhasair:[value][@][#]!", specialisedCommandType.condition),
+        ifhashunger("ifhashunger:[value][@][#]!", specialisedCommandType.condition),
+        ifhashealth("ifhashealth:[value][@][#]!", specialisedCommandType.condition),
+        ifingamemode("ifingamemode:[value][@][#]!", specialisedCommandType.condition),
+        ifinworld("ifinworld:[value][@][?][#]!", specialisedCommandType.condition),
+        ifinportal("ifinportal:[value][@][?][#]!", specialisedCommandType.condition),
+        click("click:[value][#]!", specialisedCommandType.condition),
+        ptarget("ptarget:[value]!", specialisedCommandType.condition),
+        closeinv("closeinv!", specialisedCommandType.subaction),
+        ph("ph!", specialisedCommandType.subaction),
+        ch("ch!", specialisedCommandType.subaction),
+        msg("msg!", specialisedCommandType.action),
+        broadcast("broadcast!", specialisedCommandType.action),
+        actionbar("actionbar!", specialisedCommandType.action),
+        title("title!", specialisedCommandType.action),
+        subtitle("subtitle!", specialisedCommandType.action),
+        kickall("kickall!", specialisedCommandType.action),
+        fromConsole("fromConsole!", specialisedCommandType.action),
+        asConsole("asConsole!", specialisedCommandType.action),
+        asFakeOp("asFakeOp!", specialisedCommandType.action),
+        likePlayer("likePlayer!", specialisedCommandType.action),
+        asPlayer("asPlayer!", specialisedCommandType.action),
+        allPlayers("allPlayers!", specialisedCommandType.action);
 
-        private String format;
-        private specialisedCommandType type;
+        private String format = null;
+        private specialisedCommandType type = null;
 
         specialisedCommand(String format, specialisedCommandType type) {
         }
@@ -238,14 +231,14 @@ public class SpecializedCommandManager {
     }
 
     public class specCommandAction {
-        private specialisedCommand cmd;
-        private boolean needToBreak;
-        private boolean needToInform;
-        private boolean stopAfter;
-        private boolean opposite;
-        private Object value;
-        private Object value2;
-        private String initializer;
+        private specialisedCommand cmd = null;
+        private boolean needToBreak = false;
+        private boolean needToInform = false;
+        private boolean stopAfter = false;
+        private boolean opposite = false;
+        private Object value = null;
+        private Object value2 = null;
+        private String initializer = null;
 
         public specCommandAction(specialisedCommand cmd) {
         }

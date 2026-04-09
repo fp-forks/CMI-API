@@ -16,17 +16,16 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 import com.Zrips.CMI.CMI;
-import com.Zrips.CMI.Containers.CMIUser;
 import com.Zrips.CMI.events.CMIPvEEndEventAsync;
 import com.Zrips.CMI.events.CMIPvEStartEventAsync;
 import com.Zrips.CMI.events.CMIPvPEndEventAsync;
 import com.Zrips.CMI.events.CMIPvPStartEventAsync;
 
 public class PlayerCombatListener implements Listener {
-    private CMI plugin;
-    Set<UUID> ignoreFall;
-    public static List<String> harmfulList;
-    Random rand;
+    private CMI plugin = null;
+    Set<UUID> ignoreFall = null;
+    public static List<String> harmfulList = null;
+    Random rand = null;
 
     public PlayerCombatListener(CMI plugin) {
     }
@@ -77,9 +76,6 @@ public class PlayerCombatListener implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void entityCombatEvent(EntityDamageEvent event) {
-    }
-
-    private static void showBossBar(CMIUser uAttacker, String title) {
     }
 
     @EventHandler(priority = EventPriority.HIGHEST)

@@ -10,45 +10,42 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.Location;
 import org.bukkit.block.Block;
-import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.util.Vector;
 
 import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Containers.CMIPlayerInventory.CMIInventorySlot;
-import com.Zrips.CMI.Containers.CMIUser;
 
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class AnimationManager {
-    private CMI plugin;
-    CMITask task;
+    private CMI plugin = null;
+    CMITask task = null;
     public static final String CMIArmorStandForSit = null;
     public static final String CMIRainbowArmor = null;
     public static final String CMISoulBound = null;
     public static final String CMIFakeSlime = null;
-    HashMap<UUID, Long> doubleClick;
-    HashMap<UUID, LeatherAnimation> leatherArmor;
-    HashMap<UUID, Chair> playerSittingMap;
-    HashMap<String, UUID> chairLoc;
-    private HashMap<UUID, UUID> riding;
-    private ConcurrentHashMap<UUID, Location> ridingNonSteerable;
-    private HashMap<UUID, UUID> beingRidden;
-    private boolean SitOnStairs;
-    private boolean StairsAsChairs;
-    private boolean SlabsAsChairs;
-    private boolean CarpetsAsChairs;
-    private boolean RemoveFromChairOnDamage;
-    private boolean DoubleClick;
-    private int DoubleClickDelay;
-    private int chairRange;
-    List<CMIInventorySlot> armorTypes;
-    private CMITask autoTimerBukkitId;
-    private Runnable autoTimer;
-    private static Method method;
-    private static Field field;
-    CMITask ridingTask;
+    HashMap<UUID, Long> doubleClick = null;
+    HashMap<UUID, LeatherAnimation> leatherArmor = null;
+    HashMap<UUID, Chair> playerSittingMap = null;
+    HashMap<String, UUID> chairLoc = null;
+    private HashMap<UUID, UUID> riding = null;
+    private ConcurrentHashMap<UUID, Location> ridingNonSteerable = null;
+    private HashMap<UUID, UUID> beingRidden = null;
+    private boolean SitOnStairs = false;
+    private boolean StairsAsChairs = false;
+    private boolean SlabsAsChairs = false;
+    private boolean CarpetsAsChairs = false;
+    private boolean RemoveFromChairOnDamage = false;
+    private boolean DoubleClick = false;
+    private int DoubleClickDelay = 0;
+    private int chairRange = 0;
+    List<CMIInventorySlot> armorTypes = null;
+    private CMITask autoTimerBukkitId = null;
+    private Runnable autoTimer = null;
+    private static Method method = null;
+    private static Field field = null;
+    CMITask ridingTask = null;
 
     public AnimationManager(CMI plugin) {
     }
@@ -60,16 +57,6 @@ public class AnimationManager {
     }
 
     public void stopLeatherUpdate() {
-    }
-
-    private void checkLeatherArmors() {
-    }
-
-    private static double getMaxHealth(Player player) {
-        return 0.0;
-    }
-
-    private static void setColor(CMIUser user, LeatherAnimationType type, List<CMIInventorySlot> slot, LeatherAnimation anim) {
     }
 
     public static int getIntFromColor(int Red, int Green, int Blue) {
@@ -100,10 +87,6 @@ public class AnimationManager {
         return false;
     }
 
-    private static Vector getStairLedgeDirection(Block block) {
-        return null;
-    }
-
     public void sit(Player player, Block block) {
     }
 
@@ -119,10 +102,6 @@ public class AnimationManager {
     }
 
     public void sitOnPlayer(Player player, Player target) {
-    }
-
-    private boolean sit(Player player, Chair chair) {
-        return false;
     }
 
     @Deprecated
@@ -150,15 +129,6 @@ public class AnimationManager {
     }
 
     public void removePlayerFromChair(Player player, boolean delay, boolean center, boolean teleport) {
-    }
-
-    private void tpPlayer(Player player, Chair chair, boolean center) {
-    }
-
-    private void updateSitTask() {
-    }
-
-    private void modifyArmorStandDirection(ArmorStand armorStand) {
     }
 
     public boolean isSitOnStairs() {
@@ -211,9 +181,6 @@ public class AnimationManager {
     public void addRiding(Player player, Entity vehicle) {
     }
 
-    private void runRidingTasker() {
-    }
-
     public boolean isDoubleClick() {
         return false;
     }
@@ -229,7 +196,7 @@ public class AnimationManager {
     public enum LeatherAnimationType {
         Rainbow(1), Health(2), Biome(3), Day(4);
 
-        private Integer id;
+        private Integer id = null;
 
         LeatherAnimationType(Integer id) {
         }
@@ -251,11 +218,11 @@ public class AnimationManager {
     }
 
     public class Chair {
-        private Entity ent;
-        private Location ChairBlockLoc;
-        private Location armorStandLoc;
-        private long lastCheck;
-        private boolean persistent;
+        private Entity ent = null;
+        private Location ChairBlockLoc = null;
+        private Location armorStandLoc = null;
+        private long lastCheck = 0;
+        private boolean persistent = false;
 
         public Entity getEnt() {
             return null;

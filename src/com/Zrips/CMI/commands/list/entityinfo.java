@@ -14,7 +14,7 @@ public class entityinfo implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eCheck entity information", args = "(playername)", multiTab = { "[playername]" }, regVar = { 0, 1 }, consoleVar = { 1 }, others = true)
+    @CAnnotation(info = "Check entity information", args = "(playername)", multiTab = { "[playername]" }, regVar = { 0, 1 }, consoleVar = { 1 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

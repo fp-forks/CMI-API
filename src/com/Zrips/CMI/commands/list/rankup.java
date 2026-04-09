@@ -14,8 +14,8 @@ public class rankup implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 110, info = "&eIncrease your rank", args = "(playerName) (rankName) (confirm)", tab = { "rankname" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
-        3 }, modules = "ranks", others = true)
+    @CAnnotation(priority = 110, info = "Increase your rank", args = "(playerName) (rankName) (confirm)", tab = { "rankname" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
+            3 }, modules = "ranks", others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

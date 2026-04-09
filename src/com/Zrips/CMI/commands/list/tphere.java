@@ -14,8 +14,8 @@ public class tphere implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 50, info = "&eTeleports player to your location", args = "[playerName] (playerName) (-s)", tab = { "allPlayerName", "playername", "-s" }, regVar = { 1, 2 }, consoleVar = {
-        2 }, others = true, redirectClass = tpahere.class)
+    @CAnnotation(info = "Teleports player to your location", args = "[playerName] (playerName) (-s)", tab = { "allPlayerName", "playername", "-s" }, regVar = { 1, 2 }, consoleVar = {
+            2 }, others = true, redirectClass = tpahere.class)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

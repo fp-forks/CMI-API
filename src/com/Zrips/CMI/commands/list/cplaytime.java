@@ -9,14 +9,14 @@ import com.Zrips.CMI.commands.Cmd;
 import net.Zrips.CMILib.FileHandler.ConfigReader;
 
 public class cplaytime implements Cmd {
-    static int c;
+    static int c = 0;
 
     @Override
     public void getExtra(ConfigReader c) {
     }
 
     @Override
-    @CAnnotation(info = "&eDetailed playtime", args = "(playerName)", tab = { "playername" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 666 }, modules = "cmiplaytime", others = true)
+    @CAnnotation(info = "Detailed playtime", args = "(playerName)", tab = { "playername" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 666 }, modules = "cmiplaytime", others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

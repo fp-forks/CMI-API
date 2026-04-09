@@ -3,12 +3,28 @@ package com.Zrips.CMI.Modules.Hooks;
 import org.bukkit.plugin.Plugin;
 
 public enum CMIHookType {
-    CMILib, BlueMap, AureliumSkills, AuraSkills, DiscordSRV, dynmap, Towny, mcMMO, Jobs, Vault, LWC, VaultPermissions("Vault"), PlayerVaults(false), PlaceholderAPI, MVdWPlaceholderAPI, Votifier, Citizens,
-    NoCheatPlus, ProtocolLib;
+    CMILib,
+    BlueMap,
+    AureliumSkills,
+    AuraSkills,
+    DiscordSRV,
+    dynmap,
+    Towny,
+    mcMMO,
+    Jobs,
+    Vault,
+    LWC,
+    VaultPermissions("Vault"),
+    PlayerVaults(false),
+    PlaceholderAPI,
+    MVdWPlaceholderAPI,
+    Votifier,
+    Citizens,
+    NoCheatPlus;
 
     private boolean present = false;
     private boolean enabled = false;
-    private boolean showFoundMsg = true;
+    private boolean showFoundMsg = false;
     private String targetPlugin = null;
     private CMIHookSubType subType = null;
 
@@ -25,16 +41,7 @@ public enum CMIHookType {
         return null;
     }
 
-    private static void setPresent(CMIHookType type) {
-    }
-
-    private static void message(CMIHookType type) {
-    }
-
     public void init() {
-    }
-
-    private void updateEnabled() {
     }
 
     public void update() {

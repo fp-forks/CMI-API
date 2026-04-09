@@ -14,7 +14,7 @@ public class afk implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eToggle afk mode. Reason could be provided", args = "(-p:playerName) (reason) (-s)", tab = { "playername", "-s" }, modules = { "afk" }, others = true)
+    @CAnnotation(info = "Toggle afk mode. Reason could be provided", args = "(-p:playerName) (reason) (-s)", tab = { "playername", "-s" }, modules = { "afk" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

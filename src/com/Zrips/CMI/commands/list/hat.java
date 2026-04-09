@@ -16,7 +16,7 @@ public class hat implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&ePlace item like hat", args = "(playerName)", tab = { "playername" }, regVar = { 0, 1, 2 }, consoleVar = { 666 }, others = true)
+    @CAnnotation(info = "Place item like hat", args = "(playerName)", tab = { "playername" }, regVar = { 0, 1, 2 }, consoleVar = { 666 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

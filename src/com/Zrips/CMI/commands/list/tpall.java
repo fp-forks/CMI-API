@@ -10,14 +10,14 @@ import net.Zrips.CMILib.FileHandler.ConfigReader;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class tpall implements Cmd {
-    private static CMITask sched;
+    private static CMITask sched = null;
 
     @Override
     public void getExtra(ConfigReader c) {
     }
 
     @Override
-    @CAnnotation(priority = 40, info = "&eTeleports all online players to location", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 1 }, others = false)
+    @CAnnotation(info = "Teleports all online players to location", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 1 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

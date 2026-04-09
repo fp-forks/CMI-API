@@ -14,7 +14,7 @@ public class checkban implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eCheck players ban status", args = "(playerName)", tab = { "bannedplayername" }, regVar = { 0, 1 }, consoleVar = { 0, 1 }, others = false)
+    @CAnnotation(info = "Check players ban status", args = "(playerName)", tab = { "bannedplayername" }, regVar = { 0, 1 }, consoleVar = { 0, 1 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

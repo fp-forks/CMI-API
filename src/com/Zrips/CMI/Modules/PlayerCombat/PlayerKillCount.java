@@ -3,10 +3,10 @@ package com.Zrips.CMI.Modules.PlayerCombat;
 import java.util.UUID;
 
 public class PlayerKillCount {
-    UUID uuid;
-    private long lastKill;
-    private int kills;
-    private int headDropCount;
+    UUID uuid = null;
+    private long lastKill = 0;
+    private int kills = 0;
+    private int headDropCount = 0;
 
     public PlayerKillCount(UUID uuid) {
     }

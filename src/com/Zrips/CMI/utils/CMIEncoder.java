@@ -5,8 +5,8 @@ import java.util.List;
 import javax.crypto.Cipher;
 
 public class CMIEncoder {
-    static Cipher encryptor;
-    static Cipher decryptor;
+    static Cipher encryptor = null;
+    static Cipher decryptor = null;
     private static final String fineName = null;
 
     public static void initialize() {

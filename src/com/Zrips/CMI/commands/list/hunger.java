@@ -14,7 +14,7 @@ public class hunger implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSet players hunger", args = "[playerName] [amount] (-s)", tab = { "playername" }, regVar = { 1, 2, 3 }, consoleVar = { 2, 3 }, others = true)
+    @CAnnotation(info = "Set players hunger", args = "[playerName] [amount] (-s)", tab = { "playername" }, regVar = { 1, 2, 3 }, consoleVar = { 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

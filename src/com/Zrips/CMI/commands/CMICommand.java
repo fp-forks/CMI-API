@@ -1,11 +1,11 @@
 package com.Zrips.CMI.commands;
 
 public class CMICommand {
-    private Cmd cmdClass;
-    private String name;
-    private CAnnotation anottation;
-    private Boolean enabled;
-    private boolean baseEnabled;
+    private Cmd cmdClass = null;
+    private String name = null;
+    private CAnnotation anottation = null;
+    private Boolean enabled = null;
+    private boolean baseEnabled = false;
 
     public CMICommand(Cmd cmdClass, String name, CAnnotation anottation) {
     }

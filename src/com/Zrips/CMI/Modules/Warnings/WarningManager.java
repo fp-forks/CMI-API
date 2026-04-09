@@ -12,10 +12,13 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.CMI;
 
 public class WarningManager {
-    private CMI plugin;
-    private LinkedHashMap<Integer, List<String>> commands;
-    private HashMap<String, CMIWarningCategory> Categories;
-    private HashMap<UUID, List<CMIPlayerWarning>> warnings;
+    private CMI plugin = null;
+    private LinkedHashMap<Integer, List<String>> commands = null;
+    private HashMap<String, CMIWarningCategory> Categories = null;
+    private HashMap<UUID, List<CMIPlayerWarning>> warnings = null;
+
+    public WarningManager(CMI plugin) {
+    }
 
     @Nullable
     public List<CMIPlayerWarning> getWarnings(UUID uuid) {
@@ -27,9 +30,6 @@ public class WarningManager {
     }
 
     public void setWarnings(UUID uuid, List<CMIPlayerWarning> warnings) {
-    }
-
-    public WarningManager(CMI plugin) {
     }
 
     public String serializeWarnings(List<CMIPlayerWarning> warnings) {

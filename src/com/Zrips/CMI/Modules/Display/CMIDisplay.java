@@ -11,34 +11,35 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Transformation;
 
+import net.Zrips.CMILib.Container.CMIVector3D;
+
 public class CMIDisplay {
-    CMIDisplayTransform transform;
-    private static Constructor<?> TextDisplay;
-    private static Constructor<?> ItemDisplay;
-    private static Constructor<?> BlockDisplay;
-    private static Constructor<?> InteractDisplay;
-    private static Object textDisplayEntityType;
-    private static Object itemDisplayEntityType;
-    private static Object blockDisplayEntityType;
-    private static Object interactionEntityType;
-    private static Class<?> worldClass;
-    private static Constructor<?> PacketPlayOutSpawnEntity;
-    private static Constructor<?> PacketPlayOutEntityMetadata;
-    private static Constructor<?> PacketPlayOutEntityDestroy;
-    private static Method sendPacket;
-    private static Method method1;
-    private static Method method2;
-    private static Field playerConnection;
-    private static Method setLocationMethod;
-    protected Location loc;
-    protected org.bukkit.entity.Entity display;
-    protected Object d;
-    private int id;
-    private CMIDisplayType type;
-    private static Constructor<?> packetConstructor;
-    private static Field vehicleField;
-    private static Field passengersField;
-    private static boolean fail;
+    CMIDisplayTransform transform = null;
+    private static Constructor<?> TextDisplay = null;
+    private static Constructor<?> ItemDisplay = null;
+    private static Constructor<?> BlockDisplay = null;
+    private static Constructor<?> InteractDisplay = null;
+    private static Object textDisplayEntityType = null;
+    private static Object itemDisplayEntityType = null;
+    private static Object blockDisplayEntityType = null;
+    private static Object interactionEntityType = null;
+    private static Class<?> worldClass = null;
+    private static Constructor<?> PacketPlayOutSpawnEntity = null;
+    private static Constructor<?> PacketPlayOutEntityMetadata = null;
+    private static Constructor<?> PacketPlayOutEntityDestroy = null;
+    private static Method method1 = null;
+    private static Method method2 = null;
+    private static Method setLocationMethod = null;
+    protected Location loc = null;
+    protected boolean positionModified = false;
+    protected org.bukkit.entity.Entity display = null;
+    protected Object d = null;
+    private int id = 0;
+    private CMIDisplayType type = null;
+    private static Constructor<?> packetConstructor = null;
+    private static Field vehicleField = null;
+    private static Field passengersField = null;
+    private static boolean fail = false;
 
     public CMIDisplay(CMIDisplayType type, Location loc) {
     }
@@ -51,7 +52,11 @@ public class CMIDisplay {
         return null;
     }
 
+    @Deprecated
     public void getTransformation(Transformation transformation) {
+    }
+
+    public void setTransformation(Transformation transformation) {
     }
 
     public void setWidth(double width) {
@@ -90,6 +95,9 @@ public class CMIDisplay {
     public void setBillboard(Billboard billboard) {
     }
 
+    public void setOffset(CMIVector3D offset) {
+    }
+
     public Billboard getBillboard() {
         return null;
     }
@@ -102,16 +110,10 @@ public class CMIDisplay {
         return null;
     }
 
-    private static void initPassengerPacket() {
-    }
-
     public void addAsPassenger(Player receiver, Entity vehicle) {
     }
 
     public void addAsPassenger(Set<Player> receivers, Entity vehicle) {
-    }
-
-    private static void sendPacket(Object connection, Object packet) {
     }
 
     public void show(Player player) {

@@ -10,10 +10,10 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Modules.SpecializedCommands.SpecCMDCooldown;
 
 public class CooldownManager {
-    private HashMap<String, CMICmdCooldown> cooldowns;
-    CMI plugin;
-    HashMap<UUID, CmdCooldown> playerCustomCooldowns;
-    CmdCooldown globalCooldowns;
+    private HashMap<String, CMICmdCooldown> cooldowns = null;
+    CMI plugin = null;
+    HashMap<UUID, CmdCooldown> playerCustomCooldowns = null;
+    CmdCooldown globalCooldowns = null;
 
     public CooldownManager(CMI plugin) {
     }
@@ -33,26 +33,6 @@ public class CooldownManager {
     }
 
     public void addCooldown(CMICmdCooldown cooldown) {
-    }
-
-    private CMICmdCooldown getCooldown(String cmd) {
-        return null;
-    }
-
-    private static Long getUsedTime(String cmd, CmdCooldown userCooldowns) {
-        return null;
-    }
-
-    private static Long getUsedTime(String cmd, CmdCooldown userCooldowns, boolean exact) {
-        return null;
-    }
-
-    private static String getCommandMatch(String cmd, CmdCooldown userCooldowns) {
-        return null;
-    }
-
-    private static String getCommandMatch(String cmd, CmdCooldown userCooldowns, boolean exact) {
-        return null;
     }
 
     public boolean removeCooldown(CommandSender sender, String cmd) {

@@ -14,7 +14,8 @@ public class pay implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&ePerform money transaction", args = "[playerName] [amount] (-s)", tab = { "playername" }, regVar = { 0, 2, 3 }, consoleVar = { 666 }, alias = true, others = false)
+    @CAnnotation(priority = 48, info = "Perform money transaction", args = "[playerName] [amount] (-s)", tab = { "playername" }, regVar = { 0, 2, 3 }, consoleVar = {
+            666 }, alias = true, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

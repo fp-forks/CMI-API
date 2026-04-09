@@ -6,7 +6,7 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Containers.CMIUser;
 
 public class DynMapManager {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public DynMapManager(CMI plugin) {
     }

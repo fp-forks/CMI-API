@@ -1,26 +1,41 @@
 package com.Zrips.CMI.Containers;
 
+import java.util.regex.Pattern;
+
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
 public class Snd {
-    private Player sender;
-    private String senderName;
-    private CMIUser senderUser;
-    private ConsoleCommandSender console;
-    private Player target;
-    private String targetName;
-    private CMIUser targetUser;
-    private ConsoleCommandSender targetConsole;
-    private Player source;
-    private CMIUser sourceUser;
-    private ConsoleCommandSender sourceConsole;
+    private SndUser sender = null;
+    private SndUser target = null;
+    private SndUser source = null;
+    private static final Pattern NEWLINE_PATTERN = null;
 
     public Snd() {
     }
 
     public Snd(Player sender, Player target) {
+    }
+
+    public String updateLocale(String msg) {
+        return null;
+    }
+
+    public String updateLocale(String msg, CommandSender receiver) {
+        return null;
+    }
+
+    public SndUser getSender() {
+        return null;
+    }
+
+    public SndUser getTarget() {
+        return null;
+    }
+
+    public SndUser getSource() {
+        return null;
     }
 
     public Player getPlayerSender() {
@@ -43,6 +58,10 @@ public class Snd {
         return null;
     }
 
+    public Snd resetSender() {
+        return null;
+    }
+
     public Snd setSender(ConsoleCommandSender console) {
         return null;
     }
@@ -52,6 +71,10 @@ public class Snd {
     }
 
     public ConsoleCommandSender getConsoleTarget() {
+        return null;
+    }
+
+    public Snd resetTarget() {
         return null;
     }
 
@@ -76,6 +99,10 @@ public class Snd {
     }
 
     public ConsoleCommandSender getConsoleSource() {
+        return null;
+    }
+
+    public Snd resetSource() {
         return null;
     }
 
@@ -129,6 +156,14 @@ public class Snd {
     }
 
     public Snd setTargetName(String targetName) {
+        return null;
+    }
+
+    public String getSourceName() {
+        return null;
+    }
+
+    public Snd setSourceName(String sourceName) {
         return null;
     }
 }

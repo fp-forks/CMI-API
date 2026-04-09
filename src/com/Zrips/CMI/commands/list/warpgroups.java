@@ -14,7 +14,7 @@ public class warpgroups implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 115, info = "&eLists warp groups", args = "", tab = {}, explanation = {}, regVar = { 0 }, consoleVar = { 0 }, others = false)
+    @CAnnotation(info = "Lists warp groups", args = "", tab = {}, explanation = {}, regVar = { 0 }, consoleVar = { 0 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

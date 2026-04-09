@@ -5,7 +5,7 @@ import org.bukkit.event.Listener;
 import com.Zrips.CMI.CMI;
 
 public class PlayTimeRewardsListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public PlayTimeRewardsListener(CMI plugin) {
     }

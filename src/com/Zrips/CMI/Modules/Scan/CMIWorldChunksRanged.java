@@ -6,9 +6,9 @@ import org.bukkit.World;
 import net.Zrips.CMILib.Container.CMIVectorInt2D;
 
 public class CMIWorldChunksRanged extends CMIWorldChunks {
-    private CMIVectorInt2D center;
-    private long lastChecked;
-    private int range;
+    private CMIVectorInt2D center = null;
+    private long lastChecked = 0;
+    private int range = 0;
 
     public CMIWorldChunksRanged(World world, CMIVectorInt2D center, int range) {
         super(world);

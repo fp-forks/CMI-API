@@ -14,8 +14,8 @@ public class removehome implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 115, info = "&eRemove home", args = "(homeName) (playerName)", tab = { "homes", "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 2 }, customAlias = {
-        "delhome" }, others = true)
+    @CAnnotation(priority = 115, info = "Remove home", args = "(homeName) (playerName)", tab = { "homes", "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 2 }, customAlias = {
+            "delhome" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

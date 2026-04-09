@@ -10,23 +10,23 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 
 public class CMIInventory {
-    private int id;
-    private String owner;
-    private long time;
-    private String killer;
-    private String DeathReason;
-    private double Exp;
-    private double Health;
-    private double MaxHealth;
-    private float Saturation;
-    private int Hunger;
-    private GameMode GameMode;
-    private boolean Fly;
-    private Collection<PotionEffect> potions;
-    private HashMap<Integer, ItemStack> items;
-    private Location loc;
-    private boolean editable;
-    private UUID uuid;
+    private int id = 0;
+    private String owner = null;
+    private long time = 0;
+    private String killer = null;
+    private String DeathReason = null;
+    private double Exp = 0.0;
+    private double Health = 0.0;
+    private double MaxHealth = 0.0;
+    private float Saturation = 0.0f;
+    private int Hunger = 0;
+    private GameMode GameMode = null;
+    private boolean Fly = false;
+    private Collection<PotionEffect> potions = null;
+    private HashMap<Integer, ItemStack> items = null;
+    private Location loc = null;
+    private boolean editable = false;
+    private UUID uuid = null;
 
     public CMIInventory() {
     }

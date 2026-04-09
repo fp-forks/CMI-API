@@ -12,37 +12,30 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 public class Reflections {
-    private Class<?> MinecraftServerClass;
-    private Object MinecraftServer;
-    private Class<?> PlayerList;
-    private Class<?> EntityHuman;
-    private Class<?> EntityPlayer;
-    private Class<?> EnumGameMode;
-    private Class<?> CraftPlayer;
-    private Class<?> CEntity;
-    private Class<?> nbtTagCompound;
-    private Class<?> nbtTagList;
-    private Class<?> EnumHand;
-    private Class<?> CraftBeehive;
-    private Class<?> TileEntityBeehive;
-    private Class<?> CraftItemStack;
-    private Class<?> IStack;
-    private Class<?> dimensionManager;
-    private Class<?> PacketPlayOutAnimation;
-    private CMI plugin;
+    private Class<?> MinecraftServerClass = null;
+    private Object MinecraftServer = null;
+    private Class<?> PlayerList = null;
+    private Class<?> EntityHuman = null;
+    private Class<?> EntityPlayer = null;
+    private Class<?> EnumGameMode = null;
+    private Class<?> CraftPlayer = null;
+    private Class<?> CEntity = null;
+    private Class<?> nbtTagCompound = null;
+    private Class<?> nbtTagList = null;
+    private Class<?> EnumHand = null;
+    private Class<?> CraftBeehive = null;
+    private Class<?> TileEntityBeehive = null;
+    private Class<?> CraftItemStack = null;
+    private Class<?> IStack = null;
+    private Class<?> dimensionManager = null;
+    private Class<?> PacketPlayOutAnimation = null;
+    private CMI plugin = null;
 
     public Reflections(CMI plugin) {
     }
 
-    private void initialize() {
-    }
-
     @Deprecated
     public void sendPacket(Object connection, Object packet) {
-    }
-
-    private static Class<?> getBukkitClass(String nmsClassString) {
-        return null;
     }
 
     public Class<?> getMinecraftClass(String nmsClassString) {
@@ -53,10 +46,6 @@ public class Reflections {
     }
 
     public void setOnGround(Player p, boolean state) {
-    }
-
-    private Object getPlayerList() {
-        return null;
     }
 
     public void changePlayerLimit(int amount) {
@@ -84,10 +73,6 @@ public class Reflections {
 
     public int getBeesInside(Block block) {
         return 0;
-    }
-
-    private static boolean processOpeningOfTable(Player player, String type) {
-        return false;
     }
 
     public boolean openCartographyTable(Player player) {

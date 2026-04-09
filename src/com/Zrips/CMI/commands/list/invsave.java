@@ -14,8 +14,8 @@ public class invsave implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 200, info = "&eSave inventory", args = "(playerName) (id) (-s)", tab = { "playername", "-s%%" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
-        3 }, alias = true, others = true)
+    @CAnnotation(priority = 200, info = "Save inventory", args = "(playerName) (id) (-s)", tab = { "playername", "-s%%" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
+            3 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

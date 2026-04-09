@@ -7,14 +7,10 @@ import java.io.RandomAccessFile;
 public class RegionFiles {
     private static final int SECTOR_BYTES = 0;
     private static final int SECTOR_INTS = 0;
-    private RandomAccessFile file;
-    private final int offsets = 0;
+    private RandomAccessFile file = null;
+    private final int[] offsets = null;
 
     public RegionFiles(File path) {
-    }
-
-    private int getOffset(int x, int z) {
-        return 0;
     }
 
     public boolean hasChunk(int x, int z) {

@@ -14,7 +14,7 @@ public class me implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSends special message to all players", args = "[message]", regVar = { -100 }, consoleVar = { -100 }, others = false, ignoreHelpPage = true)
+    @CAnnotation(info = "Sends special message to all players", args = "[message]", regVar = { -100 }, consoleVar = { -100 }, others = false, ignoreHelpPage = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

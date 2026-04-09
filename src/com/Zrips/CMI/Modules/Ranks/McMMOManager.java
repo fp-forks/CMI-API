@@ -5,7 +5,7 @@ import java.util.Set;
 import org.bukkit.entity.Player;
 
 public class McMMOManager {
-    private static Set<String> correctSkills;
+    private static Set<String> correctSkills = null;
 
     public McMMOManager() {
     }

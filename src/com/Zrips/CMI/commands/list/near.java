@@ -14,7 +14,7 @@ public class near implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eCheck who is near you", args = "(distance)", tab = { "100%%" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(priority = 48, info = "Check who is near you", args = "(distance)", tab = { "100%%" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

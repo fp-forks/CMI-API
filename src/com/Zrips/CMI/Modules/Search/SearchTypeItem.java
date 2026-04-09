@@ -7,22 +7,19 @@ import java.util.UUID;
 import org.bukkit.inventory.ItemStack;
 
 public class SearchTypeItem extends SearchTypeContentsBase {
-    SearchTypeItem parent;
-    private CMIPlayerSearchPlaceType currentCheckPlace;
-    Set<CMIDataResultBase> results;
-    private UUID uuid;
-    private ItemStack itemToCompare;
-    protected int checkTotalAmount;
-    Map<CMIPlayerSearchPlaceType, CMIDataResultItem> totalCountResult;
+    SearchTypeItem parent = null;
+    private CMIPlayerSearchPlaceType currentCheckPlace = null;
+    Set<CMIDataResultBase> results = null;
+    private UUID uuid = null;
+    private ItemStack itemToCompare = null;
+    protected int checkTotalAmount = 0;
+    Map<CMIPlayerSearchPlaceType, CMIDataResultItem> totalCountResult = null;
 
     public SearchTypeItem(SearchTypeItem parent) {
+        super();
     }
 
     public synchronized void setCurrentCheckedLocation(CMIPlayerSearchPlaceType type) {
-    }
-
-    private CMIPlayerSearchPlaceType getCurrentCheckedLocation() {
-        return null;
     }
 
     protected CMIDataResultItem getTotalCountResult(CMIPlayerSearchPlaceType type) {
@@ -61,33 +58,10 @@ public class SearchTypeItem extends SearchTypeContentsBase {
         return null;
     }
 
-    private void checkTotalResult() {
-    }
-
-    private void checkTotalResult(CMIPlayerSearchPlaceType currentCheckPlace) {
-    }
-
-    private void checkTotalResult(CMIPlayerSearchPlaceType currentCheckPlace, String identifier) {
-    }
-
-    private void finishTotalResult() {
-    }
-
-    private void finishTotalResult(boolean reset) {
-    }
-
     public void finishedLocationCheck() {
     }
 
     protected boolean checkShulkerBundle() {
-        return false;
-    }
-
-    private boolean checkShulker() {
-        return false;
-    }
-
-    private boolean checkBundle() {
         return false;
     }
 

@@ -6,25 +6,18 @@ import java.util.List;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
-import com.Zrips.CMI.Modules.Portals.CMIPortal;
-import com.Zrips.CMI.Modules.Portals.CuboidArea;
-
+import net.Zrips.CMILib.Container.CMICuboidArea;
+import net.Zrips.CMILib.Container.CMIVector3D;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class Visualizer {
-    private Player player;
-    private long start;
-    private List<CuboidArea> areas;
-    private List<CuboidArea> errorAreas;
-    private CMITask id;
-    private CMITask errorId;
-    private boolean once;
-    private int starting;
-    private List<Location> locations;
-    private List<Location> errorLocations;
-    private List<Location> locations2;
-    private List<Location> errorLocations2;
-    private Location loc;
+    private Player player = null;
+    private long start = 0;
+    private VisualizerPortion mainArea = null;
+    private VisualizerPortion errorArea = null;
+    private boolean once = false;
+    private int starting = 0;
+    private Location loc = null;
 
     public Visualizer(Player player) {
     }
@@ -50,36 +43,30 @@ public class Visualizer {
     public void setPlayer(Player player) {
     }
 
-    public List<CuboidArea> getAreas() {
+    public List<CMICuboidArea> getAreas() {
         return null;
     }
 
-    public void setAreas(CMIPortal res) {
+    public void setAreas(CMICuboidArea[] areas) {
     }
 
-    public void setAreas(CuboidArea[] areas) {
+    public void setAreas(ArrayList<CMICuboidArea> areas) {
     }
 
-    public void setAreas(ArrayList<CuboidArea> areas) {
+    public void setAreas(CMICuboidArea area) {
     }
 
-    public void setAreas(CuboidArea area) {
-    }
-
-    public List<CuboidArea> getErrorAreas() {
+    public List<CMICuboidArea> getErrorAreas() {
         return null;
     }
 
-    public void setErrorAreas(CMIPortal res) {
+    public void setErrorAreas(CMICuboidArea[] errorAreas) {
     }
 
-    public void setErrorAreas(CuboidArea[] errorAreas) {
+    public void setErrorAreas(ArrayList<CMICuboidArea> errorAreas) {
     }
 
-    public void setErrorAreas(ArrayList<CuboidArea> errorAreas) {
-    }
-
-    public void setErrorAreas(CuboidArea errorArea) {
+    public void setErrorAreas(CMICuboidArea errorArea) {
     }
 
     public CMITask getTask() {
@@ -103,32 +90,32 @@ public class Visualizer {
     public void setOnce(boolean once) {
     }
 
-    public List<Location> getLocations() {
+    public List<CMIVector3D> getLocations() {
         return null;
     }
 
-    public void setLocations(List<Location> locations) {
+    public void setLocations(List<CMIVector3D> locations) {
     }
 
-    public List<Location> getLocations2() {
+    public List<CMIVector3D> getLocations2() {
         return null;
     }
 
-    public void setLocations2(List<Location> locations) {
+    public void setLocations2(List<CMIVector3D> locations) {
     }
 
-    public List<Location> getErrorLocations() {
+    public List<CMIVector3D> getErrorLocations() {
         return null;
     }
 
-    public void setErrorLocations(List<Location> errorLocations) {
+    public void setErrorLocations(List<CMIVector3D> errorLocations) {
     }
 
-    public List<Location> getErrorLocations2() {
+    public List<CMIVector3D> getErrorLocations2() {
         return null;
     }
 
-    public void setErrorLocations2(List<Location> errorLocations) {
+    public void setErrorLocations2(List<CMIVector3D> errorLocations) {
     }
 
     public Location getLoc() {
@@ -143,5 +130,13 @@ public class Visualizer {
     }
 
     public void setStarting(int starting) {
+    }
+
+    public VisualizerPortion getMainArea() {
+        return null;
+    }
+
+    public VisualizerPortion getErrorArea() {
+        return null;
     }
 }

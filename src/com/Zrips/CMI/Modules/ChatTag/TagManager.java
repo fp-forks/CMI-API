@@ -10,13 +10,13 @@ import com.Zrips.CMI.Containers.CMIUser;
 import net.Zrips.CMILib.FileHandler.ConfigReader;
 
 public class TagManager {
-    private CMI plugin;
-    private boolean ChatTagEnabled;
-    private boolean HardCoreMode;
-    private boolean OnlyWhenAfk;
-    private String ChatTagColor;
-    private boolean ChatTagRemoveEta;
-    List<String> commands;
+    private CMI plugin = null;
+    private boolean ChatTagEnabled = false;
+    private boolean HardCoreMode = false;
+    private boolean OnlyWhenAfk = false;
+    private String ChatTagColor = null;
+    private boolean ChatTagRemoveEta = false;
+    List<String> commands = null;
 
     public TagManager(CMI plugin) {
     }

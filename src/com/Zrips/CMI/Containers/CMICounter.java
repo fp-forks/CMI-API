@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class CMICounter {
-    private static HashMap<UUID, HashMap<String, Long>> counters;
+    private static HashMap<UUID, HashMap<String, Long>> counters = null;
 
     public static boolean isJoinedCounter(UUID uuid) {
         return false;

@@ -2,10 +2,14 @@ package com.Zrips.CMI.Modules.PlayerMeta;
 
 import java.util.HashMap;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class PlayerMeta {
-    private static HashMap<UUID, PlayerMeta> cacheMap;
-    private HashMap<String, metaValues> map;
+    private static ConcurrentHashMap<UUID, PlayerMeta> cacheMap = null;
+    private HashMap<String, metaValues> map = null;
+
+    public PlayerMeta() {
+    }
 
     public static PlayerMeta getMeta(UUID uuid) {
         return null;
@@ -13,9 +17,6 @@ public class PlayerMeta {
 
     public static PlayerMeta getMetaRaw(UUID uuid) {
         return null;
-    }
-
-    public PlayerMeta() {
     }
 
     @Deprecated
@@ -45,7 +46,7 @@ public class PlayerMeta {
     }
 
     public class metaValues {
-        private String value;
+        private String value = null;
 
         public metaValues() {
         }

@@ -9,10 +9,10 @@ import com.Zrips.CMI.Modules.AStand.ArmorStandManager.armorStandActions;
 import com.Zrips.CMI.Modules.AStand.ArmorStandManager.armorStandExtraActions;
 
 public class ArmorStandCopy {
-    private Player player;
-    private ArmorStand stand;
-    private Set<armorStandActions> copy;
-    private Set<armorStandExtraActions> extraCopy;
+    private Player player = null;
+    private ArmorStand stand = null;
+    private Set<armorStandActions> copy = null;
+    private Set<armorStandExtraActions> extraCopy = null;
 
     ArmorStandCopy(Player player, ArmorStand stand, Set<armorStandActions> copy, Set<armorStandExtraActions> extraCopy) {
     }

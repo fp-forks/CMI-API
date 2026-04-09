@@ -6,15 +6,12 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Containers.UCInfo;
 
 public class UnloadChunks {
-    public ConcurrentHashMap<String, UCInfo> ucinfo;
-    private CMI plugin;
+    public ConcurrentHashMap<String, UCInfo> ucinfo = null;
+    private CMI plugin = null;
 
     public UnloadChunks(CMI plugin) {
     }
 
     public void loadRegionFile(UCInfo scan) {
-    }
-
-    private void loadChunk(UCInfo scan) {
     }
 }

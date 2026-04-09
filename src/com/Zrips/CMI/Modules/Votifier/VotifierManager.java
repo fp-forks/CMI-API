@@ -12,30 +12,30 @@ import com.Zrips.CMI.Containers.CMIUser;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class VotifierManager {
-    private CMI plugin;
-    private List<String> CommandsOnVote;
-    private List<String> ExcludeList;
-    private boolean CountVotes;
-    private boolean PerformCommands;
-    private int cooldown;
-    private int MaxVotesInADay;
-    private HashMap<Integer, List<String>> rewards;
-    private HashMap<UUID, HashMap<String, Long>> cooldowns;
-    private HashMap<UUID, voteReminder> voteReminder;
-    private ConcurrentSkipListMap<Double, CMIUser> Top;
-    private Set<CMIUser> withVotes;
-    Long lastUpdate;
-    CMITask sched;
-    int updateDelay;
-    boolean calculating;
+    private CMI plugin = null;
+    private List<String> CommandsOnVote = null;
+    private List<String> ExcludeList = null;
+    private boolean CountVotes = false;
+    private boolean PerformCommands = false;
+    private int cooldown = 0;
+    private int MaxVotesInADay = 0;
+    private HashMap<Integer, List<String>> rewards = null;
+    private HashMap<UUID, HashMap<String, Long>> cooldowns = null;
+    private HashMap<UUID, voteReminder> voteReminder = null;
+    private ConcurrentSkipListMap<Double, CMIUser> Top = null;
+    private Set<CMIUser> withVotes = null;
+    Long lastUpdate = null;
+    CMITask sched = null;
+    int updateDelay = 0;
+    boolean calculating = false;
+
+    public VotifierManager(CMI plugin) {
+    }
 
     public void removeVoteReminder(UUID uuid) {
     }
 
     public void addToVoteReminder(UUID uuid) {
-    }
-
-    public VotifierManager(CMI plugin) {
     }
 
     public void loadConfig() {
@@ -51,13 +51,7 @@ public class VotifierManager {
     public void updateVoteCountList(CMIUser user) {
     }
 
-    private void delayUpdate() {
-    }
-
     public void updateTopList() {
-    }
-
-    private void recalculate() {
     }
 
     public ConcurrentSkipListMap<Double, CMIUser> getTop() {
@@ -69,8 +63,8 @@ public class VotifierManager {
     }
 
     private class voteReminder {
-        private int times;
-        private long last;
+        private int times = 0;
+        private long last = 0;
 
         public voteReminder() {
         }

@@ -14,8 +14,8 @@ public class resetdbfields implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eResets particular database columns to default value", args = "[columnName] (-w:[worldName]) (-p:[playerName])", tab = { "dbusercollumsshort", "%%-w:",
-        "%%-p:" }, explanation = {}, regVar = { 666 }, consoleVar = { 1, 2, 3 }, others = false)
+    @CAnnotation(priority = 48, info = "Resets particular database columns to default value", args = "[columnName] (-w:[worldName]) (-p:[playerName])", tab = { "dbusercollumsshort", "%%-w:",
+            "%%-p:" }, explanation = {}, regVar = { 666 }, consoleVar = { 1, 2, 3 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

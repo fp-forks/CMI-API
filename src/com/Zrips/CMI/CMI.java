@@ -34,7 +34,9 @@ import com.Zrips.CMI.Modules.ConsoleFilter.ConsoleFilterManager;
 import com.Zrips.CMI.Modules.CustomText.CTextManager;
 import com.Zrips.CMI.Modules.DataBase.DBClassLoader;
 import com.Zrips.CMI.Modules.DataBase.DBManager;
+import com.Zrips.CMI.Modules.DataBase_NEW.DBManager_NEW;
 import com.Zrips.CMI.Modules.DeathMessages.DeathMessageManager;
+import com.Zrips.CMI.Modules.Dialogs.DialogManager;
 import com.Zrips.CMI.Modules.DiscordSRV.DiscordSRVManager;
 import com.Zrips.CMI.Modules.DynMap.DynMapManager;
 import com.Zrips.CMI.Modules.DynamicSigns.SignManager;
@@ -55,8 +57,7 @@ import com.Zrips.CMI.Modules.Ips.IpManager;
 import com.Zrips.CMI.Modules.Jail.JailManager;
 import com.Zrips.CMI.Modules.Kits.KitsManager;
 import com.Zrips.CMI.Modules.LightFix.LightFix;
-import com.Zrips.CMI.Modules.Mirror.MirrorManager;
-import com.Zrips.CMI.Modules.MirrorV2.CMIMirrorManagerV2;
+import com.Zrips.CMI.Modules.Mirror.CMIMirrorManager;
 import com.Zrips.CMI.Modules.NickName.NickNameManager;
 import com.Zrips.CMI.Modules.Packets.PacketInjector;
 import com.Zrips.CMI.Modules.Painting.PaintingManager;
@@ -93,7 +94,6 @@ import com.Zrips.CMI.Modules.Teleportations.TeleportManager;
 import com.Zrips.CMI.Modules.TimedCommands.TimedCommandManager;
 import com.Zrips.CMI.Modules.Totems.TotemManager;
 import com.Zrips.CMI.Modules.Vanish.VanishManager;
-import com.Zrips.CMI.Modules.ViewRange.ViewRangeManager;
 import com.Zrips.CMI.Modules.Votifier.VotifierManager;
 import com.Zrips.CMI.Modules.Warnings.WarningManager;
 import com.Zrips.CMI.Modules.Warps.WarpManager;
@@ -118,130 +118,131 @@ public class CMI extends JavaPlugin {
     public static final String savesFolderName = null;
     public static final String logsFolderName = null;
     public static final String kitsFolderName = null;
+    public static final String dialogsFolderName = null;
     public static final String translationsFolderName = null;
     public static final String deathMessagesFolderName = null;
-    boolean fullyLoaded;
-    boolean serverLoaded;
-    protected NMS nms;
-    protected Reflections ref;
-    private Placeholder Placeholder;
-    private Permission vaultPerm;
-    public static String bugReportLink;
-    static long serverStartupTime;
-    private String worldFolderPath;
-    protected SavedItemManager SavedItemManager;
-    protected BlueMapManager BlueMapManager;
-    protected PlayTimeManager PlayTimeManager;
-    protected CommandsHandler cManager;
-    protected LightFix LightFixManager;
-    protected ChunkPreview ChunkPreviewManager;
-    protected ViewRangeManager ViewRangeManager;
-    protected DiscordSRVManager DiscordSRVManager;
-    protected ConsoleFilterManager ConsoleFilterManager;
-    protected Purge PurgeManager;
-    protected CMIWorldChunkManager ScanManager;
-    protected ChunkFix ChunkFixManager;
-    protected ReplaceBlock replaceblock;
-    protected UnloadChunks unloadchunks;
-    protected ElytraManager ElytraManager;
-    protected RepairManager RepairManager;
-    protected SkinManager SkinManager;
-    protected Util UtilManager;
-    protected Config config;
-    protected Language languageManager;
-    protected ScavengeManager scavengeManager;
-    protected VersionChecker versionCheckManager;
-    protected PlayTimeRewardsManager PlayTimeRewardsManager;
-    protected TimeManager TimeManager;
-    protected MirrorManager mirror;
-    protected CMIMirrorManagerV2 mirrorV2;
-    protected KitsManager kits;
-    protected SpawnerChargeManager charges;
-    protected ParticleManager ParticleManager;
-    protected FlightChargeManager FlightChargeManager;
-    protected ChatBubbleManager ChatBubbleManager;
-    protected ChatManager ChatManager;
-    private ArmorEffectManager armorEffectManager;
-    protected PaintingManager PaintingManager;
-    protected VanishManager VanishManager;
-    protected PlayerOptionsManager PlayerOptionsManager;
-    protected InteractiveCommandManager InteractiveCommandManager;
-    protected SpecializedCommandManager SpecializedCommandManager;
-    protected ArmorStandManager ArmorStandManager;
-    protected LookupService LookupService;
-    protected DynMapManager DynMapManager;
-    protected WorthManager WorthManager;
-    protected JailManager JailManager;
-    protected TeleportHandler TeleportHandler;
-    protected WarningManager WarningManager;
-    protected com.Zrips.CMI.Modules.PlayerCombat.PlayerCombatManager PlayerCombatManager;
-    private EconomyManager economyManager;
-    protected EnderChestManager EnderChestManager;
-    protected RegChestManager RegChestManager;
-    protected VotifierManager VotifierManager;
-    protected CitizensManager CitizensManager;
-    protected AfkManager AfkManager;
-    protected TabListManager TabListManager;
-    protected TabListHeaderFooterHandler TabListHandler;
-    protected RecipeManager RecipeManager;
-    protected PortalManager portalManager;
-    protected SignManager signManager;
-    protected HologramManager HologramManager;
-    protected SelectionManager SelectionManager;
-    protected CMICommandCostManager CMICommandCostManager;
-    protected CooldownManager cooldownManager;
-    protected WarmUpManager WarmUpManager;
-    protected WorldManager regionManager;
-    protected TotemManager totemManager;
-    protected AnimationManager AnimationManager;
-    protected RandomTeleportationManager RandomTeleportationManager;
-    protected ChatFormatManager ChatFormatManager;
-    protected ShulkerBoxManager shulkerBoxManager;
-    protected SchedulerManager schedulerManager;
-    protected EnchantManager EnchantManager;
-    protected AnvilManager anvilManager;
-    protected TimedCommandManager timedCommandManager;
-    protected PermissionsManager permissionsManager;
-    protected DeathMessageManager DeathMessageManager;
-    protected TagManager TagManager;
-    protected NickNameManager nickNameManager;
-    protected HomeManager homeManager;
-    protected WarpManager warpManager;
-    protected IpManager ipManager;
-    protected TeleportManager TeleportManager;
-    protected StatsManager statsManager;
-    protected AliasManager aliasManager;
-    protected CTextManager cTextManager;
-    protected EventActionManager eventActionManager;
-    protected CustomNBTManager CustomNBTManager;
-    protected FindBiomeManager findBiomeManager;
-    protected ChatFilterManager chatFilterManager;
-    protected GUIManager GUIManager;
-    protected SavedInventoryManager SavedInventoryManager;
-    protected PatrolManager PatrolManager;
-    private DBManager dbManager;
-    private RankManager rankManager;
-    private Lag lagMeter;
-    protected PlayerManager PM;
-    protected Sorting Sorting;
-    private TabComplete tab;
-    private long timer;
-    protected HashMap<String, List<String>> preFetchNames;
-    protected HashMap<String, UUID> preFetchUUIDs;
+    boolean fullyLoaded = false;
+    boolean serverLoaded = false;
+    protected NMS nms = null;
+    protected Reflections ref = null;
+    private Placeholder Placeholder = null;
+    private Permission vaultPerm = null;
+    public static String bugReportLink = null;
+    static long serverStartupTime = 0;
+    private String worldFolderPath = null;
+    protected SavedItemManager SavedItemManager = null;
+    protected BlueMapManager BlueMapManager = null;
+    protected PlayTimeManager PlayTimeManager = null;
+    protected CommandsHandler cManager = null;
+    protected LightFix LightFixManager = null;
+    protected ChunkPreview ChunkPreviewManager = null;
+    protected DiscordSRVManager DiscordSRVManager = null;
+    protected ConsoleFilterManager ConsoleFilterManager = null;
+    protected Purge PurgeManager = null;
+    protected CMIWorldChunkManager ScanManager = null;
+    protected ChunkFix ChunkFixManager = null;
+    protected ReplaceBlock replaceblock = null;
+    protected UnloadChunks unloadchunks = null;
+    protected ElytraManager ElytraManager = null;
+    protected RepairManager RepairManager = null;
+    protected SkinManager SkinManager = null;
+    protected Util UtilManager = null;
+    protected Config config = null;
+    protected Language languageManager = null;
+    protected ScavengeManager scavengeManager = null;
+    protected VersionChecker versionCheckManager = null;
+    protected PlayTimeRewardsManager PlayTimeRewardsManager = null;
+    protected TimeManager TimeManager = null;
+    protected CMIMirrorManager mirrorV2 = null;
+    protected KitsManager kits = null;
+    protected SpawnerChargeManager charges = null;
+    protected ParticleManager ParticleManager = null;
+    protected FlightChargeManager FlightChargeManager = null;
+    protected ChatBubbleManager ChatBubbleManager = null;
+    protected ChatManager ChatManager = null;
+    private ArmorEffectManager armorEffectManager = null;
+    protected PaintingManager PaintingManager = null;
+    protected VanishManager VanishManager = null;
+    protected PlayerOptionsManager PlayerOptionsManager = null;
+    protected InteractiveCommandManager InteractiveCommandManager = null;
+    protected SpecializedCommandManager SpecializedCommandManager = null;
+    protected ArmorStandManager ArmorStandManager = null;
+    protected LookupService LookupService = null;
+    protected DynMapManager DynMapManager = null;
+    protected WorthManager WorthManager = null;
+    protected JailManager JailManager = null;
+    protected DialogManager DialogManager = null;
+    protected TeleportHandler TeleportHandler = null;
+    protected WarningManager WarningManager = null;
+    protected com.Zrips.CMI.Modules.PlayerCombat.PlayerCombatManager PlayerCombatManager = null;
+    private EconomyManager economyManager = null;
+    protected EnderChestManager EnderChestManager = null;
+    protected RegChestManager RegChestManager = null;
+    protected VotifierManager VotifierManager = null;
+    protected CitizensManager CitizensManager = null;
+    protected AfkManager AfkManager = null;
+    protected TabListManager TabListManager = null;
+    protected TabListHeaderFooterHandler TabListHandler = null;
+    protected RecipeManager RecipeManager = null;
+    protected PortalManager portalManager = null;
+    protected SignManager signManager = null;
+    protected HologramManager HologramManager = null;
+    protected SelectionManager SelectionManager = null;
+    protected CMICommandCostManager CMICommandCostManager = null;
+    protected CooldownManager cooldownManager = null;
+    protected WarmUpManager WarmUpManager = null;
+    protected WorldManager regionManager = null;
+    protected TotemManager totemManager = null;
+    protected AnimationManager AnimationManager = null;
+    protected RandomTeleportationManager RandomTeleportationManager = null;
+    protected ChatFormatManager ChatFormatManager = null;
+    protected ShulkerBoxManager shulkerBoxManager = null;
+    protected SchedulerManager schedulerManager = null;
+    protected EnchantManager EnchantManager = null;
+    protected AnvilManager anvilManager = null;
+    protected TimedCommandManager timedCommandManager = null;
+    protected PermissionsManager permissionsManager = null;
+    protected DeathMessageManager DeathMessageManager = null;
+    protected TagManager TagManager = null;
+    protected NickNameManager nickNameManager = null;
+    protected HomeManager homeManager = null;
+    protected WarpManager warpManager = null;
+    protected IpManager ipManager = null;
+    protected TeleportManager TeleportManager = null;
+    protected StatsManager statsManager = null;
+    protected AliasManager aliasManager = null;
+    protected CTextManager cTextManager = null;
+    protected EventActionManager eventActionManager = null;
+    protected CustomNBTManager CustomNBTManager = null;
+    protected FindBiomeManager findBiomeManager = null;
+    protected ChatFilterManager chatFilterManager = null;
+    protected GUIManager GUIManager = null;
+    protected SavedInventoryManager SavedInventoryManager = null;
+    protected PatrolManager PatrolManager = null;
+    private DBManager dbManager = null;
+    private DBManager_NEW dbManager_new = null;
+    private RankManager rankManager = null;
+    private Lag lagMeter = null;
+    protected PlayerManager PM = null;
+    protected Sorting Sorting = null;
+    private TabComplete tab = null;
+    private long timer = 0;
+    protected HashMap<String, List<String>> preFetchNames = null;
+    protected HashMap<String, UUID> preFetchUUIDs = null;
     private static final UUID ServerUUID = null;
-    private String s1;
-    private String s2;
-    private String s3;
-    private String s4;
-    private String s5;
-    protected static CMI instance;
-    public String prefix;
-    protected Scoreboard scoreboard;
-    PacketInjector injector;
-    private DBClassLoader classLoader;
-    BungeeCordManager BungeeCordManager;
-    static boolean shuttingdown;
-    CMITask lagTask;
+    private String s1 = null;
+    private String s2 = null;
+    private String s3 = null;
+    private String s4 = null;
+    private String s5 = null;
+    protected static CMI instance = null;
+    public String prefix = null;
+    protected Scoreboard scoreboard = null;
+    PacketInjector injector = null;
+    private DBClassLoader classLoader = null;
+    BungeeCordManager BungeeCordManager = null;
+    static boolean shuttingdown = false;
+    CMITask lagTask = null;
 
     public PacketInjector getPacketInjector() {
         return null;
@@ -283,11 +284,11 @@ public class CMI extends JavaPlugin {
         return null;
     }
 
-    public MirrorManager getMirrorManager() {
+    public CMIMirrorManager getMirrorManager() {
         return null;
     }
 
-    public CMIMirrorManagerV2 getMirrorManagerV2() {
+    public DialogManager getDialogManager() {
         return null;
     }
 
@@ -619,10 +620,6 @@ public class CMI extends JavaPlugin {
         return null;
     }
 
-    public ViewRangeManager getViewRangeManager() {
-        return null;
-    }
-
     public CMIWorldChunkManager getScanManager() {
         return null;
     }
@@ -656,6 +653,10 @@ public class CMI extends JavaPlugin {
     }
 
     public DBManager getDbManager() {
+        return null;
+    }
+
+    public DBManager_NEW getDbManager_NEW() {
         return null;
     }
 
@@ -698,14 +699,17 @@ public class CMI extends JavaPlugin {
     public void loadMessage(Object amount, String type, Long took) {
     }
 
+    @Deprecated
     public String getOffOn(Player player, Player whoGets) {
         return null;
     }
 
+    @Deprecated
     public String getOffOn(Player player) {
         return null;
     }
 
+    @Deprecated
     public String getOffOn(boolean state) {
         return null;
     }

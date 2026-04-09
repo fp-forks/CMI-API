@@ -1,10 +1,10 @@
 package com.Zrips.CMI.Modules.Search;
 
 public class SearchTypeItemModelData extends SearchTypeItem {
-    int modelData;
+    int modelData = 0;
 
     public SearchTypeItemModelData(int modelData) {
-        super(null);
+        this(null, modelData);
     }
 
     public SearchTypeItemModelData(SearchTypeItem parent, int modelData) {

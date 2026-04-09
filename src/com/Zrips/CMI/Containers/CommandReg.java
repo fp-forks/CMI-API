@@ -11,17 +11,14 @@ import org.bukkit.command.defaults.BukkitCommand;
 
 public abstract class CommandReg implements CommandExecutor, TabExecutor {
     protected final String command = null;
-    protected static CommandMap cmap;
-    private CommandAlias alias;
+    protected static CommandMap cmap = null;
+    private CommandAlias alias = null;
 
     public CommandReg(String command, CommandAlias alias) {
     }
 
     public boolean register() {
         return false;
-    }
-
-    private static void unRegisterBukkitCommand(Command cmd) {
     }
 
     public boolean register(String permission) {
@@ -43,8 +40,8 @@ public abstract class CommandReg implements CommandExecutor, TabExecutor {
     }
 
     private final class ReflectCommand extends BukkitCommand {
-        private CommandReg exe;
-        private CommandAlias alias;
+        private CommandReg exe = null;
+        private CommandAlias alias = null;
 
         protected ReflectCommand(String command, String permission, CommandAlias alias) {
             super(command);

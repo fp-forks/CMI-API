@@ -7,12 +7,12 @@ import com.Zrips.CMI.CMI;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class SchedulerManager {
-    private HashMap<String, Schedule> map;
-    private CMI plugin;
-    private CMITask autoTimerBukkitId;
+    private HashMap<String, Schedule> map = null;
+    private CMI plugin = null;
+    private CMITask autoTimerBukkitId = null;
     public static final String randomPlayerLabel = null;
-    private String fileName;
-    private Runnable autoTimer;
+    private String fileName = null;
+    private Runnable autoTimer = null;
 
     public SchedulerManager(CMI plugin) {
     }
@@ -32,18 +32,8 @@ public class SchedulerManager {
     public void load() {
     }
 
-    private void runTimer() {
-    }
-
-    private static Long nextIn() {
-        return null;
-    }
-
     public int getActualWeekDay(int day) {
         return 0;
-    }
-
-    private void checkSchedulers() {
     }
 
     public HashMap<String, Schedule> getMap() {

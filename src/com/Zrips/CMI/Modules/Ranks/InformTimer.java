@@ -1,8 +1,8 @@
 package com.Zrips.CMI.Modules.Ranks;
 
 public class InformTimer {
-    private Long nextCheck;
-    private Long timesInformed;
+    private Long nextCheck = null;
+    private Long timesInformed = null;
 
     public InformTimer() {
     }

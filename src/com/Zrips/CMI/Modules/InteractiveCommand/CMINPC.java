@@ -3,9 +3,9 @@ package com.Zrips.CMI.Modules.InteractiveCommand;
 import java.util.UUID;
 
 public class CMINPC {
-    private UUID uuid;
-    private Integer id;
-    private UUID secondaryUuid;
+    private UUID uuid = null;
+    private Integer id = null;
+    private UUID secondaryUuid = null;
 
     public CMINPC(int id) {
     }

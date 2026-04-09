@@ -14,8 +14,8 @@ public class tpahere implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 40, info = "&eAsks player to accept teleportation to your location", args = "[playerName] (playerName) (-c)", tab = { "allPlayerName", "playername",
-        "-c" }, explanation = {}, regVar = { 1, 2 }, consoleVar = { 2, 3 }, others = false)
+    @CAnnotation(info = "Asks player to accept teleportation to your location", args = "[playerName] (playerName) (-c)", tab = { "allPlayerName", "playername", "-c" }, explanation = {}, regVar = { 1,
+            2 }, consoleVar = { 2, 3 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

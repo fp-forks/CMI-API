@@ -14,8 +14,8 @@ public class god implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSet players god mode to true or false", args = "[playerName] (true/false) (-s)", tab = { "playername", "true%%false" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 2,
-        3 }, others = true)
+    @CAnnotation(info = "Set players god mode to true or false", args = "[playerName] (true/false) (-s)", tab = { "playername", "true%%false" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 2,
+            3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

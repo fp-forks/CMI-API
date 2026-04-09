@@ -14,8 +14,8 @@ public class kill implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eKill player", args = "[playerName] (-forced) (damageCause) (-s) (-lightning)", multiTab = {
-        "[playerName] -forced,[damageCause],-s,-lightning -forced,-s,-lightning -forced,-s,-lightning" }, explanation = {}, regVar = { -666 }, consoleVar = { -666 }, others = false)
+    @CAnnotation(info = "Kill player", args = "[playerName] (-forced) (damageCause) (-s) (-lightning)", multiTab = {
+            "[playerName] -forced,[damageCause],-s,-lightning -forced,-s,-lightning -forced,-s,-lightning" })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

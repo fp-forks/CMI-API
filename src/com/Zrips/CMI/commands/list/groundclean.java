@@ -19,10 +19,10 @@ public class groundclean implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eClears server from unnecessary items", args = "(+cb) (+cm) (+ci) (+b) (+sh) (+tnt) (+all) (+fl) (+named) (-w:[worldName]) (-s)", multiTab = {
-        "+cb +cm +ci +b +sh +tnt +fl +named -w:" }, explanation = { "+cm will include minecarts into cleaning", "+cb will include boats into cleaning", "+sh will include shulker box into cleaning",
-            "+ci defines if you want to include weapons and armors", "+tnt defines if you want to include primed tnt", "+named removes items with custom name or lore",
-            "+b broadcasts clear message to everyone" }, regVar = { -66 }, consoleVar = { -66 }, alias = true, others = false)
+    @CAnnotation(info = "Clears server from unnecessary items", args = "(+cb) (+cm) (+ci) (+b) (+sh) (+tnt) (+all) (+fl) (+named) (-w:[worldName]) (-s)", multiTab = {
+            "+cb +cm +ci +b +sh +tnt +fl +named -w:" }, explanation = { "+cm will include minecarts into cleaning", "+cb will include boats into cleaning",
+                    "+sh will include shulker box into cleaning", "+ci defines if you want to include weapons and armors", "+tnt defines if you want to include primed tnt",
+                    "+named removes items with custom name or lore", "+b broadcasts clear message to everyone" }, regVar = { -66 }, consoleVar = { -66 }, alias = true, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

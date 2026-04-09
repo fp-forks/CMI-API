@@ -5,12 +5,12 @@ import java.util.List;
 import org.bukkit.entity.Player;
 
 public class PlayTimeReward {
-    private String name;
-    private String displayName;
-    private List<String> description;
-    private List<String> commands;
-    private long range;
-    private boolean autoClaim;
+    private String name = null;
+    private String displayName = null;
+    private List<String> description = null;
+    private List<String> commands = null;
+    private long range = 0;
+    private boolean autoClaim = false;
 
     public PlayTimeReward(String name) {
     }

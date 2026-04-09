@@ -3,11 +3,11 @@ package com.Zrips.CMI.Modules.Search;
 import org.bukkit.enchantments.Enchantment;
 
 public class SearchTypeItemEnchant extends SearchTypeItem {
-    Enchantment enchant;
-    int level;
+    Enchantment enchant = null;
+    int level = 0;
 
     public SearchTypeItemEnchant(Enchantment enchant, int level) {
-        super(null);
+        this(null, enchant, level);
     }
 
     public SearchTypeItemEnchant(SearchTypeItem parent, Enchantment enchant, int level) {

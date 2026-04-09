@@ -5,9 +5,10 @@ import java.util.Set;
 import org.bukkit.entity.Player;
 
 public class SearchTypeMaxHealth extends SearchTypePlayerBase {
-    double health;
+    double health = 0.0;
 
     public SearchTypeMaxHealth(int health) {
+        super();
     }
 
     @Override

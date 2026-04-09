@@ -4,8 +4,8 @@ import com.Zrips.CMI.Containers.CMIUser;
 import com.Zrips.CMI.Modules.Kits.Kit;
 
 public class CMIUserKitAcquireEvent extends CMIUserCancellableEvent {
-    private Kit kit;
-    private boolean giveItems;
+    private Kit kit = null;
+    private boolean giveItems = false;
 
     public CMIUserKitAcquireEvent(CMIUser user, Kit kit, boolean giveItems) {
         super(user);

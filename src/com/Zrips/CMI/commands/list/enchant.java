@@ -14,9 +14,9 @@ public class enchant implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eEnchant items", args = "(playerName) [enchant] [level] (-o) (-onlyvalid) (-keeponlyvalid) (-inform) (-s) (-i:[itemName(:data)]) (clear)", tab = {
-        "playername%%limitedEnchant%%clear", "limitedEnchant%%maxenchantlevel", "maxenchantlevel" }, explanation = { "-o will take item from offhand" }, regVar = { 0, 1, 2, 3, 4, 5, 6, 7 }, consoleVar = {
-            2, 3, 4, 5, 6, 7 }, others = true)
+    @CAnnotation(info = "Enchant items", args = "(playerName) [enchant] [level] (-o) (-onlyvalid) (-keeponlyvalid) (-inform) (-s) (-i:[itemName(:data)]) (clear)", tab = {
+            "playername%%limitedEnchant%%clear", "limitedEnchant%%maxenchantlevel",
+            "maxenchantlevel" }, explanation = { "-o will take item from offhand" }, regVar = { 0, 1, 2, 3, 4, 5, 6, 7 }, consoleVar = { 2, 3, 4, 5, 6, 7 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

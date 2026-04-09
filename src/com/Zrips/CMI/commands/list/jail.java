@@ -14,8 +14,8 @@ public class jail implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eJail player for time period", args = "[playerName] (time) (jailName) (cellId) (-s) (r:jail_reason)", tab = { "playername", "5m%%", "jail", "cellId",
-        "r:" }, explanation = {}, regVar = { -100 }, consoleVar = { -100 }, modules = "jail", others = false)
+    @CAnnotation(info = "Jail player for time period", args = "[playerName] (time) (jailName) (cellId) (-s) (r:jail_reason)", tab = { "playername", "5m%%", "jail", "cellId",
+            "r:" }, explanation = {}, regVar = { -100 }, consoleVar = { -100 }, modules = "jail", others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

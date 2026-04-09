@@ -14,8 +14,8 @@ public class vanish implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 120, info = "&eVanish player", args = "(playerName/list) (on/off) (-s)", tab = { "playername%%list", "on%%off", "-s" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = {
-        1, 2, 3 }, customAlias = { "v" }, modules = { "vanish" }, others = true)
+    @CAnnotation(info = "Vanish player", args = "(playerName/list) (on/off) (-s)", tab = { "playername%%list", "on%%off", "-s" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
+            3 }, customAlias = { "v" }, modules = { "vanish" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

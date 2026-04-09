@@ -14,7 +14,7 @@ public class realname implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 240, info = "&eCheck players real name", args = "(playerName/nickName)", tab = { "nickNames" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 1 }, others = false)
+    @CAnnotation(info = "Check players real name", args = "(playerName/nickName)", tab = { "nickNames" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 1 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -5,8 +5,8 @@ import org.bukkit.Material;
 import net.Zrips.CMILib.Items.CMIMaterial;
 
 public class itemInfo {
-    private Material mat;
-    private int chance;
+    private Material mat = null;
+    private int chance = 0;
 
     @Deprecated
     public itemInfo(CMIMaterial mat) {

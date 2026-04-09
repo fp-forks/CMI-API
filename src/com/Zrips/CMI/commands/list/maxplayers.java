@@ -14,8 +14,8 @@ public class maxplayers implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 110, info = "&eChanges maximum amount of players who can connect to server", args = "[amount]", tab = { "maxplayers" }, explanation = { "&ePermissions: ",
-        "&6cmi.fullserver.bypass &e- join full server" }, regVar = { 1 }, consoleVar = { 1 }, alias = true, others = false)
+    @CAnnotation(info = "Changes maximum amount of players who can connect to server", args = "[amount]", tab = { "maxplayers" }, explanation = { "Permissions: ",
+            "cmi.fullserver.bypass - join full server" }, regVar = { 0, 1 }, consoleVar = { 1 }, alias = true, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -14,7 +14,7 @@ public class grindstone implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 121, info = "&eOpen grindstone", args = "(playerName) (-s)", tab = { "playername", "%%-s" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(priority = 121, info = "Open grindstone", args = "(playerName) (-s)", tab = { "playername", "%%-s" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

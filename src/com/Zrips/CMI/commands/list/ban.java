@@ -14,8 +14,8 @@ public class ban implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eBan player", args = "[playerName] (reason) (-s)", tab = { "playername" }, explanation = { "cmi.command.ban.bypass - to bypass ban" }, regVar = {
-        -100 }, consoleVar = { -100 }, others = false)
+    @CAnnotation(priority = 48, info = "Ban player", args = "[playerName] (reason) (-s)", tab = { "playername" }, explanation = { "cmi.command.ban.bypass - to bypass ban" }, regVar = {
+            -100 }, consoleVar = { -100 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

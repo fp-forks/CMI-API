@@ -14,7 +14,7 @@ public class solve implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 110, info = "&eSolve equation", args = "[equation]", explanation = {}, regVar = { 1 }, consoleVar = { 1 }, others = false)
+    @CAnnotation(info = "Solve equation", args = "[equation]", explanation = {}, regVar = { 1 }, consoleVar = { 1 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

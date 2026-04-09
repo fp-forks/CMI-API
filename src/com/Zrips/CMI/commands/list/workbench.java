@@ -14,8 +14,8 @@ public class workbench implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 121, info = "&eOpen workbench", args = "(playerName) (-s)", tab = { "playername", "-s%%" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, customAlias = { "wb",
-        "craft" }, others = true)
+    @CAnnotation(info = "Open workbench", args = "(playerName) (-s)", tab = { "playername", "-s%%" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, customAlias = { "wb",
+            "craft" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

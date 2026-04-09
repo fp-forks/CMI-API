@@ -14,8 +14,8 @@ public class server implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eConnect to bungeecord server", args = "[serverName] (playerName) (-f)", multiTab = { "[bungeeserver] [playername] -f" }, explanation = {}, regVar = { 1, 2,
-        3 }, consoleVar = { 2, 3 }, others = true)
+    @CAnnotation(priority = 48, info = "Connect to bungeecord server", args = "[serverName] (playerName) (-f)", multiTab = { "[bungeeserver] [playername] -f" }, explanation = {}, regVar = { 1, 2,
+            3 }, consoleVar = { 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

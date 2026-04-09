@@ -14,8 +14,8 @@ public class smite implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eStrike ground or player with lightning", args = "(playerName/location) (-safe) (-s)", tab = { "playername", "-safe", "-s" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
-        3 }, customAlias = { "lightning", "thor" }, others = true)
+    @CAnnotation(info = "Strike ground or player with lightning", args = "(playerName/location) (-safe) (-s)", tab = { "playername", "-safe", "-s" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
+            3 }, customAlias = { "lightning", "thor" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -15,7 +15,7 @@ public class setmotd implements Cmd {
 
     @Override
     @CAnnotation(priority = 125, info = "Set server motd", args = "[newMotd] (-s)", tab = { "motd" }, explanation = { "use \\n to make second line",
-        "use _ to create space, if you need more than one use _ followed with space" }, regVar = { -100 }, consoleVar = { -100 }, others = false)
+            "use _ to create space, if you need more than one use _ followed with space" }, regVar = {}, consoleVar = { -100 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

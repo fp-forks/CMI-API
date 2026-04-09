@@ -9,7 +9,7 @@ import com.Zrips.CMI.events.CMIWarpCreateEvent;
 import com.Zrips.CMI.events.CMIWarpRemoveEvent;
 
 public class BlueMapListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public BlueMapListener(CMI plugin) {
     }

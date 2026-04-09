@@ -14,8 +14,7 @@ public class invremoveall implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 115, info = "&eRemoves all saved inventories", args = "[confirmed]", tab = { "%%confirmed" }, explanation = {}, regVar = { 666 }, consoleVar = {
-        1 }, alias = true, others = false)
+    @CAnnotation(info = "Removes all saved inventories", args = "[confirmed]", tab = { "%%confirmed" }, regVar = { 666 }, consoleVar = { 1 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -7,16 +7,13 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Containers.FixChunkInfo;
 
 public class ChunkFix {
-    public Pattern regionPattern;
-    public ConcurrentHashMap<String, FixChunkInfo> ChunkFix;
-    private CMI plugin;
+    public Pattern regionPattern = null;
+    public ConcurrentHashMap<String, FixChunkInfo> ChunkFix = null;
+    private CMI plugin = null;
 
     public ChunkFix(CMI plugin) {
     }
 
     public void loadRegionFile(FixChunkInfo scan) {
-    }
-
-    private void loadChunk(FixChunkInfo scan) {
     }
 }

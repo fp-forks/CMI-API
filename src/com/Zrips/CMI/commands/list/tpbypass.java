@@ -14,8 +14,7 @@ public class tpbypass implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 40, info = "&eBypass teleportation to unsafe location", args = "(playername)", tab = { "playername" }, explanation = {}, regVar = { 0, 1 }, consoleVar = {
-        1 }, alias = true, others = true)
+    @CAnnotation(info = "Bypass teleportation to unsafe location", args = "(playername)", tab = { "playername" }, regVar = { 0, 1 }, consoleVar = { 1 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

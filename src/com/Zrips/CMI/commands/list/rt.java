@@ -13,15 +13,15 @@ import com.Zrips.CMI.commands.Cmd;
 import net.Zrips.CMILib.FileHandler.ConfigReader;
 
 public class rt implements Cmd {
-    private static ConcurrentHashMap<UUID, Map<String, Long>> map;
+    private static ConcurrentHashMap<UUID, Map<String, Long>> map = null;
 
     @Override
     public void getExtra(ConfigReader c) {
     }
 
     @Override
-    @CAnnotation(priority = 40, info = "&eTeleports to random location", args = "(playerName) (worldName) (-s)", tab = { "playername", "worlds", "-s" }, explanation = {}, regVar = { 0, 1, 2, 3,
-        4 }, consoleVar = { 1, 2, 3, 5 }, others = true, customAlias = { "rtp" })
+    @CAnnotation(priority = 40, info = "Teleports to random location", args = "(playerName) (worldName) (-s)", tab = { "playername", "worlds", "-s" }, explanation = {}, regVar = { 0, 1, 2, 3,
+            4 }, consoleVar = { 1, 2, 3, 5 }, others = true, customAlias = { "rtp" })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

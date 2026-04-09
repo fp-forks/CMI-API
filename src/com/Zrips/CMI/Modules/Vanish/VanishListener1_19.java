@@ -8,7 +8,7 @@ import org.bukkit.event.block.BlockReceiveGameEvent;
 import com.Zrips.CMI.CMI;
 
 public class VanishListener1_19 implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public VanishListener1_19(CMI plugin) {
     }

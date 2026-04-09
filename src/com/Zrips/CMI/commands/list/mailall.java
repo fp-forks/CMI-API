@@ -14,8 +14,8 @@ public class mailall implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 180, info = "&eCheck or send mail to all players", args = "[send/clear/remove] [message]", tab = { "send%%clear%%remove" }, explanation = {}, regVar = { -666 }, consoleVar = {
-        -100 }, others = false)
+    @CAnnotation(info = "Check or send mail to all players", args = "[send/clear/remove] [message]", tab = { "send%%clear%%remove" }, explanation = {}, regVar = { -666 }, consoleVar = {
+            -100 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

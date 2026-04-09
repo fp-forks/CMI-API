@@ -3,10 +3,10 @@ package com.Zrips.CMI.Containers;
 import org.bukkit.command.CommandSender;
 
 public class CMIMail {
-    private static long mailExpiresIn;
-    private static long mailToAllxpiresIn;
-    private static int maxMail;
-    private static String consoleMailSender;
+    private static long mailExpiresIn = 0;
+    private static long mailToAllxpiresIn = 0;
+    private static int maxMail = 0;
+    private static String consoleMailSender = null;
 
     public static void loadConfig() {
     }

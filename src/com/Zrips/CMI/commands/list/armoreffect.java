@@ -14,8 +14,8 @@ public class armoreffect implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eModifies armor effects", args = "[potionEffect]", multiTab = { "[potioneffect]" }, explanation = {}, regVar = { -666 }, consoleVar = { 666 }, alias = true, modules = {
-        "armorEffects" }, others = true)
+    @CAnnotation(info = "Modifies armor effects", args = "[potionEffect]", multiTab = { "[potioneffect]" }, explanation = {}, regVar = { -666 }, consoleVar = { 666 }, alias = true, modules = {
+            "armorEffects" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

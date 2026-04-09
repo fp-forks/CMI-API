@@ -4,7 +4,7 @@ import com.Zrips.CMI.Containers.CMIUser;
 import com.Zrips.CMI.Modules.Homes.CmiHome;
 
 public class CMIUserHomeCreateEvent extends CMIUserCancellableEvent {
-    private CmiHome home;
+    private CmiHome home = null;
 
     public CMIUserHomeCreateEvent(CMIUser user, CmiHome home) {
         super(user);

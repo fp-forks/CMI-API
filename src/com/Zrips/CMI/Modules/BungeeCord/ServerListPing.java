@@ -9,9 +9,9 @@ import java.util.List;
 import com.google.gson.Gson;
 
 public class ServerListPing {
-    private InetSocketAddress host;
-    private int timeout;
-    private Gson gson;
+    private InetSocketAddress host = null;
+    private int timeout = 0;
+    private Gson gson = null;
 
     public ServerListPing(String ip, int port) {
     }
@@ -42,7 +42,7 @@ public class ServerListPing {
     }
 
     public class Description {
-        private String text;
+        private String text = null;
 
         public String getText() {
             return null;
@@ -50,7 +50,7 @@ public class ServerListPing {
     }
 
     public class Description116 {
-        private Gson text;
+        private Gson text = null;
 
         public Gson getText() {
             return null;
@@ -58,11 +58,11 @@ public class ServerListPing {
     }
 
     public class StatusResponse {
-        private String description;
-        private Players players;
-        private Version version;
-        private String favicon;
-        private int time;
+        private String description = null;
+        private Players players = null;
+        private Version version = null;
+        private String favicon = null;
+        private int time = 0;
 
         public String getDescription() {
             return null;
@@ -101,11 +101,11 @@ public class ServerListPing {
     }
 
     public class StatusResponse19 {
-        private Description description;
-        private Players players;
-        private Version version;
-        private String favicon;
-        private int time;
+        private Description description = null;
+        private Players players = null;
+        private Version version = null;
+        private String favicon = null;
+        private int time = 0;
 
         public Description getDescription() {
             return null;
@@ -132,11 +132,11 @@ public class ServerListPing {
     }
 
     public class StatusResponse116 {
-        private Description116 description;
-        private Players players;
-        private Version version;
-        private String favicon;
-        private int time;
+        private Description116 description = null;
+        private Players players = null;
+        private Version version = null;
+        private String favicon = null;
+        private int time = 0;
 
         public Description116 getDescription() {
             return null;
@@ -163,9 +163,9 @@ public class ServerListPing {
     }
 
     public class Players {
-        private int max;
-        private int online;
-        private List<Player> sample;
+        private int max = 0;
+        private int online = 0;
+        private List<Player> sample = null;
 
         public int getMax() {
             return 0;
@@ -181,8 +181,8 @@ public class ServerListPing {
     }
 
     public class Player {
-        private String name;
-        private String id;
+        private String name = null;
+        private String id = null;
 
         public String getName() {
             return null;
@@ -194,8 +194,8 @@ public class ServerListPing {
     }
 
     public class Version {
-        private String name;
-        private String protocol;
+        private String name = null;
+        private String protocol = null;
 
         public String getName() {
             return null;

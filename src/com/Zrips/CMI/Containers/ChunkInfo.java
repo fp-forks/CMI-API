@@ -3,9 +3,9 @@ package com.Zrips.CMI.Containers;
 import org.bukkit.World;
 
 public class ChunkInfo {
-    private int x;
-    private int z;
-    private World w;
+    private int x = 0;
+    private int z = 0;
+    private World w = null;
 
     public ChunkInfo(int x, int z) {
     }

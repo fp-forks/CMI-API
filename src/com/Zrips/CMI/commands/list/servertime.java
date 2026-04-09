@@ -14,7 +14,7 @@ public class servertime implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 257, info = "&eShow server time", args = "", tab = {}, explanation = {}, regVar = { 0 }, consoleVar = { 0 }, others = false)
+    @CAnnotation(info = "Show server time", args = "", regVar = { 0 }, consoleVar = { 0 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

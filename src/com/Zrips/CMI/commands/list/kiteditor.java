@@ -14,9 +14,9 @@ public class kiteditor implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eKit editor.", tab = { "seticon%%kitnames", "kitnames" }, explanation = { "&ePermissions:", "&6cmi.kit.[kitName] &e- allows to use particular kit",
-        "&6cmi.kit.bypass.money &e- bypass money requirement", "&6cmi.kit.bypass.exp &e- bypass exp requirement", "&6/cmi kiteditor &e- shows kit list" }, regVar = { -666 }, consoleVar = {
-            666 }, others = false, modules = { "kits" })
+    @CAnnotation(info = "Kit editor", tab = { "seticon%%kitnames", "kitnames" }, explanation = { "Permissions:", "cmi.kit.[kitName] - allows to use particular kit",
+            "cmi.kit.bypass.money - bypass money requirement", "cmi.kit.bypass.exp - bypass exp requirement",
+            "/cmi kiteditor - shows kit list" }, regVar = { -666 }, consoleVar = { 666 }, others = false, modules = { "kits" })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

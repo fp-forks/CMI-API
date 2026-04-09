@@ -3,9 +3,9 @@ package com.Zrips.CMI.Modules.Search;
 public enum CMIWorldSearchPlaceType {
     ContainerHolder, Unknown;
 
-    private String place;
-    private String pref;
-    private String cmd;
+    private String place = null;
+    private String pref = null;
+    private String cmd = null;
 
     private CMIWorldSearchPlaceType() {
     }

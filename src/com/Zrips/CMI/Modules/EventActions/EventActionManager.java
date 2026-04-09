@@ -1,6 +1,5 @@
 package com.Zrips.CMI.Modules.EventActions;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.bukkit.entity.Player;
@@ -8,8 +7,8 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.CMI;
 
 public class EventActionManager {
-    private CMI plugin;
-    private String fileName;
+    private CMI plugin = null;
+    private String fileName = null;
 
     public EventActionManager(CMI plugin) {
     }
@@ -33,11 +32,32 @@ public class EventActionManager {
     }
 
     public enum eventAction {
-        firstJoinServer, joinServer, quitServer, playerDeath(true), playerKillPlayer(true), playerRespawn, playerTeleport, bedLeave, bedEnter, playerWorldChange, playerPreWorldChange, playerGameModeChange,
-        playerKick, playerBan, playerLevelChange, voidFall, elytraStartGlide, advancementDone, elytraEndGlide, sneakingSwapHandItems, swapHandItems, pvpstart, pvpend;
+        firstJoinServer,
+        joinServer,
+        quitServer,
+        playerDeath(true),
+        playerKillPlayer(true),
+        playerRespawn,
+        playerTeleport,
+        bedLeave,
+        bedEnter,
+        playerWorldChange,
+        playerPreWorldChange,
+        playerGameModeChange,
+        playerKick,
+        playerBan,
+        playerLevelChange,
+        voidFall,
+        elytraStartGlide,
+        advancementDone,
+        elytraEndGlide,
+        sneakingSwapHandItems,
+        swapHandItems,
+        pvpstart,
+        pvpend;
 
-        private List<String> commands = new ArrayList<>();
-        private List<String> sourceCommands = new ArrayList<>();
+        private List<String> commands = null;
+        private List<String> sourceCommands = null;
         private boolean secondary = false;
         private boolean enabled = false;
         private boolean disableEvent = false;

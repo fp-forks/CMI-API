@@ -14,8 +14,8 @@ public class tempipban implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eTemp ban ip", args = "[ip/playerName] [time] (reason) (-s)", tab = { "playername" }, explanation = { "cmi.command.banip.bypass - to bypass ban" }, regVar = {
-        -100 }, consoleVar = { -100 }, others = false)
+    @CAnnotation(priority = 48, info = "Temp ban ip", args = "[ip/playerName] [time] (reason) (-s)", tab = { "playername" }, explanation = { "cmi.command.banip.bypass - to bypass ban" }, regVar = {
+            -100 }, consoleVar = { -100 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

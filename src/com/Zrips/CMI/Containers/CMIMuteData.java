@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class CMIMuteData {
-    private long mutedUntil;
-    private long shadowMutedUntil;
-    private String mutedReason;
-    private static HashMap<UUID, CMIMuteData> muted;
+    private long mutedUntil = 0;
+    private long shadowMutedUntil = 0;
+    private String mutedReason = null;
+    private static HashMap<UUID, CMIMuteData> muted = null;
 
     public long getMutedUntil() {
         return 0;

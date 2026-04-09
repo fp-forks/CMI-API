@@ -4,7 +4,7 @@ import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
 
 public class CMIPlayerOpenArmorStandEditorEvent extends CMIPlayerCancellableEvent {
-    private ArmorStand armorStand;
+    private ArmorStand armorStand = null;
 
     public CMIPlayerOpenArmorStandEditorEvent(Player player, ArmorStand armorStand) {
         super(player);

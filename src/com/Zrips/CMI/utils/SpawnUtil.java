@@ -1,11 +1,11 @@
 package com.Zrips.CMI.utils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
 import org.bukkit.World;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
 import net.Zrips.CMILib.Container.CMILocation;
@@ -13,9 +13,9 @@ import net.Zrips.CMILib.Container.CMILocation;
 public class SpawnUtil {
     public static final String defaultG = null;
     public static final String defaultGW = null;
-    static HashMap<String, SpawnPoint> map;
-    private static Set<String> ignoredSpawnWorlds;
-    private static boolean SpawnSpawnOnJoin;
+    static HashMap<String, SpawnPoint> map = null;
+    private static Set<String> ignoredSpawnWorlds = null;
+    private static boolean SpawnSpawnOnJoin = false;
 
     public SpawnUtil() {
     }
@@ -43,9 +43,6 @@ public class SpawnUtil {
     public static void save() {
     }
 
-    private static void setToConfig(YamlConfiguration conf, String path, SpawnPoint point) {
-    }
-
     public static void loadConfig() {
     }
 
@@ -62,17 +59,19 @@ public class SpawnUtil {
     }
 
     public static class SpawnPoint {
-        private String group;
-        private CMILocation location;
-        private boolean respawn;
-        private Integer rng;
-        private List<World> worlds;
-        private Set<String> worldNames;
+        private String group = null;
+        private CMILocation location = null;
+        private boolean respawn = false;
+        private Integer rng = null;
+        private List<World> worlds = null;
+        private Set<String> worldNames = null;
 
         public SpawnPoint(String group, CMILocation loc, boolean respawn) {
+            this(group, loc, respawn, null, new ArrayList<>());
         }
 
         public SpawnPoint(String group, CMILocation loc, boolean respawn, Integer rng) {
+            this(group, loc, respawn, rng, new ArrayList<>());
         }
 
         public SpawnPoint(String group, CMILocation loc, boolean respawn, Integer rng, List<World> worlds) {

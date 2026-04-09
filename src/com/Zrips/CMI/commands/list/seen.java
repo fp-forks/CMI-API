@@ -14,7 +14,7 @@ public class seen implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eCheck when player was last seen", args = "[playerName/uuid]", tab = { "playername" }, regVar = { 1 }, consoleVar = { 1 }, others = false)
+    @CAnnotation(info = "Check when player was last seen", args = "[playerName/uuid]", tab = { "playername" }, regVar = { 1 }, consoleVar = { 1 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

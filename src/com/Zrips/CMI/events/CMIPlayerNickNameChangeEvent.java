@@ -3,7 +3,7 @@ package com.Zrips.CMI.events;
 import com.Zrips.CMI.Containers.CMIUser;
 
 public class CMIPlayerNickNameChangeEvent extends CMIUserCancellableEvent {
-    private String nickname;
+    private String nickname = null;
 
     public CMIPlayerNickNameChangeEvent(CMIUser user, String nickname) {
         super(user);

@@ -5,21 +5,21 @@ import java.util.List;
 import com.Zrips.CMI.CMI;
 
 public class RepairManager {
-    private boolean repairCostsMoney;
-    private double baseCost;
-    private boolean checkDurability;
-    private double worthPercentage;
-    private double enchantWorthPercentage;
-    private boolean RSProtectNormalRepair;
-    private boolean RSProtectCommandRepair;
-    private boolean RSBypassWithPerm;
-    private boolean RSAddLore;
-    private boolean RSCancelEvent;
-    private boolean RSInformWithMessage;
-    private int RSDurability;
-    private boolean RepairConfirmation;
-    private List<Integer> BlockedCustomDataID;
-    private CMI plugin;
+    private boolean repairCostsMoney = false;
+    private double baseCost = 0.0;
+    private boolean checkDurability = false;
+    private double worthPercentage = 0.0;
+    private double enchantWorthPercentage = 0.0;
+    private boolean RSProtectNormalRepair = false;
+    private boolean RSProtectCommandRepair = false;
+    private boolean RSBypassWithPerm = false;
+    private boolean RSAddLore = false;
+    private boolean RSCancelEvent = false;
+    private boolean RSInformWithMessage = false;
+    private int RSDurability = 0;
+    private boolean RepairConfirmation = false;
+    private List<Integer> BlockedCustomDataID = null;
+    private CMI plugin = null;
 
     public RepairManager(CMI plugin) {
     }

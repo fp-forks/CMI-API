@@ -14,7 +14,7 @@ public class patrol implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&ePatrol", regVar = { 0 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Patrol", regVar = { 0 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -14,7 +14,7 @@ public class jump implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eJump to target block", regVar = { 0 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Jump to target block", regVar = { 0 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

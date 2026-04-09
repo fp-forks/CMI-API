@@ -14,8 +14,7 @@ public class haspermission implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 110, info = "&eCheck if player has particular permission", args = "(playerName) [permissionNode]", tab = { "playername" }, explanation = {}, regVar = { 1, 2 }, consoleVar = {
-        2 }, others = true)
+    @CAnnotation(info = "Check if player has particular permission", args = "(playerName) [permissionNode]", tab = { "playername" }, regVar = { 1, 2 }, consoleVar = { 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

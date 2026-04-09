@@ -7,15 +7,15 @@ import java.util.regex.Pattern;
 import net.Zrips.CMILib.Chat.ChatFilterBlockType;
 
 public class ChatFilterRule {
-    private String replaceWith;
-    private ChatFilterBlockType blockType;
-    private String ruleName;
-    private List<Pattern> pattern;
-    private String messageToStaff;
-    private List<String> commands;
-    private String group;
-    private boolean informConsole;
-    private boolean applyToPrivateMessages;
+    private String replaceWith = null;
+    private ChatFilterBlockType blockType = null;
+    private String ruleName = null;
+    private List<Pattern> pattern = null;
+    private String messageToStaff = null;
+    private List<String> commands = null;
+    private String group = null;
+    private boolean informConsole = false;
+    private boolean applyToPrivateMessages = false;
 
     public ChatFilterRule(String ruleName, String group, List<String> list, String replaceWith, ChatFilterBlockType blockType, String messageToStaff, List<String> commands) {
     }

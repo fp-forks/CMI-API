@@ -14,8 +14,8 @@ public class purge implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 300, info = "&eCleans player data from world folder by inactive days", args = "(stop)", tab = { "stop%%" }, explanation = {}, regVar = { 666 }, consoleVar = { 0,
-        1 }, others = false)
+    @CAnnotation(priority = 300, info = "Cleans player data from world folder by inactive days", args = "(stop)", tab = { "stop%%" }, explanation = {}, regVar = { 666 }, consoleVar = { 0,
+            1 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

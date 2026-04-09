@@ -3,9 +3,9 @@ package com.Zrips.CMI.Modules.SavedItems;
 import org.bukkit.inventory.ItemStack;
 
 public class SavedItem {
-    private ItemStack item;
-    private String name;
-    private String category;
+    private ItemStack item = null;
+    private String name = null;
+    private String category = null;
 
     public SavedItem(String name) {
     }

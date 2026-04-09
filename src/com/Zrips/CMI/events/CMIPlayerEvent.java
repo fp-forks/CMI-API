@@ -10,6 +10,7 @@ public class CMIPlayerEvent extends CMIEvent {
     }
 
     public CMIPlayerEvent(Player player) {
+        super();
     }
 
     public Player getPlayer() {

@@ -11,7 +11,7 @@ import com.Zrips.CMI.events.CMIAnvilItemRepairEvent;
 import com.Zrips.CMI.events.CMIArmorChangeEvent;
 
 public class RepairListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public RepairListener(CMI plugin) {
     }

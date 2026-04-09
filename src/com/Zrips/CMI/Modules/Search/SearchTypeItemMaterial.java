@@ -3,10 +3,10 @@ package com.Zrips.CMI.Modules.Search;
 import org.bukkit.Material;
 
 public class SearchTypeItemMaterial extends SearchTypeItem {
-    Material material;
+    Material material = null;
 
     public SearchTypeItemMaterial(Material material) {
-        super(null);
+        this(null, material);
     }
 
     public SearchTypeItemMaterial(SearchTypeItem parent, Material material) {

@@ -3,8 +3,8 @@ package com.Zrips.CMI.Containers;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class CMISunMover {
-    private CMITask task;
-    private String moving;
+    private CMITask task = null;
+    private boolean moving = false;
 
     public CMITask getTimeMoverTask() {
         return null;
@@ -13,10 +13,10 @@ public class CMISunMover {
     public void setTimeMoverTask(CMITask task) {
     }
 
-    public String getMoving() {
-        return null;
+    public boolean getMoving() {
+        return false;
     }
 
-    public void setMoving(String moving) {
+    public void setMoving(boolean moving) {
     }
 }

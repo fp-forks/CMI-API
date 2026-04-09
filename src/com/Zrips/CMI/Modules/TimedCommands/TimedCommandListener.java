@@ -5,14 +5,14 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityTargetLivingEntityEvent;
 import org.bukkit.event.player.PlayerChangedWorldEvent;
-import org.bukkit.event.player.PlayerLoginEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 
 import com.Zrips.CMI.CMI;
 
 public class TimedCommandListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public TimedCommandListener(CMI plugin) {
     }
@@ -22,7 +22,7 @@ public class TimedCommandListener implements Listener {
     }
 
     @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
-    public void PlayerLoginEvent(PlayerLoginEvent event) {
+    public void PlayerLoginEvent(PlayerJoinEvent event) {
     }
 
     @EventHandler(priority = EventPriority.NORMAL)

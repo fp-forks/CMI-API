@@ -14,8 +14,7 @@ public class staffmsg implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eSends message to staff channel", args = "[message/toggle/on/off]", tab = { "toggle%%on%%off" }, explanation = {}, regVar = { -100 }, consoleVar = {
-        -100 }, ignoreHelpPage = true, others = false)
+    @CAnnotation(info = "Sends message to staff channel", args = "[message/toggle/on/off]", tab = { "toggle%%on%%off" }, regVar = { -100 }, consoleVar = { -100 }, ignoreHelpPage = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

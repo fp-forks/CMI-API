@@ -12,8 +12,8 @@ import org.bukkit.metadata.MetadataValue;
 import org.bukkit.plugin.Plugin;
 
 public class CMITrialSpawner {
-    private Block block;
-    private TrialSpawner spawner;
+    private Block block = null;
+    private TrialSpawner spawner = null;
 
     public CMITrialSpawner(Block block) {
     }

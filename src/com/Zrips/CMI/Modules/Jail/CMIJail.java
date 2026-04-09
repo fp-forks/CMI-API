@@ -9,11 +9,11 @@ import com.Zrips.CMI.Modules.Portals.CuboidArea;
 import net.Zrips.CMILib.Container.CMILocation;
 
 public class CMIJail {
-    private String name;
-    private CuboidArea area;
-    private CMILocation safeLoc;
-    private boolean preventLeave;
-    private HashMap<Integer, CMIJailCell> cells;
+    private String name = null;
+    private CuboidArea area = null;
+    private CMILocation safeLoc = null;
+    private boolean preventLeave = false;
+    private HashMap<Integer, CMIJailCell> cells = null;
 
     public CMIJail() {
     }

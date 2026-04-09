@@ -8,12 +8,12 @@ import org.bukkit.entity.Entity;
 import net.Zrips.CMILib.Items.CMIItemStack;
 
 class CMIKillerInfo {
-    private damageInformation damage;
-    private Entity killer;
-    private Block killerBlock;
-    private CMIDeathType type;
-    private CMIItemStack killerItem;
-    private List<CMIDeathType> path;
+    private damageInformation damage = null;
+    private Entity killer = null;
+    private Block killerBlock = null;
+    private CMIDeathType type = null;
+    private CMIItemStack killerItem = null;
+    private List<CMIDeathType> path = null;
 
     public CMIKillerInfo(damageInformation lastDamage) {
     }

@@ -11,15 +11,15 @@ import org.bukkit.entity.Player;
 import net.Zrips.CMILib.Container.CMILocation;
 
 public class CMIInteractiveCommand {
-    private String name;
-    private boolean publicIc;
-    private boolean signRequiresPerm;
-    private boolean cancelInteraction;
-    private Set<CMILocation> loc;
-    private HashMap<UUID, CMINPC> uuid;
-    private Set<CMINPC> citizensCache;
-    private List<String> commands;
-    private List<String> signLines;
+    private String name = null;
+    private boolean publicIc = false;
+    private boolean signRequiresPerm = false;
+    private boolean cancelInteraction = false;
+    private Set<CMILocation> loc = null;
+    private HashMap<UUID, CMINPC> uuid = null;
+    private Set<CMINPC> citizensCache = null;
+    private List<String> commands = null;
+    private List<String> signLines = null;
 
     public CMIInteractiveCommand(String name) {
     }

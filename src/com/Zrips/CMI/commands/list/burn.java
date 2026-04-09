@@ -14,7 +14,7 @@ public class burn implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eBurn a player", args = "(playerName) (time) (-s)", tab = { "playername" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2, 3 }, others = true)
+    @CAnnotation(info = "Burn a player", args = "(playerName) (time) (-s)", tab = { "playername" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

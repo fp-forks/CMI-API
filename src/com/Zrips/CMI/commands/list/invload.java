@@ -14,7 +14,8 @@ public class invload implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eLoad saved inventory", args = "(sourceName) (targetName) [id/last]", regVar = { 1, 2, 3 }, consoleVar = { 2, 3 }, alias = true, others = true)
+    @CAnnotation(info = "Load saved inventory", args = "(sourceName) (targetName) [id/last]", regVar = { 1, 2, 3 }, consoleVar = { 2, 3 }, alias = true, others = true, multiTab = {
+            "[playerName],!last,1 [playerName],!last,1 !last,1" })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

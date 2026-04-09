@@ -12,10 +12,10 @@ import com.Zrips.CMI.CMI;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class ArmorEffectManager {
-    private CMI plugin;
+    private CMI plugin = null;
     public static final String NBTName = null;
-    private Set<UUID> players;
-    private CMITask saveId;
+    private Set<UUID> players = null;
+    private CMITask saveId = null;
 
     public ArmorEffectManager(CMI plugin) {
     }

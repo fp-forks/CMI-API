@@ -6,10 +6,10 @@ import java.util.UUID;
 import org.bukkit.ChatColor;
 
 public class CMINamePlate {
-    private static HashMap<UUID, CMINamePlate> namePlates;
-    private String namePlatePrefix;
-    private String namePlateSuffix;
-    private ChatColor namePlateNameColor;
+    private static HashMap<UUID, CMINamePlate> namePlates = null;
+    private String namePlatePrefix = null;
+    private String namePlateSuffix = null;
+    private ChatColor namePlateNameColor = null;
 
     public String getNamePlatePrefix() {
         return null;

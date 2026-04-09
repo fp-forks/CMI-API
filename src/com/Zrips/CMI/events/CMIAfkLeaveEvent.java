@@ -5,9 +5,9 @@ import java.util.List;
 import org.bukkit.entity.Player;
 
 public class CMIAfkLeaveEvent extends CMIPlayerEvent {
-    private List<String> leaveTrigerCommands;
-    private long time;
-    private String reason;
+    private List<String> leaveTrigerCommands = null;
+    private long time = 0;
+    private String reason = null;
 
     public CMIAfkLeaveEvent(Player player) {
         super(player);

@@ -2,7 +2,6 @@ package com.Zrips.CMI.Modules.Particl;
 
 import java.util.List;
 
-import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
@@ -10,51 +9,42 @@ import net.Zrips.CMILib.Effects.CMIEffect;
 import net.Zrips.CMILib.Effects.CMIEffectManager.CMIParticle;
 
 public class CMIPECircle extends CMIPEAnimation {
-    private double MaxMoveDistance;
-    int lastPos;
-    private boolean circling;
-    private int times;
-    private Vector move;
-    private Double moveMulty;
-    private double radiusChange;
-    private double radius;
-    private double maxRadius;
-    private boolean followPitch;
-    private boolean followYaw;
-    private double pitch;
-    private double pitchAdjust;
-    private double yaw;
-    private double yawAdjust;
-    private boolean raindbowColorStatic;
-    private boolean raindbowColor;
-    private boolean raindbowColorFromStart;
-    private short startingAngle;
+    private double MaxMoveDistance = 0.0;
+    int lastPos = 0;
+    private boolean circling = false;
+    private int times = 0;
+    private Vector move = null;
+    private Double moveMulty = null;
+    private double radiusChange = 0.0;
+    private double radius = 0.0;
+    private double maxRadius = 0.0;
+    private boolean followPitch = false;
+    private boolean followYaw = false;
+    private double pitch = 0.0;
+    private double pitchAdjust = 0.0;
+    private double yaw = 0.0;
+    private double yawAdjust = 0.0;
+    private boolean raindbowColorStatic = false;
+    private boolean raindbowColor = false;
+    private boolean raindbowColorFromStart = false;
+    private short startingAngle = 0;
 
     public CMIPECircle() {
+        super();
     }
 
     public CMIPECircle(CMIEffect effect) {
+        super();
     }
 
     @Deprecated
     public CMIPECircle(CMIParticle effect) {
+        super();
     }
 
     @Override
     public boolean render(List<Player> players) {
         return false;
-    }
-
-    private List<Location> getLocations(Location location, double radius, double yaw, double pitch) {
-        return null;
-    }
-
-    private static Vector rotateX(Vector v, double a) {
-        return null;
-    }
-
-    private static Vector rotateY(Vector v, double a) {
-        return null;
     }
 
     public double xPosYaw(double time, double radius, double yaw) {

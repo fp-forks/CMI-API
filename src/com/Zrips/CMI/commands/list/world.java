@@ -14,8 +14,8 @@ public class world implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eTeleports to different world", args = "(normal/nether/end/1/2/3...) (playerName) (-s)", tab = { "normal%%nether%%end%%worlds" }, explanation = {
-        "Requires cmi.command.world.[worldName] in addition to base permission node" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2, 3 }, others = true)
+    @CAnnotation(info = "Teleports to different world", args = "(normal/nether/end/1/2/3...) (playerName) (-s)", tab = { "normal%%nether%%end%%worlds" }, explanation = {
+            "Requires cmi.command.world.[worldName] in addition to base permission node" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

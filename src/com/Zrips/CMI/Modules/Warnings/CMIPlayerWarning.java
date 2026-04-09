@@ -1,10 +1,10 @@
 package com.Zrips.CMI.Modules.Warnings;
 
 public class CMIPlayerWarning {
-    private String givenBy;
-    private long givenAt;
-    private String reason;
-    private CMIWarningCategory category;
+    private String givenBy = null;
+    private long givenAt = 0;
+    private String reason = null;
+    private CMIWarningCategory category = null;
 
     public CMIPlayerWarning() {
     }

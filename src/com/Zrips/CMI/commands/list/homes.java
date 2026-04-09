@@ -14,7 +14,7 @@ public class homes implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eA list of homes that you can click to teleport to.", args = "(playerName/near:[range])", tab = { "playername" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(info = "A list of homes that you can click to teleport to.", args = "(playerName/near:[range])", tab = { "playername" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

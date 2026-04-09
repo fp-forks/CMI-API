@@ -11,29 +11,22 @@ import com.Zrips.CMI.Containers.CommandAlias;
 import com.Zrips.CMI.Containers.CommandAliasType;
 
 public class AliasManager {
-    private CMI plugin;
-    public LinkedHashMap<String, CommandAlias> defaultAliases;
-    public LinkedHashMap<String, CommandAlias> customAliases;
-    public LinkedHashMap<String, CommandAlias> alternativeAliases;
-    public HashMap<String, CommandAlias> fromAliases;
-    public static String nonExactAliasSuffix;
+    private CMI plugin = null;
+    public LinkedHashMap<String, CommandAlias> defaultAliases = null;
+    public LinkedHashMap<String, CommandAlias> customAliases = null;
+    private Map<String, CommandAlias> allCached = null;
+    public HashMap<String, CommandAlias> fromAliases = null;
+    private volatile boolean dirtyCache = false;
+    public static String nonExactAliasSuffix = null;
     private static final int MAX_CACHE_SIZE = 0;
-    private static Map<String, CommandAlias> cache;
-    private static Map<String, List<CommandAlias>> cacheListed;
-    public static Pattern patern;
-    List<String> CommentList;
-    List<String> temp;
-    private String fileName;
+    private static Map<String, CommandAlias> cache = null;
+    private static Map<String, List<CommandAlias>> cacheListed = null;
+    public static Pattern patern = null;
+    List<String> CommentList = null;
+    List<String> temp = null;
+    private String fileName = null;
 
     public AliasManager(CMI plugin) {
-    }
-
-    private static CommandAlias getFirst(String msg, CommandAlias compare, String key) {
-        return null;
-    }
-
-    private static CommandAlias getSecond(String msg, CommandAlias secondAlias, CommandAlias firstAlias, CommandAlias compare, String key) {
-        return null;
     }
 
     public void clearCache() {
@@ -49,9 +42,6 @@ public class AliasManager {
 
     public List<CommandAlias> getAliasStartingWith(String msg, CommandAliasType type) {
         return null;
-    }
-
-    private void register(CommandAlias ca) {
     }
 
     public void addDefault(CommandAlias ca) {
@@ -74,15 +64,11 @@ public class AliasManager {
         return null;
     }
 
-    public HashMap<String, CommandAlias> getAll() {
+    public Map<String, CommandAlias> getAll() {
         return null;
     }
 
     public HashMap<String, CommandAlias> getFrom() {
-        return null;
-    }
-
-    private List<String> convertCustom() {
         return null;
     }
 

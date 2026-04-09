@@ -14,7 +14,7 @@ public class unmutechat implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 240, info = "&eUnmute public chat", args = "(-s)", tab = {}, regVar = { 0, 1 }, consoleVar = { 0, 1 }, others = false)
+    @CAnnotation(info = "Unmute public chat", args = "(-s)", tab = {}, regVar = { 0, 1 }, consoleVar = { 0, 1 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

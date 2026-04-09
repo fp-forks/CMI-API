@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.TreeMap;
@@ -32,14 +31,18 @@ import com.Zrips.CMI.Modules.Teleportations.TeleportManager.TpAction;
 import net.Zrips.CMILib.Colors.CMIChatColor;
 
 public class Util {
-    public boolean Debug;
-    private HashMap<UUID, String> worldCache;
-    static Random random;
-    private CMI plugin;
-    Integer range;
-    private static boolean updatedFile;
+    public boolean Debug = false;
+    private HashMap<UUID, String> worldCache = null;
+    static Random random = null;
+    private CMI plugin = null;
+    Integer range = null;
+    private static boolean updatedFile = false;
 
     public Util(CMI plugin) {
+    }
+
+    public static boolean isOnGround(Player player) {
+        return false;
     }
 
     public static Player getAttacker(EntityDamageEvent event) {
@@ -66,6 +69,7 @@ public class Util {
         return null;
     }
 
+    @Deprecated
     public boolean isNPC(Player player) {
         return false;
     }
@@ -117,6 +121,14 @@ public class Util {
     }
 
     public double getDistance(Location loc1, Location loc2) {
+        return 0.0;
+    }
+
+    public double getDistance(Vector vector1, Vector vector2) {
+        return 0.0;
+    }
+
+    public double getDistanceSquared(Vector vector1, Vector vector2) {
         return 0.0;
     }
 
@@ -241,6 +253,7 @@ public class Util {
         return null;
     }
 
+    @Deprecated
     public World getWorld(String name) {
         return null;
     }
@@ -292,7 +305,7 @@ public class Util {
         return false;
     }
 
-    @SuppressWarnings("deprecation")
+    @Deprecated
     public ItemStack setEntityType(ItemStack is, EntityType type) {
         return null;
     }
@@ -301,14 +314,7 @@ public class Util {
         return false;
     }
 
-    private void showBlackListedItemList(Player player, HashMap<Material, Integer> items) {
-    }
-
     public HashMap<Material, Integer> getBlackListedItems(Player player) {
-        return null;
-    }
-
-    private HashMap<Material, Integer> getAllItemsFromInv(Inventory inv, HashMap<Material, Integer> t) {
         return null;
     }
 
@@ -353,10 +359,6 @@ public class Util {
     }
 
     public String getLineSplitter(String text) {
-        return null;
-    }
-
-    private static Map<String, Object> replaceInternalWithCustom(Map<String, Object> data) {
         return null;
     }
 

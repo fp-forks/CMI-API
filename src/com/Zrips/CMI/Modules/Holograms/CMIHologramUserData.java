@@ -1,33 +1,31 @@
 package com.Zrips.CMI.Modules.Holograms;
 
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
+import java.util.UUID;
+import java.util.function.Consumer;
 
-import org.bukkit.entity.Player;
+import org.jetbrains.annotations.Nullable;
 
-import com.Zrips.CMI.Modules.Future.CMIFutureBatcher;
-import com.Zrips.CMI.Modules.Holograms.Animations.CMIHologramFadeInAnimation;
-import com.Zrips.CMI.Modules.Packets.FakeInfo;
+import com.Zrips.CMI.Modules.Holograms.Animations.CMIHologramAnimationCycle;
+import com.Zrips.CMI.Modules.Holograms.Animations.CMIHologramAnimationType;
+import com.Zrips.CMI.Modules.Holograms.Animations.CMIHologramFadeAnimation;
 
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class CMIHologramUserData {
-    private int page;
-    private int hoveringLine;
-    private CMIHologramHoveringPosition hoveringLeftSide;
-    private boolean skipPageChange;
-    private long nextUpdate;
-    private boolean skipUpdate;
-    private boolean updateLocation;
-    private CMIHologramBatch batch;
-    private List<CMIDataWatcher> dataWatcher;
-    private FakeInfo fakeInfo;
-    private CMIFutureBatcher batcher;
-    private CMIHologram hoveringHologram;
-    private CMIHologramFadeInAnimation fadeInAnimation;
-    CMITask animationTasker;
+    private int page = 0;
+    private boolean skipPageChange = false;
+    private CMIHologramBatch batch = null;
+    private CMIHologramType displayType = null;
+    private Consumer<CMIHologramAnimationCycle> consumer = null;
+    private boolean hidden = false;
+    private UUID uuid = null;
+    private int tick = 0;
+    private int steps = 0;
+    private CMIHologramFadeAnimation fadeInAnimation = null;
+    private CMIHologramFadeAnimation fadeOutAnimation = null;
+    CMITask animationTasker = null;
 
-    public CMIHologramUserData() {
+    public CMIHologramUserData(UUID uuid) {
     }
 
     public int getPage() {
@@ -35,26 +33,6 @@ public class CMIHologramUserData {
     }
 
     public CMIHologramUserData setPage(int page) {
-        return null;
-    }
-
-    public int getHoveringLine() {
-        return 0;
-    }
-
-    public int getHoveringLineAndReset() {
-        return 0;
-    }
-
-    public CMIHologramUserData setHoveringLine(int line) {
-        return null;
-    }
-
-    public CMIHologramHoveringPosition getHoveringSide() {
-        return null;
-    }
-
-    public CMIHologramUserData setHoveringSide(CMIHologramHoveringPosition hoveringLeftSide) {
         return null;
     }
 
@@ -66,75 +44,97 @@ public class CMIHologramUserData {
         return null;
     }
 
-    public long getNextUpdate() {
-        return 0;
+    public boolean isFadeAnimationRunning() {
+        return false;
     }
 
-    public void setNextUpdate(long nextUpdate) {
+    public boolean isFadeAnimationActive() {
+        return false;
     }
 
+    public CMIHologramFadeAnimation getFadeInAnimation() {
+        return null;
+    }
+
+    public void setFadeInAnimation(CMIHologramFadeAnimation fadeInAnimation) {
+    }
+
+    public void resetFadeInAnimation() {
+    }
+
+    public CMIHologramFadeAnimation getFadeOutAnimation() {
+        return null;
+    }
+
+    public void setFadeOutAnimation(CMIHologramFadeAnimation fadeOutAnimation) {
+    }
+
+    public void initializeFadeInAnimation(double targetScale) {
+    }
+
+    public void initializeFadeOutAnimation(double targetScale) {
+    }
+
+    public double getAnimationCurrentValue(CMIHologramAnimationType type) {
+        return 0.0;
+    }
+
+    public void stopFadeAnimation() {
+    }
+
+    public void cancelFadeAnimation() {
+    }
+
+    public CMIHologramUserData startFadeAnimation(CMIHologram holo, UUID uuid, Consumer<CMIHologramAnimationCycle> consumer) {
+        return null;
+    }
+
+    @Nullable
     public CMIHologramBatch getHologramBatch() {
         return null;
     }
 
-    public void setHologramBatch(CMIHologramBatch batch) {
-    }
-
-    @Deprecated
-    public List<CMIDataWatcher> getDataWatcher() {
+    public CMIHologramUserData setHologramBatch(CMIHologramBatch batch) {
         return null;
     }
 
-    @Deprecated
-    public void setDataWatcher(List<CMIDataWatcher> dataWatcher) {
-    }
-
-    public FakeInfo getFakeInfo() {
+    @Nullable
+    public CMIHologramType getHologramType() {
         return null;
     }
 
-    public void setFakeInfo(FakeInfo fakeInfo) {
+    public CMIHologramUserData setHologramType(CMIHologramType displayType) {
+        return null;
     }
 
-    public boolean isSkipUpdate() {
+    public boolean isHidden() {
         return false;
     }
 
-    public void setSkipUpdate(boolean skipUpdate) {
-    }
-
-    public CMIFutureBatcher getBatcher() {
+    public CMIHologramUserData setHidden(boolean hidden) {
         return null;
     }
 
-    public CompletableFuture<?> addBatch(CompletableFuture<?> future) {
+    public int getTick() {
+        return 0;
+    }
+
+    public CMIHologramUserData setTick(int tick) {
         return null;
     }
 
-    public CMIHologramFadeInAnimation getFadeInAnimation() {
-        return null;
+    public int incrementTick() {
+        return 0;
     }
 
-    public void setFadeInAnimation(CMIHologramFadeInAnimation fadeInAnimation) {
+    public double getCurrentAutoRotateExtraAngle(double rate) {
+        return 0.0;
     }
 
-    public void initializeFadeInAnimation(double targetScale, double targetBackgroundOpacity, double targetTextOpacity) {
+    public int getSteps() {
+        return 0;
     }
 
-    public void startFadeInAnimation(CMIHologram holo, Player player) {
-    }
-
-    public boolean isUpdateLocation() {
-        return false;
-    }
-
-    public void setUpdateLocation(boolean updateLocation) {
-    }
-
-    public CMIHologram getHoveringHologram() {
-        return null;
-    }
-
-    public void setHoveringHologram(CMIHologram hoveringHologram) {
+    public void setSteps(int steps) {
     }
 }

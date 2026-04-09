@@ -9,7 +9,7 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.events.CMIAnvilItemRenameEvent;
 
 public class MoneyChequeListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public MoneyChequeListener(CMI plugin) {
     }

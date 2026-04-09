@@ -3,7 +3,6 @@ package com.Zrips.CMI.AllListeners;
 import java.util.HashMap;
 import java.util.UUID;
 
-import org.bukkit.entity.Entity;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -31,19 +30,11 @@ import org.bukkit.event.vehicle.VehicleEnterEvent;
 import com.Zrips.CMI.CMI;
 
 public class PlayerListeners implements Listener {
-    private CMI plugin;
-    HashMap<UUID, HungerCache> hungerMap;
-    public static HashMap<UUID, String[]> scMap;
+    private CMI plugin = null;
+    HashMap<UUID, HungerCache> hungerMap = null;
+    public static HashMap<UUID, String[]> scMap = null;
 
     public PlayerListeners(CMI plugin) {
-    }
-
-    private static boolean isMonster(Entity ent) {
-        return false;
-    }
-
-    private static boolean isAnimal(Entity ent) {
-        return false;
     }
 
     @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
@@ -179,8 +170,8 @@ public class PlayerListeners implements Listener {
     }
 
     class HungerCache {
-        private int hunger;
-        private float saturation;
+        private int hunger = 0;
+        private float saturation = 0.0f;
 
         public HungerCache(int hunger, float saturation) {
         }

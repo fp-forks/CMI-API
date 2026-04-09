@@ -9,7 +9,7 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.events.CMIArmorChangeEvent;
 
 public class AnimationColoredArmorListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public AnimationColoredArmorListener(CMI plugin) {
     }

@@ -14,8 +14,8 @@ public class invcheck implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 230, info = "&eOpen saved inventory in preview mode", args = "(playerName) [id] (-e) (last)", tab = { "playerName" }, explanation = {}, regVar = { 0, 1, 2,
-        3 }, consoleVar = {}, alias = true, others = true)
+    @CAnnotation(info = "Open saved inventory in preview mode", args = "(playerName) [id] (-e) (last)", tab = { "playerName" }, explanation = {}, regVar = { 0, 1, 2,
+            3 }, consoleVar = {}, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

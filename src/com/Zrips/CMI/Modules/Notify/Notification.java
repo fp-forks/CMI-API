@@ -3,8 +3,8 @@ package com.Zrips.CMI.Modules.Notify;
 import java.util.List;
 
 public class Notification {
-    private String notifyier;
-    private List<String> mesages;
+    private String notifyier = null;
+    private List<String> mesages = null;
 
     public Notification(String notifyier) {
     }

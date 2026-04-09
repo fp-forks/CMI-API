@@ -6,11 +6,11 @@ import com.Zrips.CMI.Modules.SpecializedCommands.SpecializedCommandManager.specC
 import com.Zrips.CMI.Modules.SpecializedCommands.SpecializedCommandManager.specialisedCommand;
 
 public class specCommand {
-    private String cmd;
-    private specialisedCommand action;
-    private List<specCommandAction> subactions;
-    private List<specCommandAction> list;
-    private List<specCommandAction> statements;
+    private String cmd = null;
+    private specialisedCommand action = null;
+    private List<specCommandAction> subactions = null;
+    private List<specCommandAction> list = null;
+    private List<specCommandAction> statements = null;
 
     public String getCmd() {
         return null;

@@ -14,7 +14,8 @@ public class sc implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 65, info = "&eStarts sign copy process", args = "(playerName)", tab = { "playername" }, regVar = { 0, 1 }, consoleVar = { 666 }, customAlias = "!scopy", others = false)
+    @CAnnotation(info = "Starts sign copy process", args = "(playerName) (oneside)", multiTab = { "[playername],!oneside !oneside" }, regVar = { 0, 1, 2 }, consoleVar = {
+            666 }, customAlias = "!scopy")
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -5,16 +5,13 @@ import java.util.UUID;
 import com.Zrips.CMI.Containers.CMIUser;
 
 public class PlayerCharge {
-    private int charges;
-    private long lastGive;
-    private SCharges SCharge;
-    private UUID uuid;
-    private long lastChecked;
+    private int charges = 0;
+    private long lastGive = 0;
+    private SCharges SCharge = null;
+    private UUID uuid = null;
+    private long lastChecked = 0;
 
     public PlayerCharge(CMIUser user, boolean update) {
-    }
-
-    private void updateSpawnerCharge() {
     }
 
     public void reset() {
@@ -48,9 +45,6 @@ public class PlayerCharge {
     }
 
     public void setCharges(int charges) {
-    }
-
-    private void updateChargeTimer() {
     }
 
     public String getLeftTime() {

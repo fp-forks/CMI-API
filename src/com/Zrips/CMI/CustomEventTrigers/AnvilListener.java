@@ -9,7 +9,7 @@ import org.bukkit.event.inventory.PrepareAnvilEvent;
 import com.Zrips.CMI.CMI;
 
 public class AnvilListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public AnvilListener(CMI plugin) {
     }

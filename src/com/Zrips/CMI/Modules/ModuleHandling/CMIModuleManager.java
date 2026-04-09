@@ -1,7 +1,7 @@
 package com.Zrips.CMI.Modules.ModuleHandling;
 
 public class CMIModuleManager {
-    private static String fileName;
+    private static String fileName = null;
 
     public static void load() {
     }

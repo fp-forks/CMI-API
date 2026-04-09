@@ -14,7 +14,7 @@ public class ipbanlist implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eBan ip list", regVar = { 0, 1 }, consoleVar = { 0, 1 }, others = false)
+    @CAnnotation(info = "Ban ip list", regVar = { 0, 1 }, consoleVar = { 0, 1 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -14,7 +14,7 @@ public class checkcommand implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSearch for possible commands by keyword", args = "(key word)", regVar = { 0, 1, 2 }, consoleVar = { 0, 1, 2 }, others = false)
+    @CAnnotation(info = "Search for possible commands by keyword", args = "(key word)", regVar = { 0, 1, 2 }, consoleVar = { 0, 1, 2 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

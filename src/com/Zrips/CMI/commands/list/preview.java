@@ -14,8 +14,8 @@ public class preview implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 285, info = "&eLoad chunk for given range", args = "[range] (innerrange)", tab = { "doubleViewRange", "ViewRange" }, explanation = {}, regVar = { 1, 2 }, consoleVar = {
-        666 }, alias = true, others = false)
+    @CAnnotation(priority = 285, info = "Load chunk for given range", args = "[range] (innerrange)", tab = { "doubleViewRange", "ViewRange" }, explanation = {}, regVar = { 1, 2 }, consoleVar = {
+            666 }, alias = true, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -8,9 +8,9 @@ import com.Zrips.CMI.Modules.Teleportations.CMITeleportType;
 import com.Zrips.CMI.Modules.Teleportations.SafeTeleport;
 
 public final class CMIAsyncPlayerTeleportEvent extends CMIPlayerCancellableEvent {
-    private CommandSender sender;
-    private SafeTeleport safe;
-    private CMITeleportType type;
+    private CommandSender sender = null;
+    private SafeTeleport safe = null;
+    private CMITeleportType type = null;
 
     public CMIAsyncPlayerTeleportEvent(CommandSender sender, Player player, SafeTeleport safe, CMITeleportType type) {
         super(player, true);

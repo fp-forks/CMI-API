@@ -15,8 +15,8 @@ public class se implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 65, info = "&eChanges sign text line.", args = "(SignLine) [Text]", tab = { "1%%2%%3%%4%%signLine", "signLine" }, explanation = { "Use \\n for additional line" }, regVar = {
-        -100 }, consoleVar = { 666 }, alias = true, others = false)
+    @CAnnotation(info = "Changes sign text line.", args = "(SignLine) [Text]", tab = { "1%%2%%3%%4%%signLine", "signLine" }, explanation = { "Use \\n for additional line" }, regVar = {
+            -100 }, consoleVar = { 666 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

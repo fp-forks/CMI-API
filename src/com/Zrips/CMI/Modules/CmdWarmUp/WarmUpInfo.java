@@ -8,18 +8,26 @@ import net.Zrips.CMILib.BossBar.BossBarInfo;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class WarmUpInfo {
-    private String cmd;
-    private Location loc;
-    private boolean move;
-    private CMITask task;
-    private CMIVisualEffect effectAnimation;
-    private int leftCount;
-    private BossBarInfo bar;
+    private String cmd = null;
+    private Location loc = null;
+    private CmdWarmUp warmup = null;
+    private CMITask task = null;
+    private CMIVisualEffect effectAnimation = null;
+    private int leftCount = 0;
+    private BossBarInfo bar = null;
 
+    @Deprecated
     public WarmUpInfo(String cmd, boolean move) {
     }
 
+    @Deprecated
     public WarmUpInfo(Location loc, boolean move) {
+    }
+
+    public WarmUpInfo(String cmd, CmdWarmUp warmup) {
+    }
+
+    public WarmUpInfo(Location loc, CmdWarmUp warmup) {
     }
 
     public String getCmd() {
@@ -33,6 +41,7 @@ public class WarmUpInfo {
         return false;
     }
 
+    @Deprecated
     public void setMove(boolean move) {
     }
 
@@ -69,5 +78,12 @@ public class WarmUpInfo {
     }
 
     public void setTask(CMITask task) {
+    }
+
+    public CmdWarmUp getWarmup() {
+        return null;
+    }
+
+    public void setWarmup(CmdWarmUp warmup) {
     }
 }

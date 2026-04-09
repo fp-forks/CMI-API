@@ -10,33 +10,33 @@ import com.Zrips.CMI.Modules.Statistics.StatsManager.CMIStatistic;
 import net.Zrips.CMILib.Items.CMIItemStack;
 
 public class CMIRank {
-    private String name;
-    private String displayName;
-    private boolean enabled;
-    private boolean defaultRank;
-    private boolean AutoRankup;
-    private boolean rankUpConfirmation;
-    private List<CMIRank> nextRanks;
-    private List<String> nextRanksT;
-    private List<String> Commands;
-    private List<String> CommandsOnRankDown;
-    private LinkedHashMap<CMIStatistic, LinkedHashMap<Object, Long>> statRequirements;
-    private LinkedHashMap<String, String> permRequirements;
-    private LinkedHashMap<String, CMIRankPlaceholder> placeholderRequirements;
-    private LinkedHashMap<String, Integer> mcmmoRequirements;
-    private LinkedHashMap<String, Integer> aureliumRequirements;
-    private LinkedHashMap<String, Integer> auraSkillsRequirements;
-    private LinkedHashMap<String, Integer> JobsRequirements;
-    private LinkedHashMap<CMIItemStack, Integer> ItemRequirements;
-    private double moneyCost;
-    private double expCost;
-    private int votes;
-    private int weight;
-
-    public void reset() {
-    }
+    private String name = null;
+    private String displayName = null;
+    private boolean enabled = false;
+    private boolean defaultRank = false;
+    private boolean AutoRankup = false;
+    private boolean rankUpConfirmation = false;
+    private List<CMIRank> nextRanks = null;
+    private List<String> nextRanksT = null;
+    private List<String> Commands = null;
+    private List<String> CommandsOnRankDown = null;
+    private LinkedHashMap<CMIStatistic, LinkedHashMap<Object, Long>> statRequirements = null;
+    private LinkedHashMap<String, String> permRequirements = null;
+    private LinkedHashMap<String, CMIRankPlaceholder> placeholderRequirements = null;
+    private LinkedHashMap<String, Integer> mcmmoRequirements = null;
+    private LinkedHashMap<String, Integer> aureliumRequirements = null;
+    private LinkedHashMap<String, Integer> auraSkillsRequirements = null;
+    private LinkedHashMap<String, Integer> JobsRequirements = null;
+    private LinkedHashMap<CMIItemStack, Integer> ItemRequirements = null;
+    private double moneyCost = 0.0;
+    private double expCost = 0.0;
+    private int votes = 0;
+    private int weight = 0;
 
     public CMIRank(String name) {
+    }
+
+    public void reset() {
     }
 
     public String getName() {
@@ -76,14 +76,6 @@ public class CMIRank {
     }
 
     public boolean isOnSamePathWith(CMIRank rank2) {
-        return false;
-    }
-
-    private boolean checkPrevious(CMIRank rank1, CMIRank rank2) {
-        return false;
-    }
-
-    private boolean checkNext(CMIRank rank1, CMIRank rank2) {
         return false;
     }
 

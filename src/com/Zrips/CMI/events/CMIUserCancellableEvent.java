@@ -6,6 +6,7 @@ public class CMIUserCancellableEvent extends CMICancellableEvent {
     private final CMIUser user = null;
 
     public CMIUserCancellableEvent(CMIUser user) {
+        super();
     }
 
     public CMIUser getUser() {

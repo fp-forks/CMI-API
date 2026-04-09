@@ -14,7 +14,7 @@ public class oplist implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eCheck operator player list", regVar = { 0 }, consoleVar = { 0 }, others = false)
+    @CAnnotation(info = "Check operator player list", regVar = { 0 }, consoleVar = { 0 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

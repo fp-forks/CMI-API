@@ -9,12 +9,11 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityResurrectEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.inventory.ItemStack;
 
 import com.Zrips.CMI.CMI;
 
 public class ResurectionListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public ResurectionListener(CMI plugin) {
     }
@@ -53,13 +52,5 @@ public class ResurectionListener implements Listener {
 
     public static boolean haveTotem(Player player) {
         return false;
-    }
-
-    private boolean removeTotemMainHand(Player player) {
-        return false;
-    }
-
-    private ItemStack removeTotem(Player player) {
-        return null;
     }
 }

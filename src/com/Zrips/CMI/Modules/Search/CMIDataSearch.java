@@ -9,16 +9,16 @@ import com.Zrips.CMI.Containers.CMIFileAppender;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class CMIDataSearch {
-    protected List<SearchTypeBase> searchingFor;
-    private CommandSender sender;
-    boolean purge;
-    protected CMITask task;
-    protected long totalToCheck;
-    private int totalChecked;
-    protected double searchSpeed;
-    protected int totalFound;
-    protected long lastInformed;
-    protected CMIFileAppender appender;
+    protected List<SearchTypeBase> searchingFor = null;
+    private CommandSender sender = null;
+    boolean purge = false;
+    protected CMITask task = null;
+    protected long totalToCheck = 0;
+    private int totalChecked = 0;
+    protected double searchSpeed = 0.0;
+    protected int totalFound = 0;
+    protected long lastInformed = 0;
+    protected CMIFileAppender appender = null;
 
     public CMIDataSearch(CommandSender sender) {
     }

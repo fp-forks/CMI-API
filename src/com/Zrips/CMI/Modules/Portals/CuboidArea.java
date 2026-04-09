@@ -8,15 +8,19 @@ import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
 import net.Zrips.CMILib.Container.CMILocation;
+import net.Zrips.CMILib.Container.CMIVectorInt3D;
 
 public class CuboidArea {
-    private Vector p1;
-    private Vector p2;
-    private Vector highPoints;
-    private Vector lowPoints;
-    private World world;
-    private String worldName;
+    private Vector p1 = null;
+    private Vector p2 = null;
+    private Vector highPoints = null;
+    private Vector lowPoints = null;
+    private World world = null;
+    private String worldName = null;
     private static final int MIN_HEIGHT = 0;
+
+    public CuboidArea(World world, CMIVectorInt3D startLoc, CMIVectorInt3D endLoc) {
+    }
 
     public CuboidArea(World world, Vector startLoc, Vector endLoc) {
     }
@@ -27,19 +31,16 @@ public class CuboidArea {
     public CuboidArea(Location startLoc, Location endLoc) {
     }
 
+    public CuboidArea(World world) {
+    }
+
     @Override
     public CuboidArea clone() {
         return null;
     }
 
-    private void recheck() {
-    }
-
     public boolean valid() {
         return false;
-    }
-
-    public CuboidArea(World world) {
     }
 
     public boolean isAreaWithinArea(CuboidArea area) {
@@ -70,10 +71,6 @@ public class CuboidArea {
         return false;
     }
 
-    private static boolean advCuboidCheckCollision(Vector A1High, Vector A1Low, Vector A2High, Vector A2Low) {
-        return false;
-    }
-
     public long getSize() {
         return 0;
     }
@@ -90,7 +87,6 @@ public class CuboidArea {
         return 0;
     }
 
-    @Deprecated
     public Location getHighLoc() {
         return null;
     }
@@ -99,7 +95,6 @@ public class CuboidArea {
         return null;
     }
 
-    @Deprecated
     public Location getLowLoc() {
         return null;
     }
@@ -182,14 +177,6 @@ public class CuboidArea {
         return false;
     }
 
-    private int getMaxWorldHeight() {
-        return 0;
-    }
-
-    private static Direction getDirection(Player player) {
-        return null;
-    }
-
     public String getWorldName() {
         return null;
     }
@@ -198,14 +185,14 @@ public class CuboidArea {
         private final int z = 0;
         private final int x = 0;
 
-        public static int getChunkCoord(int val) {
-            return 0;
-        }
-
         public ChunkRef(Location loc) {
         }
 
         public ChunkRef(int x, int z) {
+        }
+
+        public static int getChunkCoord(int val) {
+            return 0;
         }
 
         @Override

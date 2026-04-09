@@ -1,7 +1,7 @@
 package com.Zrips.CMI.Modules.PlayTimeRewards;
 
 public class PTRRepeat extends PlayTimeReward {
-    private boolean stackRewards;
+    private boolean stackRewards = false;
 
     public PTRRepeat(String name) {
         super(name);

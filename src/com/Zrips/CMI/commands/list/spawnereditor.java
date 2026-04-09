@@ -14,7 +14,7 @@ public class spawnereditor implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 100, info = "&eEdit spawner", regVar = { 0, 1 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Edit spawner", regVar = { 0, 1 }, consoleVar = { 666 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

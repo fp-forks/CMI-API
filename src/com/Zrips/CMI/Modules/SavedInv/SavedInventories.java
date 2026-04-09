@@ -6,8 +6,8 @@ import java.util.Map;
 import com.Zrips.CMI.Containers.CMIUser;
 
 public class SavedInventories {
-    private CMIUser owner;
-    private Map<Integer, CMIInventory> inventories;
+    private CMIUser owner = null;
+    private Map<Integer, CMIInventory> inventories = null;
 
     public SavedInventories(CMIUser owner) {
     }
@@ -17,6 +17,9 @@ public class SavedInventories {
 
     public synchronized CMIInventory removeInventory(int id) {
         return null;
+    }
+
+    public synchronized void removeAllInventories() {
     }
 
     public synchronized CMIInventory removeInventory(CMIInventory inv) {
@@ -32,10 +35,6 @@ public class SavedInventories {
     }
 
     public void setOwner(CMIUser owner) {
-    }
-
-    private synchronized int getLastId() {
-        return 0;
     }
 
     public int getNextId() {

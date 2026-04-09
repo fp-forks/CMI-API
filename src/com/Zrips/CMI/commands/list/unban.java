@@ -14,7 +14,7 @@ public class unban implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eUnban player or ip", args = "[playerName/ip] (-s)", tab = { "playername" }, explanation = {}, regVar = { 1, 2 }, consoleVar = { 1, 2 }, others = false)
+    @CAnnotation(info = "Unban player or ip", args = "[playerName/ip] (-s)", tab = { "playername" }, explanation = {}, regVar = { 1, 2 }, consoleVar = { 1, 2 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -14,7 +14,7 @@ public class tps implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 257, info = "&eCheck servers tps status", args = "(-spikes)", tab = { "-spikes" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 0, 1 }, others = false)
+    @CAnnotation(info = "Check servers tps status", args = "(-spikes)", tab = { "-spikes" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 0, 1 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

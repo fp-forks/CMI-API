@@ -16,27 +16,27 @@ import net.Zrips.CMILib.Items.CMIItemStack;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class WarpManager {
-    private CMI plugin;
-    LinkedHashMap<String, CmiWarp> warps;
-    HashMap<UUID, HashMap<String, CmiWarp>> userWarps;
-    private boolean warpGUI;
-    private boolean GUIOnCreation;
-    private boolean warpShowCreator;
-    private boolean warpRequirePerm;
-    private int warpPerPage;
-    private int MinLength;
-    private int MaxLength;
-    private Boolean guiCloseButton;
-    private int guiCloseButtonSlot;
-    private CMIItemStack guiCloseButtonItem;
-    private List<String> guiCloseButtonCommands;
-    private boolean guiInfoButton;
-    private int guiInfoButtonSlot;
-    private CMIItemStack guiInfoButtonItem;
-    private List<String> guiInfoButtonCommands;
-    private String fileName;
-    boolean saving;
-    private CMITask saveId;
+    private CMI plugin = null;
+    LinkedHashMap<String, CmiWarp> warps = null;
+    HashMap<UUID, HashMap<String, CmiWarp>> userWarps = null;
+    private boolean warpGUI = false;
+    private boolean GUIOnCreation = false;
+    private boolean warpShowCreator = false;
+    private boolean warpRequirePerm = false;
+    private int warpPerPage = 0;
+    private int MinLength = 0;
+    private int MaxLength = 0;
+    private Boolean guiCloseButton = null;
+    private int guiCloseButtonSlot = 0;
+    private CMIItemStack guiCloseButtonItem = null;
+    private List<String> guiCloseButtonCommands = null;
+    private boolean guiInfoButton = false;
+    private int guiInfoButtonSlot = 0;
+    private CMIItemStack guiInfoButtonItem = null;
+    private List<String> guiInfoButtonCommands = null;
+    public String fileName = null;
+    boolean saving = false;
+    private CMITask saveId = null;
 
     public WarpManager(CMI plugin) {
     }
@@ -80,10 +80,6 @@ public class WarpManager {
         return null;
     }
 
-    private void process(Player player, HashMap<Integer, HashMap<Integer, CmiWarp>> w, LinkedHashMap<String, CmiWarp> copyWarps, List<CmiWarp> leftOver, String group, boolean admin, boolean includeHidden,
-        boolean onlyOwn, boolean first) {
-    }
-
     public HashMap<Integer, HashMap<Integer, CmiWarp>> getPagedWarps(Player player, String group, boolean includeHidden, boolean onlyOwn) {
         return null;
     }
@@ -112,10 +108,6 @@ public class WarpManager {
 
     public List<CmiWarp> getWarps(int page, Integer slot, String group) {
         return null;
-    }
-
-    private static int slotToGUIrelativeSlot(int slot) {
-        return 0;
     }
 
     public CMIGui openComplexGUI(Player player, int page, String group) {
@@ -201,10 +193,23 @@ public class WarpManager {
     }
 
     private enum warpEditorSlots {
-        icon(10), offIcon(19), randomYaw(20), autoLore(11), permission(13), reqPermission(22), hidden(32), group(25), displayName(34), iconSlot(14), page(23), back(8), location(37), seclocation(38),
+        icon(10),
+        offIcon(19),
+        randomYaw(20),
+        autoLore(11),
+        permission(13),
+        reqPermission(22),
+        hidden(32),
+        group(25),
+        displayName(34),
+        iconSlot(14),
+        page(23),
+        back(8),
+        location(37),
+        seclocation(38),
         repeat(39);
 
-        private int slot;
+        private int slot = 0;
 
         warpEditorSlots(int slot) {
         }

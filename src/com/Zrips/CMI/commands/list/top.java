@@ -14,13 +14,9 @@ public class top implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 150, info = "&eTeleport to highest point at your location", args = "[playerName] (-s)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1,
-        2 }, others = true)
+    @CAnnotation(priority = 150, info = "Teleport to highest point at your location", args = "[playerName] (-s)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1,
+            2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
-    }
-
-    private static <T extends Number> double abs(T num) {
-        return 0.0;
     }
 }

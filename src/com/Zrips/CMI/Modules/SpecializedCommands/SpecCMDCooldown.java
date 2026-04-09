@@ -1,8 +1,8 @@
 package com.Zrips.CMI.Modules.SpecializedCommands;
 
 public class SpecCMDCooldown {
-    private double cooldown;
-    private String cmd;
+    private double cooldown = 0.0;
+    private String cmd = null;
 
     @Deprecated
     public long getCooldown() {

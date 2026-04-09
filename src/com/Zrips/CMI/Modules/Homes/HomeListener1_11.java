@@ -8,7 +8,7 @@ import org.bukkit.event.player.PlayerBedEnterEvent;
 import com.Zrips.CMI.CMI;
 
 public class HomeListener1_11 implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public HomeListener1_11(CMI plugin) {
     }

@@ -15,8 +15,8 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 import com.Zrips.CMI.CMI;
 
 public class SignListener implements Listener {
-    private CMI plugin;
-    protected Map<UUID, Long> lastUpdateRange;
+    private CMI plugin = null;
+    protected Map<UUID, Long> lastUpdateRange = null;
 
     public SignListener(CMI plugin) {
     }

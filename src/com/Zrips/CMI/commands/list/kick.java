@@ -14,8 +14,8 @@ public class kick implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eKick player with custom message", args = "[playerName/all] (message) (-s)", tab = { "playername%%all" }, explanation = {
-        "cmi.command.kick.bypass - prevents from being kicked out" }, regVar = { -100 }, consoleVar = { -100 }, others = false)
+    @CAnnotation(info = "Kick player with custom message", args = "[playerName/all] (message) (-s)", tab = { "playername%%all" }, explanation = {
+            "cmi.command.kick.bypass - prevents from being kicked out" }, regVar = { -100 }, consoleVar = { -100 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

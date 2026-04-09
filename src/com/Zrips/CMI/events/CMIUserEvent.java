@@ -10,6 +10,7 @@ public class CMIUserEvent extends CMIEvent {
     }
 
     public CMIUserEvent(CMIUser user) {
+        this(user, false);
     }
 
     public CMIUser getUser() {

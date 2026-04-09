@@ -14,8 +14,7 @@ public class mirror implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 65, info = "&eStarts block place/break mirroring.", args = "(start/stop)", tab = {}, explanation = {}, regVar = { 0, 1 }, consoleVar = {
-        666 }, others = false, modules = "mirror")
+    @CAnnotation(info = "Starts block place/break mirroring.", args = "(start/stop)", regVar = { 0, 1 }, consoleVar = { 666 }, modules = "mirror")
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

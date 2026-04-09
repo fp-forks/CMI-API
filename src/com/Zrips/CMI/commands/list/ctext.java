@@ -14,8 +14,8 @@ public class ctext implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eShows custom text", args = "[cText] (playerName/all) (sourcePlayer)", tab = { "ctext", "playerName", "sourcePlayer" }, regVar = { -66 }, consoleVar = { 2, 3,
-        4 }, paccess = true, others = true)
+    @CAnnotation(info = "Shows custom text", args = "[cText] (playerName/all) (sourcePlayer) (pageNumber)", tab = { "ctext", "playerName", "sourcePlayer" }, regVar = { -66 }, consoleVar = { 2, 3,
+            4 }, paccess = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

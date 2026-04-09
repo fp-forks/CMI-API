@@ -6,15 +6,15 @@ import java.util.UUID;
 import com.Zrips.CMI.Containers.CMIUser;
 
 public class CMIChatRoom {
-    private Set<CMIUser> users;
-    private Set<CMIUser> watchers;
-    private String chatName;
-    private UUID owner;
-    private boolean priv;
-    private boolean locked;
-    private boolean persistent;
-    private Set<UUID> invitations;
-    private long keepAliveUntil;
+    private Set<CMIUser> users = null;
+    private Set<CMIUser> watchers = null;
+    private String chatName = null;
+    private UUID owner = null;
+    private boolean priv = false;
+    private boolean locked = false;
+    private boolean persistent = false;
+    private Set<UUID> invitations = null;
+    private long keepAliveUntil = 0;
 
     public CMIChatRoom(String chatName) {
     }

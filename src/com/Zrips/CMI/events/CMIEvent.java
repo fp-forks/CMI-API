@@ -7,6 +7,7 @@ public class CMIEvent extends Event {
     private static final HandlerList handlers = null;
 
     public CMIEvent() {
+        super();
     }
 
     public CMIEvent(boolean async) {

@@ -1,10 +1,10 @@
 package com.Zrips.CMI.Modules.Search;
 
 public class SearchTypeItemName extends SearchTypeItem {
-    String name;
+    String name = null;
 
     public SearchTypeItemName(String name) {
-        super(null);
+        this(null, name);
     }
 
     public SearchTypeItemName(SearchTypeItem parent, String name) {

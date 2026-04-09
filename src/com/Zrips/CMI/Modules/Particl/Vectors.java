@@ -3,8 +3,8 @@ package com.Zrips.CMI.Modules.Particl;
 import org.bukkit.util.Vector;
 
 public class Vectors {
-    Vector p1;
-    Vector p2;
+    Vector p1 = null;
+    Vector p2 = null;
 
     public Vectors() {
     }

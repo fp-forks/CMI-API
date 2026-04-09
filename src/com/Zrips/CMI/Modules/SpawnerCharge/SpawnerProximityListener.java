@@ -8,7 +8,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import com.Zrips.CMI.CMI;
 
 public class SpawnerProximityListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public SpawnerProximityListener(CMI plugin) {
     }

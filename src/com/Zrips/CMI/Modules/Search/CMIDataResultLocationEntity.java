@@ -8,7 +8,7 @@ import net.Zrips.CMILib.Container.CMIVectorInt3D;
 import net.Zrips.CMILib.Entities.CMIEntityType;
 
 public class CMIDataResultLocationEntity extends CMIDataResultLocationBase {
-    CMIEntityType type;
+    CMIEntityType type = null;
 
     public CMIDataResultLocationEntity(Entity ent, CMIVectorInt3D vector, int amount) {
         super(vector, amount);

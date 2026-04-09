@@ -14,8 +14,8 @@ public class placeholders implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eList out all placeholders", args = "(parse) (placeholder) (playerName)", tab = { "%%parse", "placeholders", "playername" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 0, 2,
-        3 }, others = false)
+    @CAnnotation(info = "List out all placeholders", args = "(parse) (placeholder) (playerName)", tab = { "%%parse", "placeholders", "playername" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 0, 2,
+            3 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

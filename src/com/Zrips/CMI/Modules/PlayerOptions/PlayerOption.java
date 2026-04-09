@@ -4,32 +4,60 @@ import java.util.HashMap;
 
 import org.bukkit.inventory.ItemStack;
 
+import com.Zrips.CMI.Containers.CMIUser;
+
 import net.Zrips.CMILib.Items.CMIMaterial;
 import net.Zrips.CMILib.Version.Version;
 
 public enum PlayerOption {
-    visibleHolograms(10, true, "&eVisible holograms", CMIMaterial.BLACK_STAINED_GLASS), shiftSignEdit(10, true, "&eSign shift edit", CMIMaterial.OAK_SIGN), totemBossBar(10, true, "&eTotem BossBar",
-        CMIMaterial.TOTEM_OF_UNDYING), bossBarCompass(10, true, "&eCompass BossBar", CMIMaterial.COMPASS), tagSound(10, true, "&eChat tagging sound", CMIMaterial.PAPER), chatSpy(10, false, "&eChat spy",
-            CMIMaterial.BUCKET), cmdSpy(10, false, "&eCommand spy", CMIMaterial.WATER_BUCKET), signSpy(10, false, "&eSign spy", CMIMaterial.LAVA_BUCKET), acceptingPM(10, true,
-                "&eAccepting private messages", CMIMaterial.MAP), acceptingTPA(10, true, "&eAccepting teleportations to you", CMIMaterial.CLOCK), acceptingMoney(10, true, "&eAccepting money payments",
-                    CMIMaterial.KNOWLEDGE_BOOK), chatbubble(10, true, "&eChat bubbles", CMIMaterial.LANTERN, Version.v1_19_R3), pmSound(10, true, "&ePrivate messages sounds", CMIMaterial.STONE_BUTTON),
-    rideMe(10, true, "&ePlayers can ride you", CMIMaterial.SADDLE), pveDamageNumbers(10, true, "&eShows PvE damage numbers", CMIMaterial.WOODEN_SWORD), pvpDamageNumbers(10, true,
-        "&eShows PvP damage numbers", CMIMaterial.DIAMOND_SWORD), InformDurability(10, true, "&eInform on item durability loss", CMIMaterial.ANVIL), receivePets(10, true,
-            "&eDo you want to receive pets as gifts", CMIMaterial.LEAD);
+    visibleHolograms("holograms", "{gcp}Visible holograms", CMIMaterial.BLACK_STAINED_GLASS),
+    shiftSignEdit("shiftedit", "{gcp}Sign shift edit", CMIMaterial.OAK_SIGN),
+    totemBossBar("totembar", "{gcp}Totem BossBar", CMIMaterial.TOTEM_OF_UNDYING),
+    bossBarCompass("compass", "{gcp}Compass BossBar", CMIMaterial.COMPASS),
+    tagSound("{gcp}Chat tagging sound", CMIMaterial.PAPER),
+    chatSpy(false, "{gcp}Chat spy", CMIMaterial.BUCKET),
+    cmdSpy(false, "{gcp}Command spy", CMIMaterial.WATER_BUCKET),
+    signSpy(false, "{gcp}Sign spy", CMIMaterial.LAVA_BUCKET),
+    acceptingPM("msg", "{gcp}Accepting private messages", CMIMaterial.MAP),
+    acceptingTPA("tp", "{gcp}Accepting teleportations to you", CMIMaterial.CLOCK),
+    acceptingMoney("pay", "{gcp}Accepting money payments", CMIMaterial.KNOWLEDGE_BOOK),
+    chatbubble("{gcp}Chat bubbles", CMIMaterial.LANTERN, Version.v1_19_R3),
+    pmSound("{gcp}Private messages sounds", CMIMaterial.STONE_BUTTON),
+    rideMe("{gcp}Players can ride you", CMIMaterial.SADDLE),
+    pveDamageNumbers("pvenumbers", "{gcp}Shows PvE damage numbers", CMIMaterial.WOODEN_SWORD),
+    pvpDamageNumbers("pvpnumbers", "{gcp}Shows PvP damage numbers", CMIMaterial.DIAMOND_SWORD),
+    InformDurability("durability", "{gcp}Inform on item durability loss", CMIMaterial.ANVIL),
+    receivePets("{gcp}Do you want to receive pets as gifts", CMIMaterial.LEAD),
+    deathMessages("{gcp}Do you want to show death messages", CMIMaterial.DEAD_BUSH),
+    notarget(false, "{gcp}Do you want to be ignored by mobs", CMIMaterial.BEDROCK);
 
-    private int slot;
-    private boolean defaults = true;
-    private boolean globalEnabled = true;
-    private ItemStack icon;
-    private String desc;
-    private Version versionFrom;
-    private static HashMap<String, PlayerOption> cache = new HashMap<>();
-    public static String defaultString = "";
+    private int slot = 0;
+    private boolean defaults = false;
+    private boolean globalEnabled = false;
+    private ItemStack icon = null;
+    private String desc = null;
+    private String shortName = null;
+    private Version versionFrom = null;
+    private static HashMap<String, PlayerOption> cache = null;
+    public static String defaultString = null;
 
-    PlayerOption(int slot, boolean defaults, String desc, CMIMaterial icon) {
+    PlayerOption(String desc, CMIMaterial icon, Version version) {
+        this(10, true, null, desc, icon, version);
     }
 
-    PlayerOption(int slot, boolean defaults, String desc, CMIMaterial icon, Version version) {
+    PlayerOption(boolean defaults, String desc, CMIMaterial icon) {
+        this(10, defaults, null, desc, icon, null);
+    }
+
+    PlayerOption(String shortName, String desc, CMIMaterial icon) {
+        this(10, true, shortName, desc, icon, null);
+    }
+
+    PlayerOption(String desc, CMIMaterial icon) {
+        this(10, true, null, desc, icon, null);
+    }
+
+    PlayerOption(int slot, boolean defaults, String shortName, String desc, CMIMaterial icon, Version version) {
     }
 
     public int getUISlot() {
@@ -50,16 +78,11 @@ public enum PlayerOption {
     void setEnabled(Boolean state) {
     }
 
+    public void afterToggle(CMIUser user, boolean state) {
+    }
+
     public static PlayerOption get(String name) {
         return null;
-    }
-
-    private static String to(boolean state) {
-        return null;
-    }
-
-    private static boolean from(String state) {
-        return false;
     }
 
     public static HashMap<PlayerOption, Boolean> fromString(String line) {
@@ -89,6 +112,10 @@ public enum PlayerOption {
     }
 
     public Version getVersionFrom() {
+        return null;
+    }
+
+    public String getShortName() {
         return null;
     }
 }

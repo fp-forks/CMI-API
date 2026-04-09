@@ -14,8 +14,8 @@ public class unbreakable implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 67, info = "&eMakes item unbreakable", args = "(playerName) (true/false) (-o)", tab = { "playerName%%true%%false", "true%%false", "-o" }, explanation = {}, regVar = { 0, 1, 2,
-        3 }, consoleVar = { 1, 2, 3 }, others = true)
+    @CAnnotation(info = "Makes item unbreakable", args = "(playerName) (true/false) (-o)", tab = { "playerName%%true%%false", "true%%false", "-o" }, explanation = {}, regVar = { 0, 1, 2,
+            3 }, consoleVar = { 1, 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

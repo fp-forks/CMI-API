@@ -12,8 +12,8 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 import com.Zrips.CMI.CMI;
 
 public class TeleportWithListener implements Listener {
-    private CMI plugin;
-    HashMap<UUID, vehicleLast> mapVehicle;
+    private CMI plugin = null;
+    HashMap<UUID, vehicleLast> mapVehicle = null;
 
     public TeleportWithListener(CMI plugin) {
     }
@@ -23,9 +23,9 @@ public class TeleportWithListener implements Listener {
     }
 
     class vehicleLast {
-        private UUID uuid;
-        private Entity vehicle;
-        private int tick;
+        private UUID uuid = null;
+        private Entity vehicle = null;
+        private int tick = 0;
 
         public vehicleLast(UUID uuid, Entity vehicle, int tick) {
         }

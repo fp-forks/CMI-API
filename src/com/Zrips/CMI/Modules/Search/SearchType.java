@@ -3,7 +3,7 @@ package com.Zrips.CMI.Modules.Search;
 public enum SearchType {
     ITEM, GM, GOD, MAXHP, FLY;
 
-    private String name;
+    private String name = null;
 
     private SearchType(String name) {
     }

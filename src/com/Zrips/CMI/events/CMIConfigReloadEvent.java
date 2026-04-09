@@ -6,6 +6,7 @@ public class CMIConfigReloadEvent extends CMIEvent {
     private final CommandSender sender = null;
 
     public CMIConfigReloadEvent(CommandSender sender) {
+        super();
     }
 
     public CommandSender getSender() {

@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import com.Zrips.CMI.CMI;
 
 public class PacketPlayerListeners implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public PacketPlayerListeners(CMI plugin) {
     }

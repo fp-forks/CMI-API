@@ -11,14 +11,14 @@ import com.Zrips.CMI.CMI;
 import net.Zrips.CMILib.Container.CMIVectorInt2D;
 
 public class CMIWorldChunkManager {
-    private CMI plugin;
+    private CMI plugin = null;
     private static final Pattern regionPattern = null;
-    private boolean disableWorldChunkCheckInfo;
-    private double scanSoftCap;
-    private int scanDefaultSpeed;
-    private int defaultRange;
-    private boolean purge;
-    private boolean logIntoFile;
+    private boolean disableWorldChunkCheckInfo = false;
+    private double scanSoftCap = 0.0;
+    private int scanDefaultSpeed = 0;
+    private int defaultRange = 0;
+    private boolean purge = false;
+    private boolean logIntoFile = false;
 
     public CMIWorldChunkManager(CMI plugin) {
     }
@@ -48,10 +48,6 @@ public class CMIWorldChunkManager {
     }
 
     public void loadConfig() {
-    }
-
-    private CompletableFuture<CMIWorldChunks> loadWorldChunksInfo(World world, CMIVectorInt2D center, int range) {
-        return null;
     }
 
     public CompletableFuture<CMIWorldChunksRanged> getWorldChunkInfoInRange(World world, CMIVectorInt2D center) {

@@ -14,7 +14,7 @@ public class colors implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eShows all possible colors", args = "(playerName)", tab = { "playername" }, regVar = { 0, 1 }, consoleVar = { 1 }, alias = true, others = true)
+    @CAnnotation(info = "Shows all possible colors", args = "(playerName)", tab = { "playername" }, regVar = { 0, 1 }, consoleVar = { 1 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

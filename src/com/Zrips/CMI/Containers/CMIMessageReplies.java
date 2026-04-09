@@ -3,8 +3,8 @@ package com.Zrips.CMI.Containers;
 import java.util.HashMap;
 
 public class CMIMessageReplies {
-    private static HashMap<String, CMIReplyResponder> replyMapBySender;
-    private static HashMap<String, CMIReplyResponder> replyMapByReceiver;
+    private static HashMap<String, CMIReplyResponder> replyMapBySender = null;
+    private static HashMap<String, CMIReplyResponder> replyMapByReceiver = null;
 
     public static String getMessageReplyTo(String sender) {
         return null;

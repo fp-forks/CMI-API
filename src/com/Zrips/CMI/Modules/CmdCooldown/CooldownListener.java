@@ -8,7 +8,7 @@ import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import com.Zrips.CMI.CMI;
 
 public class CooldownListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public CooldownListener(CMI plugin) {
     }

@@ -11,11 +11,11 @@ import org.bukkit.command.TabCompleter;
 import com.Zrips.CMI.Containers.CMITabComplete;
 
 public class TabComplete implements TabCompleter {
-    private CMI plugin;
-    static HashMap<String, TabAction> map;
-    public static CMITabComplete tabs;
-    private static Set<String> itemNameCache;
-    private static Set<String> blockNameCache;
+    private CMI plugin = null;
+    static HashMap<String, TabAction> map = null;
+    public static CMITabComplete tabs = null;
+    private static Set<String> itemNameCache = null;
+    private static Set<String> blockNameCache = null;
 
     public TabComplete(CMI plugin) {
     }
@@ -44,29 +44,88 @@ public class TabComplete implements TabCompleter {
         return null;
     }
 
-    private static List<String> getColorNames() {
-        return null;
-    }
-
     public enum TabAction {
-        na, allPlayername("All players including vanished ones"), allIGNPlayername("All IGN players including vanished ones"), playername("All players excluding vanished ones"), mutedplayername(
-            "All online muted players"), damageCause("Damage cause variations"), bannedplayername("Banned player names"), playerOption("Player options"), gamemode("Game modes"), worlds("Worlds"), portals(
-                "List of portal names. Exclude disabled"), allportals("List of portal names"), itemname("Materials"), playeritems("Materials in player inventory"), blockname("Blocks"), EntityType(
-                    "Entity Types"), cleanEntityType("Entity Types without _"), kit("Kit names by access"), kitnames("Kit config names by access"), kitp("Kits by preview access"), chatroom("Chat rooms"),
-        biome("Biomes"), treeType("Tree types"), maxplayers("Server max player limit"), potioneffect("Potion effects"), effect("Particle effects"), merchants("Villager professions"), enchant(
-            "Enchant names"), limitedEnchant("Enchant names by permission"), halfViewRange("Half of max server view range"), doubleViewRange("Double of max server view range"), ViewRange(
-                "Server view range"), maxenchantlevel("Max enchant level. Uses previous variable to determine enchantment"), currentItemName("Item name in main hand"), loreLine(
-                    "Lists numbers of lore lines of item in main hand"), currentItemLore("Lists lore of item in main hand"), currentLocation("Current player location"), currentFullLocation(
-                        "Current player location with pitch and yaw"), currentX("Current player X position"), currentY("Current player Y position"), currentZ("Current player Z position"), currentWorld(
-                            "World name player is in"), currentPitch("Players pitch"), currentYaw("Players yaw"), itemFlag("Item flag values"), nickName("Users display name excluding color codes"),
-        fullNickName("Users display name"), gamerule("List of world game rules"), gamerulevalue("Game rule value"), nickNames("All online users nick names"), homes("Users home list"), warps(
-            "Warps by access to them"), allwarps("All warps"), playerwarps("Warps by access to them"), rankname("Rank names"), statstype("Statistics names"), statssubtype(
-                "Sub statistics names. Uses previous variable to determine main statistic"), motd("Servers motd"), bungeeserver("Bungee servers"), scheduleName("Schedule names"), ctext(
-                    "Custom text names"), attachedCommand("Includes attached command"), jail("Jail names"), cellId("Cewll id's. Uses previous variable to determine jail"), sound("Sound names"),
-        customalias("Custom alias list"), dbusercollumsshort, placeholders("Placeholders"), warncategory("Warn categories"), projectiletype("Projectile types"), holograms("Hologram names"), mobtype(
-            "Mob types"), vanishaction("Vanish actions"), signLine("Sign line text. Uses previous variable to determine line number");
+        na,
+        allPlayername("All players including vanished ones"),
+        allIGNPlayername("All IGN players including vanished ones"),
+        playername("All players excluding vanished ones"),
+        mutedplayername("All online muted players"),
+        damageCause("Damage cause variations"),
+        bannedplayername("Banned player names"),
+        playerOption("Player options"),
+        gamemode("Game modes"),
+        worlds("Worlds"),
+        portals("List of portal names. Exclude disabled"),
+        allportals("List of portal names"),
+        itemname("Materials"),
+        playeritems("Materials in player inventory"),
+        blockname("Blocks"),
+        EntityType("Entity Types"),
+        cleanEntityType("Entity Types without _"),
+        kit("Kit names by access"),
+        kitnames("Kit config names by access"),
+        kitp("Kits by preview access"),
+        chatroom("Chat rooms"),
+        biome("Biomes"),
+        treeType("Tree types"),
+        maxplayers("Server max player limit"),
+        potioneffect("Potion effects"),
+        effect("Particle effects"),
+        merchants("Villager professions"),
+        enchant("Enchant names"),
+        limitedEnchant("Enchant names by permission"),
+        halfViewRange("Half of max server view range"),
+        doubleViewRange("Double of max server view range"),
+        ViewRange("Server view range"),
+        maxenchantlevel("Max enchant level. Uses previous variable to determine enchantment"),
+        currentItemName("Item name in main hand"),
+        loreLine("Lists numbers of lore lines of item in main hand"),
+        currentItemLore("Lists lore of item in main hand"),
+        currentLocation("Current player location"),
+        currentFullLocation("Current player location with pitch and yaw"),
+        currentX("Current player X position"),
+        currentY("Current player Y position"),
+        currentZ("Current player Z position"),
+        currentWorld("World name player is in"),
+        currentPitch("Players pitch"),
+        currentYaw("Players yaw"),
+        itemFlag("Item flag values"),
+        nickName("Users display name excluding color codes"),
+        fullNickName("Users display name"),
+        gamerule("List of world game rules"),
+        gamerulevalue("Game rule value"),
+        nickNames("All online users nick names"),
+        homes("Users home list"),
+        warps("Warps by access to them"),
+        allwarps("All warps"),
+        playerwarps("Warps by access to them"),
+        rankname("Rank names"),
+        statstype("Statistics names"),
+        statssubtype("Sub statistics names. Uses previous variable to determine main statistic"),
+        motd("Servers motd"),
+        bungeeserver("Bungee servers"),
+        scheduleName("Schedule names"),
+        ctext("Custom text names"),
+        attachedCommand("Includes attached command"),
+        jail("Jail names"),
+        cellId("Cewll id's. Uses previous variable to determine jail"),
+        sound("Sound names"),
+        customalias("Custom alias list"),
+        dbusercollumsshort,
+        placeholders("Placeholders"),
+        warncategory("Warn categories"),
+        projectiletype("Projectile types"),
+        holograms("Hologram names"),
+        mobtype("Mob types"),
+        usermeta("User meta key values"),
+        vanishaction("Vanish actions"),
+        signLine("Sign line text. Uses previous variable to determine line number"),
+        saveditems("List of saved item names"),
+        dialogname("Dialog names"),
+        trimmaterial("Trim material names"),
+        trimpattern("Trim pattern names");
 
-        private String desc;
+        private String desc = null;
 
         TabAction() {
         }

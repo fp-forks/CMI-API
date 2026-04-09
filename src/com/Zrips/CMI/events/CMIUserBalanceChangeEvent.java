@@ -3,14 +3,14 @@ package com.Zrips.CMI.events;
 import com.Zrips.CMI.Containers.CMIUser;
 
 public class CMIUserBalanceChangeEvent extends CMIUserEvent {
-    private CMIUser source;
-    private double from;
-    private double to;
-    private String actionType;
+    private CMIUser source = null;
+    private double from = 0.0;
+    private double to = 0.0;
+    private String actionType = null;
 
     @Deprecated
     public CMIUserBalanceChangeEvent(CMIUser user, double from, double to) {
-        super(user, true);
+        this(user, from, to, "Unknown");
     }
 
     public CMIUserBalanceChangeEvent(CMIUser user, double from, double to, String actionType, CMIUser source) {
@@ -19,7 +19,7 @@ public class CMIUserBalanceChangeEvent extends CMIUserEvent {
 
     @Deprecated
     public CMIUserBalanceChangeEvent(CMIUser user, double from, double to, String actionType) {
-        super(user, true);
+        this(user, from, to, actionType, null);
     }
 
     public double getFrom() {

@@ -6,20 +6,20 @@ import java.util.UUID;
 import org.bukkit.inventory.ItemStack;
 
 public class CMIItemDonations {
-    private UUID donor;
-    private UUID receiver;
-    private ItemStack item;
-    private long time;
-    private static HashMap<UUID, HashMap<UUID, CMIItemDonations>> donationsCache;
+    private UUID donor = null;
+    private UUID receiver = null;
+    private ItemStack item = null;
+    private long time = 0;
+    private static HashMap<UUID, HashMap<UUID, CMIItemDonations>> donationsCache = null;
+
+    public CMIItemDonations() {
+    }
 
     public static void addItemDonation(CMIItemDonations donation) {
     }
 
     public static HashMap<UUID, CMIItemDonations> getPendingDonations(UUID uuid) {
         return null;
-    }
-
-    public CMIItemDonations() {
     }
 
     public UUID getDonor() {

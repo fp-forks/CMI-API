@@ -14,8 +14,8 @@ public class scavenge implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eRecycle item and its enchantments", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = {
-        1 }, others = true, alias = true, customAlias = { "salvage", "recycle" })
+    @CAnnotation(info = "Recycle item and its enchantments", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = {
+            1 }, others = true, alias = true, customAlias = { "salvage", "recycle" })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

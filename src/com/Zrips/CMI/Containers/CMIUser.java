@@ -13,8 +13,6 @@ import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.annotation.Nullable;
-
 import org.bukkit.BanEntry;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -27,6 +25,8 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import com.Zrips.CMI.Modules.Afk.AfkInfo;
 import com.Zrips.CMI.Modules.Chat.CMIPlayerMessageColor;
@@ -39,7 +39,6 @@ import com.Zrips.CMI.Modules.Homes.CmiHome;
 import com.Zrips.CMI.Modules.Jail.CMIJail;
 import com.Zrips.CMI.Modules.Jail.CMIJailCell;
 import com.Zrips.CMI.Modules.Kits.Kit;
-import com.Zrips.CMI.Modules.Mirror.Mirrors;
 import com.Zrips.CMI.Modules.Permissions.PermissionsManager.CMIPerm;
 import com.Zrips.CMI.Modules.PlayTime.CMIPlayTime;
 import com.Zrips.CMI.Modules.PlayTimeRewards.PTROneTime;
@@ -63,57 +62,51 @@ import net.Zrips.CMILib.Container.CMILocation;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class CMIUser {
-    private UUID uuid;
-    private Player player;
-    private boolean collision;
-    private String name;
-    private String nickName;
-    private String displayName;
-    private CMIEconomyAcount economy;
-    private int id;
-    private int invId;
-    private int playTimeId;
-    private int playTimerewardId;
-    private LinkedHashMap<String, Integer> ips;
-    private CMILocation logOutLocation;
-    private List<String> lockedIps;
-    private long lastLogin;
-    private long lastLogoff;
-    private long totalPlayTime;
-    private CMILocation DeathLoc;
-    private Location TpLoc;
-    private long pTime;
-    private long tfly;
-    private long tgod;
-    private long teleportInvulnerability;
-    private boolean isFakeAccount;
-    private List<PlayerNote> notes;
-    private List<PlayerMail> mail;
-    private LinkedHashMap<String, CmiHome> homes;
-    private Set<UUID> ignores;
-    private boolean silenceMode;
-    private boolean hadAllowFlight;
-    private boolean AllowFlight;
-    private boolean Flying;
-    private int votifierVotes;
-    private List<Long> votifierVotesByTime;
-    private String skin;
-    private HashMap<String, Long> repeatableRewards;
-    private Set<String> oneTimeRewards;
-    HashMap<String, worldFlyState> tempFlyModes;
-    HashMap<PlayerOption, Boolean> options;
-    private CMITask schedId;
-    Boolean fakeUser;
-    Long time;
-    private static Statistic statCheck;
+    private UUID uuid = null;
+    private Player player = null;
+    private boolean collision = false;
+    private String name = null;
+    private String nickName = null;
+    private String displayName = null;
+    private CMIEconomyAcount economy = null;
+    private int id = 0;
+    private int invId = 0;
+    private int playTimeId = 0;
+    private int playTimerewardId = 0;
+    private LinkedHashMap<String, Integer> ips = null;
+    private CMILocation logOutLocation = null;
+    private List<String> lockedIps = null;
+    private long lastLogin = 0;
+    private long lastLogoff = 0;
+    private long totalPlayTime = 0;
+    private CMILocation DeathLoc = null;
+    private Location TpLoc = null;
+    private long pTime = 0;
+    private long tfly = 0;
+    private long tgod = 0;
+    private long teleportInvulnerability = 0;
+    private boolean isFakeAccount = false;
+    private List<PlayerNote> notes = null;
+    private List<PlayerMail> mail = null;
+    private LinkedHashMap<String, CmiHome> homes = null;
+    private Set<UUID> ignores = null;
+    private boolean silenceMode = false;
+    private boolean hadAllowFlight = false;
+    private boolean AllowFlight = false;
+    private boolean Flying = false;
+    private int votifierVotes = 0;
+    private List<Long> votifierVotesByTime = null;
+    private String skin = null;
+    private HashMap<String, Long> repeatableRewards = null;
+    private Set<String> oneTimeRewards = null;
+    HashMap<String, worldFlyState> tempFlyModes = null;
+    HashMap<PlayerOption, Boolean> options = null;
+    private CMITask schedId = null;
+    Boolean fakeUser = null;
+    Long time = null;
+    private static Statistic statCheck = null;
 
     public CMIUser(int id) {
-    }
-
-    public void cacheClear() {
-    }
-
-    private void scheduleDataClear() {
     }
 
     public CMIUser(UUID uuid) {
@@ -124,6 +117,9 @@ public class CMIUser {
     }
 
     public CMIUser(OfflinePlayer player) {
+    }
+
+    public void cacheClear() {
     }
 
     public boolean isOnline() {
@@ -338,10 +334,6 @@ public class CMIUser {
         return null;
     }
 
-    private boolean timeToUpdate(UserDataUpdateType type) {
-        return false;
-    }
-
     public String getNickName() {
         return null;
     }
@@ -447,13 +439,6 @@ public class CMIUser {
         return false;
     }
 
-    public Mirrors getMirror() {
-        return null;
-    }
-
-    public void setMirror(Mirrors mirror) {
-    }
-
     @Deprecated
     public LinkedHashMap<Kit, CMIKitUsage> getKits() {
         return null;
@@ -496,14 +481,6 @@ public class CMIUser {
 
     public boolean canUseKit(Kit kit) {
         return false;
-    }
-
-    private CMIKitUsage getKitUsage(Kit kit) {
-        return null;
-    }
-
-    private CMIKitUsage getKitUsage(String name) {
-        return null;
     }
 
     public int getLeftKitUseTimes(Kit kit) {
@@ -818,12 +795,6 @@ public class CMIUser {
     }
 
     public void setAfk(boolean afk, AfkType type, boolean performCommands) {
-    }
-
-    private void turnOnAfk(AfkType type, List<String> cmds) {
-    }
-
-    private void turnOffAfk(AfkType type, List<String> cmds) {
     }
 
     public void setAfkReason(String reason) {
@@ -1166,6 +1137,7 @@ public class CMIUser {
     public void setFlying(boolean flying) {
     }
 
+    @Deprecated
     public SavedInventories getSavedInventories() {
         return null;
     }
@@ -1186,15 +1158,6 @@ public class CMIUser {
     }
 
     public Long getLastDailyVoteTime() {
-        return null;
-    }
-
-    @Nullable
-    private CMIUserJailData getJailData() {
-        return null;
-    }
-
-    private CMIUserJailData getOrCreateJailData() {
         return null;
     }
 
@@ -1377,9 +1340,6 @@ public class CMIUser {
     @Deprecated
     public Boolean getCollision() {
         return null;
-    }
-
-    private void applyCollision() {
     }
 
     @Deprecated
@@ -1630,6 +1590,7 @@ public class CMIUser {
         return null;
     }
 
+    @NotNull
     public Boolean getOptionState(PlayerOption option) {
         return null;
     }
@@ -1703,6 +1664,10 @@ public class CMIUser {
     }
 
     public static Collection<CMIUser> getUsers() {
+        return null;
+    }
+
+    public static CompletableFuture<OfflinePlayer> getOfflinePlayer(String playerName) {
         return null;
     }
 }

@@ -7,9 +7,9 @@ import org.bukkit.scheduler.BukkitTask;
 import com.Zrips.CMI.CMI;
 
 public class WorldManager {
-    private CMI plugin;
-    public static Pattern regionPattern;
-    BukkitTask task;
+    private CMI plugin = null;
+    public static Pattern regionPattern = null;
+    BukkitTask task = null;
 
     public WorldManager(CMI plugin) {
     }

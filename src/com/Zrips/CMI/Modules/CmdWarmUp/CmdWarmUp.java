@@ -3,10 +3,11 @@ package com.Zrips.CMI.Modules.CmdWarmUp;
 import com.Zrips.CMI.Modules.Particl.ParticleManager.CMIPresetAnimations;
 
 public class CmdWarmUp {
-    private Long warmUpTime;
-    private boolean move;
-    private String command;
-    private CMIPresetAnimations animation;
+    private Long warmUpTime = null;
+    private boolean move = false;
+    private double maxMoveDistance = 0.0;
+    private String command = null;
+    private CMIPresetAnimations animation = null;
 
     public CmdWarmUp(String command, Long warmUpTime, boolean move) {
     }
@@ -50,5 +51,12 @@ public class CmdWarmUp {
     }
 
     public void setAnimation(CMIPresetAnimations animation) {
+    }
+
+    public double getMaxMoveDistance() {
+        return 0.0;
+    }
+
+    public void setMaxMoveDistance(double maxMoveDistance) {
     }
 }

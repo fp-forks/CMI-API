@@ -5,9 +5,9 @@ import java.util.Set;
 import org.bukkit.inventory.ItemStack;
 
 public class SearchTypeItemStack extends SearchTypeItem {
-    ItemStack searchedItem;
-    Set<SearchTypeItem> searchTypes;
-    Set<ItemSearchCriteria> criteria;
+    ItemStack searchedItem = null;
+    Set<SearchTypeItem> searchTypes = null;
+    Set<ItemSearchCriteria> criteria = null;
 
     public SearchTypeItemStack(ItemStack item, Set<ItemSearchCriteria> criteria) {
         super(null);

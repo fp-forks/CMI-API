@@ -3,9 +3,9 @@ package com.Zrips.CMI.Containers;
 import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
 public class DamageControl {
-    private String node;
-    private DamageCause cause;
-    private double mult;
+    private String node = null;
+    private DamageCause cause = null;
+    private double mult = 0.0;
 
     public DamageControl(String node, DamageCause cause, double mult) {
     }

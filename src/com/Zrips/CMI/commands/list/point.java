@@ -14,8 +14,8 @@ public class point implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 125, info = "&ePoint to block", args = "(particleName) (playerName) (-self) (time) (-s:[speed])", tab = { "effect", "playername", "%%-self" }, explanation = {}, regVar = { 0, 1,
-        2, 3, 4 }, consoleVar = { 666 }, alias = true, others = false)
+    @CAnnotation(priority = 125, info = "Point to block", args = "(particleName) (playerName) (-self) (time) (-s:[speed])", tab = { "effect", "playername", "%%-self" }, explanation = {}, regVar = { 0,
+            1, 2, 3, 4 }, consoleVar = { 666 }, alias = true, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

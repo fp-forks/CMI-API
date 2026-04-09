@@ -5,16 +5,13 @@ import com.Zrips.CMI.events.CMIAfkEnterEvent.AfkType;
 import net.Zrips.CMILib.Container.CMIVectorInt3D;
 
 public class AfkInfo {
-    private long afkFrom;
-    private int kicksPerformed;
-    private AfkType type;
-    private String reason;
-    private long playtimeAtAfkStart;
-    private CMIVectorInt3D afkAt;
-    private int kickOutIn;
-
-    public AfkInfo() {
-    }
+    private long afkFrom = 0;
+    private int kicksPerformed = 0;
+    private AfkType type = null;
+    private String reason = null;
+    private long playtimeAtAfkStart = 0;
+    private CMIVectorInt3D afkAt = null;
+    private int kickOutIn = 0;
 
     public long getAfkFrom() {
         return 0;

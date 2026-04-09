@@ -4,34 +4,26 @@ import java.lang.reflect.Method;
 import java.util.List;
 
 import org.bukkit.Color;
-import org.bukkit.FireworkEffect;
 import org.bukkit.FireworkEffect.Type;
-import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 public class CMIPEFireWork extends CMIPEAnimation {
-    private static Method world_getHandle;
-    private static Method nms_world_broadcastEntityEffect;
-    private static Method firework_getHandle;
-    private Color fadeFrom;
-    private Color fadeTo;
-    private Type type;
-    private Boolean flicker;
-    private Boolean trail;
+    private static Method world_getHandle = null;
+    private static Method nms_world_broadcastEntityEffect = null;
+    private static Method firework_getHandle = null;
+    private Color fadeFrom = null;
+    private Color fadeTo = null;
+    private Type type = null;
+    private Boolean flicker = null;
+    private Boolean trail = null;
 
     public CMIPEFireWork() {
+        super();
     }
 
     @Override
     public boolean render(List<Player> players) {
         return false;
-    }
-
-    private static void ShotFirework(Location loc, FireworkEffect fe) throws Exception {
-    }
-
-    private static Method getMethod(Class<?> cl, String method) {
-        return null;
     }
 
     public Color getFadeFrom() {

@@ -14,7 +14,8 @@ public class prewards implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eCheck playtime rewards", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, alias = true, others = true)
+    @CAnnotation(priority = 48, info = "Check playtime rewards", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1,
+            2 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

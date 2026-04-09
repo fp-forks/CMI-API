@@ -3,18 +3,19 @@ package com.Zrips.CMI.Modules.Teleportations;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.util.Vector;
+import org.jetbrains.annotations.Nullable;
 
 import net.Zrips.CMILib.Items.CMIMaterial;
 
 public class CMITeleportLocation {
-    private World world;
-    private Vector position;
-    private float yaw;
-    private float pitch;
-    private CMITeleportCondition condition;
-    private double fallDistance;
-    private CMIMaterial floor;
-    private CMITeleportType type;
+    private World world = null;
+    private Vector position = null;
+    private float yaw = 0.0f;
+    private float pitch = 0.0f;
+    private CMITeleportCondition condition = null;
+    private double fallDistance = 0.0;
+    private CMIMaterial floor = null;
+    private CMITeleportType type = null;
 
     public CMITeleportLocation(World world) {
     }
@@ -31,6 +32,7 @@ public class CMITeleportLocation {
         return null;
     }
 
+    @Nullable
     public Location getLocation() {
         return null;
     }

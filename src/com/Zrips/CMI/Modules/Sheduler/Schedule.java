@@ -6,27 +6,27 @@ import java.util.regex.Pattern;
 import org.bukkit.entity.Player;
 
 public class Schedule {
-    private boolean enabled;
-    private String name;
-    private long performOn;
-    private boolean performed;
-    private List<String> commands;
-    private List<String> tempCommands;
-    private List<String> minPlayerCommands;
-    private boolean repeatable;
-    private boolean randomize;
-    private boolean duplicateRandomize;
-    private boolean singleLinear;
-    private long delay;
-    private long lastPerformedOn;
-    private List<SchedTime> time;
-    private int MinPlayer;
-    private int MaxPlayer;
-    private boolean playerAmountFeedback;
-    private double commandDelay;
-    private boolean dontTranslatePlaceholders;
-    private boolean randomPlayer;
-    Pattern placeholderKeepPatern;
+    private boolean enabled = false;
+    private String name = null;
+    private long performOn = 0;
+    private boolean performed = false;
+    private List<String> commands = null;
+    private List<String> tempCommands = null;
+    private List<String> minPlayerCommands = null;
+    private boolean repeatable = false;
+    private boolean randomize = false;
+    private boolean duplicateRandomize = false;
+    private boolean singleLinear = false;
+    private long delay = 0;
+    private long lastPerformedOn = 0;
+    private List<SchedTime> time = null;
+    private int MinPlayer = 0;
+    private int MaxPlayer = 0;
+    private boolean playerAmountFeedback = false;
+    private double commandDelay = 0.0;
+    private boolean dontTranslatePlaceholders = false;
+    private boolean randomPlayer = false;
+    Pattern placeholderKeepPatern = null;
 
     public Schedule(String name) {
     }
@@ -114,9 +114,6 @@ public class Schedule {
     public void setLastPerformedOn(Long lastPerformedOn) {
     }
 
-    private void updateNextPerform() {
-    }
-
     public List<SchedTime> getTime() {
         return null;
     }
@@ -149,12 +146,6 @@ public class Schedule {
     }
 
     public void perform() {
-    }
-
-    private void processCmd(String cmd, Player player) {
-    }
-
-    private void performCmd(List<String> cmds, Player player) {
     }
 
     public List<String> updateSchedCmds(List<String> cmds, Player player) {

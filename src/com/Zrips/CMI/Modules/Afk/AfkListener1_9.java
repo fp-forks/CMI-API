@@ -4,12 +4,14 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.AreaEffectCloudApplyEvent;
+import org.bukkit.event.entity.EntityTargetLivingEntityEvent;
 import org.bukkit.event.entity.LingeringPotionSplashEvent;
+import org.bukkit.event.entity.ProjectileLaunchEvent;
 
 import com.Zrips.CMI.CMI;
 
 public class AfkListener1_9 implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public AfkListener1_9(CMI plugin) {
     }
@@ -20,5 +22,13 @@ public class AfkListener1_9 implements Listener {
 
     @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
     public void onLingeringEffectApply(AreaEffectCloudApplyEvent event) {
+    }
+
+    @EventHandler(priority = EventPriority.NORMAL)
+    public void onProjectileLaunchEvent(ProjectileLaunchEvent event) {
+    }
+
+    @EventHandler(priority = EventPriority.NORMAL)
+    public void onEntityTargetLivingEntityEvent(EntityTargetLivingEntityEvent event) {
     }
 }

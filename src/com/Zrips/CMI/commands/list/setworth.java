@@ -14,7 +14,7 @@ public class setworth implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eChange item worth", args = "(itemname) -s:(sellPrice)", multiTab = { "[itemname],-s:1", "-s:1,-b:0.5" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 2, 3 }, others = false)
+    @CAnnotation(info = "Change item worth", args = "(itemname) -s:(sellPrice)", multiTab = { "[itemname],-s:1", "-s:1,-b:0.5" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 2, 3 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -1,39 +1,34 @@
 package com.Zrips.CMI.Modules.Scan;
 
-import java.util.Set;
+import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.World;
-import org.bukkit.block.Block;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Entity;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
-import com.Zrips.CMI.Modules.Search.CMIDataResultBase;
 import com.Zrips.CMI.Modules.Search.CMIDataResultLocationBase;
 import com.Zrips.CMI.Modules.Search.CMIDataSearch;
 
 import net.Zrips.CMILib.Container.CMIVectorInt2D;
 
 public class CMIWorldDataSearch extends CMIDataSearch {
-    protected static CMIWorldDataSearch activeSearch;
-    World world;
-    CMIVectorInt2D center;
-    int range;
-    int maxY;
-    int minY;
-    long skippedChunks;
-    private boolean startScan;
-    boolean paused;
-    CompletableFuture<CMIWorldChunksRanged> complete;
-    private ConcurrentHashMap<UUID, CMIDataResultLocationBase> foundIn;
-    private CMIWorldChunksRanged worldInformation;
-    int chunksLoading;
+    protected static CMIWorldDataSearch activeSearch = null;
+    World world = null;
+    CMIVectorInt2D center = null;
+    int range = 0;
+    int maxY = 0;
+    int minY = 0;
+    long skippedChunks = 0;
+    private boolean startScan = false;
+    boolean paused = false;
+    CompletableFuture<CMIWorldChunksRanged> complete = null;
+    private Map<UUID, CMIDataResultLocationBase> foundIn = null;
+    private CMIWorldChunksRanged worldInformation = null;
+    int chunksLoading = 0;
 
     public CMIWorldDataSearch(CommandSender sender, Location center, int range) {
         super(sender);
@@ -70,7 +65,8 @@ public class CMIWorldDataSearch extends CMIDataSearch {
     public void setRange(int range) {
     }
 
-    private void recheckWorldInfo() {
+    public int getRange() {
+        return 0;
     }
 
     public static CMIWorldDataSearch getActiveSearch() {
@@ -98,29 +94,11 @@ public class CMIWorldDataSearch extends CMIDataSearch {
     public void onPauseChange() {
     }
 
-    private void scanNextChunk() {
-    }
-
-    private void scanChunkBlocks(Chunk chunk) {
-    }
-
-    private void scanChunkEntities(Chunk chunk) {
-    }
-
     public static UUID locationToUUID(Vector vector) {
         return null;
     }
 
-    private void checkContents(Block block, ItemStack[] contents) {
-    }
-
-    public ConcurrentHashMap<UUID, CMIDataResultLocationBase> getSearchResults() {
+    public Map<UUID, CMIDataResultLocationBase> getSearchResults() {
         return null;
-    }
-
-    private void checkContents(Entity entity, ItemStack[] contents) {
-    }
-
-    private void add(Set<CMIDataResultBase> results) {
     }
 }

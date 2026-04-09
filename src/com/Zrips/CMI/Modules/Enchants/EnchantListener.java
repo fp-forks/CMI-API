@@ -8,7 +8,7 @@ import org.bukkit.event.inventory.InventoryCloseEvent;
 import com.Zrips.CMI.CMI;
 
 public class EnchantListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public EnchantListener(CMI plugin) {
     }

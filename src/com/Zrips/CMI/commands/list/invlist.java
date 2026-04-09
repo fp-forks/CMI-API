@@ -14,7 +14,7 @@ public class invlist implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 230, info = "&eShow saved inventories list", args = "(playerName)", tab = { "playername" }, regVar = { 0, 1 }, consoleVar = { 666 }, alias = true, others = true)
+    @CAnnotation(priority = 230, info = "Show saved inventories list", args = "(playerName)", tab = { "playername" }, regVar = { 0, 1 }, consoleVar = { 666 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

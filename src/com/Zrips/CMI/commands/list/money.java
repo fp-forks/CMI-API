@@ -14,8 +14,8 @@ public class money implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eManage money balance", args = "[pay/give/take/set] [playerName/all/alloffline/allonline] [amount][%rand/1-1000%][1%[min-max][[playerName]]] (-s)", tab = {
-        "pay%%give%%take%%set", "playername%%-all%%-alloffline%%-allonline", "-s%%" }, explanation = {}, regVar = { 0, 1, 3, 4 }, consoleVar = { 1, 3, 4 }, others = false)
+    @CAnnotation(priority = 48, info = "Manage money balance", args = "[pay/give/take/set] [playerName/all/alloffline/allonline] [amount][%rand/1-1000%][1%[min-max][[playerName]]] (-s)", tab = {
+            "pay%%give%%take%%set", "playername%%-all%%-alloffline%%-allonline", "-s%%" }, explanation = {}, regVar = { 0, 1, 3, 4 }, consoleVar = { 1, 3, 4 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }
@@ -23,7 +23,7 @@ public class money implements Cmd {
     private enum Actions {
         pay(false), send(false), give(true), add(true), take(true), set(true);
 
-        private boolean adminCmd;
+        private boolean adminCmd = false;
 
         Actions(boolean adminCmd) {
         }

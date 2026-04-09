@@ -6,15 +6,15 @@ import org.bukkit.inventory.ItemStack;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class CMIInvSee {
-    Player watcher;
-    Player target;
-    private ItemStack contents;
-    private ItemStack armor;
-    private ItemStack offHand;
-    private ItemStack cursor;
-    private CMITask task;
-    private CMITask lockTask;
-    private boolean tempLocked;
+    Player watcher = null;
+    Player target = null;
+    private ItemStack[] contents = null;
+    private ItemStack[] armor = null;
+    private ItemStack offHand = null;
+    private ItemStack cursor = null;
+    private CMITask task = null;
+    private CMITask lockTask = null;
+    private boolean tempLocked = false;
 
     public CMIInvSee(Player watcher, Player target) {
     }

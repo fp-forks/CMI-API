@@ -8,17 +8,12 @@ import org.bukkit.Location;
 import org.bukkit.World;
 
 public class WorldInfo {
-    private transient Map<String, List<Boolean>> regionChunks;
-    private CMIRegion center;
-    private long totalChunks;
-    private long lastChecked;
-    private World world;
-    private int range;
-
-    @Override
-    public WorldInfo clone() {
-        return null;
-    }
+    private transient Map<String, List<Boolean>> regionChunks = null;
+    private CMIRegion center = null;
+    private long totalChunks = 0;
+    private long lastChecked = 0;
+    private World world = null;
+    private int range = 0;
 
     public WorldInfo(World world, CMIRegion center) {
     }
@@ -26,14 +21,15 @@ public class WorldInfo {
     public WorldInfo(Location center, int range) {
     }
 
+    @Override
+    public WorldInfo clone() {
+        return null;
+    }
+
     public void setRegion(Map<String, List<Boolean>> regionChunks) {
     }
 
     public Map<String, List<Boolean>> getRegion() {
-        return null;
-    }
-
-    private static String toString(CMIRegion cord) {
         return null;
     }
 

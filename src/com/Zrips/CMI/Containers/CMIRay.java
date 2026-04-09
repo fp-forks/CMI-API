@@ -4,13 +4,14 @@ import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
 public class CMIRay {
-    private Vector origin;
-    private Vector direction;
+    private Vector origin = null;
+    private Vector direction = null;
 
     public CMIRay(Vector origin, Vector direction) {
     }
 
     public CMIRay(Player player) {
+        this(player.getEyeLocation().toVector(), player.getLocation().getDirection());
     }
 
     public Vector getOrigin() {

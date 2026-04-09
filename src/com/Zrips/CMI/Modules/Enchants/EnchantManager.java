@@ -8,14 +8,14 @@ import org.bukkit.enchantments.Enchantment;
 import com.Zrips.CMI.CMI;
 
 public class EnchantManager {
-    private Map<String, Object> maxValues;
-    private HashMap<String, Enchantment> disabled;
-    private CMI plugin;
-    private boolean RequireSpecificPermission;
-    private boolean EnforceValidEnchants;
-    private boolean PermissionLevelLimit;
-    private boolean enchantLimitEnabled;
-    private String fileName;
+    private Map<String, Object> maxValues = null;
+    private HashMap<String, Enchantment> disabled = null;
+    private CMI plugin = null;
+    private boolean RequireSpecificPermission = false;
+    private boolean EnforceValidEnchants = false;
+    private boolean PermissionLevelLimit = false;
+    private boolean enchantLimitEnabled = false;
+    private String fileName = null;
 
     public EnchantManager(CMI plugin) {
     }

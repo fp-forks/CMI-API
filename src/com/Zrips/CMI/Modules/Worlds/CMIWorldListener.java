@@ -10,8 +10,8 @@ import org.bukkit.event.world.WorldLoadEvent;
 import com.Zrips.CMI.CMI;
 
 public class CMIWorldListener implements Listener {
-    private CMI plugin;
-    static ConcurrentHashMap<String, Set<UpdateOnWorldLoad>> locations;
+    private CMI plugin = null;
+    static ConcurrentHashMap<String, Set<UpdateOnWorldLoad>> locations = null;
 
     public CMIWorldListener(CMI plugin) {
     }

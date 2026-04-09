@@ -5,10 +5,10 @@ import com.Zrips.CMI.CMI;
 import net.milkbowl.vault.economy.Economy;
 
 public class VaultManager {
-    private CMI plugin;
-    private String version;
-    private boolean supportsCmi;
-    private Economy economy;
+    private CMI plugin = null;
+    private String version = null;
+    private boolean supportsCmi = false;
+    private Economy economy = null;
 
     public VaultManager(CMI plugin) {
     }

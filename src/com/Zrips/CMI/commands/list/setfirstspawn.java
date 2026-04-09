@@ -14,7 +14,7 @@ public class setfirstspawn implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 240, info = "&eSets first spawn point", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 1 }, others = false)
+    @CAnnotation(priority = 240, info = "Sets first spawn point", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 1 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

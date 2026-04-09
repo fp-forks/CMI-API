@@ -3,7 +3,7 @@ package com.Zrips.CMI.Modules.CmdCooldown;
 import java.util.HashMap;
 
 public class CmdCooldown {
-    HashMap<String, CMICooldown> list;
+    HashMap<String, CMICooldown> list = null;
 
     public void addCooldown2(String cmd, Long time, Long timePeriod) {
     }
@@ -28,8 +28,8 @@ public class CmdCooldown {
     }
 
     public class CMICooldown {
-        private long initialized;
-        private int cooldownSeconds;
+        private long initialized = 0;
+        private int cooldownSeconds = 0;
 
         public CMICooldown(Long time, int cooldownSeconds) {
         }

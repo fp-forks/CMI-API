@@ -14,9 +14,9 @@ public class rankset implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 110, info = "&eSet a players rank", args = "(playerName) [rankName] (-cmd) (-cost)", tab = { "playername", "rankname", "-cmd%%", "-cost%%" }, explanation = {
-        "-cmd will perform command defined for that rank rankup", "-cost will charge player with money, exp or items if defined for that rank rankup",
-        "player will get rank even if he doesnt have enough money, exp or required items" }, regVar = { 1, 2, 3, 4 }, consoleVar = { 2, 3, 4 }, modules = "ranks", others = true)
+    @CAnnotation(priority = 110, info = "Set a players rank", args = "(playerName) [rankName] (-cmd) (-cost)", tab = { "playername", "rankname", "-cmd%%", "-cost%%" }, explanation = {
+            "-cmd will perform command defined for that rank rankup", "-cost will charge player with money, exp or items if defined for that rank rankup",
+            "player will get rank even if he doesnt have enough money, exp or required items" }, regVar = { 1, 2, 3, 4 }, consoleVar = { 2, 3, 4 }, modules = "ranks", others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

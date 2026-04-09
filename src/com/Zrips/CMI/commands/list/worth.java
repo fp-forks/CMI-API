@@ -14,8 +14,7 @@ public class worth implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 125, info = "&eCheck item worth", args = "(all/blocks/hand/material)", tab = { "all%%blocks%%hand%%[itemname]" }, explanation = {}, regVar = { 0, 1 }, consoleVar = {
-        666 }, others = false)
+    @CAnnotation(info = "Check item worth", args = "(all/blocks/hand/material)", tab = { "all%%blocks%%hand%%[itemname]" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

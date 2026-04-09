@@ -14,7 +14,7 @@ public class tpdeny implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 40, info = "&eDeny teleport request", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Deny teleport request", args = "(playerName)", tab = { "playername" }, regVar = { 0, 1 }, consoleVar = { 666 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

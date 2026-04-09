@@ -14,7 +14,7 @@ public class falldistance implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSet players falldistance", args = "(playerName) (number) (-s)", tab = { "playername", "-s" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2, 3 }, others = true)
+    @CAnnotation(info = "Set players falldistance", args = "(playerName) (number) (-s)", tab = { "playername", "-s" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

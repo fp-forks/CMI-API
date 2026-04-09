@@ -16,8 +16,8 @@ public class shoot implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 120, info = "&eShoot projectile", args = "(playerName) (-t:targetPlayer) (type) (speed)", tab = { "playername%%projectiletype%%cleanEntityType",
-        "-t:%%projectiletype%%cleanEntityType", "projectiletype%%cleanEntityType" }, explanation = {}, regVar = { 0, 1, 2, 3, 4 }, consoleVar = { 1, 2, 3, 4 }, others = true)
+    @CAnnotation(priority = 120, info = "Shoot projectile", args = "(playerName) (-t:targetPlayer) (type) (speed)", tab = { "playername%%projectiletype%%cleanEntityType",
+            "-t:%%projectiletype%%cleanEntityType", "projectiletype%%cleanEntityType" }, explanation = {}, regVar = { 0, 1, 2, 3, 4 }, consoleVar = { 1, 2, 3, 4 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

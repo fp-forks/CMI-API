@@ -8,7 +8,7 @@ import org.bukkit.event.player.PlayerChatTabCompleteEvent;
 import com.Zrips.CMI.CMI;
 
 public class TagListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public TagListener(CMI plugin) {
     }

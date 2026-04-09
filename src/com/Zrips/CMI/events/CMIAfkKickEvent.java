@@ -5,7 +5,7 @@ import java.util.List;
 import org.bukkit.entity.Player;
 
 public class CMIAfkKickEvent extends CMIPlayerCancellableEvent {
-    private List<String> kickTrigerCommands;
+    private List<String> kickTrigerCommands = null;
 
     public CMIAfkKickEvent(Player player, List<String> kickTrigerCommands) {
         super(player);

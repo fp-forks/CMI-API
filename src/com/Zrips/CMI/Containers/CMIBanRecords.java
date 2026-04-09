@@ -1,6 +1,5 @@
 package com.Zrips.CMI.Containers;
 
-import java.lang.reflect.Method;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.UUID;
@@ -12,10 +11,7 @@ import org.bukkit.BanList;
 import org.bukkit.entity.Player;
 
 public class CMIBanRecords {
-    private static HashMap<UUID, CMIBanEntry> banCache;
-    static Method banPaperMethod;
-    static Method pardonPaperMethod;
-    static Method getBanPaperMethod;
+    private static HashMap<UUID, CMIBanEntry> banCache = null;
 
     public static CMIBanEntry getBanEntryRaw(UUID uuid) {
         return null;

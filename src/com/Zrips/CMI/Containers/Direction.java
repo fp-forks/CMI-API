@@ -3,7 +3,7 @@ package com.Zrips.CMI.Containers;
 public enum Direction {
     SOUTH("South"), WEST("West"), NORTH("North"), EAST("East");
 
-    private String direction;
+    private String direction = null;
 
     private Direction(String direction) {
     }

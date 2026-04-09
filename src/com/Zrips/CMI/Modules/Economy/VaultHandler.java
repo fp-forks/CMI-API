@@ -11,20 +11,21 @@ import org.bukkit.event.server.PluginEnableEvent;
 import org.bukkit.plugin.Plugin;
 
 import com.Zrips.CMI.CMI;
-import com.Zrips.CMI.Containers.CMIUser;
 
 import net.milkbowl.vault.economy.AbstractEconomy;
 import net.milkbowl.vault.economy.EconomyResponse;
 
 public class VaultHandler extends AbstractEconomy {
-    public CMI cmi;
-    Plugin plugin;
+    public CMI cmi = null;
+    Plugin plugin = null;
     private final String name = null;
 
     public VaultHandler(CMI plugin) {
+        super();
     }
 
     public VaultHandler(Plugin plugin) {
+        super();
     }
 
     public void setCMI(CMI cmi) {
@@ -69,10 +70,6 @@ public class VaultHandler extends AbstractEconomy {
         return 0.0;
     }
 
-    private static double getAccountBalance(CMIUser user) {
-        return 0.0;
-    }
-
     @Override
     public EconomyResponse withdrawPlayer(String playerName, double amount) {
         return null;
@@ -83,10 +80,6 @@ public class VaultHandler extends AbstractEconomy {
         return null;
     }
 
-    private static EconomyResponse withdraw(CMIUser user, double amount) {
-        return null;
-    }
-
     @Override
     public EconomyResponse depositPlayer(String playerName, double amount) {
         return null;
@@ -94,10 +87,6 @@ public class VaultHandler extends AbstractEconomy {
 
     @Override
     public EconomyResponse depositPlayer(OfflinePlayer offlinePlayer, double amount) {
-        return null;
-    }
-
-    private static EconomyResponse deposit(CMIUser user, double amount) {
         return null;
     }
 
@@ -262,7 +251,7 @@ public class VaultHandler extends AbstractEconomy {
     }
 
     public class EconomyServerListener implements Listener {
-        VaultHandler economy;
+        VaultHandler economy = null;
 
         public EconomyServerListener(VaultHandler economy) {
         }

@@ -16,32 +16,25 @@ import com.Zrips.CMI.Modules.Portals.CuboidArea.ChunkRef;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class PortalManager {
-    private SortedMap<String, CMIPortal> portals;
-    protected Map<String, Map<ChunkRef, Set<CMIPortal>>> chunkPortals;
-    protected Map<String, Map<ChunkRef, Set<CMIPortal>>> chunkPortalsRange1;
-    private Map<UUID, Set<CMIPortal>> playerNearPortals;
-    private ConcurrentHashMap<UUID, Set<CMIPortal>> lastPortals;
-    private ConcurrentHashMap<CMIPortal, Set<UUID>> lastPortalInRange;
-    private int PortalsCheckInterval;
-    private int PortalsCheckParticleInterval;
-    private List<String> commandsOnTeleport;
-    public static boolean performCmd;
-    private CMI plugin;
-    private CMITask sched;
-    private String fileName;
-    private CMITask id;
-    private boolean saving;
+    private SortedMap<String, CMIPortal> portals = null;
+    protected Map<String, Map<ChunkRef, Set<CMIPortal>>> chunkPortals = null;
+    protected Map<String, Map<ChunkRef, Set<CMIPortal>>> chunkPortalsRange1 = null;
+    private Map<UUID, Set<CMIPortal>> playerNearPortals = null;
+    private ConcurrentHashMap<UUID, Set<CMIPortal>> lastPortals = null;
+    private ConcurrentHashMap<CMIPortal, Set<UUID>> lastPortalInRange = null;
+    private int PortalsCheckInterval = 0;
+    private int PortalsCheckParticleInterval = 0;
+    private List<String> commandsOnTeleport = null;
+    public static boolean performCmd = false;
+    private CMI plugin = null;
+    private CMITask sched = null;
+    private String fileName = null;
+    private CMITask id = null;
 
     public PortalManager(CMI plugin) {
     }
 
     public void stop() {
-    }
-
-    private void tasker() {
-    }
-
-    private static void showParticlesForPortal(CMIPortal portal) {
     }
 
     public void addPortal(CMIPortal portal) {
@@ -73,14 +66,6 @@ public class PortalManager {
         return null;
     }
 
-    private static List<ChunkRef> getChunks(CMIPortal res) {
-        return null;
-    }
-
-    private static List<ChunkRef> getChunks(CMIPortal portal, int range) {
-        return null;
-    }
-
     public void loadConfig() {
     }
 
@@ -98,9 +83,6 @@ public class PortalManager {
     }
 
     public void savePortals() {
-    }
-
-    private void save() {
     }
 
     public synchronized void removeLastPortalInRange(CMIPortal portal, UUID uuid) {

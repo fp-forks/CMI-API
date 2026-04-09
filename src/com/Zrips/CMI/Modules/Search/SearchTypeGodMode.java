@@ -5,9 +5,10 @@ import java.util.Set;
 import org.bukkit.entity.Player;
 
 public class SearchTypeGodMode extends SearchTypePlayerBase {
-    boolean godMode;
+    boolean godMode = false;
 
     public SearchTypeGodMode(boolean godMode) {
+        super();
     }
 
     @Override

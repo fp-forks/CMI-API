@@ -9,29 +9,29 @@ import org.bukkit.inventory.ItemStack;
 import com.Zrips.CMI.Containers.CMIPlayerInventory.CMIInventorySlot;
 
 public class Kit {
-    private List<ItemStack> item;
-    private List<String> commands;
-    private List<String> conditions;
-    private List<String> Description;
-    private HashMap<CMIInventorySlot, ItemStack> extraItems;
-    private ItemStack Icon;
-    private ItemStack IconOff;
-    private double cost;
-    private int expCost;
-    private Long delay;
-    private String name;
-    private String displayName;
-    private String group;
-    private String fileName;
-    private boolean enabled;
-    private int weight;
-    private String cmdName;
-    private Integer slot;
-    private Integer page;
-    private int maxUsages;
-    private boolean showDespiteUsage;
-    private boolean showDespiteWeight;
-    private boolean dropItems;
+    private List<ItemStack> item = null;
+    private List<String> commands = null;
+    private List<String> conditions = null;
+    private List<String> Description = null;
+    private HashMap<CMIInventorySlot, ItemStack> extraItems = null;
+    private ItemStack Icon = null;
+    private ItemStack IconOff = null;
+    private double cost = 0.0;
+    private int expCost = 0;
+    private Long delay = null;
+    private String name = null;
+    private String displayName = null;
+    private String group = null;
+    private String fileName = null;
+    private boolean enabled = false;
+    private int weight = 0;
+    private String cmdName = null;
+    private Integer slot = null;
+    private Integer page = null;
+    private int maxUsages = 0;
+    private boolean showDespiteUsage = false;
+    private boolean showDespiteWeight = false;
+    private boolean dropItems = false;
 
     public Kit(String name) {
     }
@@ -53,10 +53,6 @@ public class Kit {
 
     public boolean enoughFreeSpace(Player player) {
         return false;
-    }
-
-    private ItemStack checkBook(ItemStack book) {
-        return null;
     }
 
     public void setItem(List<ItemStack> item) {

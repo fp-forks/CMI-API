@@ -14,19 +14,15 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import com.Zrips.CMI.CMI;
 
 public class InteractiveCommandListener implements Listener {
-    private CMI plugin;
-    private static int MAX_ENTRIES;
-    public static LinkedHashMap<UUID, Long> limit;
+    private CMI plugin = null;
+    private static int MAX_ENTRIES = 0;
+    public static LinkedHashMap<UUID, Long> limit = null;
 
     public InteractiveCommandListener(CMI plugin) {
     }
 
     @EventHandler(priority = EventPriority.NORMAL)
     public void PlayerInteractCancelableEvent(PlayerInteractEvent event) {
-    }
-
-    private CMIInteractiveCommand getCommand(PlayerInteractEvent event) {
-        return null;
     }
 
     @EventHandler(priority = EventPriority.MONITOR)

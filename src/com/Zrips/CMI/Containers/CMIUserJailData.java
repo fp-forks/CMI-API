@@ -5,10 +5,10 @@ import java.util.UUID;
 import com.Zrips.CMI.Modules.Jail.CMIJailCell;
 
 public class CMIUserJailData {
-    private long jailedForTime;
-    private String jailedReason;
-    private UUID jailedBy;
-    private CMIJailCell cell;
+    private long jailedForTime = 0;
+    private String jailedReason = null;
+    private UUID jailedBy = null;
+    private CMIJailCell cell = null;
 
     public long getJailedForTime() {
         return 0;

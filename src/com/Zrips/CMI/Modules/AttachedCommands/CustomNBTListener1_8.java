@@ -8,7 +8,7 @@ import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import com.Zrips.CMI.CMI;
 
 public class CustomNBTListener1_8 implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public CustomNBTListener1_8(CMI plugin) {
     }

@@ -8,7 +8,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import com.Zrips.CMI.CMI;
 
 public class AnimationListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public AnimationListener(CMI plugin) {
     }

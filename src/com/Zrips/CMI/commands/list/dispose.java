@@ -14,7 +14,7 @@ public class dispose implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eDispose of unneeded items", args = "(playerName)", tab = { "playerName" }, regVar = { 0, 1 }, consoleVar = { 1 }, customAlias = { "trash" }, alias = true, others = true)
+    @CAnnotation(info = "Dispose of unneeded items", args = "(playerName)", tab = { "playerName" }, regVar = { 0, 1 }, consoleVar = { 1 }, customAlias = { "trash" }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

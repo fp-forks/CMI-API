@@ -14,8 +14,8 @@ public class down implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 150, info = "&eTeleport one floor down", args = "[playerName] (-s) (max)", tab = { "playername", "max" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
-        3 }, others = true)
+    @CAnnotation(priority = 150, info = "Teleport one floor down", args = "[playerName] (-s) (max)", tab = { "playername", "max" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
+            3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

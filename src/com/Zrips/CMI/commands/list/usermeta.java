@@ -13,14 +13,9 @@ public class usermeta implements Cmd {
     public void getExtra(ConfigReader c) {
     }
 
-    private static boolean fractional(double number) {
-        return false;
-    }
-
     @Override
-    @CAnnotation(priority = 180, info = "&eManage players meta data", args = "[playerName] [add/remove/clear/list/increment] (key) (value) (-s)", tab = { "playername",
-        "add%%remove%%clear%%list%%increment", "username-color%%" }, explanation = { "Any set meta can be displayed with %cmi_user_meta_[key]% placeholder around plugin" }, regVar = {
-            -100 }, consoleVar = { -100, -1 }, others = false)
+    @CAnnotation(info = "Manage players meta data", args = "[playerName] [add/remove/clear/list/increment] (key) (value) (-s)", tab = { "playername", "add%%remove%%clear%%list%%increment",
+            "[usermeta]" }, explanation = { "Any set meta can be displayed with %cmi_user_meta_[key]% placeholder around plugin" }, regVar = { -100 }, consoleVar = { -100, -1 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

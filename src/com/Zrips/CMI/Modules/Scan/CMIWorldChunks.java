@@ -10,9 +10,9 @@ import org.bukkit.World;
 import net.Zrips.CMILib.Container.CMIVectorInt2D;
 
 public class CMIWorldChunks {
-    protected World world;
-    protected Map<Long, BitSet> regionChunks;
-    protected long totalChunks;
+    protected World world = null;
+    protected Map<Long, BitSet> regionChunks = null;
+    protected long totalChunks = 0;
 
     public CMIWorldChunks(World world) {
     }

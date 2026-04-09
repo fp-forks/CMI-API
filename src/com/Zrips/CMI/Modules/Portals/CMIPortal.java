@@ -13,28 +13,30 @@ import net.Zrips.CMILib.Effects.CMIEffect;
 import net.Zrips.CMILib.Effects.CMIEffectManager.CMIParticle;
 
 public class CMIPortal {
-    private CuboidArea area;
-    private Location tpLoc;
-    private Location safeLoc;
-    private String bungeeServer;
-    private String bungeeLocation;
-    private boolean toExactBungeeLocation;
-    private boolean performCommandsWithoutTp;
-    private World world;
-    private String worldName;
-    private boolean enabled;
-    private boolean showParticles;
-    private int particleAmount;
-    private boolean requiresPermission;
-    private boolean kickBack;
-    private boolean informOnMissingPerm;
-    private int percentToHide;
-    private int activationRange;
-    private CMIEffect cmiEffect;
-    private List<String> commands;
-    private String name;
-    private boolean particlesByPermission;
-    private Set<UUID> particleForPlayers;
+    private CuboidArea area = null;
+    private Location tpLoc = null;
+    private Location safeLoc = null;
+    private String bungeeServer = null;
+    private String bungeeLocation = null;
+    private boolean toExactBungeeLocation = false;
+    private boolean performCommandsWithoutTp = false;
+    private World world = null;
+    private String worldName = null;
+    private boolean enabled = false;
+    private boolean showParticles = false;
+    private CMIPortalParticleOrigin particleOrigin = null;
+    private int particleAmount = 0;
+    private boolean requiresPermission = false;
+    private boolean kickBack = false;
+    private boolean informOnMissingPerm = false;
+    private boolean cancelCmdWarmup = false;
+    private int percentToHide = 0;
+    private int activationRange = 0;
+    private CMIEffect cmiEffect = null;
+    private List<String> commands = null;
+    private String name = null;
+    private boolean particlesByPermission = false;
+    private Set<UUID> particleForPlayers = null;
 
     public CMIPortal() {
     }
@@ -231,6 +233,7 @@ public class CMIPortal {
         return null;
     }
 
+    @Deprecated
     public void setEffect(CMIParticle effect) {
     }
 
@@ -241,7 +244,22 @@ public class CMIPortal {
     public void setCMIEffect(CMIEffect cmiEffect) {
     }
 
+    @Deprecated
     public CMIPortal setEffectColor(Color color) {
         return null;
+    }
+
+    public boolean isCancelCmdWarmup() {
+        return false;
+    }
+
+    public void setCancelCmdWarmup(boolean cancelCmdWarmup) {
+    }
+
+    public CMIPortalParticleOrigin getParticleOrigin() {
+        return null;
+    }
+
+    public void setParticleOrigin(CMIPortalParticleOrigin particleOrigin) {
     }
 }

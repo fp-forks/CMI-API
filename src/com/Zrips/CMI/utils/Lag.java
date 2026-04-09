@@ -3,7 +3,7 @@ package com.Zrips.CMI.utils;
 import java.util.List;
 
 public class Lag implements Runnable {
-    private List<Long> TicksList;
+    private List<Long> TicksList = null;
 
     public int getTicks() {
         return 0;

@@ -5,9 +5,9 @@ import java.util.List;
 import org.bukkit.inventory.ItemStack;
 
 public class CondenseResult {
-    private int iAmount;
-    private int rAmount;
-    private List<ItemStack> items;
+    private int iAmount = 0;
+    private int rAmount = 0;
+    private List<ItemStack> items = null;
 
     public CondenseResult() {
     }

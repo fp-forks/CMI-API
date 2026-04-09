@@ -11,35 +11,37 @@ import net.Zrips.CMILib.Container.CMIVectorInt3D;
 import net.Zrips.CMILib.Items.CMIMaterial;
 
 public class RandomTeleport {
-    private boolean enabled;
-    private int MaxDistance;
-    private int MinDistance;
-    private CMILocation loc;
-    private boolean circle;
-    private boolean ignoreWater;
-    private boolean ignoreLava;
-    private boolean ignorePowderSnow;
-    private boolean ignoreLeaves;
-    private boolean surfaceOnly;
-    private boolean IgnoreCrawl;
-    private boolean fromAnotherWorld;
-    private boolean requireWorldPermission;
-    private Set<CMIMaterial> ignoredMaterials;
-    private Set<String> ignoredBiomes;
-    private Set<String> preferredBiomes;
-    private int maxTries;
-    private int MaxY;
-    private int MinY;
-    static Random random;
-    private int cooldown;
+    private boolean enabled = false;
+    private int MaxDistance = 0;
+    private int MinDistance = 0;
+    private CMILocation loc = null;
+    private boolean circle = false;
+    private boolean ignoreWater = false;
+    private boolean ignoreLava = false;
+    private boolean ignorePowderSnow = false;
+    private boolean ignoreLeaves = false;
+    private boolean surfaceOnly = false;
+    private boolean IgnoreCrawl = false;
+    private boolean fromAnotherWorld = false;
+    private boolean requireWorldPermission = false;
+    private Set<CMIMaterial> ignoredMaterials = null;
+    private Set<String> ignoredBiomes = null;
+    private Set<String> preferredBiomes = null;
+    private int maxTries = 0;
+    private int MaxY = 0;
+    private int MinY = 0;
+    static Random random = null;
+    private int cooldown = 0;
 
     public RandomTeleport(boolean enabled, int MaxDistance, int MinDistance, CMILocation center) {
     }
 
     public RandomTeleport(World world, int MaxDistance, int MinDistance, int centerX, int centerZ) {
+        this(true, MaxDistance, MinDistance, new CMILocation(world, centerX, 63, centerZ));
     }
 
     public RandomTeleport(World world) {
+        this(true, 100, 0, new CMILocation(world, 0, 63, 0));
     }
 
     public Location getCenter() {

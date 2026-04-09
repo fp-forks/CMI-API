@@ -14,7 +14,7 @@ public class tpaccept implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 40, info = "&eAccept teleport request", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Accept teleport request", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

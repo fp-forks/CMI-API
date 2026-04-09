@@ -1,7 +1,6 @@
 package com.Zrips.CMI.Containers;
 
 import java.lang.reflect.Method;
-import java.util.HashMap;
 
 import org.bukkit.ChunkSnapshot;
 import org.bukkit.Location;
@@ -10,16 +9,14 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
 import org.bukkit.util.Vector;
 
-import net.Zrips.CMILib.Items.CMIMaterial;
-
 public class CMIHitBox {
-    private Vector max;
-    private Vector min;
-    private Block block;
-    private Entity ent;
-    private World world;
-    private ChunkSnapshot snapshot;
-    static Method getBlockTypeId;
+    private Vector max = null;
+    private Vector min = null;
+    private Block block = null;
+    private Entity ent = null;
+    private World world = null;
+    private ChunkSnapshot snapshot = null;
+    static Method getBlockTypeId = null;
 
     CMIHitBox(World world, Vector min, Vector max) {
     }
@@ -69,15 +66,7 @@ public class CMIHitBox {
     public void byExactXYZ(double x, double y, double z) {
     }
 
-    private static HashMap<BlockStateType, String> getBlockStates(Block block) {
-        return null;
-    }
-
     public boolean byExactXYZ(double x, double y, double z, double tolerance) {
-        return false;
-    }
-
-    private boolean checkBlock(Block block, boolean resize) {
         return false;
     }
 
@@ -115,10 +104,6 @@ public class CMIHitBox {
 
     public boolean canPlayerStand(Location loc) {
         return false;
-    }
-
-    private CMIMaterial getBlockType(int x, int y, int z) {
-        return null;
     }
 
     public boolean collides(Vector position) {

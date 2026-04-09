@@ -16,9 +16,8 @@ public class itemlore implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eChange items lore", args = "(-p:[playerName]) [linenumber/*] [remove/insert/ new lore line]", multiTab = {
-        "-p:,[loreLine],*,[currentItemLore] [loreLine],*,![currentItemLore] ![currentItemLore]" }, explanation = {}, regVar = { -100 }, consoleVar = {
-            -100 }, alias = true, customAlias = "!ilore", others = true)
+    @CAnnotation(info = "Change items lore", args = "(-p:[playerName]) [linenumber/*] [remove/insert/ new lore line]", multiTab = {
+            "-p:,[loreLine],*,[currentItemLore] [loreLine],*,![currentItemLore] ![currentItemLore]" }, regVar = { -100 }, consoleVar = { -100 }, alias = true, customAlias = "!ilore", others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

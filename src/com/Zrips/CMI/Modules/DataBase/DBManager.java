@@ -1,8 +1,8 @@
 package com.Zrips.CMI.Modules.DataBase;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -13,35 +13,36 @@ import com.Zrips.CMI.Modules.PlayTime.CMIPlayDay;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class DBManager {
-    private DBDAO dao;
-    private CMI plugin;
-    private DataBaseType DbType;
-    int autoSaveInterval;
-    private boolean ForceSaveOnLogOut;
-    private boolean ForceLoadOnLogIn;
+    private DBDAO dao = null;
+    private CMI plugin = null;
+    private DataBaseType DbType = null;
+    boolean databaseSwitch = false;
+    int autoSaveInterval = 0;
+    private boolean ForceSaveOnLogOut = false;
+    private boolean ForceLoadOnLogIn = false;
     private static final String fileName = null;
-    private String username;
-    private String password;
-    private String hostname;
-    private String database;
-    private String prefix;
-    private boolean autoReconnect;
-    private boolean useSSL;
-    private boolean verifyServerCertificate;
-    private ConcurrentHashMap<CMIUser, InvSave> invToSave;
-    private Set<CMIUser> playerListToSave;
-    private Set<CMIUser> playerPlayTimeRewardToSave;
-    CMITask autosaveBukkitId;
-    CompletableFuture<Void> task;
-    Long startedAt;
-    private Runnable autoSave;
-    HashMap<String, CMIUser> getPlayerId;
-    HashMap<Integer, CMIUser> getPlayerInvId;
-    HashMap<CMIPlayDay, CMIUser> getPlayerPlayTimeId;
-    HashMap<Integer, CMIUser> getPlayerPlayTimeRewardId;
-    Boolean all;
-    Integer oldRapidvalue;
-    boolean startingDb;
+    private String username = null;
+    private String password = null;
+    private String hostname = null;
+    private String database = null;
+    private String prefix = null;
+    private boolean autoReconnect = false;
+    private boolean useSSL = false;
+    private boolean verifyServerCertificate = false;
+    private ConcurrentHashMap<CMIUser, InvSave> invToSave = null;
+    private Set<CMIUser> playerListToSave = null;
+    private Set<CMIUser> playerPlayTimeRewardToSave = null;
+    CMITask autosaveBukkitId = null;
+    CompletableFuture<Void> task = null;
+    Long startedAt = null;
+    private Runnable autoSave = null;
+    HashMap<String, CMIUser> getPlayerId = null;
+    HashMap<Integer, CMIUser> getPlayerInvId = null;
+    HashMap<CMIPlayDay, CMIUser> getPlayerPlayTimeId = null;
+    HashMap<Integer, CMIUser> getPlayerPlayTimeRewardId = null;
+    Boolean all = null;
+    Integer oldRapidvalue = null;
+    boolean startingDb = false;
 
     public DBManager(CMI plugin) {
     }
@@ -50,18 +51,38 @@ public class DBManager {
         return null;
     }
 
+    public boolean isConnected() {
+        return false;
+    }
+
+    public void closeConnections() {
+    }
+
+    public void loadAllUsers() {
+    }
+
+    public void loadPlayTimes() {
+    }
+
+    public void loadPlayerPlayTimeRewards() {
+    }
+
+    public CompletableFuture<Void> loadUserAsync(UUID uuid) {
+        return null;
+    }
+
+    public String getInv(CMIUser user) {
+        return null;
+    }
+
+    public CompletableFuture<String> getInventoriesString(CMIUser user) {
+        return null;
+    }
+
     public void switchDataBase() {
     }
 
     public void load() {
-    }
-
-    private synchronized DBMySQL startMysql(boolean reload) {
-        return null;
-    }
-
-    private synchronized DBSQLite startSqlite(boolean reload) {
-        return null;
     }
 
     public DataBaseType getDbType() {
@@ -83,11 +104,11 @@ public class DBManager {
     public void addForSave(CMIUser user, String inventory) {
     }
 
-    public void clear() {
+    public boolean isInventorySavePending(CMIUser user) {
+        return false;
     }
 
-    private synchronized HashSet<CMIUser> getFirstPlayersForSave(boolean all) {
-        return null;
+    public void clear() {
     }
 
     public void saveAllInNextCicle() {
@@ -102,13 +123,7 @@ public class DBManager {
     public void saveBatch(boolean all) {
     }
 
-    private void saveInventories() {
-    }
-
-    private void savePlaytimeRewards() {
-    }
-
-    private void saveCMIPlaytime(HashSet<CMIUser> temp) {
+    public void recheckIDs(CMIUser user) {
     }
 
     public boolean isRapidModeEnabled() {
@@ -123,13 +138,17 @@ public class DBManager {
         return false;
     }
 
+    public String getPrefix() {
+        return null;
+    }
+
     public enum DataBaseType {
         MySQL, SqLite;
     }
 
     class InvSave {
-        private CMIUser user;
-        private String inv;
+        private CMIUser user = null;
+        private String inv = null;
 
         public InvSave(CMIUser user, String inv) {
         }

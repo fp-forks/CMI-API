@@ -9,11 +9,11 @@ import com.Zrips.CMI.Modules.Worth.WorthManager.worthType;
 import net.Zrips.CMILib.Items.CMIMaterial;
 
 public class CMIPlayerItemsSellEvent extends CMIPlayerEvent {
-    private HashMap<CMIMaterial, Integer> amounts;
-    private HashMap<CMIMaterial, Double> payments;
-    private worthType sellType;
-    private double totalPayment;
-    private int totalAmount;
+    private HashMap<CMIMaterial, Integer> amounts = null;
+    private HashMap<CMIMaterial, Double> payments = null;
+    private worthType sellType = null;
+    private double totalPayment = 0.0;
+    private int totalAmount = 0;
 
     public CMIPlayerItemsSellEvent(Player player, worthType sellType, int totalAmount, double totalPayment, HashMap<CMIMaterial, Integer> amounts, HashMap<CMIMaterial, Double> payments) {
         super(player);

@@ -4,7 +4,7 @@ import com.Zrips.CMI.Containers.CMIUser;
 import com.Zrips.CMI.Modules.Jail.CMIJailCell;
 
 public class CMIPlayerJailEvent extends CMIUserCancellableEvent {
-    private CMIJailCell cell;
+    private CMIJailCell cell = null;
 
     public CMIPlayerJailEvent(CMIUser user, CMIJailCell cell) {
         super(user);

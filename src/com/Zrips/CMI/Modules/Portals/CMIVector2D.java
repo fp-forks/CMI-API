@@ -3,8 +3,8 @@ package com.Zrips.CMI.Modules.Portals;
 import org.bukkit.util.Vector;
 
 public class CMIVector2D {
-    private double x;
-    private double y;
+    protected double x = 0.0;
+    protected double y = 0.0;
 
     public CMIVector2D(Vector v) {
     }
@@ -24,7 +24,7 @@ public class CMIVector2D {
         return null;
     }
 
-    public CMIVector2D times(double s) {
+    public CMIVector2D multiply(double s) {
         return null;
     }
 
@@ -37,17 +37,23 @@ public class CMIVector2D {
         return null;
     }
 
+    public static CMIVector2D fromString(String value) {
+        return null;
+    }
+
     public double getX() {
         return 0.0;
     }
 
-    public void setX(double x) {
+    public CMIVector2D setX(double x) {
+        return null;
     }
 
     public double getY() {
         return 0.0;
     }
 
-    public void setY(double y) {
+    public CMIVector2D setY(double y) {
+        return null;
     }
 }

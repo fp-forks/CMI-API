@@ -3,8 +3,8 @@ package com.Zrips.CMI.Modules.Worth;
 import org.bukkit.inventory.ItemStack;
 
 public class WorthItemCheck {
-    private WorthItem worth;
-    private ItemStack item;
+    private WorthItem worth = null;
+    private ItemStack item = null;
 
     public WorthItemCheck(ItemStack item) {
     }

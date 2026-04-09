@@ -14,7 +14,7 @@ public class itemnbt implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eShow item NBT information", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1 }, others = true)
+    @CAnnotation(info = "Show item NBT information", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

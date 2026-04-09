@@ -4,16 +4,16 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class BungeeCordServer {
-    private String name;
-    private String ip;
-    private Integer port;
-    private String motd;
-    private int maxPlayers;
-    private int currentPlayers;
-    private Long nextCheck;
-    private boolean online;
-    private ConcurrentHashMap<String, BungeePlayer> playersMapUUID;
-    private ConcurrentHashMap<String, BungeePlayer> playersMapName;
+    private String name = null;
+    private String ip = null;
+    private Integer port = null;
+    private String motd = null;
+    private int maxPlayers = 0;
+    private int currentPlayers = 0;
+    private Long nextCheck = null;
+    private boolean online = false;
+    private ConcurrentHashMap<String, BungeePlayer> playersMapUUID = null;
+    private ConcurrentHashMap<String, BungeePlayer> playersMapName = null;
 
     public BungeeCordServer(String name, String ip, Integer port) {
     }

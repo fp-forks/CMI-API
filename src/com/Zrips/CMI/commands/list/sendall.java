@@ -14,7 +14,8 @@ public class sendall implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eSend all online players to target server", args = "[serverName]", tab = { "bungeeserver" }, explanation = {}, regVar = { 1 }, consoleVar = { 1 }, others = false)
+    @CAnnotation(priority = 48, info = "Send all online players to target server", args = "[serverName]", tab = { "bungeeserver" }, explanation = {}, regVar = { 1 }, consoleVar = {
+            1 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

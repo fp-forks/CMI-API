@@ -14,8 +14,8 @@ public class clearchat implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eClears chat", args = "(self) (-s)", explanation = { "Permission:", " &6cmi.command.clearchat.bypass &e- to ignore chat cleaning" }, multiTab = { "self,-s !-s" }, regVar = { 0,
-        1 }, consoleVar = { 1 }, customAlias = "cc", others = false)
+    @CAnnotation(info = "Clears chat", args = "(self) (-s)", explanation = { "Permission:", " cmi.command.clearchat.bypass - to ignore chat cleaning" }, multiTab = { "self,-s !-s" }, regVar = { 0,
+            1 }, consoleVar = { 1 }, customAlias = "cc", others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

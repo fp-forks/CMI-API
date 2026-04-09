@@ -13,10 +13,13 @@ import com.Zrips.CMI.CMI;
 import net.Zrips.CMILib.Container.CMIVectorInt2D;
 
 public class WorldManager {
-    private CMI plugin;
-    public Pattern regionPattern;
-    private static Map<String, WorldInfo> worldMap;
-    BukkitTask task;
+    private CMI plugin = null;
+    public Pattern regionPattern = null;
+    private static Map<String, WorldInfo> worldMap = null;
+    BukkitTask task = null;
+
+    public WorldManager(CMI plugin) {
+    }
 
     public void cancelLoading() {
     }
@@ -27,9 +30,6 @@ public class WorldManager {
 
     public boolean stillLoading() {
         return false;
-    }
-
-    public WorldManager(CMI plugin) {
     }
 
     public void removeWorldInfo(World world) {
@@ -77,35 +77,11 @@ public class WorldManager {
         return null;
     }
 
-    private static boolean inRange(CMIRegion center, CMIRegion scord, Integer range) {
-        return false;
-    }
-
     public HashMap<String, CMIRegion> getRegionFiles(World world) {
         return null;
     }
 
     public HashMap<String, CMIRegion> getRegionFiles(CMIRegion center, Integer range) {
         return null;
-    }
-
-    private static CMIRegion getRegionCord(CMIRegion scord) {
-        return null;
-    }
-
-    private static CMIRegion getRegionCord(int x, int z) {
-        return null;
-    }
-
-    private static CMIRegion getRealChunkFromPlace(CMIRegion region, int place) {
-        return null;
-    }
-
-    private static CMIRegion getCordFromPlace(int place) {
-        return null;
-    }
-
-    private static int CoordToChunkPlace(int x, int z) {
-        return 0;
     }
 }

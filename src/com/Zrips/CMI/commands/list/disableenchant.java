@@ -14,7 +14,7 @@ public class disableenchant implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eDisable enchantment", args = "(enchant/id) (disable/enable)", tab = { "enchant", "disable%%enable" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = false)
+    @CAnnotation(info = "Disable enchantment", args = "(enchant/id) (disable/enable)", tab = { "enchant", "disable%%enable" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

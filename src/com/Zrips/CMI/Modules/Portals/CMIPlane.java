@@ -3,9 +3,9 @@ package com.Zrips.CMI.Modules.Portals;
 import org.bukkit.util.Vector;
 
 public class CMIPlane {
-    private Vector center;
-    private CMIVector2D sizeMin;
-    private CMIVector2D sizeMax;
+    private Vector center = null;
+    private CMIVector2D sizeMin = null;
+    private CMIVector2D sizeMax = null;
 
     public CMIPlane(Vector center, CMIVector2D sizeMin, CMIVector2D sizeMax) {
     }

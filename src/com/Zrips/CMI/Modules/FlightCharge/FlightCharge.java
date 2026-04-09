@@ -1,41 +1,42 @@
 package com.Zrips.CMI.Modules.FlightCharge;
 
 public class FlightCharge {
-    private double charge;
-    private double lastChange;
-    private boolean enabled;
-    private boolean autoRecharge;
-    private boolean moneyRecharge;
-    private boolean expRecharge;
-    private boolean informedMissingExp;
-    private boolean informedMissingMoney;
+    private double charge = 0.0;
+    private double lastChange = 0.0;
+    private boolean enabled = false;
+    private boolean autoRecharge = false;
+    private boolean moneyRecharge = false;
+    private boolean expRecharge = false;
+    private boolean informedMissingExp = false;
+    private boolean informedMissingMoney = false;
 
     public FlightCharge() {
     }
 
-    public Double getCharge() {
-        return null;
+    public double getCharge() {
+        return 0.0;
     }
 
-    public Double getSafeCharge() {
-        return null;
+    @Deprecated
+    public double getSafeCharge() {
+        return 0.0;
     }
 
-    public void setCharge(Double charge) {
+    public void setCharge(double charge) {
     }
 
-    public void addCharge(Double charge) {
+    public void addCharge(double charge) {
     }
 
-    public void takeCharge(Double charge) {
+    public void takeCharge(double charge) {
     }
 
-    public Integer getMax() {
-        return null;
+    public int getMax() {
+        return 0;
     }
 
-    public Double getLastChange() {
-        return null;
+    public double getLastChange() {
+        return 0.0;
     }
 
     public boolean isEnabled() {
@@ -45,11 +46,11 @@ public class FlightCharge {
     public void setEnabled(boolean enabled) {
     }
 
-    public Boolean isAutoRecharge() {
-        return null;
+    public boolean isAutoRecharge() {
+        return false;
     }
 
-    public void setAutoRecharge(Boolean autoRecharge) {
+    public void setAutoRecharge(boolean autoRecharge) {
     }
 
     public void setAutoMoneyRecharge(boolean moneyRecharge) {

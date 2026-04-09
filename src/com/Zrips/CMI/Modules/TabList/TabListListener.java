@@ -14,7 +14,7 @@ import com.Zrips.CMI.events.CMIAfkEnterEvent;
 import com.Zrips.CMI.events.CMIAfkLeaveEvent;
 
 public class TabListListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public TabListListener(CMI plugin) {
     }

@@ -14,7 +14,7 @@ public class feed implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eFeed player", args = "(playerName/all) (-s)", tab = { "playername%%all", "-s%%" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(info = "Feed player", args = "(playerName/all) (-s)", tab = { "playername%%all", "-s%%" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

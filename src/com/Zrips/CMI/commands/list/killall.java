@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Set;
 
 import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -20,56 +21,169 @@ public class killall implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eKill mobs around you", args = "(-monsters/-pets/-npc/-animals/-ambient/-named/-f/-lightning/-list/-m:[mobType]) (-r:range) (-s) (-w:[worldName])", tab = {
-        "-monsters%%-pets%%-npc%%-animals%%-ambient%%-named%%-f%%-lightning%%-list%%EntityType",
-        "-monsters%%-pets%%-npc%%-animals%%-ambient%%-named%%-f%%-lightning%%-list%%EntityType" }, explanation = {}, regVar = { -666 }, consoleVar = { -666 }, others = false)
+    @CAnnotation(priority = 48, info = "Kill mobs around you", args = "(-monsters/-pets/-npc/-animals/-ambient/-named/-all/-force/-lightning/-list/-m:[mobType]) (-r:range) (-s) (-w:[worldName])", multiTab = {
+            "!-monsters,!-pets,!-npc,!-animals,!-ambient,!-named,!-all,!-withitems,!-force,!-lightning,!-list,[EntityType] !-monsters,!-pets,!-npc,!-animals,!-ambient,!-named,!-all,!-withitems,!-force,!-lightning,!-list,[EntityType]" }, explanation = {}, regVar = {
+                    -666 }, consoleVar = { -666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
-    }
-
-    private void list(HashMap<Action, Set<Entity>> fullList, CommandSender sender) {
-    }
-
-    private void removeEntities(CommandSender sender, Set<Action> actions, HashMap<Action, Set<Entity>> fullList, Integer range, Location center, boolean lightning, boolean silent) {
-    }
-
-    private void processEntity(HashMap<Action, Set<Entity>> fullList, Entity entity, boolean named, Set<EntityType> customTypes) {
-    }
-
-    private static boolean isEmptyArmorStand(Entity entity) {
-        return false;
-    }
-
-    private static boolean isNamed(Entity entity) {
-        return false;
     }
 
     public static boolean isMonster(Entity ent) {
         return false;
     }
 
-    private static boolean isTamed(Entity ent) {
-        return false;
-    }
+    private enum removalCriteria {
+        monsters("Monsters"),
+        pets(true, "Pets"),
+        npc(true, "NPCs"),
+        animals("Animals"),
+        ambient("Ambient"),
+        vehicles("Vehicles"),
+        named(true, "With custom name"),
+        withitems(true, "With items"),
+        force("Force"),
+        custom("By type");
 
-    private static void process(HashMap<Action, Set<Entity>> fullList, Entity entity, Action action) {
-    }
+        private String category = null;
+        private boolean secondaryCheck = false;
 
-    private enum Action {
-        monsters("Removes monsters", "Monsters"), pets("Removes pets", "Pets"), npc("Removes NPCs", "NPCs"), animals("Removes animals", "Animals"), ambient("Removes ambient mobs", "Ambient"), vehicles(
-            "Removes vehicles", "Vehicles"), named("Removes mobs with name tags", "With custom name"), custom("Removes by custom type"), f("Compounds all previous flags"), lightning(
-                "Strikes lightning on removed mobs"), list("List entities");
-
-        private String desc;
-        private String category;
-
-        Action(String desc) {
+        removalCriteria(boolean secondaryCheck, String category) {
         }
 
-        Action(String desc, String category) {
+        removalCriteria(String category) {
         }
 
         public String getCategory() {
+            return null;
+        }
+
+        public boolean isSecondaryCheck() {
+            return false;
+        }
+
+        public static removalCriteria get(String name) {
+            return null;
+        }
+
+        public boolean addForRemoval(Entity entity) {
+            return false;
+        }
+    }
+
+    private enum Action {
+        all, lightning, list;
+
+        public static Action get(String name) {
+            return null;
+        }
+    }
+
+    private class entityRemoval {
+        private CommandSender sender = null;
+        private HashMap<removalCriteria, Set<Entity>> fullList = null;
+        private Set<Action> actions = null;
+        private Set<removalCriteria> criteria = null;
+        private Set<EntityType> customTypes = null;
+        private int range = 0;
+        private boolean silent = false;
+        private World world = null;
+        private Location center = null;
+
+        public entityRemoval(CommandSender sender) {
+        }
+
+        public entityRemoval(Location center) {
+        }
+
+        public entityRemoval addAction(Action action) {
+            return null;
+        }
+
+        public entityRemoval addType(EntityType type) {
+            return null;
+        }
+
+        public Set<Action> getActions() {
+            return null;
+        }
+
+        public Set<EntityType> getTypes() {
+            return null;
+        }
+
+        public boolean hasAction(Action action) {
+            return false;
+        }
+
+        public boolean hasType(EntityType type) {
+            return false;
+        }
+
+        public int getRange() {
+            return 0;
+        }
+
+        public entityRemoval setRange(int range) {
+            return null;
+        }
+
+        public boolean isSilent() {
+            return false;
+        }
+
+        public entityRemoval setSilent(boolean silent) {
+            return null;
+        }
+
+        public World getWorld() {
+            return null;
+        }
+
+        public entityRemoval setWorld(World world) {
+            return null;
+        }
+
+        public Location getCenter() {
+            return null;
+        }
+
+        public entityRemoval setCenter(Location center) {
+            return null;
+        }
+
+        public HashMap<removalCriteria, Set<Entity>> getFullList() {
+            return null;
+        }
+
+        public void setFullList(HashMap<removalCriteria, Set<Entity>> fullList) {
+        }
+
+        public void clean() {
+        }
+
+        public void processEntity(Entity entity) {
+        }
+
+        public CommandSender getSender() {
+            return null;
+        }
+
+        public void setSender(CommandSender sender) {
+        }
+
+        public Set<removalCriteria> getRemovalCriteria() {
+            return null;
+        }
+
+        public boolean hasRemovalCriteria(removalCriteria criteria) {
+            return false;
+        }
+
+        public entityRemoval setRemovalCriteria(Set<removalCriteria> criteria) {
+            return null;
+        }
+
+        public entityRemoval addRemovalCriteria(removalCriteria action) {
             return null;
         }
     }

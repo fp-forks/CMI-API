@@ -8,9 +8,9 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.CMI;
 
 public class EnderChestManager {
-    private HashMap<UUID, EndWatcher> WatcherList;
-    private HashMap<UUID, EndWatcher> WatchedList;
-    private CMI plugin;
+    private HashMap<UUID, EndWatcher> WatcherList = null;
+    private HashMap<UUID, EndWatcher> WatchedList = null;
+    private CMI plugin = null;
 
     public EnderChestManager(CMI plugin) {
     }

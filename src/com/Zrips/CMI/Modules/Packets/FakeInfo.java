@@ -3,10 +3,10 @@ package com.Zrips.CMI.Modules.Packets;
 import org.bukkit.entity.Player;
 
 public class FakeInfo {
-    private int id;
-    private Player player;
-    private Object obj;
-    private Object entity;
+    private int id = 0;
+    private Player player = null;
+    private Object obj = null;
+    private Object entity = null;
 
     public Player getPlayer() {
         return null;

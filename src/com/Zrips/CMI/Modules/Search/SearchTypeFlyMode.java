@@ -5,9 +5,10 @@ import java.util.Set;
 import org.bukkit.entity.Player;
 
 public class SearchTypeFlyMode extends SearchTypePlayerBase {
-    boolean allowFlight;
+    boolean allowFlight = false;
 
     public SearchTypeFlyMode(boolean allowFlight) {
+        super();
     }
 
     @Override

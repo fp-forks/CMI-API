@@ -1,12 +1,14 @@
 package com.Zrips.CMI.Modules.Vanish;
 
 public class VanishActionStateBoolean extends VanishActionState {
-    boolean state;
+    boolean state = false;
 
     public VanishActionStateBoolean() {
+        super();
     }
 
     public VanishActionStateBoolean(boolean state) {
+        super();
     }
 
     @Override

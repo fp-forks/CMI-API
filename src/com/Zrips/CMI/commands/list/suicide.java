@@ -14,7 +14,7 @@ public class suicide implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 110, info = "&eKill your self", args = "[playerName] (-s)", tab = { "playername", "-s" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(priority = 110, info = "Kill your self", args = "[playerName] (-s)", tab = { "playername", "-s" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

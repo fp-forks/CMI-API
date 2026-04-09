@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.Modules.Selection.Visualizer;
 
 public class CMISelectionVisualizationEvent extends CMIPlayerCancellableEvent {
-    private Visualizer visualizer;
+    private Visualizer visualizer = null;
 
     @Deprecated
     public CMISelectionVisualizationEvent(Player player) {

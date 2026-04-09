@@ -1,11 +1,11 @@
 package com.Zrips.CMI.Modules.GeoIP;
 
 public class IPLocation {
-    private String countryCode;
-    private String countryName;
-    private String region;
-    private String city;
-    private String postalCode;
+    private String countryCode = null;
+    private String countryName = null;
+    private String region = null;
+    private String city = null;
+    private String postalCode = null;
 
     public String getCountryCode() {
         return null;

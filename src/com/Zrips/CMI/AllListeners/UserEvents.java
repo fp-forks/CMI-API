@@ -1,10 +1,8 @@
 package com.Zrips.CMI.AllListeners;
 
-import java.net.InetAddress;
 import java.util.HashMap;
 import java.util.UUID;
 
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -17,14 +15,13 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
 
 import com.Zrips.CMI.CMI;
-import com.Zrips.CMI.Containers.CMIUser;
 import com.Zrips.CMI.events.CMIUserBalanceChangeEvent;
 
 public class UserEvents implements Listener {
-    private CMI plugin;
-    private static HashMap<UUID, Long> backExclusionMap;
-    HashMap<UUID, Long> roofTeleporterDelay;
-    HashMap<UUID, Long> informer;
+    private CMI plugin = null;
+    private static HashMap<UUID, Long> backExclusionMap = null;
+    HashMap<UUID, Long> roofTeleporterDelay = null;
+    HashMap<UUID, Long> informer = null;
 
     public UserEvents(CMI plugin) {
     }
@@ -43,9 +40,6 @@ public class UserEvents implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onPlayerLoginIpRecord(PlayerLoginEvent event) {
-    }
-
-    private void record(Player player, InetAddress add) {
     }
 
     @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
@@ -85,8 +79,5 @@ public class UserEvents implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onPlayerLogin(PlayerJoinEvent event) {
-    }
-
-    private void processPlayerLogin(CMIUser user) {
     }
 }

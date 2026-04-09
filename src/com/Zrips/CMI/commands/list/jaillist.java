@@ -15,7 +15,7 @@ public class jaillist implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eList jails", args = "(jailName) (cellId)", tab = { "jail", "cellId" }, regVar = { 0, 1, 2 }, consoleVar = { 0, 1, 2 }, modules = "jail", others = false)
+    @CAnnotation(info = "List jails", args = "(jailName) (cellId)", tab = { "jail", "cellId" }, regVar = { 0, 1, 2 }, consoleVar = { 0, 1, 2 }, modules = "jail")
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

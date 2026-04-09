@@ -12,15 +12,15 @@ import com.Zrips.CMI.Modules.Portals.CuboidArea;
 import net.Zrips.CMILib.Container.CMILocation;
 
 public class CMISign {
-    private CuboidArea area;
-    private List<String> lines;
-    private Sign sign;
-    private double updateIntervalSec;
-    private Long lastUpdate;
-    private boolean personal;
-    private int activationRange;
-    private int currentLine;
-    private CMILocation loc;
+    private CuboidArea area = null;
+    private List<String> lines = null;
+    private Sign sign = null;
+    private double updateIntervalSec = 0.0;
+    private Long lastUpdate = null;
+    private boolean personal = false;
+    private int activationRange = 0;
+    private int currentLine = 0;
+    private CMILocation loc = null;
 
     public CMISign(CMILocation loc) {
     }
@@ -62,10 +62,6 @@ public class CMISign {
     public void setArea(CuboidArea area) {
     }
 
-    public Sign getSign() {
-        return null;
-    }
-
     public void setSign(Sign sign) {
     }
 
@@ -77,6 +73,10 @@ public class CMISign {
     }
 
     public void update() {
+    }
+
+    public CompletableFuture<Sign> getSign() {
+        return null;
     }
 
     public void update(Player player) {

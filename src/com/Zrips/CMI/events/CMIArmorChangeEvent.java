@@ -8,8 +8,8 @@ import net.Zrips.CMILib.Items.ArmorTypes;
 public class CMIArmorChangeEvent extends CMIPlayerCancellableEvent {
     private final EquipMethod equipType = null;
     private final ArmorTypes type = null;
-    private ItemStack oldArmorPiece;
-    private ItemStack newArmorPiece;
+    private ItemStack oldArmorPiece = null;
+    private ItemStack newArmorPiece = null;
 
     public CMIArmorChangeEvent(Player player, EquipMethod equipType, ArmorTypes type, ItemStack oldArmorPiece, ItemStack newArmorPiece) {
         super(player);

@@ -4,10 +4,10 @@ import org.bukkit.ChunkSnapshot;
 import org.bukkit.World;
 
 public class CMIChunkSnapShot {
-    private ChunkSnapshot snap;
-    private int maxY;
-    private int minY;
-    private World world;
+    private ChunkSnapshot snap = null;
+    private int maxY = 0;
+    private int minY = 0;
+    private World world = null;
 
     public CMIChunkSnapShot(World world) {
     }

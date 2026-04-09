@@ -12,17 +12,23 @@ import net.Zrips.CMILib.Effects.CMIEffect;
 import net.Zrips.CMILib.Effects.CMIEffectManager.CMIParticle;
 
 public class CMIPEAnimation implements CMIPEAnimationInterface {
-    protected Location center;
-    protected boolean fixedLocation;
-    protected CMIEffect effect;
-    protected Vector offset;
-    protected int updateTimes;
-    protected double duration;
-    private Player playerMove;
-    private boolean hideWithVanish;
-    private int interval;
+    protected Location center = null;
+    protected boolean fixedLocation = false;
+    protected CMIEffect effect = null;
+    protected Vector offset = null;
+    protected int updateTimes = 0;
+    protected double duration = 0.0;
+    private Player playerMove = null;
+    private boolean hideWithVanish = false;
+    private int interval = 0;
 
     public CMIPEAnimation() {
+    }
+
+    public CMIPEAnimation(CMIEffect effect) {
+    }
+
+    public CMIPEAnimation(CMIParticle effect) {
     }
 
     @Override
@@ -31,12 +37,6 @@ public class CMIPEAnimation implements CMIPEAnimationInterface {
     }
 
     public void setPlayerMove(Player playerMove) {
-    }
-
-    public CMIPEAnimation(CMIEffect effect) {
-    }
-
-    public CMIPEAnimation(CMIParticle effect) {
     }
 
     @Override

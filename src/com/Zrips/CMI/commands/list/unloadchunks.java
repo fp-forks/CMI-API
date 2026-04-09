@@ -14,8 +14,8 @@ public class unloadchunks implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 286, info = "&eUnloads chunks from server memory", args = "(-f)", explanation = { "-f variable will force for all chunks to be unloaded in one go." }, regVar = {
-        -66 }, consoleVar = { -66 }, alias = true, others = false)
+    @CAnnotation(info = "Unloads chunks from server memory", args = "(-f)", explanation = { "-f variable will force for all chunks to be unloaded in one go." }, regVar = { -66 }, consoleVar = {
+            -66 }, alias = true, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

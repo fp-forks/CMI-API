@@ -3,13 +3,13 @@ package com.Zrips.CMI.Modules.DeathMessages;
 import java.util.UUID;
 
 class CMIDeathMsgInfo {
-    private UUID uuid;
-    private CMIKillerInfo killerInfo;
-    private CMIKillerInfo PreviousDamageInfo;
-    private String prefixPath;
-    private String suffixPath;
-    private String basePath;
-    private String message;
+    private UUID uuid = null;
+    private CMIKillerInfo killerInfo = null;
+    private CMIKillerInfo PreviousDamageInfo = null;
+    private String prefixPath = null;
+    private String suffixPath = null;
+    private String basePath = null;
+    private String message = null;
 
     public CMIDeathMsgInfo(UUID uuid, CMIKillerInfo killerInfo) {
     }

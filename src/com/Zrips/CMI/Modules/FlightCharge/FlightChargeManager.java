@@ -12,23 +12,23 @@ import com.Zrips.CMI.Modules.SpawnerCharge.PlayerCharge;
 import net.Zrips.CMILib.Colors.CMIChatColor;
 
 public class FlightChargeManager {
-    CMI plugin;
-    private boolean FlightChargeEnabledByDefault;
-    private boolean FlightChargeAutoSwitch;
-    private boolean bossbar;
-    private double ExpRechargeCost;
-    private double MoneyRechargeCost;
-    private int MaxChargeLevel;
-    private int DeductOnFallMulti;
-    private double DeductOnIdling;
-    private double DeductOnlyForTime;
-    private boolean DamageOnFall;
-    private boolean DamageOnToggle;
-    private boolean KillOnFall;
-    private CMIChatColor GlowColor;
-    private double autoRechargeFrom;
-    private double autoRechargeAmount;
-    private ConcurrentHashMap<UUID, FlightCharge> flightCharges;
+    CMI plugin = null;
+    private boolean FlightChargeEnabledByDefault = false;
+    private boolean FlightChargeAutoSwitch = false;
+    private boolean bossbar = false;
+    private double ExpRechargeCost = 0.0;
+    private double MoneyRechargeCost = 0.0;
+    private int MaxChargeLevel = 0;
+    private int DeductOnFallMulti = 0;
+    private double DeductOnIdling = 0.0;
+    private double DeductOnlyForTime = 0.0;
+    private boolean DamageOnFall = false;
+    private boolean DamageOnToggle = false;
+    private boolean KillOnFall = false;
+    private CMIChatColor GlowColor = null;
+    private double autoRechargeFrom = 0.0;
+    private double autoRechargeAmount = 0.0;
+    private ConcurrentHashMap<UUID, FlightCharge> flightCharges = null;
     public static final String flightChargeBossBar = null;
 
     public FlightChargeManager(CMI plugin) {
@@ -61,9 +61,6 @@ public class FlightChargeManager {
     }
 
     public void updateBossBar(CMIUser user) {
-    }
-
-    private void updateBossBar(traveledDistance dinfo) {
     }
 
     public double getExpRechargeCost() {

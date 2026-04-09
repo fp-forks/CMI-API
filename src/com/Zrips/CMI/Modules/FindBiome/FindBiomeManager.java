@@ -8,8 +8,8 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.CMI;
 
 public class FindBiomeManager {
-    public ConcurrentHashMap<UUID, FindBiomeInfo> FindBiomeInfo;
-    private CMI plugin;
+    public ConcurrentHashMap<UUID, FindBiomeInfo> FindBiomeInfo = null;
+    private CMI plugin = null;
 
     public FindBiomeManager(CMI plugin) {
     }
@@ -19,9 +19,5 @@ public class FindBiomeManager {
     }
 
     public void start(FindBiomeInfo scan) {
-    }
-
-    @SuppressWarnings("deprecation")
-    private void loadChunk(FindBiomeInfo scan) {
     }
 }

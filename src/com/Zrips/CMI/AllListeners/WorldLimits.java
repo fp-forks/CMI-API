@@ -1,7 +1,5 @@
 package com.Zrips.CMI.AllListeners;
 
-import org.bukkit.World;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -14,7 +12,7 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 import com.Zrips.CMI.CMI;
 
 public class WorldLimits implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public WorldLimits(CMI plugin) {
     }
@@ -27,18 +25,12 @@ public class WorldLimits implements Listener {
     public void onLoginGameMode(PlayerLoginEvent event) {
     }
 
-    private void processGameMode(Player player) {
-    }
-
     @EventHandler(priority = EventPriority.NORMAL)
     public void onWorldChangeFly(PlayerChangedWorldEvent event) {
     }
 
     @EventHandler(priority = EventPriority.LOWEST)
     public void onWorldChangeFlyCached(PlayerChangedWorldEvent event) {
-    }
-
-    private void processCachedFly(Player player, World from) {
     }
 
     @EventHandler(priority = EventPriority.LOWEST)
@@ -57,17 +49,11 @@ public class WorldLimits implements Listener {
     public void onLoginFly(PlayerLoginEvent event) {
     }
 
-    private void processFly(Player player, String from) {
-    }
-
     @EventHandler(priority = EventPriority.MONITOR)
     public void onLoginGod(PlayerLoginEvent event) {
     }
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void onWorldChangeGod(PlayerChangedWorldEvent event) {
-    }
-
-    private void processGod(Player player) {
     }
 }

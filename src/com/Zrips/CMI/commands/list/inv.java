@@ -14,8 +14,8 @@ public class inv implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eOpens players inventory", args = "[playerName]", tab = { "playername" }, explanation = { "cmi.command.inv.preventmodify - prevents inventory editing",
-        "cmi.invedit - allows to edit inventory", "cmi.command.inv.location - shows players location" }, regVar = { 1 }, consoleVar = { 666 }, customAlias = { "cinv", "invsee", "oi" }, others = false)
+    @CAnnotation(info = "Opens players inventory", args = "[playerName]", tab = { "playername" }, explanation = { "cmi.command.inv.preventmodify - prevents inventory editing",
+            "cmi.invedit - allows to edit inventory", "cmi.command.inv.location - shows players location" }, regVar = { 1 }, consoleVar = { 666 }, customAlias = { "cinv", "invsee", "oi" })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

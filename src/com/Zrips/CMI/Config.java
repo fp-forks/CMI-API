@@ -3,6 +3,8 @@ package com.Zrips.CMI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.regex.Pattern;
 
 import org.bukkit.GameMode;
 import org.bukkit.Location;
@@ -26,183 +28,182 @@ import net.Zrips.CMILib.Items.CMIItemStack;
 import net.Zrips.CMILib.Items.CMIMaterial;
 
 public class Config {
-    public static String imageFolder;
-    private boolean ShowNewVersion;
-    public static boolean DyeBoundToPlayer;
-    private List<String> signEditBlackList;
-    private HashMap<String, Integer> FlyAboveRoofLimitationsMap;
-    public boolean VaultMoney;
-    private boolean OverrideLoginMessage;
-    private boolean BossBarHpBarEnabled;
-    private List<EntityType> HpBarBlackList;
-    private String BooksDefaultAuthor;
-    public static boolean BooksAddDate;
-    public boolean VaultGroup;
-    public boolean DynamicViewRangeEnabled;
-    private int OptimizationsSimilarCommandChecker;
-    private boolean OptimizationsSimilarCommandPrevention;
-    public int lfixDefaultSpeed;
-    public int SpawnMobMaxQuantity;
-    public int SpawnMobMaxPassengers;
-    public double lfixSoftCap;
-    public boolean fixLightOngeneration;
-    private List<String> fixWorldsToFix;
-    public boolean hungeroveride;
-    public String Lang;
-    public boolean LanguageDownload;
-    public static boolean monochromeConsole;
-    public static int ImmortalityOnJoin;
-    public boolean fileSaveAsync;
-    private boolean PartialPlayerName;
-    public static boolean PrioritizeOnlinePlayers;
-    public boolean PreventDifferentCapitalizationNames;
-    public boolean PlayTimeFromStats;
-    public static boolean PlayTimeAutoUpdater;
-    private boolean PreloadTopPlaytime;
-    private List<Material> ItemLoreTypeBlackList;
-    private boolean ItemNameMarkChanged;
-    private boolean ItemLoreMarkChanged;
-    public static int ItemLoreMaxLength;
-    private boolean CMIPlayTimeTracking;
-    public static List<String> PlaytimeTopExclude;
-    public static long PlaytimeTopOffline;
-    private boolean PerformCommandsOnNewName;
-    private List<String> OptimizationsNameChangeCommands;
-    private boolean OnLimitedItemUseInform;
-    private boolean PreventEntityBoatEnterAnimals;
-    private boolean PreventEntityBoatEnterMonsters;
-    private boolean PreventEntityBoatEnterVillagers;
-    private boolean PreventBedExplosionNether;
-    private boolean PreventBedExplosionTheEnd;
-    private boolean PreventPlayersOnNetherRoof;
-    private int netherRoofHeight;
-    private boolean PreventPlayersBelowBedrock;
-    private boolean PreventIronGolemRoses;
-    public static boolean ShowMainHelpPage;
-    private boolean PreventHook;
-    public static int NearDefaultDistance;
-    public static boolean NearCommand;
-    public static List<Integer> lastonlineTimers;
-    public static boolean NearHideInvisible;
-    public static boolean NearHideObfuscate;
-    public static boolean NearDirection;
-    public static int NearCommandCount;
-    private boolean MulticraftDisableList;
-    private boolean PreventExpPortals;
-    public static boolean NoCommandsInBed;
-    public static boolean LimitBooks;
-    public static boolean BlockEndPortalItemTransfers;
-    public static List<String> CommandsClearExclude;
-    public static boolean CommandsClearConfirmation;
-    public static boolean CommandsListASCOrder;
-    private boolean FlyAboveRoof;
-    private boolean durabilityLossUse;
-    private boolean armorDurabilityLossUse;
-    private int durabilityLossPercentage;
-    private int armorDurabilityLossPercentage;
-    private String LongDateFormat;
-    private String ShortDateFormat;
-    private boolean SellLog;
-    private boolean PermisionOnError;
-    private boolean PermisionInConsole;
-    private boolean OptimizationsCommandSorting;
-    private boolean AllowRconCommands;
-    private List<String> CustomCommandSenders;
-    private boolean CleanRconCommands;
-    private boolean OptimizationsCommandRemoveLabel;
-    private HashMap<CMIItemStack, String> ItemRenamingPreventMap;
-    public static boolean ItemRenamingGlobalDisable;
-    public static boolean ItemRenamingCheckSource;
-    public static boolean AddItalicByDefault;
-    public static int ItemRenamingMaxLength;
-    private boolean PotionEffectsDeductWhileOffline;
-    public int IPdelay;
-    public static boolean IPRecord;
-    public static boolean helpopfeedbackMessage;
-    public boolean LoginDisabled;
-    public boolean LogoutDisabled;
-    public boolean LoginCustomUse;
-    public boolean LogoutCustomUse;
-    public boolean LogoutServerSwitch;
-    public boolean LoginServerSwitch;
-    public boolean FirstJoinMessageUse;
-    public static boolean loginNameFilterUse;
-    public static boolean logoutNameFilterUse;
-    public static ChatFilterRule loginLogoutNameFilter;
-    private int LogoutAutoHideFrom;
-    private int LoginAutoHideFrom;
-    private boolean NotesShowOnAlertEvent;
-    public static long alertTimer;
-    public String TimeDay;
-    public String TimeNight;
-    public String TimeMorning;
-    public String TimeDusk;
-    public int AutoTimeInterval;
-    private boolean AutoTimeSmooth;
-    private int AutoTimeSmoothSpeed;
-    private CText Motd;
-    public boolean SearchPurge;
-    public boolean SearchLogIntoFile;
-    public static boolean MuteNoPm;
-    public boolean CuffMute;
-    public List<String> CuffAllowed;
-    private List<Material> GroundCleanWhiteList;
-    private List<EntityType> GroundCleanEntityWhiteList;
-    public boolean WorldLimits;
-    public HashMap<String, GameMode> worldGameMode;
-    public HashMap<String, Boolean> worldFlyMode;
-    public HashMap<String, Boolean> worldGodMode;
-    public HashMap<String, Boolean> worldElytraMode;
-    public boolean hatIgnoreLored;
-    public boolean hatBlockArmorItems;
-    public boolean hatBlockNoneHatEnchanted;
-    public boolean hatAllowMobHeads;
-    public List<CMIMaterial> hatWhiteList;
-    public boolean RemoveNegative;
-    public List<String> RemoveNegativeEffects;
-    private List<String> CommandSpyBlackListed;
-    private List<String> CommandSpyCommandList;
-    private int SpyDelayForTrigger;
-    private CMIParticle PointDefaultParticle;
-    private boolean ExploitPatcherRiptide;
-    private boolean ExploitPatcherCheckItem;
-    public int CounterRange;
-    private int MaxHp;
-    private boolean NetherPortalPreventCreation;
-    public int NetherPortalMaxHeight;
-    public int NetherPortalMaxWidth;
-    public HashMap<DamageCause, ArrayList<DamageControl>> DamageControlMap;
-    public int MirrorMaxRange;
-    private boolean MirrorBreakDisabled;
-    private CMIItemStack SelectionTool;
-    private CMILocation firstSpawnPoint;
-    private boolean InvDisableOffline;
-    public static List<String> InvBlackList;
-    private long PlayerNotesExpiresIn;
-    public int DisposeUILines;
-    public boolean DisposeCustomModelData;
-    public boolean DisposeAttachedCommands;
-    public List<CMIMaterial> DisposeMaterials;
-    private ConfigReader localeFile;
-    private ConfigReader cfg;
-    public static ChatFilterRule InteractiveCommandsSignRegex;
-    public static boolean InteractiveCommandsSort;
-    public static boolean UseFakeOperator;
-    public static boolean InfiniteLoopDetection;
-    public static boolean ShowSkullOwner;
-    public static boolean ShowBeeHive;
-    public static boolean ShowDecoratedPot;
-    private List<String> ElevatorIndicator;
-    private String ElevatorStaticIndicator;
-    private boolean maintenance;
-    public static boolean DisableTeamManagement;
-    private boolean AutoDownloadGeoIp;
-    private boolean AutoDownloadGeoLiteCity;
-    private String maintenanceMessage;
-    public static Boolean maintenanceBossbar;
-    public static Boolean maintenanceAutoKick;
-    private CMI plugin;
-    List<String> CommentList;
+    public static String imageFolder = null;
+    private boolean ShowNewVersion = false;
+    public static boolean DyeBoundToPlayer = false;
+    private List<String> signEditBlackList = null;
+    private HashMap<String, Integer> FlyAboveRoofLimitationsMap = null;
+    public boolean VaultMoney = false;
+    private boolean OverrideLoginMessage = false;
+    private boolean BossBarHpBarEnabled = false;
+    private List<EntityType> HpBarBlackList = null;
+    private String BooksDefaultAuthor = null;
+    public static boolean BooksAddDate = false;
+    public boolean VaultGroup = false;
+    public boolean DynamicViewRangeEnabled = false;
+    private int OptimizationsSimilarCommandChecker = 0;
+    private boolean OptimizationsSimilarCommandPrevention = false;
+    public int lfixDefaultSpeed = 0;
+    public int SpawnMobMaxQuantity = 0;
+    public int SpawnMobMaxPassengers = 0;
+    public double lfixSoftCap = 0.0;
+    public boolean fixLightOngeneration = false;
+    private List<String> fixWorldsToFix = null;
+    public boolean hungeroveride = false;
+    public String Lang = null;
+    public boolean LanguageDownload = false;
+    public static boolean monochromeConsole = false;
+    public static int ImmortalityOnJoin = 0;
+    public boolean fileSaveAsync = false;
+    private boolean PartialPlayerName = false;
+    public static boolean PrioritizeOnlinePlayers = false;
+    public boolean PreventDifferentCapitalizationNames = false;
+    public boolean PlayTimeFromStats = false;
+    public static boolean PlayTimeAutoUpdater = false;
+    private List<Material> ItemLoreTypeBlackList = null;
+    private boolean ItemNameMarkChanged = false;
+    private boolean ItemLoreMarkChanged = false;
+    public static int ItemLoreMaxLength = 0;
+    private boolean CMIPlayTimeTracking = false;
+    public static List<String> checkAccountExlusions = null;
+    public static List<String> PlaytimeTopExclude = null;
+    public static long PlaytimeTopOffline = 0;
+    private boolean PerformCommandsOnNewName = false;
+    private List<String> OptimizationsNameChangeCommands = null;
+    private boolean OnLimitedItemUseInform = false;
+    private boolean PreventEntityBoatEnterAnimals = false;
+    private boolean PreventEntityBoatEnterMonsters = false;
+    private boolean PreventEntityBoatEnterVillagers = false;
+    private boolean PreventBedExplosionNether = false;
+    private boolean PreventBedExplosionTheEnd = false;
+    private boolean PreventPlayersOnNetherRoof = false;
+    private int netherRoofHeight = 0;
+    private boolean PreventPlayersBelowBedrock = false;
+    private boolean PreventIronGolemRoses = false;
+    public static boolean ShowMainHelpPage = false;
+    private boolean PreventHook = false;
+    public static int NearDefaultDistance = 0;
+    public static boolean NearCommand = false;
+    public static List<Integer> lastonlineTimers = null;
+    public static boolean NearHideInvisible = false;
+    public static boolean NearHideObfuscate = false;
+    public static boolean NearDirection = false;
+    public static int NearCommandCount = 0;
+    private boolean MulticraftDisableList = false;
+    private boolean PreventExpPortals = false;
+    public static boolean NoCommandsInBed = false;
+    public static boolean LimitBooks = false;
+    public static boolean BlockEndPortalItemTransfers = false;
+    public static List<String> CommandsClearExclude = null;
+    public static boolean CommandsClearConfirmation = false;
+    public static boolean CommandsListASCOrder = false;
+    private boolean FlyAboveRoof = false;
+    private boolean durabilityLossUse = false;
+    private boolean armorDurabilityLossUse = false;
+    private int durabilityLossPercentage = 0;
+    private int armorDurabilityLossPercentage = 0;
+    private String LongDateFormat = null;
+    private String ShortDateFormat = null;
+    private boolean SellLog = false;
+    private boolean PermisionOnError = false;
+    private boolean PermisionInConsole = false;
+    private boolean OptimizationsCommandSorting = false;
+    private boolean AllowRconCommands = false;
+    private List<String> CustomCommandSenders = null;
+    private boolean CleanRconCommands = false;
+    private boolean OptimizationsCommandRemoveLabel = false;
+    private HashMap<CMIItemStack, String> ItemRenamingPreventMap = null;
+    public static boolean ItemRenamingGlobalDisable = false;
+    public static boolean ItemRenamingCheckSource = false;
+    public static boolean AddItalicByDefault = false;
+    public static int ItemRenamingMaxLength = 0;
+    private boolean PotionEffectsDeductWhileOffline = false;
+    public int IPdelay = 0;
+    public static boolean IPRecord = false;
+    public static boolean helpopfeedbackMessage = false;
+    public boolean LoginDisabled = false;
+    public boolean LogoutDisabled = false;
+    public boolean LoginCustomUse = false;
+    public boolean LogoutCustomUse = false;
+    public boolean LogoutServerSwitch = false;
+    public boolean LoginServerSwitch = false;
+    public boolean FirstJoinMessageUse = false;
+    public static boolean loginNameFilterUse = false;
+    public static boolean logoutNameFilterUse = false;
+    public static ChatFilterRule loginLogoutNameFilter = null;
+    private int LogoutAutoHideFrom = 0;
+    private int LoginAutoHideFrom = 0;
+    private boolean NotesShowOnAlertEvent = false;
+    public static long alertTimer = 0;
+    public String TimeDay = null;
+    public String TimeNight = null;
+    public String TimeMorning = null;
+    public String TimeDusk = null;
+    public int AutoTimeInterval = 0;
+    private boolean AutoTimeSmooth = false;
+    private int AutoTimeSmoothSpeed = 0;
+    private CText Motd = null;
+    public boolean SearchPurge = false;
+    public boolean SearchLogIntoFile = false;
+    public static boolean MuteNoPm = false;
+    public boolean CuffMute = false;
+    public List<String> CuffAllowed = null;
+    private List<Material> GroundCleanWhiteList = null;
+    private List<EntityType> GroundCleanEntityWhiteList = null;
+    public boolean WorldLimits = false;
+    public HashMap<String, GameMode> worldGameMode = null;
+    public HashMap<String, Boolean> worldFlyMode = null;
+    public HashMap<String, Boolean> worldGodMode = null;
+    public HashMap<String, Boolean> worldElytraMode = null;
+    public boolean hatIgnoreLored = false;
+    public boolean hatBlockArmorItems = false;
+    public boolean hatBlockNoneHatEnchanted = false;
+    public boolean hatAllowMobHeads = false;
+    public List<CMIMaterial> hatWhiteList = null;
+    public boolean RemoveNegative = false;
+    public List<String> RemoveNegativeEffects = null;
+    private List<String> CommandSpyBlackListed = null;
+    private List<String> CommandSpyCommandList = null;
+    private int SpyDelayForTrigger = 0;
+    private CMIParticle PointDefaultParticle = null;
+    private boolean ExploitPatcherRiptide = false;
+    private boolean ExploitPatcherCheckItem = false;
+    public int CounterRange = 0;
+    private int MaxHp = 0;
+    private boolean NetherPortalPreventCreation = false;
+    public int NetherPortalMaxHeight = 0;
+    public int NetherPortalMaxWidth = 0;
+    public HashMap<DamageCause, ArrayList<DamageControl>> DamageControlMap = null;
+    private CMIItemStack SelectionTool = null;
+    private CMILocation firstSpawnPoint = null;
+    private boolean InvDisableOffline = false;
+    public static List<String> InvBlackList = null;
+    private long PlayerNotesExpiresIn = 0;
+    public int DisposeUILines = 0;
+    public boolean DisposeCustomModelData = false;
+    public boolean DisposeAttachedCommands = false;
+    public List<CMIMaterial> DisposeMaterials = null;
+    private ConfigReader localeFile = null;
+    private ConfigReader cfg = null;
+    public static ChatFilterRule InteractiveCommandsSignRegex = null;
+    public static boolean InteractiveCommandsSort = false;
+    public static boolean UseFakeOperator = false;
+    public static boolean InfiniteLoopDetection = false;
+    public static boolean ShowSkullOwner = false;
+    public static boolean ShowBeeHive = false;
+    public static boolean ShowDecoratedPot = false;
+    private List<String> ElevatorIndicator = null;
+    private String ElevatorStaticIndicator = null;
+    private boolean maintenance = false;
+    public static boolean DisableTeamManagement = false;
+    private boolean AutoDownloadGeoIp = false;
+    private boolean AutoDownloadGeoLiteCity = false;
+    private String maintenanceMessage = null;
+    public static Boolean maintenanceBossbar = null;
+    public static Boolean maintenanceAutoKick = null;
+    private CMI plugin = null;
+    List<String> CommentList = null;
+    private static final Pattern PATTERN = null;
 
     public Config(CMI plugin) {
     }
@@ -213,13 +214,6 @@ public class Config {
     public void ChangeConfig(String path, Object list, boolean load) {
     }
 
-    private static void newLn(StringBuilder header) {
-    }
-
-    private static StringBuilder formStringBuilder(List<String> list) {
-        return null;
-    }
-
     public boolean LoadLang(String lang) {
         return false;
     }
@@ -228,11 +222,16 @@ public class Config {
         return false;
     }
 
-    public boolean load() {
-        return false;
+    public CompletableFuture<Boolean> loadLangAsync(String lang) {
+        return null;
     }
 
-    private static void exportChatSection(ConfigReader cfg) {
+    public static String expand(String input) {
+        return null;
+    }
+
+    public boolean load() {
+        return false;
     }
 
     public boolean reload() {
@@ -243,15 +242,11 @@ public class Config {
         return false;
     }
 
-    private static DamageCause getCause(String name) {
-        return null;
-    }
-
     public void reload(CommandSender sender) {
     }
 
-    public boolean reloadLanguage() {
-        return false;
+    public CompletableFuture<Boolean> reloadLanguage() {
+        return null;
     }
 
     public Location getFirstSpawnPoint() {
@@ -587,6 +582,7 @@ public class Config {
         return false;
     }
 
+    @Deprecated
     public boolean isPreloadTopPlaytime() {
         return false;
     }
@@ -774,6 +770,7 @@ public class Config {
         return false;
     }
 
+    @Deprecated
     public boolean isMirrorBreakDisabled() {
         return false;
     }

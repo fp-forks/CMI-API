@@ -1,13 +1,15 @@
 package com.Zrips.CMI.Modules.Skin;
 
+import java.net.URL;
 import java.util.UUID;
 
 public class CMISkin {
-    private String name;
-    private UUID uuid;
-    private String skin;
-    private String signature;
-    private Long lastUpdate;
+    private String name = null;
+    private UUID uuid = null;
+    private String skin = null;
+    private String signature = null;
+    private Long lastUpdate = null;
+    private URL skinUrl = null;
 
     public CMISkin(String name, UUID uuid, String skin, String signature) {
     }
@@ -45,5 +47,9 @@ public class CMISkin {
     }
 
     public void setLastUpdate(Long lastUpdate) {
+    }
+
+    public URL getSkinUrl() {
+        return null;
     }
 }

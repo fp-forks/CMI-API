@@ -14,8 +14,8 @@ public class autorecharge implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 110, info = "&eToggle auto flight recharge", args = "(playerName) [exp/money/off/on] (-s)", tab = { "playername%%exp%%money%%off%%on",
-        "exp%%money%%off%%on" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2, 3 }, others = true)
+    @CAnnotation(priority = 110, info = "Toggle auto flight recharge", args = "(playerName) [exp/money/off/on] (-s)", tab = { "playername%%exp%%money%%off%%on",
+            "exp%%money%%off%%on" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

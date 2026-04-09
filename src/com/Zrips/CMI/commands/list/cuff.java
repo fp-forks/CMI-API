@@ -14,8 +14,8 @@ public class cuff implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSuspends players actions", args = "[playername] (true/false) (-s)", multiTab = { "[playername] true,false -s" }, regVar = { 1, 2, 3 }, consoleVar = { 1, 2,
-        3 }, alias = true, customAlias = { "!+false:uncuff", "freeze" }, modules = { "cuffed" }, others = false)
+    @CAnnotation(info = "Suspends players actions", args = "[playername] (true/false) (-s)", multiTab = { "[playername] true,false -s" }, regVar = { 1, 2, 3 }, consoleVar = { 1, 2,
+            3 }, alias = true, customAlias = { "!+false:uncuff", "freeze" }, modules = { "cuffed" }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

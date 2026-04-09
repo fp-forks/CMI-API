@@ -17,44 +17,40 @@ import net.Zrips.CMILib.FileHandler.ConfigReader;
 import net.Zrips.CMILib.RawMessages.RawMessage;
 
 public class ChatFormatManager {
-    private CMI plugin;
-    HashMap<Integer, String> groupFormats;
-    HashMap<Integer, String> groupMessageFormats;
-    private HashMap<String, CMIChatRoom> chatRooms;
-    private HashMap<UUID, CMIChatRoom> userChatRoom;
-    private Set<UUID> staffChats;
-    private Long chatMutedUntil;
-    private String chatMutedReason;
-    private boolean BungeeMessages;
-    private boolean BungeePublicMessages;
-    private boolean BungeePublicMessagesSingleIgnore;
-    private boolean BungeeStaffMessages;
-    private String ChatGeneralFormat;
-    private String ChatMessageGeneralFormat;
-    private int ChatGeneralRange;
-    private int ChatShoutRange;
-    private String ChatShoutColor;
-    private Integer ChatShoutCost;
-    public static int ChatRoomLife;
-    public static String ChatRoomShout;
-    public static TreeMap<Integer, Integer> chatDynamicRange;
-    ChatFilterRule rule;
-    ChatFilterRule itemRule;
-    private boolean ChatTranslateLink;
-    private boolean hoverItems;
-    private String fileName;
-
-    public void clearCache(UUID uuid) {
-    }
+    private CMI plugin = null;
+    HashMap<Integer, String> groupFormats = null;
+    HashMap<Integer, String> groupMessageFormats = null;
+    private HashMap<String, CMIChatRoom> chatRooms = null;
+    private HashMap<UUID, CMIChatRoom> userChatRoom = null;
+    private Set<UUID> staffChats = null;
+    private Long chatMutedUntil = null;
+    private String chatMutedReason = null;
+    private boolean BungeeMessages = false;
+    private boolean BungeePublicMessages = false;
+    private boolean BungeePublicMessagesSingleIgnore = false;
+    private boolean BungeeStaffMessages = false;
+    private String ChatGeneralFormat = null;
+    private String ChatMessageGeneralFormat = null;
+    private int ChatGeneralRange = 0;
+    private int ChatShoutRange = 0;
+    private String ChatShoutColor = null;
+    private Integer ChatShoutCost = null;
+    public static int ChatRoomLife = 0;
+    public static String ChatRoomShout = null;
+    public static TreeMap<Integer, Integer> chatDynamicRange = null;
+    ChatFilterRule rule = null;
+    ChatFilterRule itemRule = null;
+    private boolean ChatTranslateLink = false;
+    private boolean hoverItems = false;
+    private String fileName = null;
 
     public ChatFormatManager(CMI plugin) {
     }
 
-    public void loadConfig(ConfigReader cfg) {
+    public void clearCache(UUID uuid) {
     }
 
-    private String getChatGeneralFormat() {
-        return null;
+    public void loadConfig(ConfigReader cfg) {
     }
 
     public String getNickNamePrefix(CMIUser user) {
@@ -214,8 +210,8 @@ public class ChatFormatManager {
     public enum chatClickAction {
         pubmsg, privmsg, staffmsg, helpop, chatroom, discord;
 
-        private String sug = "/msg [playerNickName] ";
-        private String cmd = "";
+        private String sug = null;
+        private String cmd = null;
         private boolean specialized = false;
 
         public void updateClickAction(RawMessage rm, CMIUser user) {
@@ -243,10 +239,6 @@ public class ChatFormatManager {
         }
 
         public String getCommand(CMIUser user) {
-            return null;
-        }
-
-        private static String process(String playerName, String playerDisplayName, String playerNickName, String value) {
             return null;
         }
 

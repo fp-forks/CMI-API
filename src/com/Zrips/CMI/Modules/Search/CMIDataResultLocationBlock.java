@@ -4,7 +4,7 @@ import net.Zrips.CMILib.Container.CMIVectorInt3D;
 import net.Zrips.CMILib.Items.CMIMaterial;
 
 public class CMIDataResultLocationBlock extends CMIDataResultLocationBase {
-    CMIMaterial type;
+    CMIMaterial type = null;
 
     public CMIDataResultLocationBlock(CMIMaterial type, CMIVectorInt3D vector, int amount) {
         super(vector, amount);

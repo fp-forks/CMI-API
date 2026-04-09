@@ -1,11 +1,11 @@
 package com.Zrips.CMI.Modules.SpawnerCharge;
 
 public class SCharges {
-    private String name;
-    private int startingCharges;
-    private int maxCharges;
-    private int cooldown;
-    private int bonus;
+    private String name = null;
+    private int startingCharges = 0;
+    private int maxCharges = 0;
+    private int cooldown = 0;
+    private int bonus = 0;
 
     public SCharges() {
     }

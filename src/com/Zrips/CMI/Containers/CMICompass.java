@@ -3,22 +3,22 @@ package com.Zrips.CMI.Containers;
 import java.util.List;
 
 public class CMICompass {
-    private static boolean compassBossBar;
-    private static boolean compassRequireCompass;
-    private static boolean recoveryRequireCompass;
-    private static boolean recoveryAsRegularCompass;
-    private static int compassUpdateInterval;
-    private static String compassShape;
-    private static String compassColor;
-    private static String compassHomeIcon;
-    private static String compassSpawnIcon;
-    private static String compassDeathIcon;
-    private static String compassTargetIcon;
-    private static List<String> compassColors;
-    private static boolean compassShowHome;
-    private static boolean compassShowSpawn;
-    private static boolean compassShowDeath;
-    private static boolean compassShowCompass;
+    private static boolean compassBossBar = false;
+    private static boolean compassRequireCompass = false;
+    private static boolean recoveryRequireCompass = false;
+    private static boolean recoveryAsRegularCompass = false;
+    private static int compassUpdateInterval = 0;
+    private static String compassShape = null;
+    private static String compassColor = null;
+    private static String compassHomeIcon = null;
+    private static String compassSpawnIcon = null;
+    private static String compassDeathIcon = null;
+    private static String compassTargetIcon = null;
+    private static List<String> compassColors = null;
+    private static boolean compassShowHome = false;
+    private static boolean compassShowSpawn = false;
+    private static boolean compassShowDeath = false;
+    private static boolean compassShowCompass = false;
 
     public static void loadConfig() {
     }

@@ -2,9 +2,7 @@ package com.Zrips.CMI.Modules.Recipes;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
 
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.Recipe;
@@ -18,14 +16,14 @@ import net.Zrips.CMILib.Recipes.CMIRecipeIngredient;
 import net.Zrips.CMILib.Recipes.CMIRecipeType;
 
 public class RecipeManager {
-    private CMI plugin;
-    private boolean RecipesRequireBackwards;
-    private boolean Recipes4Sized;
-    private HashMap<String, Recipe> disabledRecipes;
-    private Integer GUIRecipeResultSlot;
-    private HashMap<String, CMIRecipe> recipes;
-    private HashMap<Recipe, CMIRecipe> recipesMap;
-    private String fileName;
+    private CMI plugin = null;
+    private boolean RecipesRequireBackwards = false;
+    private boolean Recipes4Sized = false;
+    private HashMap<String, Recipe> disabledRecipes = null;
+    private Integer GUIRecipeResultSlot = null;
+    private HashMap<String, CMIRecipe> recipes = null;
+    private HashMap<Recipe, CMIRecipe> recipesMap = null;
+    public String fileName = null;
 
     public RecipeManager(CMI plugin) {
     }
@@ -78,13 +76,7 @@ public class RecipeManager {
         return null;
     }
 
-    private void saveRecipes() {
-    }
-
-    private void loadCustomRecipes(YamlConfiguration k) {
-    }
-
-    private void loadDisabled(YamlConfiguration k) {
+    public void save() {
     }
 
     public void load() {
@@ -119,20 +111,12 @@ public class RecipeManager {
         return null;
     }
 
-    private static int getModelData(ItemStack item) {
-        return 0;
-    }
-
     @Deprecated
     public Boolean openRecipeUI(Player player, CMIItemStack cm, int page, List<Recipe> recipes) {
         return null;
     }
 
     public Boolean openRecipeUI(Player player, int page, List<Recipe> recipes) {
-        return null;
-    }
-
-    private Set<Recipe> getDisabled(ItemStack item) {
         return null;
     }
 

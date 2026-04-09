@@ -10,11 +10,11 @@ import org.bukkit.inventory.ItemStack;
 import net.Zrips.CMILib.Entities.CMIEntityType;
 
 public class EntityHeadDrop {
-    private CMIEntityType type;
-    private double baseDropChance;
-    private double baseLowerAmount;
-    private HashMap<String, Double> heads;
-    private Set<String> ls;
+    private CMIEntityType type = null;
+    private double baseDropChance = 0.0;
+    private double baseLowerAmount = 0.0;
+    private HashMap<String, Double> heads = null;
+    private Set<String> ls = null;
 
     public EntityHeadDrop(CMIEntityType type) {
     }

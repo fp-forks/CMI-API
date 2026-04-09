@@ -14,13 +14,9 @@ public class walkspeed implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 140, info = "&eSet players walk speed from 0 to 5", args = "(playerName) [amount] (-s)", tab = { "playername" }, explanation = {}, regVar = { 1, 2, 3 }, consoleVar = { 2,
-        3 }, customAlias = { "wspeed" }, others = true)
+    @CAnnotation(info = "Set players walk speed from 0 to 5", args = "(playerName) [amount] (-s)", tab = { "playername" }, explanation = {}, regVar = { 1, 2, 3 }, consoleVar = { 2,
+            3 }, customAlias = { "wspeed" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
-    }
-
-    private static double maxSpeed(CommandSender sender) {
-        return 0.0;
     }
 }

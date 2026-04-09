@@ -13,14 +13,14 @@ import com.Zrips.CMI.Modules.Teleportations.TeleportManager.TpAction;
 import net.Zrips.CMILib.BossBar.BossBarInfo;
 
 public class WarmUpManager {
-    public HashMap<String, CmdWarmUp> warmups;
-    private HashMap<UUID, WarmUpInfo> counter;
-    CMI plugin;
+    public HashMap<String, CmdWarmUp> warmups = null;
+    private HashMap<UUID, WarmUpInfo> counter = null;
+    CMI plugin = null;
     private final static String bossBarName = null;
-    boolean InformOnNoMove;
-    boolean counterBarInfo;
-    boolean showBossBarInfo;
-    BossBarInfo bossBarInfo;
+    boolean InformOnNoMove = false;
+    boolean counterBarInfo = false;
+    boolean showBossBarInfo = false;
+    BossBarInfo bossBarInfo = null;
 
     public WarmUpManager(CMI plugin) {
     }
@@ -36,15 +36,15 @@ public class WarmUpManager {
     public void addWU(String cmd, CmdWarmUp warmup) {
     }
 
-    private CmdWarmUp getTime(String cmd) {
-        return null;
-    }
-
     public boolean canMove(Player player) {
         return false;
     }
 
     public boolean canMove(UUID uuid) {
+        return false;
+    }
+
+    public boolean canMove(UUID uuid, Location currentPos) {
         return false;
     }
 
@@ -69,10 +69,8 @@ public class WarmUpManager {
         return false;
     }
 
-    private void performCmd(Player player, WarmUpInfo info) {
-    }
-
-    private void count(UUID uuid) {
+    public boolean startCmdUsage(CommandSender sender, String cmd, boolean cmiPermissionCheck) {
+        return false;
     }
 
     public boolean cancel(UUID uuid) {

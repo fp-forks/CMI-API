@@ -1,10 +1,10 @@
 package com.Zrips.CMI.Modules.Warnings;
 
 public class CMIWarningCategory {
-    private String name;
-    private Long lifeTime;
-    private int points;
-    private String defaultReason;
+    private String name = null;
+    private Long lifeTime = null;
+    private int points = 0;
+    private String defaultReason = null;
 
     public CMIWarningCategory(String name) {
     }

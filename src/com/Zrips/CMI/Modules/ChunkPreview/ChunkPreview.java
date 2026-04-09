@@ -7,8 +7,8 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Containers.ChunkPreviewInfo;
 
 public class ChunkPreview {
-    public ConcurrentHashMap<UUID, ChunkPreviewInfo> Info;
-    private CMI plugin;
+    public ConcurrentHashMap<UUID, ChunkPreviewInfo> Info = null;
+    private CMI plugin = null;
 
     public ChunkPreview(CMI plugin) {
     }
@@ -17,8 +17,5 @@ public class ChunkPreview {
     }
 
     public void loadRegionFile(ChunkPreviewInfo scan) {
-    }
-
-    private void loadChunk(ChunkPreviewInfo scan) {
     }
 }

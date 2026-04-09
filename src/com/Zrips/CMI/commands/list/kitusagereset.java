@@ -14,7 +14,7 @@ public class kitusagereset implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eReset kit usage counter", args = "(kitName) (playerName)", tab = { "kit", "playername" }, modules = { "kits" }, regVar = { 0, 1, 2 }, consoleVar = { 0, 2 }, others = true)
+    @CAnnotation(info = "Reset kit usage counter", args = "(kitName) (playerName)", tab = { "kit", "playername" }, modules = { "kits" }, regVar = { 0, 1, 2 }, consoleVar = { 0, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

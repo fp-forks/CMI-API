@@ -1,28 +1,32 @@
 package com.Zrips.CMI.Modules.Elytra;
 
+import javax.annotation.Nullable;
+
+import org.bukkit.inventory.ItemStack;
+
 import com.Zrips.CMI.CMI;
 
 import net.Zrips.CMILib.Items.CMIMaterial;
 
 public class ElytraManager {
-    private boolean BoostUseItems;
-    private double BoostMultyplier;
-    private double BoostSuperMultyplier;
-    private CMIMaterial BoostItem;
-    private CMIMaterial BoostItemConsume;
-    private CMIMaterial LaunchItem;
-    private int BoostAmount;
-    private int BoostSuperAmount;
-    private int BoostSpeedLimit;
-    private boolean BoostSpeedLimitStop;
-    private boolean BoostRequiresItem;
-    private boolean BoostShowParticles;
-    private boolean PreventSelfDamage;
-    private boolean PreventRocketUsage;
-    private boolean BoostSpeedDecimals;
-    private double LaunchTime;
-    private boolean disableRiptide;
-    private CMI plugin;
+    private boolean BoostUseItems = false;
+    private double BoostMultyplier = 0.0;
+    private double BoostSuperMultyplier = 0.0;
+    private ItemStack BoostItem = null;
+    private ItemStack BoostItemConsume = null;
+    private ItemStack LaunchItem = null;
+    private int BoostAmount = 0;
+    private int BoostSuperAmount = 0;
+    private int BoostSpeedLimit = 0;
+    private boolean BoostSpeedLimitStop = false;
+    private boolean BoostRequiresItem = false;
+    private boolean BoostShowParticles = false;
+    private boolean PreventSelfDamage = false;
+    private boolean PreventRocketUsage = false;
+    private boolean BoostSpeedDecimals = false;
+    private double LaunchTime = 0.0;
+    private boolean disableRiptide = false;
+    private CMI plugin = null;
 
     public ElytraManager(CMI plugin) {
     }
@@ -42,15 +46,45 @@ public class ElytraManager {
         return 0.0;
     }
 
+    @Deprecated
     public CMIMaterial getBoostItem() {
         return null;
     }
 
+    @Deprecated
     public CMIMaterial getBoostItemConsume() {
         return null;
     }
 
+    @Deprecated
     public CMIMaterial getLaunchItem() {
+        return null;
+    }
+
+    public boolean isBoostItemStack(ItemStack stack) {
+        return false;
+    }
+
+    @Nullable
+    public ItemStack getBoostItemStack() {
+        return null;
+    }
+
+    public boolean isBoostItemStackConsume(ItemStack stack) {
+        return false;
+    }
+
+    @Nullable
+    public ItemStack getBoostItemStackConsume() {
+        return null;
+    }
+
+    public boolean isLaunchItemStack(ItemStack stack) {
+        return false;
+    }
+
+    @Nullable
+    public ItemStack getLaunchItemStack() {
         return null;
     }
 

@@ -1,7 +1,6 @@
 package com.Zrips.CMI.Modules.ChatFormat;
 
 import java.util.HashMap;
-import java.util.Set;
 import java.util.UUID;
 
 import org.bukkit.entity.Player;
@@ -14,23 +13,11 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Modules.ChatFilter.ChatFilterRule;
 
 public class ChatFormatListener implements Listener {
-    private CMI plugin;
-    private ChatFilterRule whiteRules;
-    public static HashMap<UUID, Long> shouts;
+    private CMI plugin = null;
+    private ChatFilterRule whiteRules = null;
+    public static HashMap<UUID, Long> shouts = null;
 
     public ChatFormatListener(CMI plugin) {
-    }
-
-    private static void onAsyncPlayerChatRoomEvent(AsyncPlayerChatEvent event) {
-    }
-
-    private void onAsyncPlayerStaffRoomEvent(AsyncPlayerChatEvent event) {
-    }
-
-    private void onAsyncPlayerChatEvent(AsyncPlayerChatEvent event) {
-    }
-
-    private void AsyncPlayerChatEventMute(AsyncPlayerChatEvent event) {
     }
 
     public void AsyncPlayerChatEventShadowMute(AsyncPlayerChatEvent event) {
@@ -45,9 +32,6 @@ public class ChatFormatListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void AsyncPlayerChatEventRawConverter(AsyncPlayerChatEvent event) {
-    }
-
-    private void sendBungee(Player player, String message, Set<Player> set) {
     }
 
     @EventHandler(priority = EventPriority.MONITOR)

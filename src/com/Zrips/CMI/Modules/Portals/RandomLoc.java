@@ -1,9 +1,9 @@
 package com.Zrips.CMI.Modules.Portals;
 
 public class RandomLoc {
-    double x;
-    double y;
-    double z;
+    double x = 0.0;
+    double y = 0.0;
+    double z = 0.0;
 
     public RandomLoc(double x, double y, double z) {
     }

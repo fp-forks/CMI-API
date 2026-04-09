@@ -16,53 +16,57 @@ import com.Zrips.CMI.Containers.CMIUser;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class AfkManager {
-    private HashMap<CMIUser, Long> lastAction;
-    private HashMap<UUID, AfkInfo> afkPlayersMap;
+    private HashMap<CMIUser, Long> lastAction = null;
+    private HashMap<UUID, AfkInfo> afkPlayersMap = null;
     private final NavigableMap<Integer, Long> afkKickTimers = null;
-    private CMI plugin;
-    private CMITask sched;
-    private long awayTrigerTime;
-    private List<String> awayTrigerCommands;
-    private List<String> manualAwayTrigerCommands;
-    private List<String> manualLeaveCommands;
-    private List<String> autoLeaveCommands;
-    private long defaultKickTime;
-    private int AutoKickFromPlayerCount;
-    private long RepeatingAutoKickInterval;
-    private List<String> kickTrigerCommands;
-    private List<String> disabledWorlds;
-    private boolean AfkEnabled;
-    private boolean PreventJumping;
-    private boolean TitleMessage;
-    private boolean SubTitleMessage;
-    private boolean PreventDamage;
-    private boolean PreventMobDamage;
-    private boolean StopPlayTime;
-    private int interval;
-    private boolean disableOnPublicChat;
-    private boolean disableOnPrivateChat;
-    private boolean disableOnInteract;
-    private boolean SmartInteractCheck;
-    private boolean AntiAfkMachines;
-    private boolean DisableOnInventoryClick;
-    private boolean DisableOnitemDrop;
-    private boolean RepeatKickCommand;
-    private boolean disableOnCommand;
-    private boolean disableOnMove;
-    private boolean disableOnLookAround;
-    private boolean disableItemPickup;
-    private boolean disableFishing;
-    private boolean PreventMobSpawning;
-    private boolean PreventMobSpawningNatural;
-    private boolean PreventMobSpawningSpawners;
-    private boolean PreventMobVillageDefence;
-    private boolean PreventPushing;
-    private boolean PreventHook;
-    private boolean disableExpPickup;
-    int messageSize;
-    List<String> afkSubTitle;
-    private CMITask afkSched;
-    List<CMIUser> afkList;
+    private CMI plugin = null;
+    private CMITask sched = null;
+    private long awayTrigerTime = 0;
+    private List<String> awayTrigerCommands = null;
+    private List<String> manualAwayTrigerCommands = null;
+    private List<String> manualLeaveCommands = null;
+    private List<String> autoLeaveCommands = null;
+    private long defaultKickTime = 0;
+    private int AutoKickFromPlayerCount = 0;
+    private long RepeatingAutoKickInterval = 0;
+    private List<String> kickTrigerCommands = null;
+    private List<String> disabledWorlds = null;
+    private boolean AfkEnabled = false;
+    private boolean PreventJumping = false;
+    private boolean TitleMessage = false;
+    private boolean SubTitleMessage = false;
+    private boolean PreventDamage = false;
+    private boolean PreventMobDamage = false;
+    private boolean StopPlayTime = false;
+    private int interval = 0;
+    private boolean disableOnPublicChat = false;
+    private boolean disableOnPrivateChat = false;
+    private boolean disableOnInteract = false;
+    private boolean SmartInteractCheck = false;
+    private boolean AntiAfkMachines = false;
+    private boolean DisableOnInventoryClick = false;
+    private boolean DisableOnitemDrop = false;
+    private boolean RepeatKickCommand = false;
+    private boolean disableOnCommand = false;
+    private boolean disableOnMove = false;
+    private boolean disableOnLookAround = false;
+    private boolean disableItemPickup = false;
+    private boolean disableFishing = false;
+    private boolean PreventMobSpawning = false;
+    private boolean PreventMobSpawningNatural = false;
+    private boolean PreventMobSpawningSpawners = false;
+    private boolean PreventMobVillageDefence = false;
+    private boolean PreventPushing = false;
+    private boolean PreventHook = false;
+    private boolean disableExpPickup = false;
+    private boolean disableShulkerTargeting = false;
+    int messageSize = 0;
+    List<String> afkSubTitle = null;
+    private CMITask afkSched = null;
+    List<CMIUser> afkList = null;
+
+    public AfkManager(CMI plugin) {
+    }
 
     public long getClosestKickTime() {
         return 0;
@@ -83,33 +87,16 @@ public class AfkManager {
     public void removeAfkInfo(UUID uuid) {
     }
 
-    public AfkManager(CMI plugin) {
-    }
-
     public void stop() {
     }
 
     public void loadConfig() {
     }
 
-    private void loadAfk() {
-    }
-
-    private void tasker() {
-    }
-
     public void showTitle(CMIUser user, boolean fade) {
     }
 
     public void hideTitle(CMIUser user) {
-    }
-
-    private String getTitle(CMIUser user) {
-        return null;
-    }
-
-    private String getSubtitle(CMIUser user) {
-        return null;
     }
 
     public void setUserToAfk(CMIUser user, List<String> cmds) {
@@ -230,9 +217,6 @@ public class AfkManager {
     public void AddToAfkTimePreventer(CMIUser user) {
     }
 
-    private void AfkTimePreventer() {
-    }
-
     public List<String> getManualAwayTrigerCommands() {
         return null;
     }
@@ -253,6 +237,10 @@ public class AfkManager {
     }
 
     public boolean isDisableExpPickup() {
+        return false;
+    }
+
+    public boolean isDisableShulkerTargeting() {
         return false;
     }
 

@@ -14,8 +14,8 @@ import com.Zrips.CMI.CMI;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class MobExpirationListener implements Listener {
-    private CMI plugin;
-    static ConcurrentHashMap<UUID, CMITask> mobTaskers;
+    private CMI plugin = null;
+    static ConcurrentHashMap<UUID, CMITask> mobTaskers = null;
 
     public MobExpirationListener(CMI plugin) {
     }

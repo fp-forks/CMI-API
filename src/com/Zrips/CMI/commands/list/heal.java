@@ -14,9 +14,9 @@ public class heal implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eHeal player", args = "[playerName/all] (healamount/healpercent) (-nofeed) (-ignoreffects) (-dontextinguish)", tab = { "playername%%all",
-        "!-nofeed%%!-ignoreffects%%!-dontextinguish", "!-nofeed%%!-ignoreffects%%!-dontextinguish", "!-nofeed%%!-ignoreffects%%!-dontextinguish" }, regVar = { 0, 1, 2, 3, 4, 5, 6 }, consoleVar = { 1, 2, 3,
-            4, 5, 6 }, others = true)
+    @CAnnotation(info = "Heal player", args = "[playerName/all] (healamount/healpercent) (-nofeed) (-ignoreffects) (-dontextinguish)", tab = { "playername%%all",
+            "!-nofeed%%!-ignoreffects%%!-dontextinguish", "!-nofeed%%!-ignoreffects%%!-dontextinguish",
+            "!-nofeed%%!-ignoreffects%%!-dontextinguish" }, regVar = { 0, 1, 2, 3, 4, 5, 6 }, consoleVar = { 1, 2, 3, 4, 5, 6 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -14,8 +14,8 @@ public class more implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 65, info = "&eFills item stack to maximum amount", args = "(playerName) (-clone/[amount])", tab = { "playername" }, explanation = { "&ePermissions:",
-        " &6cmi.command.more.oversize &e- to get oversized stacks" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(priority = 65, info = "Fills item stack to maximum amount", args = "(playerName) (-clone/[amount])", tab = { "playername" }, explanation = { "Permissions:",
+            " cmi.command.more.oversize - to get oversized stacks" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

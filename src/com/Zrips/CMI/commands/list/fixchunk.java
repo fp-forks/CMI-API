@@ -13,12 +13,11 @@ public class fixchunk implements Cmd {
     public void getExtra(ConfigReader c) {
     }
 
-    @SuppressWarnings("deprecation")
     @Override
-    @CAnnotation(info = "&eScans for damaged chunks", args = "&ew &6[worldName]&e r &6[range in chunks]&e c &6[x:z]&e ", explanation = { "&6SubCommands:", "- &6stats &e- show current scanning stats",
-        "- &6pause &e- pause scanning", "- &6continue &e- continue scanning", "- &6stop &e- stop scanning", "- &6stopall &e- stop all scanning", "- &6speed [amount] &e- set current scan speed",
-        "- &6autospeed [true/false] &e- set autospeed turned off or on", "- &6messages [true/false] &e- set message output to off or on", "Example:", "/fixchunk w LT_Craft",
-        "/fixchunk w LT_Craft r 50 c 1024:-2048", "/fixchunk w LT_Craft r g", "/fixchunk fix" }, regVar = { -100 }, consoleVar = { -100 }, alias = true, others = false)
+    @CAnnotation(info = "Scans for damaged chunks", args = "w [worldName] r [range in chunks] c [x:z]", explanation = { "SubCommands:", "- stats - show current scanning stats",
+            "- pause - pause scanning", "- continue - continue scanning", "- stop - stop scanning", "- stopall - stop all scanning", "- speed [amount] - set current scan speed",
+            "- autospeed [true/false] - set autospeed turned off or on", "- messages [true/false] - set message output to off or on", "Example:", "/fixchunk w LT_Craft",
+            "/fixchunk w LT_Craft r 50 c 1024:-2048", "/fixchunk w LT_Craft r g", "/fixchunk fix" }, regVar = { -100 }, consoleVar = { -100 }, alias = true, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

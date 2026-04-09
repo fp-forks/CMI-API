@@ -3,9 +3,9 @@ package com.Zrips.CMI.Modules.SpecializedCommands;
 import java.util.Set;
 
 public class overflowCommands {
-    private long time;
-    private Set<String> command;
-    private int repeat;
+    private long time = 0;
+    private Set<String> command = null;
+    private int repeat = 0;
 
     public overflowCommands(String command) {
     }

@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -18,18 +17,20 @@ import net.Zrips.CMILib.GUI.GUIManager.GUIClickType;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class SignManager {
-    private Set<CMISign> signs;
-    protected Map<String, Map<ChunkRef, Set<CMISign>>> chunkSignsRange;
-    private Map<UUID, Set<CMISign>> playerNearSigns;
-    private Map<CMISign, Set<UUID>> lastSignInRange;
-    private int SignRangeCheckInterval;
-    private HashMap<CMIChatColor, CMIChatColor> colorChange;
-    private CMITask saveId;
-    private CMI plugin;
-    private CMITask sched;
-    private List<String> signEditBlackList;
-    private String fileName;
-    boolean saving;
+    private Set<CMISign> signs = null;
+    protected Map<String, Map<ChunkRef, Set<CMISign>>> chunkSignsRange = null;
+    private Map<UUID, Set<CMISign>> playerNearSigns = null;
+    private Map<CMISign, Set<UUID>> lastSignInRange = null;
+    private boolean signRequireShift = false;
+    private boolean signDialogEditor = false;
+    private int SignRangeCheckInterval = 0;
+    private HashMap<CMIChatColor, CMIChatColor> colorChange = null;
+    private CMITask saveId = null;
+    private CMI plugin = null;
+    private CMITask sched = null;
+    private List<String> signEditBlackList = null;
+    private String fileName = null;
+    boolean saving = false;
 
     public SignManager(CMI plugin) {
     }
@@ -57,10 +58,6 @@ public class SignManager {
     public void handleSignUpdates(Player player, Location locto) {
     }
 
-    private static CompletableFuture<List<ChunkRef>> getChunks(CMISign res) {
-        return null;
-    }
-
     public void loadConfig() {
     }
 
@@ -68,9 +65,6 @@ public class SignManager {
     }
 
     public void save() {
-    }
-
-    private void saveSigns() {
     }
 
     public void removeLastSignInRange(CMISign sign, UUID uuid) {
@@ -82,19 +76,7 @@ public class SignManager {
     public void removeLastSignInRange(UUID uuid) {
     }
 
-    private void tasker() {
-    }
-
     public void addPlayersNearSign(CMISign sign) {
-    }
-
-    private static void updateSign(Player player, CMISign sign) {
-    }
-
-    private void updateSign(CMISign sign) {
-    }
-
-    private static void updateSign(CMISign sign, Set<UUID> list) {
     }
 
     public Set<CMISign> getSigns() {
@@ -146,5 +128,13 @@ public class SignManager {
 
     public List<String> getSignEditBlackList() {
         return null;
+    }
+
+    public boolean isSignEditRequireSneaking() {
+        return false;
+    }
+
+    public boolean isSignDialogEditor() {
+        return false;
     }
 }

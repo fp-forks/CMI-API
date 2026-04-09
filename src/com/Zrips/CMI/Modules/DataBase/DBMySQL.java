@@ -6,13 +6,13 @@ import java.sql.Statement;
 import com.Zrips.CMI.CMI;
 
 public class DBMySQL extends DBDAO {
-    private CMI plugin;
-    private String database;
-    private static String path;
+    private CMI plugin = null;
+    private String database = null;
+    private static String path = null;
 
     public DBMySQL(CMI plugin, String hostname, String database, String username, String password, String prefix, boolean autoReconnect, boolean certificate, boolean ssl) {
-        super(plugin, path, "jdbc:mysql://" + hostname + "/" + database + "?autoReconnect=" + autoReconnect + "&useSSL=" + ssl + "&verifyServerCertificate=" + certificate + "&allowPublicKeyRetrieval=true"
-            + "&useUnicode=true&characterEncoding=utf8mb4_unicode_ci", username, password, prefix);
+        super(plugin, path, "jdbc:mysql://" + hostname + "/" + database + "?autoReconnect=" + autoReconnect + "&useSSL=" + ssl + "&verifyServerCertificate=" + certificate
+                + "&allowPublicKeyRetrieval=true" + "&useUnicode=true&characterEncoding=utf8mb4_unicode_ci", username, password, prefix);
     }
 
     public void initialize() {
@@ -74,6 +74,11 @@ public class DBMySQL extends DBDAO {
 
     @Override
     public boolean convertTableRowFormat(DBTables table) {
+        return false;
+    }
+
+    @Override
+    public boolean isColumnUnique(DBTables table, String collumn) {
         return false;
     }
 }

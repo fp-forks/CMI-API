@@ -14,8 +14,7 @@ public class importoldusers implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 121, info = "&eImports users from playerdata folder in main world folder. Server can suffer lag spike during import", args = "", tab = { "" }, explanation = {}, regVar = {
-        0 }, consoleVar = { 0 }, others = false)
+    @CAnnotation(info = "Imports users from playerdata folder in main world folder. Server can suffer lag spike during import", regVar = { 0 }, consoleVar = { 0 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

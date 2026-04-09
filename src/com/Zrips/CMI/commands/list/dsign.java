@@ -14,8 +14,8 @@ public class dsign implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eManage dynamic signs", args = "(new)", tab = { "%%new" }, explanation = { "Look at sign and perform /cmi dsign new" }, regVar = { -66 }, consoleVar = {
-        666 }, modules = "dynamicsigns", others = false)
+    @CAnnotation(info = "Manage dynamic signs", args = "(new)", tab = { "%%new" }, explanation = { "Look at sign and perform /cmi dsign new" }, regVar = { -66 }, consoleVar = {
+            666 }, modules = "dynamicsigns", others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

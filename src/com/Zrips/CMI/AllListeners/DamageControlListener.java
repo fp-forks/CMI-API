@@ -8,7 +8,7 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import com.Zrips.CMI.CMI;
 
 public class DamageControlListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public DamageControlListener(CMI plugin) {
     }

@@ -14,8 +14,7 @@ public class schedule implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eTrigger schedule", args = "[scheduleName] (-updatetimer)", tab = { "scheduleName", "-updatetimer" }, explanation = {}, regVar = { 1, 2 }, consoleVar = { 1,
-        2 }, others = false)
+    @CAnnotation(info = "Trigger schedule", args = "[scheduleName] (-updatetimer)", tab = { "scheduleName", "-updatetimer" }, regVar = { 1, 2 }, consoleVar = { 1, 2 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

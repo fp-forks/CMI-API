@@ -1,10 +1,10 @@
 package com.Zrips.CMI.Modules.Search;
 
 public class SearchTypeItemLore extends SearchTypeItem {
-    String lore;
+    String lore = null;
 
     public SearchTypeItemLore(String lore) {
-        super(null);
+        this(null, lore);
     }
 
     public SearchTypeItemLore(SearchTypeItem parent, String lore) {

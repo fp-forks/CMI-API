@@ -16,8 +16,8 @@ public class scan implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 286, info = "&eScans for items in current world", args = "", multiTab = { "cancel", "results", "pause", "resume", "hand,stoneaxe oversize" }, explanation = {
-        "More information at https://www.zrips.net/cmi/extra/scan/" }, regVar = { -66 }, consoleVar = { -66 }, alias = true, others = false)
+    @CAnnotation(priority = 286, info = "Scans for items in current world", args = "", multiTab = { "cancel", "results", "pause", "resume", "hand,stoneaxe oversize" }, explanation = {
+            "<T>More information at https://www.zrips.net/cmi/extra/scan/</T><URL>https://www.zrips.net/cmi/extra/scan/</URL>" }, regVar = { -66 }, consoleVar = { -66 }, alias = true, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

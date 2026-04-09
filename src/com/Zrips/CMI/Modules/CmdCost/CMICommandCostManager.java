@@ -7,9 +7,9 @@ import org.bukkit.command.CommandSender;
 import com.Zrips.CMI.CMI;
 
 public class CMICommandCostManager {
-    private HashMap<String, CMICommandCost> costs;
-    CMI plugin;
-    private String fileName;
+    private HashMap<String, CMICommandCost> costs = null;
+    CMI plugin = null;
+    private String fileName = null;
 
     public CMICommandCostManager(CMI plugin) {
     }
@@ -35,9 +35,5 @@ public class CMICommandCostManager {
 
     public boolean loadConfig(boolean isReload) {
         return false;
-    }
-
-    private static CMICommandCost get(String line) {
-        return null;
     }
 }

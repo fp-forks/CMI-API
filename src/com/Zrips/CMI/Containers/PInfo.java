@@ -1,10 +1,10 @@
 package com.Zrips.CMI.Containers;
 
 public class PInfo {
-    private String permission;
-    private String desc;
-    private boolean cmd;
-    private boolean others;
+    private String permission = null;
+    private String desc = null;
+    private boolean cmd = false;
+    private boolean others = false;
 
     public PInfo(String permission, String desc, boolean cmd) {
     }

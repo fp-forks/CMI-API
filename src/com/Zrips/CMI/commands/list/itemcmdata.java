@@ -14,8 +14,8 @@ public class itemcmdata implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eCheck or modify items custom model data", args = "[set/delete/list] (playerName) (integerId) (-s)", multiTab = { "set,delete,list [playerName] -s" }, regVar = {
-        -66 }, consoleVar = { -100 }, alias = true, others = true)
+    @CAnnotation(info = "Check or modify items custom model data", args = "[set/delete/list] (playerName) (integerId) (-s)", multiTab = { "set,delete,list [playerName] -s" }, regVar = {
+            -66 }, consoleVar = { -100 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

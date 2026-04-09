@@ -14,7 +14,7 @@ public class serverlist implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eShow server list", args = "", tab = {}, explanation = {}, regVar = { -666 }, consoleVar = { -666 }, others = true)
+    @CAnnotation(info = "Show server list", args = "", tab = {}, explanation = {}, regVar = { -666 }, consoleVar = { -666 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

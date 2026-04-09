@@ -1,8 +1,8 @@
 package com.Zrips.CMI.Modules.FlightCharge;
 
 public class freeFall {
-    private Float fallDistance;
-    private Boolean jump;
+    private Float fallDistance = null;
+    private Boolean jump = null;
 
     public Float getFallDistance() {
         return null;

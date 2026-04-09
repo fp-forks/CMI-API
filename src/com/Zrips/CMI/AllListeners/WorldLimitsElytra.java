@@ -11,7 +11,7 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import com.Zrips.CMI.CMI;
 
 public class WorldLimitsElytra implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public WorldLimitsElytra(CMI plugin) {
     }

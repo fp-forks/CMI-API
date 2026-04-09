@@ -1,9 +1,9 @@
 package com.Zrips.CMI.Containers;
 
 public class PlayerNote {
-    private String sender;
-    private long time;
-    private String note;
+    private String sender = null;
+    private long time = 0;
+    private String note = null;
 
     public PlayerNote(String sender, Long time, String note) {
     }

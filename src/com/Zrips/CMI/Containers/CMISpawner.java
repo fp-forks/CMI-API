@@ -13,8 +13,8 @@ import org.bukkit.metadata.MetadataValue;
 import org.bukkit.plugin.Plugin;
 
 public class CMISpawner {
-    private Block block;
-    private CreatureSpawner spawner;
+    private Block block = null;
+    private CreatureSpawner spawner = null;
 
     public CMISpawner(Block block) {
     }
@@ -117,10 +117,6 @@ public class CMISpawner {
         return 0;
     }
 
-    private int getValue(String path) {
-        return 0;
-    }
-
     public EntityType getSpawnedType() {
         return null;
     }
@@ -148,9 +144,6 @@ public class CMISpawner {
     }
 
     public void setSpawnRange(int arg0) {
-    }
-
-    private void updateValue(String type, int val) {
     }
 
     public void setSpawnedType(EntityType arg0) {

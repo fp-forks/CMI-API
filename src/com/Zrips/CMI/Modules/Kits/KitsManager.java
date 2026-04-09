@@ -8,50 +8,47 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import javax.annotation.Nullable;
 
-import org.bukkit.Material;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Containers.CMIKitUsage;
-import com.Zrips.CMI.Containers.CMIUser;
 
 import net.Zrips.CMILib.FileHandler.ConfigReader;
 import net.Zrips.CMILib.Items.CMIItemStack;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class KitsManager {
-    private LinkedHashMap<String, Kit> map;
-    private static HashMap<UUID, Clickery> clickeryMap;
-    private static HashMap<UUID, List<ItemStack>> cloneCache;
-    private String NewbieKitName;
-    private Kit NewbieKit;
-    private CMI plugin;
-    private boolean KitsGUI;
-    private boolean KitsGUIFillEmptyFields;
-    private boolean allowKitPreview;
-    private boolean guiCloseButton;
-    private int guiCloseButtonSlot;
-    private CMIItemStack guiCloseButtonItem;
-    private List<String> guiCloseButtonCommands;
-    private boolean guiInfoButton;
-    private int guiInfoButtonSlot;
-    private CMIItemStack guiInfoButtonItem;
-    private List<String> guiInfoButtonCommands;
-    private static ConcurrentHashMap<UUID, LinkedHashMap<String, CMIKitUsage>> kitsData;
-    private String fileName;
-    private CMITask saveTask;
-    private static int min;
+    private LinkedHashMap<String, Kit> map = null;
+    private static HashMap<UUID, Clickery> clickeryMap = null;
+    private static HashMap<UUID, List<ItemStack>> cloneCache = null;
+    private String NewbieKitName = null;
+    private Kit NewbieKit = null;
+    private CMI plugin = null;
+    private boolean KitsGUI = false;
+    private boolean KitsGUIFillEmptyFields = false;
+    private boolean allowKitPreview = false;
+    private boolean guiCloseButton = false;
+    private int guiCloseButtonSlot = 0;
+    private CMIItemStack guiCloseButtonItem = null;
+    private List<String> guiCloseButtonCommands = null;
+    private boolean guiInfoButton = false;
+    private int guiInfoButtonSlot = 0;
+    private CMIItemStack guiInfoButtonItem = null;
+    private List<String> guiInfoButtonCommands = null;
+    private static ConcurrentHashMap<UUID, LinkedHashMap<String, CMIKitUsage>> kitsData = null;
+    private String fileName = null;
+    private CMITask saveTask = null;
+    private static int min = 0;
+
+    public KitsManager(CMI plugin) {
+    }
 
     public void clearCache(UUID uuid) {
     }
 
     public void onDisable() {
-    }
-
-    public KitsManager(CMI plugin) {
     }
 
     public static LinkedHashMap<String, CMIKitUsage> getUserKits(UUID uuid) {
@@ -125,21 +122,10 @@ public class KitsManager {
     public void load() {
     }
 
-    private void parseItems(ConfigurationSection section, Kit kit) {
-    }
-
     public void safeSave() {
     }
 
     public void save() {
-    }
-
-    private static Material getMaterial(String val) {
-        return null;
-    }
-
-    private static Integer getData(String val) {
-        return null;
     }
 
     public ItemStack updateItemStackLore(ItemStack item, Player player, Kit kit) {
@@ -154,14 +140,6 @@ public class KitsManager {
     }
 
     public void listPlayersKits(CommandSender sender, Player player, int page) {
-    }
-
-    private List<String> getLoreForButton(CMIUser user, Kit oneKit) {
-        return null;
-    }
-
-    private int slotToGUIrelativeSlot(int slot) {
-        return 0;
     }
 
     public void listPlayersKitsInComplexGUI(Player player, int page) {
@@ -220,10 +198,6 @@ public class KitsManager {
     public void openGuiEditorSettings(Kit kit, Player player, boolean editor) {
     }
 
-    private static int getSpeed(UUID uuid) {
-        return 0;
-    }
-
     @Deprecated
     public CMIItemStack getKitPreviewIcon(CMIKitGUILayout type) {
         return null;
@@ -238,11 +212,39 @@ public class KitsManager {
     }
 
     public enum CMIKitGUILayout {
-        Separator(-1), OffHand(11), Helmet(0), Chest(9), Legs(1), Boots(10), Clone(4), configName(39), commandName(40), fileName(48), displayName(49), ShowDespiteWeight(36), Weight(37), Group(28), Slot(
-            15), Page(6), DropItems(35), Icon(12), IconCD(13), Delay(10), Money(21), Exp(22), Back(9), Commands(33), Conditions(42), ShowWithoutUsage(18), Usages(19), Description(24), Enabled(8), Settings(
-                17), MainMenu(17);
+        Separator(-1),
+        OffHand(11),
+        Helmet(0),
+        Chest(9),
+        Legs(1),
+        Boots(10),
+        Clone(4),
+        configName(39),
+        commandName(40),
+        fileName(48),
+        displayName(49),
+        ShowDespiteWeight(36),
+        Weight(37),
+        Group(28),
+        Slot(15),
+        Page(6),
+        DropItems(35),
+        Icon(12),
+        IconCD(13),
+        Delay(10),
+        Money(21),
+        Exp(22),
+        Back(9),
+        Commands(33),
+        Conditions(42),
+        ShowWithoutUsage(18),
+        Usages(19),
+        Description(24),
+        Enabled(8),
+        Settings(17),
+        MainMenu(17);
 
-        private int slots;
+        private int slots = 0;
         private CMIItemStack icon = null;
 
         CMIKitGUILayout(Integer slot) {

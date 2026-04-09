@@ -14,9 +14,9 @@ public class ctellraw implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eSend tellraw type message", args = "[playerName/all] [formattedMessage]", explanation = {
-        "Usage is same as shown in https://www.zrips.net/cmi/custom-text/ aka customtext command" }, multiTab = { "[playername],all" }, regVar = { -100 }, consoleVar = {
-            -100 }, ignoreHelpPage = true, others = false, asyncSupported = true)
+    @CAnnotation(priority = 48, info = "Send tellraw type message", args = "[playerName/all] [formattedMessage]", explanation = {
+            "Usage is same as shown in https://www.zrips.net/cmi/custom-text/ aka customtext command" }, multiTab = {
+                    "[playername],all" }, regVar = { -100 }, consoleVar = { -100 }, ignoreHelpPage = true, others = false, asyncSupported = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

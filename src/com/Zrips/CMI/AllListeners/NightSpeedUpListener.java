@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerBedLeaveEvent;
 import com.Zrips.CMI.CMI;
 
 public class NightSpeedUpListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public NightSpeedUpListener(CMI plugin) {
     }

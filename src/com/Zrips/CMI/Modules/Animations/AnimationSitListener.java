@@ -12,12 +12,13 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
+import org.bukkit.event.vehicle.VehicleEnterEvent;
 import org.bukkit.event.vehicle.VehicleExitEvent;
 
 import com.Zrips.CMI.CMI;
 
 public class AnimationSitListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public AnimationSitListener(CMI plugin) {
     }
@@ -40,6 +41,10 @@ public class AnimationSitListener implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void PlayerMoveEvent(PlayerMoveEvent event) {
+    }
+
+    @EventHandler(priority = EventPriority.MONITOR)
+    public void VehicleEnterEvent(VehicleEnterEvent event) {
     }
 
     @EventHandler(priority = EventPriority.MONITOR)

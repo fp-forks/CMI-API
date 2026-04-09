@@ -5,11 +5,11 @@ import java.util.List;
 import org.bukkit.entity.Player;
 
 public class TabListCache {
-    private List<String> header;
-    private List<String> footer;
-    private String playerNameFormat;
-    private Player player;
-    private TabList tl;
+    private List<String> header = null;
+    private List<String> footer = null;
+    private String playerNameFormat = null;
+    private Player player = null;
+    private TabList tl = null;
 
     public TabListCache(Player player, TabList tl) {
     }

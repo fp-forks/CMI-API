@@ -1,15 +1,19 @@
 package com.Zrips.CMI.Modules.Sheduler;
 
+import com.Zrips.CMI.Containers.CMIWeekday;
+
 public class SchedTime {
-    private Integer year;
-    private Integer month;
-    private Integer day;
-    private Integer dayOfWeek;
-    private Integer hour;
-    private Integer minute;
-    private Integer second;
-    private boolean done;
-    Long next;
+    private int year = 0;
+    private int month = 0;
+    private int day = 0;
+    private int dayOfWeek = 0;
+    private int hour = 0;
+    private int minute = 0;
+    private int second = 0;
+    private boolean done = false;
+    private CMIWeekday firstDayOfMonth = null;
+    private CMIWeekday lastDayOfMonth = null;
+    long next = 0;
 
     public SchedTime() {
     }
@@ -76,5 +80,23 @@ public class SchedTime {
     }
 
     public void setDayOfWeek(Integer dayOfWeek) {
+    }
+
+    public CMIWeekday getFirstDayOfMonth() {
+        return null;
+    }
+
+    public void setFirstDayOfMonth(CMIWeekday firstDayOfMonth) {
+    }
+
+    public CMIWeekday getLastDayOfMonth() {
+        return null;
+    }
+
+    public void setLastDayOfMonth(CMIWeekday lastDayOfMonth) {
+    }
+
+    public String toString() {
+        return null;
     }
 }

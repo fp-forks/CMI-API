@@ -7,16 +7,16 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.Recipe;
 
 public class WorthItem {
-    private Material material;
-    private Integer data;
-    private Double sellPrice;
-    private Double buyPrice;
-    private ItemStack item;
-    private Recipe recipe;
-    private Recipe exploitRecipe;
-    private Set<Recipe> recipesFor;
-    private Set<Recipe> recipesFrom;
-    private Integer modelData;
+    private Material material = null;
+    private Integer data = null;
+    private Double sellPrice = null;
+    private Double buyPrice = null;
+    private ItemStack item = null;
+    private Recipe recipe = null;
+    private Recipe exploitRecipe = null;
+    private Set<Recipe> recipesFor = null;
+    private Set<Recipe> recipesFrom = null;
+    private Integer modelData = null;
 
     @Deprecated
     public WorthItem(ItemStack item, Integer data, double price) {
@@ -26,6 +26,7 @@ public class WorthItem {
     }
 
     public WorthItem(ItemStack item) {
+        this(item, 0D);
     }
 
     public Integer getData() {

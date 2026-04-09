@@ -7,10 +7,9 @@ import com.Zrips.CMI.Containers.CMIUser;
 import com.Zrips.CMI.Modules.Economy.EconomyManager.WorldGroup;
 
 public class CMIEconomyAcount {
-    private Map<WorldGroup, Double> balances;
-    private CMIUser user;
-    private int balTopPos;
-    private double lastKnownBalance;
+    private Map<WorldGroup, Double> balances = null;
+    private CMIUser user = null;
+    private double lastKnownBalance = 0.0;
 
     public CMIEconomyAcount(CMIUser user) {
     }
@@ -39,14 +38,7 @@ public class CMIEconomyAcount {
         return null;
     }
 
-    private static void fireEvent(CMIUser user, Double from, Double to, String type, CMIUser source) {
-    }
-
     public Double getBalance() {
-        return null;
-    }
-
-    private Double getVaultBalance() {
         return null;
     }
 
@@ -118,14 +110,17 @@ public class CMIEconomyAcount {
         return null;
     }
 
+    @Deprecated
     public int updateBalTopPosition() {
         return 0;
     }
 
+    @Deprecated
     public int getBalTopPosition() {
         return 0;
     }
 
+    @Deprecated
     public void setBalTopPosition(int balTopPos) {
     }
 }

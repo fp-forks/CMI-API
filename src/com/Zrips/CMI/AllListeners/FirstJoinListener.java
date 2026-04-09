@@ -8,7 +8,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import com.Zrips.CMI.CMI;
 
 public class FirstJoinListener implements Listener {
-    CMI plugin;
+    CMI plugin = null;
 
     public FirstJoinListener(CMI plugin) {
     }

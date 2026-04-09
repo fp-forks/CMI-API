@@ -19,7 +19,7 @@ import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerFishEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemHeldEvent;
-import org.bukkit.event.player.PlayerLoginEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
@@ -34,10 +34,10 @@ import com.Zrips.CMI.events.CMIAfkKickEvent;
 import com.Zrips.CMI.events.CMIAfkLeaveEvent;
 
 public class AfkListener implements Listener {
-    private CMI plugin;
-    HashMap<UUID, previousLoc> antiJump;
-    static HashMap<UUID, checkInfo> pitchChange;
-    HashMap<UUID, Long> antiPush;
+    private CMI plugin = null;
+    HashMap<UUID, previousLoc> antiJump = null;
+    static HashMap<UUID, checkInfo> pitchChange = null;
+    HashMap<UUID, Long> antiPush = null;
 
     public AfkListener(CMI plugin) {
     }
@@ -120,7 +120,7 @@ public class AfkListener implements Listener {
     }
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
-    public void PlayerLoginEvent(PlayerLoginEvent event) {
+    public void PlayerLoginEvent(PlayerJoinEvent event) {
     }
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
@@ -144,8 +144,8 @@ public class AfkListener implements Listener {
     }
 
     private class previousLoc {
-        List<Location> locs;
-        private int jumpCount;
+        List<Location> locs = null;
+        private int jumpCount = 0;
 
         public Location addLoc(Location loc) {
             return null;

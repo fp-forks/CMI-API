@@ -159,9 +159,21 @@ public class MirrorManager {
     }
 
     public enum MirrorAction {
-        X("&eMirrors by &6X &eaxis", 1), Y("&eMirrors by &6Y &eaxis", 3), Z("&eMirrors by &6Z &eaxis", 5), XY("&eMirrors by &6X &eto &6Y &eaxis", 11), ZY("&eMirrors by &6Z &eto &6Y &eaxis", 13), XZ(
-            "&eMirrors by &6X &eto &6Z &eaxis", 20), ZX("&eMirrors by &6Z &eto &6Y &eaxis", 22), Rotate90V("&eRotates up", 28), Rotate90H("&eRotates &690 &edegrees clock wise", 29), Rotate90HC(
-                "&eRotates &690 &edegrees counter clock wise", 31), Rotate180H("&eRotates &6180 &edegrees", 32), Pause("&ePauses mirroring", 16), Location("&eSets mirroring center location", 34);
+        X("&eMirrors by &6X &eaxis", 1),
+        Y("&eMirrors by &6Y &eaxis", 3),
+        Z("&eMirrors by &6Z &eaxis", 5),
+        XY("&eMirrors by &6X &eto &6Y &eaxis", 11),
+        ZY("&eMirrors by &6Z &eto &6Y &eaxis", 13),
+        XZ(
+                "&eMirrors by &6X &eto &6Z &eaxis", 20),
+        ZX("&eMirrors by &6Z &eto &6Y &eaxis", 22),
+        Rotate90V("&eRotates up", 28),
+        Rotate90H("&eRotates &690 &edegrees clock wise", 29),
+        Rotate90HC(
+                "&eRotates &690 &edegrees counter clock wise", 31),
+        Rotate180H("&eRotates &6180 &edegrees", 32),
+        Pause("&ePauses mirroring", 16),
+        Location("&eSets mirroring center location", 34);
 
         private int slot;
         private String desc;

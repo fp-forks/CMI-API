@@ -14,10 +14,10 @@ public class msg implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eSends message to player", args = "[playerName] [message]", tab = { "playername" }, explanation = {
-        "If message starts with ! then clean message without sender name will be shown", "Requires cmi.command.msg.clean permission",
-        "If message starts with !- then clean message without sender name will be shown and without option to reply", "Requires cmi.command.msg.noreply permission" }, regVar = { -100, -1 }, consoleVar = {
-            -100, -1 }, ignoreHelpPage = true, others = false, customAlias = { "w" })
+    @CAnnotation(priority = 48, info = "Sends message to player", args = "[playerName] [message]", tab = { "playername" }, explanation = {
+            "If message starts with ! then clean message without sender name will be shown", "Requires cmi.command.msg.clean permission",
+            "If message starts with !- then clean message without sender name will be shown and without option to reply",
+            "Requires cmi.command.msg.noreply permission" }, regVar = { -100, -1 }, consoleVar = { -100, -1 }, ignoreHelpPage = true, others = false, customAlias = { "w" })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

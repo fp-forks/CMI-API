@@ -4,11 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 
 public class TabList {
-    private HashMap<Integer, List<String>> headerMap;
-    Integer lastHeader;
-    private HashMap<Integer, List<String>> footerMap;
-    Integer lastFooter;
-    private String playerNameFormat;
+    private HashMap<Integer, List<String>> headerMap = null;
+    Integer lastHeader = null;
+    private HashMap<Integer, List<String>> footerMap = null;
+    Integer lastFooter = null;
+    private String playerNameFormat = null;
 
     public TabList() {
     }

@@ -6,10 +6,12 @@ import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.entity.TextDisplay.TextAlignment;
 
+import com.Zrips.CMI.Components.CMIComponentBase;
+
 import net.Zrips.CMILib.Colors.CMIChatColor;
 
 public class CMITextDisplay extends CMIDisplay {
-    private org.bukkit.entity.TextDisplay td;
+    private org.bukkit.entity.TextDisplay td = null;
 
     public CMITextDisplay(Location loc) {
         super(CMIDisplayType.Text, loc);
@@ -19,10 +21,20 @@ public class CMITextDisplay extends CMIDisplay {
         return null;
     }
 
-    public void setText(List<String> text) {
+    public static String linesIntoString(List<String> lines) {
+        return null;
     }
 
-    public void setText(String text) {
+    public boolean setText(List<String> text) {
+        return false;
+    }
+
+    public boolean setText(String text) {
+        return false;
+    }
+
+    public boolean setText(CMIComponentBase text) {
+        return false;
     }
 
     public int getLineWidth() {
@@ -53,15 +65,12 @@ public class CMITextDisplay extends CMIDisplay {
         return false;
     }
 
-    @SuppressWarnings("deprecation")
     public void setBackgroundColor(Color color) {
     }
 
-    @SuppressWarnings("deprecation")
     public void setBackgroundColor(CMIChatColor color) {
     }
 
-    @SuppressWarnings("deprecation")
     public Color getBackgroundColor() {
         return null;
     }

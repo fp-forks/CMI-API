@@ -12,8 +12,8 @@ import org.bukkit.event.player.PlayerToggleSneakEvent;
 import com.Zrips.CMI.CMI;
 
 public class ElytraLaunchListener implements Listener {
-    private CMI plugin;
-    HashMap<UUID, CMILaunch> map;
+    private CMI plugin = null;
+    HashMap<UUID, CMILaunch> map = null;
 
     public ElytraLaunchListener(CMI plugin) {
     }
@@ -31,8 +31,8 @@ public class ElytraLaunchListener implements Listener {
     }
 
     private class CMILaunch {
-        private Long started;
-        private Long lastCharge;
+        private Long started = null;
+        private Long lastCharge = null;
 
         public Long getStarted() {
             return null;

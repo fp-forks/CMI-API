@@ -8,10 +8,13 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Containers.CMIUser;
 
 public class IpManager {
-    private CMI plugin;
-    HashMap<String, Set<CMIUser>> ips;
+    private CMI plugin = null;
+    HashMap<String, Set<CMIUser>> ips = null;
     private static final Pattern PATTERN = null;
     private static final Pattern ALTPATTERN = null;
+
+    public IpManager(CMI plugin) {
+    }
 
     public boolean ipIsOk(String ip) {
         return false;
@@ -19,9 +22,6 @@ public class IpManager {
 
     public boolean alternateIpIsOk(String ip) {
         return false;
-    }
-
-    public IpManager(CMI plugin) {
     }
 
     public void addIp(HashMap<String, Integer> map, CMIUser user) {

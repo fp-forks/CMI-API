@@ -14,7 +14,7 @@ public class ranklist implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eList of possible ranks", regVar = { 0, 1 }, consoleVar = { 0, 1 }, modules = "ranks", others = false)
+    @CAnnotation(info = "List of possible ranks", regVar = { 0, 1 }, consoleVar = { 0, 1 }, modules = "ranks", others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

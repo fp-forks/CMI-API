@@ -14,7 +14,7 @@ public class loom implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eOpen loom", args = "(playerName)", tab = { "playername", "%%-s" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(info = "Open loom", args = "(playerName)", tab = { "playername", "%%-s" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

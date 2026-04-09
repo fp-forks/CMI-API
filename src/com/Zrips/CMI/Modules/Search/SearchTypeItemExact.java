@@ -3,10 +3,10 @@ package com.Zrips.CMI.Modules.Search;
 import org.bukkit.inventory.ItemStack;
 
 public class SearchTypeItemExact extends SearchTypeItem {
-    ItemStack searchedItem;
+    ItemStack searchedItem = null;
 
     public SearchTypeItemExact(ItemStack item) {
-        super(null);
+        this(null, item);
     }
 
     public SearchTypeItemExact(SearchTypeItem parent, ItemStack item) {

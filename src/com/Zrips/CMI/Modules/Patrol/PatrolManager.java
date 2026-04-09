@@ -4,7 +4,7 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Containers.CMIUser;
 
 public class PatrolManager {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public PatrolManager(CMI plugin) {
     }

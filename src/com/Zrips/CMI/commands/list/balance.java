@@ -14,8 +14,8 @@ public class balance implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eCheck money balance", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 1 }, customAlias = {
-        "bal" }, others = true)
+    @CAnnotation(priority = 48, info = "Check money balance", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 1 }, customAlias = {
+            "bal" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

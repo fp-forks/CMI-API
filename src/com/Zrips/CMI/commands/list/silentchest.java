@@ -14,8 +14,8 @@ public class silentchest implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 10, info = "&eToggles silent chest", args = "", tab = {}, explanation = { "&ePlayers arround you wont see chest opening animation when you opening chest",
-        "&eProtocollib required for this feature to work." }, regVar = { 0 }, consoleVar = { 666 }, modules = { "silentChest" }, others = false)
+    @CAnnotation(priority = 10, info = "Toggles silent chest", args = "", tab = {}, explanation = { "Players arround you wont see chest opening animation when you opening chest",
+            "Protocollib required for this feature to work." }, regVar = { 0 }, consoleVar = { 666 }, modules = { "silentChest" }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

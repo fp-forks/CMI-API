@@ -3,10 +3,10 @@ package com.Zrips.CMI.Modules.Worth;
 import org.bukkit.enchantments.Enchantment;
 
 public class WorthEnchantment {
-    private Double sellPrice;
-    private Double buyPrice;
-    private Integer level;
-    private Enchantment enchant;
+    private Double sellPrice = null;
+    private Double buyPrice = null;
+    private Integer level = null;
+    private Enchantment enchant = null;
 
     public WorthEnchantment(Enchantment enchant, int level, double sellPrice, Double buyPrice) {
     }

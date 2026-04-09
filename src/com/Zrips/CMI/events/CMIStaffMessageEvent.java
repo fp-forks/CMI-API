@@ -6,11 +6,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class CMIStaffMessageEvent extends CMICancellableEvent {
-    private CommandSender by;
-    private Set<Player> receivers;
-    private String message;
+    private CommandSender by = null;
+    private Set<Player> receivers = null;
+    private String message = null;
 
     public CMIStaffMessageEvent(CommandSender by, Set<Player> receivers, String message) {
+        super();
     }
 
     public CommandSender getSentBy() {

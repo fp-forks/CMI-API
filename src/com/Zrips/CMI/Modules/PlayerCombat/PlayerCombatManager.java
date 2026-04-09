@@ -19,53 +19,56 @@ import com.Zrips.CMI.Containers.CMIUser;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class PlayerCombatManager {
-    private HashMap<CombatDamageType, Set<UUID>> combatMap;
-    private HashMap<UUID, CMIPlayerCombat> playerCombatMap;
-    private HashMap<UUID, HashMap<UUID, PlayerKillCount>> playerKills;
-    private HashMap<UUID, HashMap<EntityType, EntityKillCount>> entityKills;
-    private HashMap<EntityType, EntityHeadDrop> entityHeadDropChance;
-    private HashMap<Integer, Double> lootMobBonus;
-    private HashMap<Integer, Double> lootPlayerBonus;
-    private CMI plugin;
-    private boolean dropHead;
-    private boolean pvpIncludeVictim;
-    private boolean pveIncludeVictim;
-    private boolean PlayerShowBossBar;
-    private boolean PlayerShowDamageNumbers;
-    private String PlayerDamageNumbersFormat;
-    private boolean MobShowBossBar;
-    private boolean MobIncludeEnvironment;
-    private boolean MobShowDamageNumbers;
-    private String MobDamageNumbersFormat;
-    private boolean PDisableFlight;
-    private boolean PDisableFallDamage;
-    private boolean MDisableFallDamage;
-    private boolean MDisableFlight;
-    private boolean PlayerBlockCommands;
-    private List<String> playerWorlds;
-    private boolean MobBlockCommands;
-    private List<String> PlayerAllowedCommands;
-    private List<String> MobAllowedCommands;
-    private boolean PlayerMakeBlackList;
-    private boolean MobMakeBlackList;
-    private boolean maintainName;
-    private boolean maintainLore;
-    private boolean maintainEnchants;
-    private boolean pvpNoGodDamage;
-    private boolean pvpNoGodDamageInform;
-    private boolean pveNoGodDamage;
-    private boolean pveNoGodDamageInform;
-    private boolean safeZoneDamage;
-    private boolean dropEntityHead;
-    private double DropHeadPercentage;
-    private List<String> mobWorlds;
-    private double LowerChanceWithEachKill;
-    private int CombatTimer;
-    private List<String> PlayerHeadLore;
-    Pattern lorePattern;
-    private CMITask sched;
-    ConfigurationSection tempSection;
-    private String fileName;
+    private HashMap<CombatDamageType, Set<UUID>> combatMap = null;
+    private HashMap<UUID, CMIPlayerCombat> playerCombatMap = null;
+    private HashMap<UUID, HashMap<UUID, PlayerKillCount>> playerKills = null;
+    private HashMap<UUID, HashMap<EntityType, EntityKillCount>> entityKills = null;
+    private HashMap<EntityType, EntityHeadDrop> entityHeadDropChance = null;
+    private HashMap<Integer, Double> lootMobBonus = null;
+    private HashMap<Integer, Double> lootPlayerBonus = null;
+    private CMI plugin = null;
+    private boolean dropHead = false;
+    private boolean pvpIncludeVictim = false;
+    private boolean pveIncludeVictim = false;
+    private boolean PlayerShowBossBar = false;
+    private boolean PlayerShowDamageNumbers = false;
+    private String PlayerDamageNumbersFormat = null;
+    private boolean MobShowBossBar = false;
+    private boolean MobIncludeEnvironment = false;
+    private boolean MobShowDamageNumbers = false;
+    private String MobDamageNumbersFormat = null;
+    private boolean PDisableFlight = false;
+    private boolean PDisableFallDamage = false;
+    private boolean MDisableFallDamage = false;
+    private boolean MDisableFlight = false;
+    private boolean PlayerBlockCommands = false;
+    private List<String> playerWorlds = null;
+    private boolean MobBlockCommands = false;
+    private List<String> PlayerAllowedCommands = null;
+    private List<String> MobAllowedCommands = null;
+    private boolean PlayerMakeBlackList = false;
+    private boolean MobMakeBlackList = false;
+    private boolean maintainName = false;
+    private boolean maintainLore = false;
+    private boolean maintainEnchants = false;
+    private boolean pvpNoGodDamage = false;
+    private boolean pvpNoGodDamageInform = false;
+    private boolean pveNoGodDamage = false;
+    private boolean pveNoGodDamageInform = false;
+    private boolean safeZoneDamage = false;
+    private boolean dropEntityHead = false;
+    private double DropHeadPercentage = 0.0;
+    private List<String> mobWorlds = null;
+    private double LowerChanceWithEachKill = 0.0;
+    private int CombatTimer = 0;
+    private List<String> PlayerHeadLore = null;
+    Pattern lorePattern = null;
+    private CMITask sched = null;
+    ConfigurationSection tempSection = null;
+    private String fileName = null;
+
+    public PlayerCombatManager(CMI plugin) {
+    }
 
     public HashMap<UUID, PlayerKillCount> getKills(UUID uuid) {
         return null;
@@ -73,9 +76,6 @@ public class PlayerCombatManager {
 
     public HashMap<EntityType, EntityKillCount> getEntityKills(UUID uuid) {
         return null;
-    }
-
-    public PlayerCombatManager(CMI plugin) {
     }
 
     public void clearCache(UUID uuid) {
@@ -90,10 +90,6 @@ public class PlayerCombatManager {
     public void loadHeads() {
     }
 
-    private Set<UUID> get(CombatDamageType type) {
-        return null;
-    }
-
     public void removePlayerFromCombat(CMIUser user) {
     }
 
@@ -101,9 +97,6 @@ public class PlayerCombatManager {
     }
 
     public void addPlayerIntoMobCombat(CMIUser user) {
-    }
-
-    private void tasker() {
     }
 
     public Boolean isDropPlayerHead() {
@@ -253,10 +246,6 @@ public class PlayerCombatManager {
     }
 
     public Long getGotLastDamageAt(UUID uuid) {
-        return null;
-    }
-
-    private CMIPlayerCombat getCombatRecord(UUID uuid) {
         return null;
     }
 

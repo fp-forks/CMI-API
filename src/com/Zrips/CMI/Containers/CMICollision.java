@@ -4,13 +4,15 @@ import org.bukkit.Location;
 import org.bukkit.util.Vector;
 
 public class CMICollision {
-    private Vector min;
-    private Vector max;
+    private Vector min = null;
+    private Vector max = null;
 
     public CMICollision(CMIHitBox box) {
+        this(box.getMin(), box.getMax());
     }
 
     public CMICollision(Vector min, Vector max) {
+        this(min.getX(), min.getY(), min.getZ(), max.getX(), max.getY(), max.getZ());
     }
 
     public CMICollision(double x1, double y1, double z1, double x2, double y2, double z2) {

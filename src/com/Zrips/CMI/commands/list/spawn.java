@@ -14,8 +14,7 @@ public class spawn implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 240, info = "&eTeleports back to spawn location", args = "(playerName) (-s)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1,
-        2 }, others = true)
+    @CAnnotation(info = "Teleports back to spawn location", args = "(playerName) (-s)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

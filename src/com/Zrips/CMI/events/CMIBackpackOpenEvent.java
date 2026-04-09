@@ -6,8 +6,8 @@ import org.bukkit.inventory.ItemStack;
 import com.Zrips.CMI.Modules.ShulkerBoxInventory.ShulkerInv;
 
 public class CMIBackpackOpenEvent extends CMIPlayerCancellableEvent {
-    private ShulkerInv shulkerbackpack;
-    private double costToOpen;
+    private ShulkerInv shulkerbackpack = null;
+    private double costToOpen = 0.0;
 
     public CMIBackpackOpenEvent(ShulkerInv shulkerbackpack) {
         super(shulkerbackpack.getPlayer());

@@ -14,8 +14,8 @@ public class speed implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 140, info = "&eSet players walk or fly speed", args = "(playerName) [amount] (-s)", tab = { "playername" }, explanation = {}, regVar = { 1, 2, 3 }, consoleVar = { 2,
-        3 }, others = true)
+    @CAnnotation(priority = 140, info = "Set players walk or fly speed", args = "(playerName) [amount] (-s)", tab = { "playername" }, explanation = {}, regVar = { 1, 2, 3 }, consoleVar = { 2,
+            3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

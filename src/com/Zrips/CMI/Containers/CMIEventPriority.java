@@ -5,7 +5,7 @@ import org.bukkit.event.EventPriority;
 public enum CMIEventPriority {
     LOWEST, LOW, NORMAL, HIGH, HIGHEST, MONITOR;
 
-    private EventPriority priority;
+    private EventPriority priority = null;
 
     CMIEventPriority() {
     }

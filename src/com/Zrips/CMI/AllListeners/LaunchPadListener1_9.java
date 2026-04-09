@@ -8,7 +8,7 @@ import org.bukkit.event.entity.EntityToggleGlideEvent;
 import com.Zrips.CMI.CMI;
 
 public class LaunchPadListener1_9 implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public LaunchPadListener1_9(CMI plugin) {
     }

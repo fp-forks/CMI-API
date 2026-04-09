@@ -10,16 +10,17 @@ import com.Zrips.CMI.Modules.Particl.ParticleManager.CMIPresetAnimations;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class CMIVisualEffect {
-    private Player targetPlayerLocation;
-    private Location loc;
-    CMITask task;
-    private int interval;
-    private Long until;
-    private CMIPEAnimationInterface effectAnimation;
-    List<Player> players;
-    Long nextPlayerUpdate;
+    private Player targetPlayerLocation = null;
+    private Location loc = null;
+    CMITask task = null;
+    private int interval = 0;
+    private Long until = null;
+    private CMIPEAnimationInterface effectAnimation = null;
+    List<Player> players = null;
+    Long nextPlayerUpdate = null;
 
     public CMIVisualEffect(Player targetPlayer, CMIPresetAnimations effect) {
+        this(targetPlayer, effect.getInter(targetPlayer));
     }
 
     public CMIVisualEffect(Player targetPlayer, CMIPEAnimationInterface effect) {
@@ -28,17 +29,10 @@ public class CMIVisualEffect {
     public CMIVisualEffect(Location loc, CMIPEAnimationInterface effect) {
     }
 
-    private Location getLocation() {
-        return null;
-    }
-
     public void show() {
     }
 
     public void show(Player player) {
-    }
-
-    private void visualize() {
     }
 
     public void stop() {

@@ -12,32 +12,32 @@ import org.bukkit.util.Vector;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class FixChunkInfo {
-    private CMITask scheduleTask;
-    private int currentId;
-    private List<File> regionFiles;
-    private RegionFiles currentRegion;
-    private Vector center;
-    private ArrayList<ChunkInfo> chunks;
-    private boolean onlyChunks;
-    private double chunksChecked;
-    private double chunksCkeckedLast;
-    private long showedInfo;
-    private boolean showInfo;
-    private boolean autoSpeed;
-    private boolean messages;
-    private UUID sender;
-    private double checked;
-    private World world;
-    private int mcaX;
-    private int mcaZ;
-    private int loaded;
-    private double total;
-    private int found;
-    private long startTime;
-    private int speed;
-    private int range;
-    private boolean running;
-    private ArrayList<ChunkInfo> chunksResult;
+    private CMITask scheduleTask = null;
+    private int currentId = 0;
+    private List<File> regionFiles = null;
+    private RegionFiles currentRegion = null;
+    private Vector center = null;
+    private ArrayList<ChunkInfo> chunks = null;
+    private boolean onlyChunks = false;
+    private double chunksChecked = 0.0;
+    private double chunksCkeckedLast = 0.0;
+    private long showedInfo = 0;
+    private boolean showInfo = false;
+    private boolean autoSpeed = false;
+    private boolean messages = false;
+    private UUID sender = null;
+    private double checked = 0.0;
+    private World world = null;
+    private int mcaX = 0;
+    private int mcaZ = 0;
+    private int loaded = 0;
+    private double total = 0.0;
+    private int found = 0;
+    private long startTime = 0;
+    private int speed = 0;
+    private int range = 0;
+    private boolean running = false;
+    private ArrayList<ChunkInfo> chunksResult = null;
 
     public FixChunkInfo() {
     }

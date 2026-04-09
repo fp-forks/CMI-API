@@ -14,8 +14,7 @@ public class tpohere implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 50, info = "&eTeleports player to your location by force", args = "[playerName] (playerName)", tab = { "allPlayerName", "playername" }, explanation = {}, regVar = { 1,
-        2 }, consoleVar = { 2 }, others = true)
+    @CAnnotation(info = "Teleports player to your location by force", args = "[playerName] (playerName)", tab = { "allPlayerName", "playername" }, regVar = { 1, 2 }, consoleVar = { 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

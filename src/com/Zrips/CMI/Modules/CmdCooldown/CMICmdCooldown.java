@@ -3,9 +3,9 @@ package com.Zrips.CMI.Modules.CmdCooldown;
 import com.Zrips.CMI.Modules.Particl.ParticleManager.CMIPresetAnimations;
 
 public class CMICmdCooldown {
-    private int cdSeconds;
-    private String command;
-    private CMIPresetAnimations animation;
+    private int cdSeconds = 0;
+    private String command = null;
+    private CMIPresetAnimations animation = null;
 
     public CMICmdCooldown(String command, int cdSeconds) {
     }

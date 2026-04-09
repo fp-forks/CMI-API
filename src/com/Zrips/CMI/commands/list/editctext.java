@@ -14,7 +14,7 @@ public class editctext implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eCustom text editor", regVar = { -66 }, consoleVar = { 666 }, others = false, multiTab = { "[ctext]" })
+    @CAnnotation(info = "Custom text editor", regVar = { -66 }, consoleVar = { 666 }, others = false, multiTab = { "[ctext]" })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

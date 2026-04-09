@@ -1,12 +1,12 @@
 package com.Zrips.CMI.Modules.Selection;
 
 public class SelectionSides {
-    Boolean NorthSide;
-    Boolean WestSide;
-    Boolean EastSide;
-    Boolean SouthSide;
-    Boolean TopSide;
-    Boolean BottomSide;
+    boolean NorthSide = false;
+    boolean WestSide = false;
+    boolean EastSide = false;
+    boolean SouthSide = false;
+    boolean TopSide = false;
+    boolean BottomSide = false;
 
     public SelectionSides() {
     }

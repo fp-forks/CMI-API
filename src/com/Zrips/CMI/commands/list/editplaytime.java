@@ -14,8 +14,7 @@ public class editplaytime implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eEdit players playtime", args = "(playerName) [add/take/set] [amount] (-s)", tab = { "playername", "add%%take%%set" }, explanation = {}, regVar = { 3, 4 }, consoleVar = { 3,
-        4 }, others = true)
+    @CAnnotation(info = "Edit players playtime", args = "(playerName) [add/take/set] [amount] (-s)", tab = { "playername", "add%%take%%set" }, regVar = { 3, 4 }, consoleVar = { 3, 4 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

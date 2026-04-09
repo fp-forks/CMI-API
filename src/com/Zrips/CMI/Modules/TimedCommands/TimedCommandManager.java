@@ -8,12 +8,12 @@ import com.Zrips.CMI.Containers.CMIUser;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class TimedCommandManager {
-    private CMI plugin;
-    private CMITask autoTimerBukkitId;
-    private long nextIn;
-    private boolean delay;
-    public Set<CMIUser> timed;
-    private Runnable autoTimer;
+    private CMI plugin = null;
+    private CMITask autoTimerBukkitId = null;
+    private long nextIn = 0;
+    private boolean delay = false;
+    public Set<CMIUser> timed = null;
+    private Runnable autoTimer = null;
 
     public TimedCommandManager(CMI plugin) {
     }
@@ -22,12 +22,6 @@ public class TimedCommandManager {
     }
 
     public void stop() {
-    }
-
-    private void checkUsers() {
-    }
-
-    private void updateNextIn(Long time) {
     }
 
     public boolean checkTFly(CMIUser user, boolean logout) {

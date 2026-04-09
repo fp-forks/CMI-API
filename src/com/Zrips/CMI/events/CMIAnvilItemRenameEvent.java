@@ -4,9 +4,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 public class CMIAnvilItemRenameEvent extends CMIPlayerCancellableEvent {
-    private ItemStack itemFrom;
-    private ItemStack itemTo;
-    private int cost;
+    private ItemStack itemFrom = null;
+    private ItemStack itemTo = null;
+    private int cost = 0;
 
     public CMIAnvilItemRenameEvent(Player player, ItemStack itemFrom, ItemStack itemTo, int cost) {
         super(player);

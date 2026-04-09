@@ -9,7 +9,7 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.events.CMIArmorChangeEvent;
 
 public class HatListeners implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public HatListeners(CMI plugin) {
     }

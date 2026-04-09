@@ -17,15 +17,15 @@ import com.Zrips.CMI.CMI;
 public class BungeeCordListener implements PluginMessageListener, Listener {
     public final static String incomingChannel = null;
     public final static String outgoingChannel = null;
-    CMI plugin;
-    HashMap<UUID, BungeeTeleport> tpMap;
-    HashMap<String, Long> m;
-    Long lastMessageTime;
-    Long lastStaffMessageTime;
-    Long lastPrivateMessageTime;
-    String lastMessage;
-    String lastStaffMessage;
-    String lastPrivateMessage;
+    CMI plugin = null;
+    HashMap<UUID, BungeeTeleport> tpMap = null;
+    HashMap<String, Long> m = null;
+    Long lastMessageTime = null;
+    Long lastStaffMessageTime = null;
+    Long lastPrivateMessageTime = null;
+    String lastMessage = null;
+    String lastStaffMessage = null;
+    String lastPrivateMessage = null;
 
     public BungeeCordListener(CMI plugin) {
     }
@@ -38,17 +38,14 @@ public class BungeeCordListener implements PluginMessageListener, Listener {
     public void onPlayerJoinEvent(PlayerJoinEvent event) {
     }
 
-    private void checkTeleportRecords(Player player) {
-    }
-
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerQuitEvent(PlayerQuitEvent event) {
     }
 
     class BungeeTeleport {
-        private Location loc;
-        private String from;
-        private long time;
+        private Location loc = null;
+        private String from = null;
+        private long time = 0;
 
         public BungeeTeleport() {
         }

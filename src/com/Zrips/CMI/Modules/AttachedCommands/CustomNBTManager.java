@@ -8,7 +8,7 @@ import org.bukkit.inventory.ItemStack;
 import com.Zrips.CMI.CMI;
 
 public class CustomNBTManager {
-    private CMI plugin;
+    private CMI plugin = null;
     public static final String cdSpliter = null;
     public static final String leftClick = null;
     public static final String rightClick = null;
@@ -40,6 +40,6 @@ public class CustomNBTManager {
     }
 
     public enum CustomNBTType {
-        NBTCommands, CMILimitedUseCurrent, CMILimitedUseMax, CMISafeLimitedUse, CMILimitedLeftClick, CMIRepairMan, Add, Clear, Take, CMICheque, MoneyCheque, RandomId, CooldownId, Cooldown, ItemCooldown;
+        NBTCommands, CMILimitedUseCurrent, CMILimitedUseMax, CMISafeLimitedUse, CMIRepairMan, CMICheque, MoneyCheque, RandomId, CooldownId, Cooldown, ItemCooldown;
     }
 }

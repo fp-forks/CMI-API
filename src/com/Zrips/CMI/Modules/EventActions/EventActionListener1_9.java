@@ -10,7 +10,7 @@ import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import com.Zrips.CMI.CMI;
 
 public class EventActionListener1_9 implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public EventActionListener1_9(CMI plugin) {
     }

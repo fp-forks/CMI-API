@@ -3,9 +3,9 @@ package com.Zrips.CMI.Modules.Afk;
 import org.bukkit.Location;
 
 public class checkInfo {
-    private Long time;
-    private Location loc;
-    private double prevAngle;
+    private Long time = null;
+    private Location loc = null;
+    private double prevAngle = 0.0;
 
     checkInfo(Location loc) {
     }

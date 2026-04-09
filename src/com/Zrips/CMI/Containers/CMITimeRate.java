@@ -3,10 +3,10 @@ package com.Zrips.CMI.Containers;
 import net.Zrips.CMILib.Time.timeState;
 
 public class CMITimeRate {
-    private int everyTicks;
-    private int addAmount;
-    private timeState state;
-    private boolean turnCycleOff;
+    private int everyTicks = 0;
+    private int addAmount = 0;
+    private timeState state = null;
+    private boolean turnCycleOff = false;
 
     public CMITimeRate(timeState state, int everyTicks, int addAmount) {
     }

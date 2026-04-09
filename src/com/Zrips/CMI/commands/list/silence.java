@@ -14,8 +14,7 @@ public class silence implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 120, info = "&eBlocks public messages", args = "", tab = { "on%%off" }, explanation = { "cmi.command.silence.bypass - to bypass silence" }, regVar = { -66 }, consoleVar = {
-        666 }, others = false)
+    @CAnnotation(info = "Blocks public messages", args = "", tab = { "on%%off" }, explanation = { "cmi.command.silence.bypass - to bypass silence" }, regVar = { -66 }, consoleVar = { 666 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

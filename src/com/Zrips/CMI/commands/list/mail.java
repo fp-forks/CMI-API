@@ -14,8 +14,8 @@ public class mail implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 180, info = "&eSend and receive mail", args = "[send/clear/read/sendtemp] [playerName] (time) (message)", tab = { "send%%clear%%read%%sendtemp",
-        "playername" }, explanation = {}, regVar = { -666 }, consoleVar = { -100 }, others = true, subIgnoreHelpPage = true)
+    @CAnnotation(info = "Send and receive mail", args = "[send/clear/read/sendtemp] [playerName] (time) (message)", tab = { "send%%clear%%read%%sendtemp", "playername" }, explanation = {}, regVar = {
+            -666 }, consoleVar = { -100 }, others = true, subIgnoreHelpPage = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

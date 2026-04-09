@@ -15,7 +15,7 @@ public class viewrange implements Cmd {
 
     @Override
     @CAnnotation(priority = 287, info = "&eChange view range", args = "[range] (playerName)", tab = { "doubleViewRange", "playername" }, explanation = {}, regVar = { 1, 2 }, consoleVar = {
-        2 }, alias = true, others = true)
+            2 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

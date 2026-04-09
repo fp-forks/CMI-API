@@ -7,31 +7,33 @@ import java.util.regex.Pattern;
 import org.bukkit.command.CommandSender;
 
 public class CommandAlias {
-    private boolean state;
-    private String cmiCommandName;
-    private List<String> commands;
-    private String alias;
-    private boolean requiresPerm;
-    private boolean tabComplete;
-    private CommandAliasType type;
-    private boolean exact;
-    private boolean overrideTab;
-    private boolean addTabs;
-    private boolean disableBase;
-    private List<String> customTabList;
-    private CMITabComplete customTab;
-    private Boolean containsDynamic;
-    private String fileName;
-    private Set<String> alternatives;
-    private boolean alternative;
-    Pattern patern;
+    private boolean state = false;
+    private String cmiCommandName = null;
+    private List<String> commands = null;
+    private String alias = null;
+    private boolean requiresPerm = false;
+    private boolean tabComplete = false;
+    private CommandAliasType type = null;
+    private boolean exact = false;
+    private boolean overrideTab = false;
+    private boolean addTabs = false;
+    private boolean disableBase = false;
+    private List<String> customTabList = null;
+    private CMITabComplete customTab = null;
+    private Boolean containsDynamic = null;
+    private String fileName = null;
+    private Set<String> alternatives = null;
+    private boolean alternative = false;
+    Pattern patern = null;
 
     @Deprecated
     public CommandAlias(String alias, List<String> commands, boolean state) {
+        this(alias, commands, state, null);
     }
 
     @Deprecated
     public CommandAlias(String alias, List<String> commands, boolean state, CommandAliasType type) {
+        this(alias, commands, state, type, null);
     }
 
     @Deprecated
@@ -39,9 +41,11 @@ public class CommandAlias {
     }
 
     public CommandAlias(String alias, String fileName, List<String> commands, boolean state) {
+        this(alias, fileName, commands, state, null);
     }
 
     public CommandAlias(String alias, String fileName, List<String> commands, boolean state, CommandAliasType type) {
+        this(alias, fileName, commands, state, type, null);
     }
 
     public CommandAlias(String alias, String fileName, List<String> commands, boolean state, CommandAliasType type, String cmiCommandName) {

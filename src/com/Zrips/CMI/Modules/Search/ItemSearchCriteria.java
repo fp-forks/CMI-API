@@ -6,11 +6,11 @@ import java.util.regex.Pattern;
 public enum ItemSearchCriteria {
     MATERIAL, NAME, LORE, ENCHANT, MODELDATA, POTION, AMOUNT, EXACT, OVERSIZE;
 
-    private static String prefix = "{";
-    private static Pattern pname = Pattern.compile("^(?i)(name|n)\\" + prefix);
-    private static Pattern plore = Pattern.compile("^(?i)(lore|l)\\" + prefix);
-    private static Pattern penchant = Pattern.compile("^(?i)(e)\\" + prefix);
-    private static Pattern pmodel = Pattern.compile("^(?i)(custommodeldata|custommodel|cm|cmd)\\" + prefix);
+    private static String prefix = null;
+    private static Pattern pname = null;
+    private static Pattern plore = null;
+    private static Pattern penchant = null;
+    private static Pattern pmodel = null;
 
     public static ItemSearchCriteria getByName(String name) {
         return null;

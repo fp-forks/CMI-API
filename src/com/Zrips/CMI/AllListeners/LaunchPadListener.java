@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 import com.Zrips.CMI.CMI;
 
 public class LaunchPadListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public LaunchPadListener(CMI plugin) {
     }

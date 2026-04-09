@@ -14,7 +14,7 @@ public class reload implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eReloads plugins config and locale files", regVar = { 0 }, consoleVar = { 0 }, others = false, alias = false)
+    @CAnnotation(info = "Reloads plugins config and locale files", regVar = { 0, 1 }, multiTab = { "dialogs,holograms" }, consoleVar = { 0, 1, 2 }, others = false, alias = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

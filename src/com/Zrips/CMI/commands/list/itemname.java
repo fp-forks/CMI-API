@@ -16,8 +16,8 @@ public class itemname implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eRename items", args = "(-p:[playerName]) [remove/your new item name]", multiTab = { "[currentItemName]" }, regVar = { -100 }, consoleVar = { -100 }, alias = true, customAlias = {
-        "!iname", "rename" }, others = true)
+    @CAnnotation(info = "Rename items", args = "(-p:[playerName]) [remove/your new item name]", multiTab = { "[currentItemName]" }, regVar = { -100 }, consoleVar = {
+            -100 }, alias = true, customAlias = { "!iname", "rename" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

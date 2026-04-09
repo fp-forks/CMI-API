@@ -14,7 +14,7 @@ public class spawner implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 100, info = "&eSets spawner", args = "[EntityType]", tab = { "EntityType" }, regVar = { 1 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(priority = 100, info = "Sets spawner", args = "[EntityType]", tab = { "EntityType" }, regVar = { 1 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

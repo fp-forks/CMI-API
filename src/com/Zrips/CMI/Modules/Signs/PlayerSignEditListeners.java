@@ -3,7 +3,6 @@ package com.Zrips.CMI.Modules.Signs;
 import java.util.Set;
 import java.util.UUID;
 
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -13,8 +12,8 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import com.Zrips.CMI.CMI;
 
 public class PlayerSignEditListeners implements Listener {
-    private CMI plugin;
-    Set<UUID> signEditCache;
+    private CMI plugin = null;
+    Set<UUID> signEditCache = null;
 
     public PlayerSignEditListeners(CMI plugin) {
     }
@@ -25,8 +24,5 @@ public class PlayerSignEditListeners implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
     public void onSignInteractShift(PlayerInteractEvent event) {
-    }
-
-    private static void disableNCP(Player player, boolean placeExcempt) {
     }
 }

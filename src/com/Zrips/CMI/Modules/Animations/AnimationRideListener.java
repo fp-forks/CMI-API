@@ -13,7 +13,7 @@ import org.bukkit.event.vehicle.VehicleMoveEvent;
 import com.Zrips.CMI.CMI;
 
 public class AnimationRideListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public AnimationRideListener(CMI plugin) {
     }

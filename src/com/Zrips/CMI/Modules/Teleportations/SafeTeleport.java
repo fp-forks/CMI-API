@@ -3,20 +3,23 @@ package com.Zrips.CMI.Modules.Teleportations;
 import org.bukkit.Location;
 
 public class SafeTeleport {
-    private Location old;
-    private Location safeLoc;
-    private Location lastCheckedLoc;
-    private CMITeleportCondition TpCond;
-    private boolean enableFly;
-    private boolean forceDisableFly;
+    private Location old = null;
+    private Location safeLoc = null;
+    private Location lastCheckedLoc = null;
+    private CMITeleportCondition TpCond = null;
+    private boolean enableFly = false;
+    private boolean forceDisableFly = false;
 
     public SafeTeleport(Location old, Location safeLoc, Location lastCheckedLoc, CMITeleportCondition TpCondition) {
+        this(old, safeLoc, lastCheckedLoc, TpCondition, false);
     }
 
     public SafeTeleport(Location old, Location safeLoc, CMITeleportCondition TpCondition) {
+        this(old, safeLoc, TpCondition, false);
     }
 
     public SafeTeleport(Location old, Location safeLoc, CMITeleportCondition TpCondition, boolean enableFly) {
+        this(old, safeLoc, null, TpCondition, enableFly);
     }
 
     public SafeTeleport(Location old, Location safeLoc, Location lastCheckedLoc, CMITeleportCondition TpCondition, boolean enableFly) {

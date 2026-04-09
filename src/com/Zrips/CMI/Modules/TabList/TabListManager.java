@@ -10,30 +10,30 @@ import com.Zrips.CMI.CMI;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class TabListManager {
-    private HashMap<Integer, TabList> TabList;
-    private CMI plugin;
-    private CMITask sched;
-    private CMITask sortSched;
-    private double interval;
-    private boolean async;
-    private boolean UpdateTabListNames;
-    private boolean GroupedEnabled;
-    private boolean UpdatesOnJoin;
-    private boolean UpdatesOnLeave;
-    private boolean UpdatesOnWorldChange;
-    private boolean UpdatesOnPlayerDeath;
-    private boolean UpdatesOnAfkStateChange;
-    private boolean UpdatesOnPlayerTeleport;
-    private boolean UpdatesOnNickChange;
-    private boolean addTabListHeader;
-    private boolean addTabListFooter;
-    private boolean sortingEnabled;
-    private CMITabSortingType sortingType;
-    private CMITabSortingOrder sortingOrder;
-    private List<String> SortingCustomGroup;
-    private int SortingBalanceInterval;
-    private int SortingAutoUpdate;
-    private String fileName;
+    private HashMap<Integer, TabList> TabList = null;
+    private CMI plugin = null;
+    private CMITask sched = null;
+    private CMITask sortSched = null;
+    private double interval = 0.0;
+    private boolean async = false;
+    private boolean UpdateTabListNames = false;
+    private boolean GroupedEnabled = false;
+    private boolean UpdatesOnJoin = false;
+    private boolean UpdatesOnLeave = false;
+    private boolean UpdatesOnWorldChange = false;
+    private boolean UpdatesOnPlayerDeath = false;
+    private boolean UpdatesOnAfkStateChange = false;
+    private boolean UpdatesOnPlayerTeleport = false;
+    private boolean UpdatesOnNickChange = false;
+    private boolean addTabListHeader = false;
+    private boolean addTabListFooter = false;
+    private boolean sortingEnabled = false;
+    private CMITabSortingType sortingType = null;
+    private CMITabSortingOrder sortingOrder = null;
+    private List<String> SortingCustomGroup = null;
+    private int SortingBalanceInterval = 0;
+    private int SortingAutoUpdate = 0;
+    private String fileName = null;
 
     public TabListManager(CMI plugin) {
     }
@@ -42,9 +42,6 @@ public class TabListManager {
     }
 
     public void loadConfig() {
-    }
-
-    private void tasker() {
     }
 
     public TabList getTL(Player player) {

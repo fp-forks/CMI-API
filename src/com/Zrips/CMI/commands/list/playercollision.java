@@ -14,8 +14,8 @@ public class playercollision implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 70, info = "&eSet players collision mode", args = "(playerName) [true/false] (-s)", tab = { "playername", "true%%false", "-s%%" }, explanation = {}, regVar = { 0, 1, 2,
-        3 }, consoleVar = { 1, 2, 3 }, others = true)
+    @CAnnotation(priority = 70, info = "Set players collision mode", args = "(playerName) [true/false] (-s)", tab = { "playername", "true%%false", "-s%%" }, explanation = {}, regVar = { 0, 1, 2,
+            3 }, consoleVar = { 1, 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

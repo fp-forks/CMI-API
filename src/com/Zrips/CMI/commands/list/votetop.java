@@ -14,7 +14,7 @@ public class votetop implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eCheck top vote list", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(info = "Check top vote list", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

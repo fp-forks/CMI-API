@@ -14,9 +14,9 @@ public class nameplate implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 70, info = "&eSet players name plate prefix, suffix or its color", args = "(playerName) (-pref:[some_prefix]) (-suf:[some_suffix]) (-c:[colorCode]) (reset) (-s)", tab = {
-        "playername", "reset%%-pref:", "%%-suf:", "%%-c:" }, explanation = { "Use _ to add space and __ to add underscore for placeholder and similar" }, regVar = { -666 }, consoleVar = {
-            -100 }, others = true)
+    @CAnnotation(priority = 70, info = "Set players name plate prefix, suffix or its color", args = "(playerName) (-pref:[some_prefix]) (-suf:[some_suffix]) (-c:[colorCode]) (reset) (-s)", tab = {
+            "playername", "reset%%-pref:", "%%-suf:",
+            "%%-c:" }, explanation = { "Use _ to add space and __ to add underscore for placeholder and similar" }, regVar = { -666 }, consoleVar = { -100 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

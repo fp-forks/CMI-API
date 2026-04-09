@@ -14,7 +14,7 @@ public class aliaseditor implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 70, info = "&eAlias editor", args = "(new) (alias-cmd)", tab = { "new%%customalias" }, explanation = {}, regVar = { -66 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Alias editor", args = "(new) (alias-cmd)", multiTab = { "new,[customalias]" }, regVar = { -66 }, consoleVar = { 666 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -14,7 +14,7 @@ public class head implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eGet players head", args = "[sourceName] (targetName) (-s) (amount)", tab = { "allIGNPlayername", "playername" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 2, 3 }, others = true)
+    @CAnnotation(info = "Get players head", args = "[sourceName] (targetName) (-s) (amount)", tab = { "allIGNPlayername", "playername" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

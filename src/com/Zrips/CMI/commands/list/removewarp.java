@@ -14,7 +14,7 @@ public class removewarp implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eRemove warp", args = "(warpName)", tab = { "warps" }, regVar = { 0, 1 }, consoleVar = { 1 }, customAlias = { "delwarp" }, others = false)
+    @CAnnotation(info = "Remove warp", args = "(warpName)", tab = { "warps" }, regVar = { 0, 1 }, consoleVar = { 1 }, customAlias = { "delwarp" }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

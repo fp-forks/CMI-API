@@ -5,7 +5,7 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.Modules.Animations.AnimationManager.Chair;
 
 public class CMIPlayerSitEvent extends CMIPlayerCancellableEvent {
-    private Chair chair;
+    private Chair chair = null;
 
     public CMIPlayerSitEvent(Player player, Chair chair) {
         super(player);

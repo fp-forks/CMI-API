@@ -17,7 +17,7 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import com.Zrips.CMI.CMI;
 
 public class UserCuffedEvents implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public UserCuffedEvents(CMI plugin) {
     }

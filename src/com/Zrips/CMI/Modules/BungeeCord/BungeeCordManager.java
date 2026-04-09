@@ -1,9 +1,10 @@
 package com.Zrips.CMI.Modules.BungeeCord;
 
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -32,22 +33,22 @@ public class BungeeCordManager {
     public static final String ServerInformation = null;
     public static final String PlayerFeedback = null;
     public static final String ServerListRequest = null;
-    public static UUID localRangedMessage;
-    public static long localRangedMessageTime;
-    HashMap<String, BungeeCordServer> servers;
-    private CMI plugin;
-    private boolean isBungee;
-    private boolean CMIBPresent;
-    public static boolean gotServerList;
-    private BungeeCordServer thisServer;
-    private String thisServerName;
-    private boolean enabledSupport;
-    private boolean backToPreviousServer;
-    private boolean namesInTabComplete;
-    private List<String> tabNamesServers;
-    private CMIBungeeCord bcord;
-    private CMIBungeeType type;
-    Long time;
+    public static UUID localRangedMessage = null;
+    public static long localRangedMessageTime = 0;
+    ConcurrentHashMap<String, BungeeCordServer> servers = null;
+    private CMI plugin = null;
+    private boolean isBungee = false;
+    private boolean CMIBPresent = false;
+    public static boolean gotServerList = false;
+    private BungeeCordServer thisServer = null;
+    private String thisServerName = null;
+    private boolean enabledSupport = false;
+    private boolean backToPreviousServer = false;
+    private boolean namesInTabComplete = false;
+    private List<String> tabNamesServers = null;
+    private CMIBungeeCord bcord = null;
+    private CMIBungeeType type = null;
+    Long time = null;
     private static final String spacer = null;
 
     public BungeeCordManager(CMI plugin) {
@@ -85,7 +86,7 @@ public class BungeeCordManager {
         return null;
     }
 
-    public HashMap<String, BungeeCordServer> getServers() {
+    public Map<String, BungeeCordServer> getServers() {
         return null;
     }
 

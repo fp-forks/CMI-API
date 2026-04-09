@@ -20,10 +20,10 @@ import com.Zrips.CMI.CMI;
 import net.Zrips.CMILib.BossBar.CMIBossBarHideEvent;
 
 public class FlightListener implements Listener {
-    private CMI plugin;
-    static HashMap<UUID, traveledDistance> distanceMap;
-    public static HashMap<UUID, freeFall> fallDistanceMap;
-    HashMap<UUID, Long> informed;
+    private CMI plugin = null;
+    static HashMap<UUID, traveledDistance> distanceMap = null;
+    public static HashMap<UUID, freeFall> fallDistanceMap = null;
+    HashMap<UUID, Long> informed = null;
 
     public FlightListener(CMI plugin) {
     }

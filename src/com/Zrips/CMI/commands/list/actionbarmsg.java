@@ -14,8 +14,8 @@ public class actionbarmsg implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSends action bar message to player", args = "[playerName/all] (-s:[seconds]) [message]", tab = { "playername" }, regVar = { -100, -1 }, consoleVar = { -100,
-        -1 }, ignoreHelpPage = true, others = false)
+    @CAnnotation(info = "Sends action bar message to player", args = "[playerName/all] (-s:[seconds]) [message]", tab = { "playername" }, regVar = { -100, -1 }, consoleVar = { -100,
+            -1 }, ignoreHelpPage = true, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

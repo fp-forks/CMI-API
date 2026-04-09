@@ -14,8 +14,8 @@ public class ping implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 255, info = "&eShows players ping", args = "(playerName/message)", tab = { "playername" }, explanation = {}, regVar = { -666 }, consoleVar = {
-        -100 }, alias = true, others = true)
+    @CAnnotation(priority = 255, info = "Shows players ping", args = "(playerName/message)", tab = { "playername" }, explanation = {}, regVar = { -666 }, consoleVar = {
+            -100 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

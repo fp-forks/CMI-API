@@ -10,32 +10,32 @@ import com.Zrips.CMI.CMI;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class Purge {
-    private CMITask purgeId;
-    public boolean running;
-    private CMI plugin;
-    HashMap<PurgeType, Integer> map;
-    private boolean CleanOnStart;
-    private int OfflineDays;
-    private boolean PlayerDataEnabled;
-    private String PlayerDataSourceFolder;
-    private boolean PlayerDataDeleteFiles;
-    private String PlayerDataDestinationFolder;
-    private boolean PlayerStatsEnabled;
-    private String PlayerStatsSourceFolder;
-    private boolean PlayerStatsDeleteFiles;
-    private String PlayerStatsDestinationFolder;
-    private boolean PlayerAdvancementsEnabled;
-    private String PlayerAdvancementsSourceFolder;
-    private boolean PlayerAdvancementsDeleteFiles;
-    private String PlayerAdvancementsDestinationFolder;
-    private boolean EssentialsEnabled;
-    private String EssentialsSourceFolder;
-    private boolean EssentialsDeleteFiles;
-    private String EssentialsDestinationFolder;
-    private boolean LwcEnabled;
-    private static OfflinePlayer offPlayers;
-    private static int x;
-    private static int count;
+    private CMITask purgeId = null;
+    public boolean running = false;
+    private CMI plugin = null;
+    HashMap<PurgeType, Integer> map = null;
+    private boolean CleanOnStart = false;
+    private int OfflineDays = 0;
+    private boolean PlayerDataEnabled = false;
+    private String PlayerDataSourceFolder = null;
+    private boolean PlayerDataDeleteFiles = false;
+    private String PlayerDataDestinationFolder = null;
+    private boolean PlayerStatsEnabled = false;
+    private String PlayerStatsSourceFolder = null;
+    private boolean PlayerStatsDeleteFiles = false;
+    private String PlayerStatsDestinationFolder = null;
+    private boolean PlayerAdvancementsEnabled = false;
+    private String PlayerAdvancementsSourceFolder = null;
+    private boolean PlayerAdvancementsDeleteFiles = false;
+    private String PlayerAdvancementsDestinationFolder = null;
+    private boolean EssentialsEnabled = false;
+    private String EssentialsSourceFolder = null;
+    private boolean EssentialsDeleteFiles = false;
+    private String EssentialsDestinationFolder = null;
+    private boolean LwcEnabled = false;
+    private static OfflinePlayer[] offPlayers = null;
+    private static int x = 0;
+    private static int count = 0;
 
     public Purge(CMI plugin) {
     }
@@ -46,16 +46,7 @@ public class Purge {
     public void initialize() {
     }
 
-    private void fillZero() {
-    }
-
     public void StartingPurge() {
-    }
-
-    private void addValue(PurgeType type) {
-    }
-
-    private void addValue(PurgeType type, int amount) {
     }
 
     public boolean purgePlayerAdvancementsFiles(UUID uuid, boolean chekcIfEnabled) {

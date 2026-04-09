@@ -5,9 +5,9 @@ import java.util.UUID;
 import org.bukkit.Location;
 
 public class DangerousTp {
-    private UUID uuid;
-    private Location location;
-    private Long time;
+    private UUID uuid = null;
+    private Location location = null;
+    private Long time = null;
 
     public DangerousTp(UUID uuid, Location location) {
     }

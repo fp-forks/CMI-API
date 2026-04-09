@@ -14,7 +14,7 @@ public class unmute implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 240, info = "&eUnmute player", args = "[playerName] (-s)", tab = { "mutedplayername" }, explanation = {}, regVar = { 1, 2 }, consoleVar = { 1, 2 }, others = false)
+    @CAnnotation(info = "Unmute player", args = "[playerName] (-s)", tab = { "mutedplayername" }, explanation = {}, regVar = { 1, 2 }, consoleVar = { 1, 2 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

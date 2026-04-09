@@ -3,11 +3,11 @@ package com.Zrips.CMI.Modules.PlayTime;
 import com.Zrips.CMI.Containers.CMIUser;
 
 public class CMIPlayDay {
-    Long map;
-    private long lastUpdate;
-    private CMIUser user;
-    private int date;
-    private int id;
+    Long[] map = null;
+    private long lastUpdate = 0;
+    private CMIUser user = null;
+    private int date = 0;
+    private int id = 0;
     private final static Long maxValue = null;
 
     public CMIPlayDay(CMIUser user, int date) {

@@ -10,25 +10,25 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 public class CMIAnvilGUI {
-    private boolean colorrename;
-    private Player player;
-    private String title;
-    private String defaulttext;
-    private Inventory inventory;
-    private HashMap<AnvilSlot, ItemStack> items;
-    private Listener listener;
-    private AnvilClickEventHandler handler;
-    private static Class<?> BlockPosition;
-    private static Class<?> PacketPlayOutOpenWindow;
-    private static Class<?> ContainerAnvil;
-    private static Class<?> ChatMessage;
-    private static Class<?> EntityHuman;
-    private static Class<?> ContainerAccess;
-    private static Class<?> Containers;
-    private static Class<?> Container;
-    private static boolean useNewVersion;
+    private boolean colorrename = false;
+    private Player player = null;
+    private String title = null;
+    private String defaulttext = null;
+    private Inventory inventory = null;
+    private HashMap<AnvilSlot, ItemStack> items = null;
+    private Listener listener = null;
+    private AnvilClickEventHandler handler = null;
+    private static Class<?> BlockPosition = null;
+    private static Class<?> PacketPlayOutOpenWindow = null;
+    private static Class<?> ContainerAnvil = null;
+    private static Class<?> ChatMessage = null;
+    private static Class<?> EntityHuman = null;
+    private static Class<?> ContainerAccess = null;
+    private static Class<?> Containers = null;
+    private static Class<?> Container = null;
+    private static boolean useNewVersion = false;
 
-    private static void loadClasses() {
+    public CMIAnvilGUI(Player Player, AnvilClickEventHandler Handler) {
     }
 
     public boolean getColorRename() {
@@ -70,9 +70,6 @@ public class CMIAnvilGUI {
     public void setSlotName(AnvilSlot Slot, String Name) {
     }
 
-    public CMIAnvilGUI(Player Player, AnvilClickEventHandler Handler) {
-    }
-
     public void open() {
     }
 
@@ -86,7 +83,7 @@ public class CMIAnvilGUI {
     public enum AnvilSlot {
         INPUT_LEFT(0), INPUT_RIGHT(1), OUTPUT(2);
 
-        private int slot;
+        private int slot = 0;
 
         private AnvilSlot(int Slot) {
         }
@@ -107,9 +104,9 @@ public class CMIAnvilGUI {
     }
 
     public class AnvilClickEvent {
-        private AnvilSlot slot;
-        private ItemStack item;
-        private String text;
+        private AnvilSlot slot = null;
+        private ItemStack item = null;
+        private String text = null;
 
         public AnvilClickEvent(AnvilSlot Slot, ItemStack Item, String Text) {
         }

@@ -14,7 +14,7 @@ public class colorpicker implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&ePick hex color", args = "(hex/colorname)", tab = {}, explanation = {}, consoleVar = { 666 }, others = true)
+    @CAnnotation(info = "Pick hex color", args = "(hex/colorname)", consoleVar = { 666 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -8,16 +8,16 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import net.Zrips.CMILib.RawMessages.RawMessage;
+import com.Zrips.CMI.Components.CMIComponentBase;
 
 public class CText {
-    private HashMap<Integer, CTextPage> pages;
-    private String name;
-    private boolean autoPage;
-    private boolean hidden;
-    private boolean autoAlias;
-    private boolean requirePermission;
-    private String path;
+    private HashMap<Integer, CTextPage> pages = null;
+    private String name = null;
+    private boolean autoPage = false;
+    private boolean hidden = false;
+    private boolean autoAlias = false;
+    private boolean requirePermission = false;
+    private String path = null;
     static final Pattern patern = null;
 
     public CText(String name) {
@@ -127,7 +127,7 @@ public class CText {
         return null;
     }
 
-    private static RawMessage translateRaw(CommandSender sender, RawMessage rm, String textLine, boolean book) {
+    public static CMIComponentBase translateToComponent(CommandSender sender, String textLine, boolean book) {
         return null;
     }
 
@@ -146,8 +146,8 @@ public class CText {
     }
 
     public class bookPage {
-        private boolean json;
-        private String lines;
+        private boolean json = false;
+        private String lines = null;
 
         public bookPage(String lines) {
         }

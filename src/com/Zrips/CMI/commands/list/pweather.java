@@ -14,8 +14,8 @@ public class pweather implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 235, info = "&eControls player weather", args = "(playerName) [sun/rain/reset] (-s)", tab = { "playername%%sun%%rain%%reset" }, explanation = {}, regVar = { 0, 1, 2,
-        3 }, consoleVar = { 2, 3 }, alias = true, others = true)
+    @CAnnotation(priority = 235, info = "Controls player weather", args = "[sun/rain/reset] (playerName) (-s)", tab = { "playername%%sun%%rain%%reset" }, explanation = {}, regVar = { 0, 1, 2,
+            3 }, consoleVar = { 2, 3 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

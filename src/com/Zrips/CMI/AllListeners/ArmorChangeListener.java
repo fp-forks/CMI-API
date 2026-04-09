@@ -17,8 +17,8 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import com.Zrips.CMI.CMI;
 
 public class ArmorChangeListener implements Listener {
-    private CMI plugin;
-    public static Set<UUID> checked;
+    private CMI plugin = null;
+    public static Set<UUID> checked = null;
 
     public ArmorChangeListener(CMI plugin) {
     }

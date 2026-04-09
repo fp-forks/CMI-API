@@ -14,7 +14,8 @@ public class fly implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSet players fly true or false", args = "[playerName] (true/false) (-s)", tab = { "playername", "true%%false" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2, 3 }, others = true)
+    @CAnnotation(info = "Set players fly true or false", args = "[playerName] (true/false) (-s)", tab = { "playername", "true%%false" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
+            3 }, others = true)
     public Boolean perform(CMI pl, CommandSender sender, String[] args) {
         return null;
     }

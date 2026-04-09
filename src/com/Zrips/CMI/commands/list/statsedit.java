@@ -14,8 +14,8 @@ public class statsedit implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 257, info = "&eEdit players statistics", args = "(playerName) [add/take/set] [statistic] (subType) [amount] (-s)", tab = { "playername", "add%%take%%set", "statstype",
-        "statssubtype" }, explanation = {}, regVar = { 3, 4, 5, 6 }, consoleVar = { 3, 4, 5, 6 }, others = false)
+    @CAnnotation(priority = 257, info = "Edit players statistics", args = "(playerName) [add/take/set] [statistic] (subType) [amount] (-s)", tab = { "playername", "add%%take%%set", "statstype",
+            "statssubtype" }, explanation = {}, regVar = { 3, 4, 5, 6 }, consoleVar = { 3, 4, 5, 6 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

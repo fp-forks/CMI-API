@@ -4,7 +4,10 @@ import java.util.UUID;
 
 import org.bukkit.entity.Player;
 
+import io.papermc.paper.plugin.PermissionManager;
+
 public class PEXHandler implements PermissionInterface {
+    private PermissionManager perms = null;
 
     public PEXHandler() {
     }

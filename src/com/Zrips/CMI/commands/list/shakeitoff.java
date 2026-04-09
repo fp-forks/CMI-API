@@ -14,7 +14,7 @@ public class shakeitoff implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 47, info = "&eDismount any entity riding you or target player", args = "(playerName) (-s)", regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(priority = 47, info = "Dismount any entity riding you or target player", args = "(playerName) (-s)", regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

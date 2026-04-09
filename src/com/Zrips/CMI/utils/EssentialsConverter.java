@@ -5,11 +5,11 @@ import java.io.File;
 import org.bukkit.command.CommandSender;
 
 public class EssentialsConverter {
-    static int totalToConvert;
-    static int converted;
-    static int lastBatch;
-    static boolean done;
-    static File ff;
+    static int totalToConvert = 0;
+    static int converted = 0;
+    static int lastBatch = 0;
+    static boolean done = false;
+    static File ff = null;
 
     public EssentialsConverter() {
     }
@@ -18,12 +18,6 @@ public class EssentialsConverter {
     }
 
     public static void convertUsers(CommandSender sender, importSettings is) {
-    }
-
-    private static void convertWarps(CommandSender sender) {
-    }
-
-    private static void proccess(int place, CommandSender sender, importSettings is) {
     }
 
     public enum importType {

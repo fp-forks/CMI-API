@@ -1,11 +1,11 @@
 package com.Zrips.CMI.Containers;
 
 public class CMIIpBanEntry {
-    private String ip;
-    private Long banedAt;
-    private String Source;
-    private Long bannedUntil;
-    private String reason;
+    private String ip = null;
+    private Long banedAt = null;
+    private String Source = null;
+    private Long bannedUntil = null;
+    private String reason = null;
 
     public CMIIpBanEntry(String ip, Long banedAt, String bannedBy, Long bannedUntil, String reason) {
     }

@@ -10,22 +10,22 @@ import com.Zrips.CMI.Modules.Region.WorldInfo;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class BRInfo {
-    private CMITask task;
-    private long showedInfo;
-    private boolean showInfo;
-    private boolean autoSpeed;
-    private boolean messages;
-    private Player player;
-    private String Playername;
-    private long startTime;
-    private int speed;
-    private boolean running;
-    private int y;
-    private long replaced;
-    List<itemInfo> itemIds;
-    List<itemInfo> replaceIds;
-    private double d;
-    private WorldInfo RI;
+    private CMITask task = null;
+    private long showedInfo = 0;
+    private boolean showInfo = false;
+    private boolean autoSpeed = false;
+    private boolean messages = false;
+    private Player player = null;
+    private String Playername = null;
+    private long startTime = 0;
+    private int speed = 0;
+    private boolean running = false;
+    private int y = 0;
+    private long replaced = 0;
+    List<itemInfo> itemIds = null;
+    List<itemInfo> replaceIds = null;
+    private double d = 0.0;
+    private WorldInfo RI = null;
 
     public BRInfo() {
     }

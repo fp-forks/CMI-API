@@ -8,10 +8,10 @@ import org.bukkit.entity.Player;
 import net.Zrips.CMILib.Chat.ChatFilterBlockType;
 
 public class RuleResponse {
-    private String message;
-    private String updatedMessage;
-    private HashMap<String, ChatFilterRule> rules;
-    private List<String> bypass;
+    private String message = null;
+    private String updatedMessage = null;
+    private HashMap<String, ChatFilterRule> rules = null;
+    private List<String> bypass = null;
 
     public RuleResponse(String message) {
     }

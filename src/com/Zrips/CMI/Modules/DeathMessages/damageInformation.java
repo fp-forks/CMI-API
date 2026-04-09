@@ -10,13 +10,13 @@ import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.inventory.ItemStack;
 
 public class damageInformation {
-    private static HashMap<UUID, TreeMap<Long, damageInformation>> cache;
-    private Entity ent;
-    private double damage;
-    private ItemStack item;
-    private DamageCause cause;
-    private long time;
-    private Block block;
+    private static HashMap<UUID, TreeMap<Long, damageInformation>> cache = null;
+    private Entity ent = null;
+    private double damage = 0.0;
+    private ItemStack item = null;
+    private DamageCause cause = null;
+    private long time = 0;
+    private Block block = null;
 
     public static void cacheClear(UUID uuid) {
     }

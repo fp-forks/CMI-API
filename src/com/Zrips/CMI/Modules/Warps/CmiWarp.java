@@ -8,31 +8,31 @@ import org.bukkit.inventory.ItemStack;
 import net.Zrips.CMILib.Container.CMILocation;
 
 public class CmiWarp {
-    private CMILocation loc;
-    private List<CMILocation> locations;
-    private String name;
-    private String displayName;
-    private ItemStack item;
-    private ItemStack offItem;
-    private Integer slot;
-    private Integer page;
-    private Boolean reqPerm;
-    private Boolean showUnavailable;
-    private Boolean autoLore;
-    private boolean randomizeYaw;
-    private boolean repeatingLocation;
-    private String group;
-    private boolean hidden;
-    private UUID creator;
-    private List<CMILocation> temp;
+    private CMILocation loc = null;
+    private List<CMILocation> locations = null;
+    private String name = null;
+    private String displayName = null;
+    private ItemStack item = null;
+    private ItemStack offItem = null;
+    private Integer slot = null;
+    private Integer page = null;
+    private Boolean reqPerm = null;
+    private Boolean showUnavailable = null;
+    private Boolean autoLore = null;
+    private boolean randomizeYaw = false;
+    private boolean repeatingLocation = false;
+    private String group = null;
+    private boolean hidden = false;
+    private UUID creator = null;
+    private List<CMILocation> temp = null;
 
     public CmiWarp(String name) {
     }
 
-    public void reset() {
+    public CmiWarp(String name, CMILocation loc) {
     }
 
-    public CmiWarp(String name, CMILocation loc) {
+    public void reset() {
     }
 
     public CMILocation getLoc() {

@@ -13,7 +13,7 @@ import com.Zrips.CMI.events.CMIPlayerUnVanishEvent;
 import com.Zrips.CMI.events.CMIPlayerVanishEvent;
 
 public class RegChestListener implements Listener {
-    CMI plugin;
+    CMI plugin = null;
 
     public RegChestListener(CMI plugin) {
     }

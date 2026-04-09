@@ -6,8 +6,6 @@ import java.util.UUID;
 
 import javax.annotation.Nonnull;
 
-import org.bukkit.Location;
-import org.bukkit.World;
 import org.bukkit.entity.Player;
 
 import com.Zrips.CMI.CMI;
@@ -15,21 +13,21 @@ import com.Zrips.CMI.CMI;
 import net.Zrips.CMILib.RawMessages.RawMessage;
 
 public class DeathMessageManager {
-    private CMI plugin;
-    HashMap<String, DeathMessages> messages;
-    private List<String> playerHover;
-    private List<String> killerHover;
-    private List<String> disabledWorlds;
-    private List<String> mutedWorlds;
-    private List<String> ignoredPlayers;
-    private String prefix;
-    private long spamTimeRange;
-    private int spamCount;
-    private HashMap<UUID, List<Long>> spamProtection;
-    private boolean enabled;
-    private int autoHideFrom;
-    private int range;
-    private String destination;
+    private CMI plugin = null;
+    HashMap<String, DeathMessages> messages = null;
+    private List<String> playerHover = null;
+    private List<String> killerHover = null;
+    private List<String> disabledWorlds = null;
+    private List<String> mutedWorlds = null;
+    private List<String> ignoredPlayers = null;
+    private String prefix = null;
+    private long spamTimeRange = 0;
+    private int spamCount = 0;
+    private HashMap<UUID, List<Long>> spamProtection = null;
+    private boolean enabled = false;
+    private int autoHideFrom = 0;
+    private int range = 0;
+    private String destination = null;
 
     public DeathMessageManager(CMI plugin) {
     }
@@ -43,32 +41,12 @@ public class DeathMessageManager {
     public void load() {
     }
 
-    private void loadConfig() {
-    }
-
-    private void loadLocale() {
-    }
-
-    private void addMessages(String path, List<String> ls) {
-    }
-
     @Nonnull
     public String getDeathMessage(String path) {
         return null;
     }
 
-    private List<Player> getPlayersFromRange(Location loc, int range) {
-        return null;
-    }
-
     public boolean broadcastDeathMessage(Player player, RawMessage rm) {
-        return false;
-    }
-
-    private void addSpamRecord(UUID uuid) {
-    }
-
-    private boolean isUnderSpamCooldown(UUID uuid) {
         return false;
     }
 
@@ -86,22 +64,6 @@ public class DeathMessageManager {
 
     public List<String> getKillerHover() {
         return null;
-    }
-
-    private boolean isInMutedWorld(World world) {
-        return false;
-    }
-
-    private boolean isInMutedWorld(String worldName) {
-        return false;
-    }
-
-    private boolean isInDisabledWorld(World world) {
-        return false;
-    }
-
-    private boolean isInDisabledWorld(String worldName) {
-        return false;
     }
 
     public String getPrefix() {

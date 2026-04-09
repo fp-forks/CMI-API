@@ -1,12 +1,14 @@
 package com.Zrips.CMI.Modules.Vanish;
 
 public class VanishActionStateInt extends VanishActionState {
-    int value;
+    int value = 0;
 
     public VanishActionStateInt() {
+        super();
     }
 
     public VanishActionStateInt(int value) {
+        super();
     }
 
     @Override

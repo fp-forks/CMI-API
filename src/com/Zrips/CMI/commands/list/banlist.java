@@ -14,7 +14,7 @@ public class banlist implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eBan list", args = "(-s)", multiTab = { "-s" }, regVar = { 0, 1, 2 }, consoleVar = { 0, 1, 3 }, others = false)
+    @CAnnotation(info = "Ban list", args = "(-s)", multiTab = { "-s" }, regVar = { 0, 1, 2 }, consoleVar = { 0, 1, 3 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

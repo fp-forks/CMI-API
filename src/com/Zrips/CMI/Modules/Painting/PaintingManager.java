@@ -9,8 +9,8 @@ import org.bukkit.entity.Painting;
 import com.Zrips.CMI.CMI;
 
 public class PaintingManager {
-    private CMI plugin;
-    HashMap<UUID, Entity> map;
+    private CMI plugin = null;
+    HashMap<UUID, Entity> map = null;
 
     public PaintingManager(CMI plugin) {
     }

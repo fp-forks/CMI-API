@@ -12,8 +12,4 @@ public class CMIItemRepair {
     public static double getRepairCost(ItemStack item) {
         return 0.0;
     }
-
-    private static double format(double number) {
-        return 0.0;
-    }
 }

@@ -4,8 +4,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 public class CMIChequeUsageEvent extends CMIPlayerCancellableEvent {
-    private ItemStack cheque;
-    private double price;
+    private ItemStack cheque = null;
+    private double price = 0.0;
 
     public CMIChequeUsageEvent(Player player, ItemStack cheque, double price) {
         super(player);

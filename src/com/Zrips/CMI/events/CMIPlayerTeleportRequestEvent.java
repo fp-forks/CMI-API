@@ -5,8 +5,8 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.Modules.Teleportations.TeleportManager.TpAction;
 
 public class CMIPlayerTeleportRequestEvent extends CMIPlayerCancellableEvent {
-    private Player whoAccepts;
-    private TpAction action;
+    private Player whoAccepts = null;
+    private TpAction action = null;
 
     public CMIPlayerTeleportRequestEvent(Player whoOffers, Player whoAccepts, TpAction action) {
         super(whoOffers);

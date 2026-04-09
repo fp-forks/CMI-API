@@ -14,7 +14,7 @@ public class votes implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 180, info = "&eCheck players vote count", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1 }, consoleVar = { 1 }, alias = true, others = true)
+    @CAnnotation(info = "Check players vote count", args = "(playerName)", tab = { "playername" }, regVar = { 0, 1 }, consoleVar = { 1 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

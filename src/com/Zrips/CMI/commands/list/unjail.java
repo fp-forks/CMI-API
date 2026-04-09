@@ -14,8 +14,8 @@ public class unjail implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eRelease player from jail", args = "[playerName] (-s)", tab = { "playername", "-s" }, explanation = {}, regVar = { 1, 2 }, consoleVar = { 1,
-        2 }, modules = "jail", others = false)
+    @CAnnotation(info = "Release player from jail", args = "[playerName] (-s)", tab = { "playername", "-s" }, explanation = {}, regVar = { 1, 2 }, consoleVar = { 1,
+            2 }, modules = "jail", others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

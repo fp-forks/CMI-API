@@ -7,13 +7,13 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 public class teleportAll {
-    private String targetFolder;
-    private String targetWorld;
-    private Location destination;
-    private CompletableFuture<Void> id;
-    private int teleported;
-    private List<String> names;
-    private Player player;
+    private String targetFolder = null;
+    private String targetWorld = null;
+    private Location destination = null;
+    private CompletableFuture<Void> id = null;
+    private int teleported = 0;
+    private List<String> names = null;
+    private Player player = null;
 
     public teleportAll() {
     }

@@ -8,8 +8,8 @@ import org.bukkit.event.player.PlayerAdvancementDoneEvent;
 import com.Zrips.CMI.CMI;
 
 public class EventActionListener1_12 implements Listener {
-    private CMI plugin;
-    static boolean existingMethod;
+    private CMI plugin = null;
+    static boolean existingMethod = false;
 
     public EventActionListener1_12(CMI plugin) {
     }

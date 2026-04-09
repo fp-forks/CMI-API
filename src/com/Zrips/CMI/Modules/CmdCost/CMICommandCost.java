@@ -4,11 +4,11 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class CMICommandCost {
-    private String command;
-    private double cost;
-    private boolean informOnCharge;
-    private boolean requiresConfirmation;
-    ConcurrentHashMap<UUID, String> confirmations;
+    private String command = null;
+    private double cost = 0.0;
+    private boolean informOnCharge = false;
+    private boolean requiresConfirmation = false;
+    ConcurrentHashMap<UUID, String> confirmations = null;
 
     public CMICommandCost(String cmd, double cost) {
     }

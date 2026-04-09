@@ -1,13 +1,18 @@
 package com.Zrips.CMI.Modules.Search;
 
 public enum CMIPlayerSearchPlaceType {
-    Inventory("inv", "inv%", "cmi inv [player]"), InventoryShulker("invS", "invS%", "cmi inv [player]"), InventoryBundle("invB", "invB%", "cmi inv [player]"), EnderChest("ender", "end%",
-        "cmi ender [player]"), EnderChestShulker("enderS", "endS%", "cmi ender [player]"), EnderChestBundle("enderB", "endB%", "cmi ender [player]"), PlayerVaults("PlayerVault", "Pv%", "pv [player] [nr]"),
+    Inventory("inv", "inv%", "cmi inv [player]"),
+    InventoryShulker("invS", "invS%", "cmi inv [player]"),
+    InventoryBundle("invB", "invB%", "cmi inv [player]"),
+    EnderChest("ender", "end%", "cmi ender [player]"),
+    EnderChestShulker("enderS", "endS%", "cmi ender [player]"),
+    EnderChestBundle("enderB", "endB%", "cmi ender [player]"),
+    PlayerVaults("PlayerVault", "Pv%", "pv [player] [nr]"),
     Custom("", "Cs%", "");
 
-    private String place;
-    private String pref;
-    private String cmd;
+    private String place = null;
+    private String pref = null;
+    private String cmd = null;
 
     private CMIPlayerSearchPlaceType(String place, String pref, String cmd) {
     }

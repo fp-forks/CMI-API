@@ -12,11 +12,12 @@ import com.Zrips.CMI.Containers.CMIUser;
 import net.Zrips.CMILib.Container.CMILocation;
 
 public class CMIJailCell {
-    private int id;
-    private CMILocation teleportInLocation;
-    private World world;
-    private Set<UUID> jailedOnes;
-    private CMIJail jail;
+    private int id = 0;
+    private CMILocation teleportInLocation = null;
+    private World world = null;
+    private String worldName = null;
+    private Set<UUID> jailedOnes = null;
+    private CMIJail jail = null;
 
     public CMIJailCell(CMIJail jail) {
     }
@@ -50,6 +51,13 @@ public class CMIJailCell {
     }
 
     public void setWorld(World world) {
+    }
+
+    public void setWorld(String worldName) {
+    }
+
+    public String getWorldName() {
+        return null;
     }
 
     public Set<UUID> getJailed() {

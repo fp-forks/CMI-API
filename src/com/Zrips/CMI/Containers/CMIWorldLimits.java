@@ -9,15 +9,15 @@ import org.bukkit.GameMode;
 import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
 
 public class CMIWorldLimits {
-    private static boolean worldLimits;
-    private static boolean flyAboveRoof;
-    private static HashMap<String, GameMode> worldGameMode;
-    private static HashMap<String, Boolean> worldFlyMode;
-    private static HashMap<String, Boolean> worldGodMode;
-    private static HashMap<String, Boolean> worldElytraMode;
-    private static HashMap<String, Integer> flyAboveRoofLimitations;
-    private static HashMap<String, List<SpawnReason>> blockedSpawnReasons;
-    private static boolean reenabledFlyAfterDeath;
+    private static boolean worldLimits = false;
+    private static boolean flyAboveRoof = false;
+    private static HashMap<String, GameMode> worldGameMode = null;
+    private static HashMap<String, Boolean> worldFlyMode = null;
+    private static HashMap<String, Boolean> worldGodMode = null;
+    private static HashMap<String, Boolean> worldElytraMode = null;
+    private static HashMap<String, Integer> flyAboveRoofLimitations = null;
+    private static HashMap<String, List<SpawnReason>> blockedSpawnReasons = null;
+    private static boolean reenabledFlyAfterDeath = false;
 
     public static void loadConfig() {
     }

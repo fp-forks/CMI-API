@@ -7,15 +7,17 @@ import org.bukkit.Location;
 import org.bukkit.World;
 
 public class CMIRegion {
-    private int z;
-    private int x;
-    private World world;
-    private TreeMap<Integer, CMIChunk> chunks;
+    private int z = 0;
+    private int x = 0;
+    private World world = null;
+    private TreeMap<Integer, CMIChunk> chunks = null;
 
     public CMIRegion(Location loc) {
+        this(loc.getWorld(), loc.getChunk().getX() >> 5, loc.getChunk().getZ() >> 5);
     }
 
     public CMIRegion(Chunk chunk) {
+        this(chunk.getWorld(), chunk.getX() >> 5, chunk.getZ() >> 5);
     }
 
     public CMIRegion(World world, int x, int z) {
@@ -47,10 +49,6 @@ public class CMIRegion {
 
     public CMIChunk getRelativeChunk(int x, int z) {
         return null;
-    }
-
-    private int getChunkRelativePlace(int x, int z) {
-        return 0;
     }
 
     public boolean exists(int place) {

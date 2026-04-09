@@ -1,11 +1,11 @@
 package com.Zrips.CMI.Modules.PlayerCombat;
 
 public class CMIPlayerCombat {
-    private long gotLastDamageAt;
-    private long gotLastDamageFromPlayer;
-    private long didLastDamageToPlayer;
-    private long gotLastDamageFromEntity;
-    private long didLastDamageToEntity;
+    private long gotLastDamageAt = 0;
+    private long gotLastDamageFromPlayer = 0;
+    private long didLastDamageToPlayer = 0;
+    private long gotLastDamageFromEntity = 0;
+    private long didLastDamageToEntity = 0;
 
     public Long getGotLastDamageAt() {
         return null;

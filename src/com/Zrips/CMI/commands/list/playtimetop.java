@@ -14,7 +14,7 @@ public class playtimetop implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 110, info = "&eShows top list of player total play time", args = "[page]", tab = {}, explanation = {}, regVar = { 0, 1 }, consoleVar = { 0, 1 }, others = false)
+    @CAnnotation(priority = 110, info = "Shows top list of player total play time", args = "[page]", tab = {}, explanation = {}, regVar = { 0, 1 }, consoleVar = { 0, 1 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

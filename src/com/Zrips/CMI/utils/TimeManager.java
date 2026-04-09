@@ -17,21 +17,21 @@ import net.Zrips.CMILib.Time.timeState;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class TimeManager {
-    double tPHour;
-    double tPMin;
-    double tPSec;
-    private HashMap<String, CMITask> daySchedID;
-    private HashMap<String, HashMap<timeState, CMITimeRate>> dayTimeDurations;
-    private Set<World> froozenWorlds;
-    private CMI plugin;
-    static int dayTime;
-    static int sunriseTime;
-    static int sunsetTime;
-    static int nightTime;
-    private List<String> worlds;
-    private static SimpleDateFormat dateFormat;
-    public static HashMap<World, CMISunMover> movingmap;
-    private static long showTimer;
+    double tPHour = 0.0;
+    double tPMin = 0.0;
+    double tPSec = 0.0;
+    private HashMap<String, CMITask> daySchedID = null;
+    private HashMap<String, HashMap<timeState, CMITimeRate>> dayTimeDurations = null;
+    private Set<World> froozenWorlds = null;
+    private CMI plugin = null;
+    static int dayTime = 0;
+    static int sunriseTime = 0;
+    static int sunsetTime = 0;
+    static int nightTime = 0;
+    private List<String> worlds = null;
+    private static SimpleDateFormat dateFormat = null;
+    public static HashMap<World, CMISunMover> movingmap = null;
+    private static long showTimer = 0;
 
     public TimeManager(CMI plugin) {
     }
@@ -50,12 +50,6 @@ public class TimeManager {
     }
 
     public void stopDayTimer(String worldName) {
-    }
-
-    private void runDayTimer(World world) {
-    }
-
-    private void runDayTimer(String worldName) {
     }
 
     public long setTime(World world, String time, boolean smooth) {

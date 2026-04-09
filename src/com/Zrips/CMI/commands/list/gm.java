@@ -14,8 +14,8 @@ public class gm implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSet players game mode", args = "(playerName) [gamemode]", tab = { "playername%%gamemode", "gamemode%%playername" }, regVar = { 1, 2, 3 }, consoleVar = { 2, 3 }, customAlias = {
-        "gamemode", "+creative:gmc", "+survival:gms", "+spectator:gmsp", "+adventure:gma" }, others = false)
+    @CAnnotation(info = "Set players game mode", args = "(playerName) [gamemode]", tab = { "playername%%gamemode", "gamemode%%playername" }, regVar = { 1, 2, 3 }, consoleVar = { 2,
+            3 }, customAlias = { "gamemode", "+creative:gmc", "+survival:gms", "+spectator:gmsp", "+adventure:gma" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

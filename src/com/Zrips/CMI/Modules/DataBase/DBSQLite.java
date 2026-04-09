@@ -7,11 +7,11 @@ import java.sql.Statement;
 import com.Zrips.CMI.CMI;
 
 public class DBSQLite extends DBDAO {
-    public void initialize() {
+    public DBSQLite(CMI plugin, File file) {
+        super(plugin, "org.sqlite.JDBC", "jdbc:sqlite:" + file.getPath(), null, null, "");
     }
 
-    DBSQLite(CMI plugin, File file) {
-        super(plugin, "org.sqlite.JDBC", "jdbc:sqlite:" + new File(file, "cmi.sqlite.db").getPath(), null, null, "");
+    public void initialize() {
     }
 
     @Override
@@ -64,6 +64,11 @@ public class DBSQLite extends DBDAO {
 
     @Override
     public boolean convertTableRowFormat(DBTables table) {
+        return false;
+    }
+
+    @Override
+    public boolean isColumnUnique(DBTables table, String collumn) {
         return false;
     }
 }

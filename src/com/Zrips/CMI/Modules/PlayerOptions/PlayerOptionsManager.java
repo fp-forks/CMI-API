@@ -10,16 +10,16 @@ import com.Zrips.CMI.Containers.CMIUser;
 import net.Zrips.CMILib.Items.CMIItemStack;
 
 public class PlayerOptionsManager {
-    private CMI plugin;
-    private Boolean guiCloseButton;
-    private int guiCloseButtonSlot;
-    private CMIItemStack guiCloseButtonItem;
-    private List<String> guiCloseButtonCommands;
-    private boolean guiInfoButton;
-    private int guiInfoButtonSlot;
-    private CMIItemStack guiInfoButtonItem;
-    private List<String> guiInfoButtonCommands;
-    public static String defaultString;
+    private CMI plugin = null;
+    private Boolean guiCloseButton = null;
+    private int guiCloseButtonSlot = 0;
+    private CMIItemStack guiCloseButtonItem = null;
+    private List<String> guiCloseButtonCommands = null;
+    private boolean guiInfoButton = false;
+    private int guiInfoButtonSlot = 0;
+    private CMIItemStack guiInfoButtonItem = null;
+    private List<String> guiInfoButtonCommands = null;
+    public static String defaultString = null;
 
     public PlayerOptionsManager(CMI plugin) {
     }

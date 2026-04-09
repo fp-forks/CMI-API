@@ -14,8 +14,8 @@ public class hologrampages implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eChange hologram page", args = "[holoName] (playerName) (next/prev/[pageNumber])", tab = { "holograms", "playername", "next%%prev%%" }, regVar = { 1, 2, 3 }, consoleVar = { 2,
-        3 }, others = true)
+    @CAnnotation(info = "Change hologram page", args = "[holoName] (playerName) (next/prev/[pageNumber])", tab = { "holograms", "playername", "next%%prev%%" }, regVar = { 1, 2, 3 }, consoleVar = { 2,
+            3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -7,10 +7,10 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.CMI;
 
 public class CounterInfo {
-    private String message;
-    private List<Player> list;
-    private int t;
-    private CMI plugin;
+    private String message = null;
+    private List<Player> list = null;
+    private int t = 0;
+    private CMI plugin = null;
 
     public CounterInfo(String message, List<Player> list, int t, CMI plugin) {
     }

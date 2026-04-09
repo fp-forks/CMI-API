@@ -14,7 +14,7 @@ public class endgateway implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eToggle end gateway beam", regVar = { 0 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Toggle end gateway beam", regVar = { 0 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

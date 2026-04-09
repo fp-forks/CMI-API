@@ -7,11 +7,11 @@ import org.bukkit.entity.Player;
 public class CMIRankPlaceholder {
     private static final String regex = null;
     private static final Pattern pattern = null;
-    private String placeholder;
-    private Object value;
-    private rankPlaceholderType type;
-    private rankPlaceholderAction action;
-    private String message;
+    private String placeholder = null;
+    private Object value = null;
+    private rankPlaceholderType type = null;
+    private rankPlaceholderAction action = null;
+    private String message = null;
 
     public CMIRankPlaceholder(String line) {
     }

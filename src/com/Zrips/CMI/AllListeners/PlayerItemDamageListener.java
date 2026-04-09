@@ -11,8 +11,8 @@ import org.bukkit.event.player.PlayerItemDamageEvent;
 import com.Zrips.CMI.CMI;
 
 public class PlayerItemDamageListener implements Listener {
-    private CMI plugin;
-    HashMap<UUID, Long> informed;
+    private CMI plugin = null;
+    HashMap<UUID, Long> informed = null;
 
     public PlayerItemDamageListener(CMI plugin) {
     }

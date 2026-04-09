@@ -4,20 +4,20 @@ import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 
-import com.Zrips.CMI.Modules.Portals.CMIVector3D;
+import net.Zrips.CMILib.Container.CMIVector3D;
 
 public class CMITeleportationBounds {
-    private World world;
-    private CMIVector3D position;
-    private int maxY;
-    private int minY;
-    private float yaw;
-    private float pitch;
-    private boolean imortal;
-    private boolean canFly;
-    private boolean flying;
-    private Player player;
-    private boolean ignoreYLimits;
+    private World world = null;
+    private CMIVector3D position = null;
+    private int maxY = 0;
+    private int minY = 0;
+    private float yaw = 0.0f;
+    private float pitch = 0.0f;
+    private boolean imortal = false;
+    private boolean canFly = false;
+    private boolean flying = false;
+    private Player player = null;
+    private boolean ignoreYLimits = false;
 
     CMITeleportationBounds(Location loc) {
     }

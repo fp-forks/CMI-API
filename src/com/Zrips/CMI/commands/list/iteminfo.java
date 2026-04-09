@@ -14,7 +14,7 @@ public class iteminfo implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 47, info = "&eShow item information", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1 }, others = true)
+    @CAnnotation(priority = 47, info = "Show item information", args = "(playerName)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

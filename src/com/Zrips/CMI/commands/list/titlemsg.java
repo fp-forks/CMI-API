@@ -14,8 +14,8 @@ public class titlemsg implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eSends title message to player", args = "[playerName/all] [title \n subtitle] (-in:[ticks]) (-out:[ticks]) (-keep:[ticks])", tab = {
-        "playername" }, explanation = {}, regVar = { -100, -1 }, consoleVar = { -100, -1 }, ignoreHelpPage = true, others = false)
+    @CAnnotation(info = "Sends title message to player", args = "[playerName/all] [title \n subtitle] (-in:[ticks]) (-out:[ticks]) (-keep:[ticks])", tab = {
+            "playername" }, explanation = {}, regVar = { -100, -1 }, consoleVar = { -100, -1 }, ignoreHelpPage = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

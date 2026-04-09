@@ -14,7 +14,7 @@ public class giftpet implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eGift your tamed pet to another player", args = "[playerName] (-s)", tab = { "playername", "-s" }, regVar = { 1, 2 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Gift your tamed pet to another player", args = "[playerName] (-s)", tab = { "playername", "-s" }, regVar = { 1, 2 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

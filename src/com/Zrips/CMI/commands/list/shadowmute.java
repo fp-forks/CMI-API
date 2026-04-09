@@ -14,8 +14,8 @@ public class shadowmute implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 240, info = "&eMute player without telling him that he is muted", args = "[playerName] (time) (-s) (reason)", tab = { "playername", "1m%%", "-s%%" }, regVar = {
-        -100 }, consoleVar = { -100 }, others = false)
+    @CAnnotation(priority = 240, info = "Mute player without telling him that he is muted", args = "[playerName] (time) (-s) (reason)", tab = { "playername", "1m%%", "-s%%" }, regVar = {
+            -100 }, consoleVar = { -100 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

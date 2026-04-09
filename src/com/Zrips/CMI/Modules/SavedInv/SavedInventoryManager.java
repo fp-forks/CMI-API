@@ -3,6 +3,7 @@ package com.Zrips.CMI.Modules.SavedInv;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.bukkit.Material;
@@ -15,27 +16,25 @@ import org.bukkit.inventory.Inventory;
 import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Containers.CMIUser;
 
-import net.Zrips.CMILib.GUI.CMIGui;
-
 public class SavedInventoryManager {
-    private ConcurrentHashMap<UUID, SavedInventories> map;
-    private CMI plugin;
-    private boolean restoreHP;
-    private boolean restoreXP;
-    private boolean restoreFood;
-    private boolean restoreSaturation;
-    private boolean restorePotions;
-    private boolean restoreItems;
-    private boolean SaveOnDeath;
-    private boolean ignoreEmpty;
-    private boolean SaveOnDeathRequiresPermission;
-    private int SavedInventorys;
-    List<Material> blackListedMaterials;
+    private ConcurrentHashMap<UUID, SavedInventories> map = null;
+    private CMI plugin = null;
+    private boolean restoreHP = false;
+    private boolean restoreXP = false;
+    private boolean restoreFood = false;
+    private boolean restoreSaturation = false;
+    private boolean restorePotions = false;
+    private boolean restoreItems = false;
+    private boolean SaveOnDeath = false;
+    private boolean ignoreEmpty = false;
+    private boolean SaveOnDeathRequiresPermission = false;
+    private int SavedInventorys = 0;
+    List<Material> blackListedMaterials = null;
 
     public SavedInventoryManager(CMI plugin) {
     }
 
-    private SavedInventories getInventories(UUID uuid) {
+    public SavedInventories removeCacheInventory(UUID uuid) {
         return null;
     }
 
@@ -51,56 +50,102 @@ public class SavedInventoryManager {
     public void addInventory(CMIUser user, CMIInventory inventory, Integer id, boolean checkLimits) {
     }
 
-    private void checkInvLimit(SavedInventories inventories) {
+    public CompletableFuture<CMIInventory> getInventoryById(CMIUser user, int id) {
+        return null;
     }
 
+    @Deprecated
     public CMIInventory getInvById(CMIUser user, int id) {
         return null;
     }
 
+    @Deprecated
     public CMIInventory getFirstInv(CMIUser user) {
         return null;
     }
 
+    @Deprecated
     public CMIInventory getFirstInv(SavedInventories inventories) {
         return null;
     }
 
+    @Deprecated
     public CMIInventory getLastInv(CMIUser user) {
         return null;
     }
 
+    public CompletableFuture<CMIInventory> getLastInventory(CMIUser user) {
+        return null;
+    }
+
+    @Deprecated
     public CMIInventory getNextInv(CMIUser user, int id) {
         return null;
     }
 
+    public CompletableFuture<CMIInventory> getNextInventory(CMIUser user, int id) {
+        return null;
+    }
+
+    @Deprecated
     public CMIInventory getPrevInv(CMIUser user, int id) {
         return null;
     }
 
+    public CompletableFuture<CMIInventory> getPrevInventory(CMIUser user, int id) {
+        return null;
+    }
+
+    @Deprecated
     public SavedInventories getInventories(CMIUser user) {
         return null;
     }
 
+    @Deprecated
     public void loadInventories(CMIUser user) {
     }
 
+    @Deprecated
     public void loadInventories(CMIUser user, String invString) {
     }
 
+    public CompletableFuture<SavedInventories> getUserInventories(CMIUser user) {
+        return null;
+    }
+
+    public CompletableFuture<CMIInventory> loadUserInventories(CMIUser user) {
+        return null;
+    }
+
+    public CompletableFuture<CMIInventory> loadUserInventories(CMIUser user, String invString) {
+        return null;
+    }
+
+    @Deprecated
     public boolean saveAllInventories(UUID uuid) {
         return false;
     }
 
+    public CompletableFuture<Boolean> saveUserInventories(UUID uuid) {
+        return null;
+    }
+
+    @Deprecated
     public CMIInventory saveInv(Player player, Entity killer, DamageCause cause) {
         return null;
     }
 
+    @Deprecated
     public CMIInventory saveInv(Player player, Entity killer, DamageCause cause, Integer id) {
         return null;
     }
 
+    @Deprecated
     public CMIInventory saveInv(CMIInventory inv, Integer id) {
+        return null;
+    }
+
+    public CompletableFuture<CMIInventory> saveInventory(CMIInventory inv, Integer id) {
         return null;
     }
 
@@ -121,18 +166,6 @@ public class SavedInventoryManager {
         return null;
     }
 
-    private static String serialize(HashMap<String, Object> map) {
-        return null;
-    }
-
-    @SuppressWarnings("unchecked")
-    private static HashMap<String, Object> deserialize(String string) {
-        return null;
-    }
-
-    private void fillFields(CMIGui gui, CMIInventory inv) {
-    }
-
     public void updateCMIInventoryItems(Inventory top, CMIInventory inv) {
     }
 
@@ -150,8 +183,13 @@ public class SavedInventoryManager {
         return false;
     }
 
+    @Deprecated
     public boolean removeInventory(CMIUser user, int id) {
         return false;
+    }
+
+    public CompletableFuture<Boolean> removeUserInventory(CMIUser user, int id) {
+        return null;
     }
 
     public int showTimer(Player player, int current, int found, int total, int skipped, int currentplace) {

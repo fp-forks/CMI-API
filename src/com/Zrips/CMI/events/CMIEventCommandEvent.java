@@ -8,9 +8,9 @@ import com.Zrips.CMI.Modules.EventActions.EventActionManager.eventAction;
 
 public class CMIEventCommandEvent extends CMIPlayerCancellableEvent {
     private final eventAction action = null;
-    private List<String> commands;
-    private List<String> sourceCommands;
-    private Player source;
+    private List<String> commands = null;
+    private List<String> sourceCommands = null;
+    private Player source = null;
 
     public CMIEventCommandEvent(Player player, Player source, eventAction action, List<String> commands, List<String> sourceCommands) {
         super(player);

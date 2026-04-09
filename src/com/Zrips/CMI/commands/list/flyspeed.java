@@ -14,13 +14,9 @@ public class flyspeed implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSet players fly speed from 0 to 10", args = "(playerName) [amount] (-s)", tab = { "playername" }, regVar = { 1, 2, 3 }, consoleVar = { 2, 3 }, customAlias = {
-        "fspeed" }, others = true)
+    @CAnnotation(info = "Set players fly speed from 0 to 10", args = "(playerName) [amount] (-s)", tab = { "playername" }, regVar = { 1, 2, 3 }, consoleVar = { 2, 3 }, customAlias = {
+            "fspeed" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
-    }
-
-    private static double maxSpeed(CommandSender sender) {
-        return 0.0;
     }
 }

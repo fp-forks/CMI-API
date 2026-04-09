@@ -14,8 +14,8 @@ public class checkaccount implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSearch for a players other accounts", args = "(playerName/ip)", tab = { "playername" }, explanation = { "Extra permission: cmi.command.checkaccount.showip" }, regVar = { 0,
-        1 }, consoleVar = { 1 }, alias = true, others = false)
+    @CAnnotation(info = "Search for a players other accounts", args = "(playerName/ip)", tab = { "playername" }, explanation = { "Extra permission: cmi.command.checkaccount.showip" }, regVar = { 0,
+            1 }, consoleVar = { 1 }, alias = true, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

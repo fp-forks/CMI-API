@@ -14,7 +14,7 @@ public class entitynbt implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eCheck entity nbt information", args = "(playername) (-console)", multiTab = { "[playername] -console" }, regVar = { 0, 1, 2 }, consoleVar = { 1 }, others = true)
+    @CAnnotation(info = "Check entity nbt information", args = "(playername) (-console)", multiTab = { "[playername] -console" }, regVar = { 0, 1, 2 }, consoleVar = { 1 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

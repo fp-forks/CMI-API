@@ -11,14 +11,10 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import com.Zrips.CMI.CMI;
 
 public class HeadContainerListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
     static final Pattern pattern = null;
 
     public HeadContainerListener(CMI plugin) {
-    }
-
-    private boolean processPersistentContainer(BlockBreakEvent event) {
-        return false;
     }
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)

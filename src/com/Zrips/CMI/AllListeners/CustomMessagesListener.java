@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import com.Zrips.CMI.CMI;
 
 public class CustomMessagesListener implements Listener {
-    CMI plugin;
+    CMI plugin = null;
 
     public CustomMessagesListener(CMI plugin) {
     }

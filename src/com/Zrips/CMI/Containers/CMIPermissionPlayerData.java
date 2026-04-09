@@ -5,18 +5,14 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class CMIPermissionPlayerData {
-    private String nameColor;
-    private String prefix;
-    private String suffix;
-    private String group;
-    HashMap<UserDataUpdateType, Long> lastInfoUpdate;
-    private static ConcurrentHashMap<UUID, CMIPermissionPlayerData> data;
+    private String nameColor = null;
+    private String prefix = null;
+    private String suffix = null;
+    private String group = null;
+    HashMap<UserDataUpdateType, Long> lastInfoUpdate = null;
+    private static ConcurrentHashMap<UUID, CMIPermissionPlayerData> data = null;
 
     public static void clearCache(UUID uuid) {
-    }
-
-    private static boolean timeToUpdate(CMIUser user, UserDataUpdateType type) {
-        return false;
     }
 
     public String getNameColor() {

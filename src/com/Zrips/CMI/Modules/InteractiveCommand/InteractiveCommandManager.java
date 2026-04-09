@@ -16,15 +16,15 @@ import net.Zrips.CMILib.Container.CMILocation;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class InteractiveCommandManager {
-    CMI plugin;
-    private boolean checkCitizens;
-    HashMap<String, Map<ChunkRef, Set<CMIInteractiveCommand>>> map;
-    HashMap<UUID, CMIInteractiveCommand> entMap;
-    HashMap<Integer, CMIInteractiveCommand> citiznesMap;
-    LinkedHashMap<String, CMIInteractiveCommand> nameMap;
-    private CMITask saveTask;
-    boolean saving;
-    private String fileName;
+    CMI plugin = null;
+    private boolean checkCitizens = false;
+    HashMap<String, Map<ChunkRef, Set<CMIInteractiveCommand>>> map = null;
+    HashMap<UUID, CMIInteractiveCommand> entMap = null;
+    HashMap<Integer, CMIInteractiveCommand> citiznesMap = null;
+    LinkedHashMap<String, CMIInteractiveCommand> nameMap = null;
+    private CMITask saveTask = null;
+    boolean saving = false;
+    private String fileName = null;
 
     public InteractiveCommandManager(CMI plugin) {
     }
@@ -69,9 +69,6 @@ public class InteractiveCommandManager {
 
     public CMIInteractiveCommand getByCitizensId(Integer id) {
         return null;
-    }
-
-    private void checkCitizens() {
     }
 
     public CMIInteractiveCommand getByName(String name) {

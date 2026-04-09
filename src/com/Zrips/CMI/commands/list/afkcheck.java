@@ -14,7 +14,7 @@ public class afkcheck implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eCheck players afk status", args = "[playerName/all]", tab = { "playername%%all" }, regVar = { 1 }, consoleVar = { 1 }, modules = { "afk" }, others = true)
+    @CAnnotation(info = "Check players afk status", args = "[playerName/all]", tab = { "playername%%all" }, regVar = { 1 }, consoleVar = { 1 }, modules = { "afk" }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

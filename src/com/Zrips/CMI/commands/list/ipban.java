@@ -14,8 +14,8 @@ public class ipban implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eBan ip", args = "[ip/playerName] (reason) (-s)", tab = { "playername" }, explanation = { "cmi.command.banip.bypass - to bypass ban" }, regVar = {
-        -100 }, consoleVar = { -100 }, others = false)
+    @CAnnotation(info = "Ban ip", args = "[ip/playerName] (reason) (-s)", tab = { "playername" }, explanation = { "cmi.command.banip.bypass - to bypass ban" }, regVar = { -100 }, consoleVar = {
+            -100 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import com.Zrips.CMI.CMI;
 
 public class PlayTimeListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public PlayTimeListener(CMI plugin) {
     }

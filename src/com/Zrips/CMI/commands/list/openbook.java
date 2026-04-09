@@ -14,7 +14,7 @@ public class openbook implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eOpen book gui", args = "(cText) (playerName) (fileName.txt)", tab = { "ctext", "playerName" }, regVar = { -66 }, consoleVar = { 2, 3, 4 }, paccess = true, others = true)
+    @CAnnotation(info = "Open book gui", args = "(cText) (playerName) (fileName.txt)", tab = { "ctext", "playerName" }, regVar = { -66 }, consoleVar = { 2, 3, 4 }, paccess = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

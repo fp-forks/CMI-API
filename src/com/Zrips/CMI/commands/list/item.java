@@ -14,8 +14,8 @@ public class item implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eGive item to yourself", args = "[itemdata/hand] (-slot:[number]) (unstack) (-s)", tab = { "itemname", "itemname%%hand" }, regVar = { -100 }, consoleVar = {
-        -100 }, customAlias = { "i" }, others = false)
+    @CAnnotation(info = "Give item to yourself", args = "[itemdata/hand] (-slot:[number]) (unstack) (-s)", tab = { "itemname", "itemname%%hand" }, regVar = { -100 }, consoleVar = {
+            -100 }, customAlias = { "i" })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

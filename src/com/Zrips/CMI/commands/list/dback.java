@@ -14,7 +14,7 @@ public class dback implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eReturns to death location", args = "(playerName) (-s)", tab = { "playername", "-s%%" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(info = "Returns to death location", args = "(playerName) (-s)", tab = { "playername", "-s%%" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

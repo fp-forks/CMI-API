@@ -10,7 +10,7 @@ import com.Zrips.CMI.events.CMIPlayerUnVanishEvent;
 import com.Zrips.CMI.events.CMIPlayerVanishEvent;
 
 public class DynMapListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public DynMapListener(CMI plugin) {
     }

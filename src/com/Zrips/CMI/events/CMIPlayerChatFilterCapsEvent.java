@@ -3,7 +3,7 @@ package com.Zrips.CMI.events;
 import org.bukkit.entity.Player;
 
 public class CMIPlayerChatFilterCapsEvent extends CMIPlayerCancellableEvent {
-    private String message;
+    private String message = null;
 
     public CMIPlayerChatFilterCapsEvent(Player player, String message) {
         super(player);

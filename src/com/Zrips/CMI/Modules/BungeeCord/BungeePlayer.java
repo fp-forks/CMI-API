@@ -3,14 +3,14 @@ package com.Zrips.CMI.Modules.BungeeCord;
 import java.util.UUID;
 
 public class BungeePlayer {
-    private String playerName;
-    private String playerDisplayName;
-    private String nickName;
-    private BungeeCordServer bungeeServer;
-    private UUID uuid;
-    private boolean vanished;
-    private String previousServer;
-    private Long serverSwitchTime;
+    private String playerName = null;
+    private String playerDisplayName = null;
+    private String nickName = null;
+    private BungeeCordServer bungeeServer = null;
+    private UUID uuid = null;
+    private boolean vanished = false;
+    private String previousServer = null;
+    private Long serverSwitchTime = null;
 
     public boolean getVanished() {
         return false;

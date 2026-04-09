@@ -19,23 +19,23 @@ import com.Zrips.CMI.Modules.Portals.CuboidArea.ChunkRef;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class JailManager {
-    private SortedMap<String, CMIJail> jails;
-    protected Map<String, Map<ChunkRef, Set<CMIJail>>> chunkJails;
-    private Set<CMIUser> onlineInjail;
-    protected ConcurrentHashMap<UUID, CMIUserJailData> jailed;
-    private int JailCheckInterval;
-    private Integer DefaultTime;
-    private Integer JailChatRange;
-    private boolean CountWhileOffline;
-    private boolean NoAfk;
-    private boolean PreventDamage;
-    private boolean noHunger;
-    private List<String> cmdsOnUnJail;
-    private List<String> cmdsOnJail;
-    private List<String> whiteList;
-    private CMI plugin;
-    private CMITask sched;
-    private String fileName;
+    private SortedMap<String, CMIJail> jails = null;
+    protected Map<String, Map<ChunkRef, Set<CMIJail>>> chunkJails = null;
+    private Set<CMIUser> onlineInjail = null;
+    protected ConcurrentHashMap<UUID, CMIUserJailData> jailed = null;
+    private int JailCheckInterval = 0;
+    private Integer DefaultTime = null;
+    private Integer JailChatRange = null;
+    private boolean CountWhileOffline = false;
+    private boolean NoAfk = false;
+    private boolean PreventDamage = false;
+    private boolean noHunger = false;
+    private List<String> cmdsOnUnJail = null;
+    private List<String> cmdsOnJail = null;
+    private List<String> whiteList = null;
+    private CMI plugin = null;
+    private CMITask sched = null;
+    private String fileName = null;
 
     public JailManager(CMI plugin) {
     }
@@ -52,9 +52,6 @@ public class JailManager {
     }
 
     public void stop() {
-    }
-
-    private void tasker() {
     }
 
     public boolean isOnlineAndInJail(CMIUser user) {
@@ -96,14 +93,6 @@ public class JailManager {
         return null;
     }
 
-    private static List<ChunkRef> getChunks(CMIJail jail) {
-        return null;
-    }
-
-    private static List<ChunkRef> getChunks(CMIJail jail, int range) {
-        return null;
-    }
-
     public void loadConfig() {
     }
 
@@ -131,14 +120,6 @@ public class JailManager {
         return 0;
     }
 
-    private boolean isCellOk(CMIJailCell cell) {
-        return false;
-    }
-
-    private boolean isJailOk(CMIJail jail) {
-        return false;
-    }
-
     public CMIJailCell getValidCell(CMIUser user) {
         return null;
     }
@@ -147,10 +128,16 @@ public class JailManager {
         return null;
     }
 
-    public void removePlayerFromJail(CMIUser user) {
+    public void refreshBossBar(CMIUser user) {
     }
 
-    private void processOnUnjailCommands(CMIUser user) {
+    public void showBossBar(CMIUser user) {
+    }
+
+    public void hideBossBar(CMIUser user) {
+    }
+
+    public void removePlayerFromJail(CMIUser user) {
     }
 
     public void placePlayerIntoJail(CMIUser user) {

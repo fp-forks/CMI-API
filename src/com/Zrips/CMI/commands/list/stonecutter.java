@@ -14,7 +14,7 @@ public class stonecutter implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eOpen stonecutter", args = "(playerName) (-s)", tab = { "playername", "%%-s" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(info = "Open stonecutter", args = "(playerName) (-s)", tab = { "playername", "%%-s" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

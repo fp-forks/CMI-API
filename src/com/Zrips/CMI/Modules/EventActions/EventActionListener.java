@@ -26,8 +26,8 @@ import com.Zrips.CMI.events.CMIPvPEndEventAsync;
 import com.Zrips.CMI.events.CMIPvPStartEventAsync;
 
 public class EventActionListener implements Listener {
-    private CMI plugin;
-    HashMap<UUID, Long> last;
+    private CMI plugin = null;
+    HashMap<UUID, Long> last = null;
 
     public EventActionListener(CMI plugin) {
     }

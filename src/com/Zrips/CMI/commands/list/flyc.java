@@ -14,8 +14,8 @@ public class flyc implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eToggle flight charge mode", args = "(playerName) (true/false) (-s)", tab = { "playername", "true%%false" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
-        3 }, modules = "flightcharge", others = true)
+    @CAnnotation(info = "Toggle flight charge mode", args = "(playerName) (true/false) (-s)", tab = { "playername", "true%%false" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
+            3 }, modules = "flightcharge", others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

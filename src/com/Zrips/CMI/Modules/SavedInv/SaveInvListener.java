@@ -12,7 +12,7 @@ import org.bukkit.event.inventory.InventoryOpenEvent;
 import com.Zrips.CMI.CMI;
 
 public class SaveInvListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public SaveInvListener(CMI plugin) {
     }

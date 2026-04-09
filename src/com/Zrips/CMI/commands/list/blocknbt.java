@@ -14,7 +14,7 @@ public class blocknbt implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eShow block NBT information", regVar = { 0 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Show block NBT information", regVar = { 0 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

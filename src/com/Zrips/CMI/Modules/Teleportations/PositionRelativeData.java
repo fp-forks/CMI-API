@@ -3,10 +3,10 @@ package com.Zrips.CMI.Modules.Teleportations;
 import org.bukkit.Location;
 
 public class PositionRelativeData {
-    private int localX;
-    private int localZ;
-    private int maxWorldY;
-    private int minWorldY;
+    private int localX = 0;
+    private int localZ = 0;
+    private int maxWorldY = 0;
+    private int minWorldY = 0;
 
     public PositionRelativeData(Location loc) {
     }

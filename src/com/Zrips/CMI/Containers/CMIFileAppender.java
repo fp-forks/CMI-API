@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.time.format.DateTimeFormatter;
 
 public class CMIFileAppender {
-    private FileWriter writer;
+    private FileWriter writer = null;
     private static final DateTimeFormatter formatter = null;
 
     public CMIFileAppender(String filePath) {

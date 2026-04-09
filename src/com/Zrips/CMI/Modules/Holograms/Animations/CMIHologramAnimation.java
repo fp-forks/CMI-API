@@ -5,7 +5,7 @@ import java.util.HashMap;
 import org.bukkit.Color;
 
 public class CMIHologramAnimation {
-    HashMap<CMIHologramAnimationType, CMIHologramValueChanger> changers;
+    HashMap<CMIHologramAnimationType, CMIHologramValueChanger> changers = null;
 
     public double getTarget(CMIHologramAnimationType type) {
         return 0.0;
@@ -34,5 +34,8 @@ public class CMIHologramAnimation {
 
     public boolean finished() {
         return false;
+    }
+
+    public void onFinish() {
     }
 }

@@ -14,7 +14,7 @@ public class findbiome implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eFinds nearest biome by name", args = "&3(biomeName/stop/stopall)", tab = { "biome" }, regVar = { 1 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Finds nearest biome by name", args = "(biomeName/stop/stopall)", tab = { "biome" }, regVar = { 1 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

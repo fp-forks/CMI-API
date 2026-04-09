@@ -1,31 +1,29 @@
 package com.Zrips.CMI.Modules.BungeeCord;
 
 import java.net.InetSocketAddress;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 import java.util.WeakHashMap;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.BiFunction;
 
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.messaging.PluginMessageListener;
 
 public class CMIBungeeCord {
-    private static WeakHashMap<Plugin, CMIBungeeCord> registeredInstances;
+    private static WeakHashMap<Plugin, CMIBungeeCord> registeredInstances = null;
     private final PluginMessageListener messageListener = null;
     private final Plugin plugin = null;
     private final Map<String, Queue<CompletableFuture<?>>> callbackMap = null;
-    private Map<String, ForwardConsumer> forwardListeners;
-    private ForwardConsumer globalForwardListener;
+    private Map<String, ForwardConsumer> forwardListeners = null;
+    private ForwardConsumer globalForwardListener = null;
+
+    public CMIBungeeCord(Plugin plugin) {
+    }
 
     public synchronized static CMIBungeeCord of(Plugin plugin) {
         return null;
-    }
-
-    public CMIBungeeCord(Plugin plugin) {
     }
 
     public void registerForwardListener(ForwardConsumer globalListener) {
@@ -92,25 +90,10 @@ public class CMIBungeeCord {
     public void forwardToPlayer(String playerName, String channelName, byte[] data) {
     }
 
-    @SuppressWarnings("unchecked")
-    private void onPluginMessageReceived(String channel, Player player, byte[] message) {
-    }
-
     public void unregister() {
     }
 
-    private BiFunction<String, Queue<CompletableFuture<?>>, Queue<CompletableFuture<?>>> computeQueueValue(CompletableFuture<?> queueValue) {
-        return null;
-    }
-
-    private Player getFirstPlayer() {
-        return null;
-    }
-
-    private Player getFirstPlayer(Collection<? extends Player> playerCollection) {
-        return null;
-    }
-
+    @FunctionalInterface
     public interface ForwardConsumer {
         void accept(String channel, Player player, byte[] data);
     }

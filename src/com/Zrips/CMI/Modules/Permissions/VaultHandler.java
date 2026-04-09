@@ -9,8 +9,8 @@ import com.Zrips.CMI.CMI;
 import net.milkbowl.vault.permission.Permission;
 
 public class VaultHandler implements PermissionInterface {
-    private CMI plugin;
-    private Permission perms;
+    private CMI plugin = null;
+    private Permission perms = null;
 
     public VaultHandler(CMI plugin) {
     }

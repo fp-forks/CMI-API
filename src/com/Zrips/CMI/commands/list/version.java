@@ -14,7 +14,7 @@ public class version implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 9999, info = "&eShow plugin version", args = "", tab = {}, explanation = {}, regVar = { 0 }, consoleVar = { 0 }, others = false, alias = false)
+    @CAnnotation(priority = 9999, info = "Show plugin version", args = "", tab = {}, explanation = {}, regVar = { 0 }, consoleVar = { 0 }, others = false, alias = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

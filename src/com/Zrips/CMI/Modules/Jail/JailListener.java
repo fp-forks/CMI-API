@@ -24,8 +24,8 @@ import com.Zrips.CMI.events.CMIAfkEnterEvent;
 import com.Zrips.CMI.events.CMIAfkLeaveEvent;
 
 public class JailListener implements Listener {
-    private CMI plugin;
-    protected Map<UUID, Long> lastUpdate;
+    private CMI plugin = null;
+    protected Map<UUID, Long> lastUpdate = null;
 
     public JailListener(CMI plugin) {
     }

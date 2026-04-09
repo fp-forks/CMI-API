@@ -14,8 +14,8 @@ public class home implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eTeleport to home location", args = "(homeName) (playerName) (whoTeleport)", tab = { "homes", "playername", "playername" }, regVar = { 0, 1, 2, 3, 4 }, consoleVar = { 2, 3,
-        4 }, others = true)
+    @CAnnotation(info = "Teleport to home location", args = "(homeName) (playerName) (whoTeleport)", tab = { "homes", "playername", "playername" }, regVar = { 0, 1, 2, 3, 4 }, consoleVar = { 2, 3,
+            4 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

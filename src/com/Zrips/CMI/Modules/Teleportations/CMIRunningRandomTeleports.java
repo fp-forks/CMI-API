@@ -1,7 +1,7 @@
 package com.Zrips.CMI.Modules.Teleportations;
 
 public class CMIRunningRandomTeleports {
-    private long time;
+    private long time = 0;
 
     public CMIRunningRandomTeleports() {
     }

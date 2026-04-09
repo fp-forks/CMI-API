@@ -3,7 +3,6 @@ package com.Zrips.CMI.Modules.ChatFilter;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
@@ -14,45 +13,43 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Containers.CMIEventPriority;
 
-import net.Zrips.CMILib.Chat.ChatFilterBlockType;
-
 public class ChatFilterManager {
-    private CMI plugin;
-    private Pattern simpleReplacer;
-    private LinkedHashMap<String, String> simpleReplacerMap;
-    private Set<String> emojis;
-    private HashMap<String, ChatFilterRule> rules;
-    private ChatFilterRule whiteRules;
-    private HashMap<UUID, MessageLog> spamMessages;
-    private HashMap<UUID, MessageLog> spamCommands;
-    private double similarityPercentage;
-    private boolean preventDoublicates;
-    private int douplicateInterval;
-    private int douplicateChatMinAmount;
-    private double similarityComamndPercentage;
-    private boolean preventCommandDoublicates;
-    private int douplicateCommandInterval;
-    private int douplicateCommandMinAmount;
-    private List<String> douplicateCommandWhiteList;
-    private boolean capsFilter;
-    private boolean lowerCase;
-    private boolean cancelEvent;
-    private int capsIgnoreUnder;
-    private int capsPercentage;
-    private List<String> capsCommands;
-    private List<String> capsWhiteList;
-    private CMIEventPriority capsCheckPriority;
-    private CMIEventPriority filterCheckPriority;
-    private CMIEventPriority simpleReplacerPriority;
-    private CMIEventPriority commandSpamPriority;
-    private CMIEventPriority chatSpamPriority;
-    private CMIEventPriority signAdPriority;
+    private CMI plugin = null;
+    private Pattern simpleReplacer = null;
+    private LinkedHashMap<String, String> simpleReplacerMap = null;
+    private List<String> emojis = null;
+    private HashMap<String, ChatFilterRule> rules = null;
+    private ChatFilterRule whiteRules = null;
+    private HashMap<UUID, MessageLog> spamMessages = null;
+    private HashMap<UUID, MessageLog> spamCommands = null;
+    private double similarityPercentage = 0.0;
+    private boolean preventDoublicates = false;
+    private int douplicateInterval = 0;
+    private int douplicateChatMinAmount = 0;
+    private double similarityComamndPercentage = 0.0;
+    private boolean preventCommandDoublicates = false;
+    private int douplicateCommandInterval = 0;
+    private int douplicateCommandMinAmount = 0;
+    private List<String> douplicateCommandWhiteList = null;
+    private boolean capsFilter = false;
+    private boolean lowerCase = false;
+    private boolean cancelEvent = false;
+    private int capsIgnoreUnder = 0;
+    private int capsPercentage = 0;
+    private List<String> capsCommands = null;
+    private List<String> capsWhiteList = null;
+    private CMIEventPriority capsCheckPriority = null;
+    private CMIEventPriority filterCheckPriority = null;
+    private CMIEventPriority simpleReplacerPriority = null;
+    private CMIEventPriority commandSpamPriority = null;
+    private CMIEventPriority chatSpamPriority = null;
+    private CMIEventPriority signAdPriority = null;
     public final static String StringchatFilterFile = null;
 
-    public void clearCache(UUID uuid) {
+    public ChatFilterManager(CMI plugin) {
     }
 
-    public ChatFilterManager(CMI plugin) {
+    public void clearCache(UUID uuid) {
     }
 
     public boolean checkCaps(Player player, String message) {
@@ -76,10 +73,6 @@ public class ChatFilterManager {
         return false;
     }
 
-    private boolean isWhiteListedCommand(String command) {
-        return false;
-    }
-
     public boolean isSpam(Player player, String message) {
         return false;
     }
@@ -92,15 +85,7 @@ public class ChatFilterManager {
         return 0;
     }
 
-    private static ChatFilterBlockType getBlockType(String type) {
-        return null;
-    }
-
     public void load() {
-    }
-
-    private static List<String> splitByUnicode(String input) {
-        return null;
     }
 
     public void loadCommandFilters() {
@@ -142,7 +127,7 @@ public class ChatFilterManager {
         return null;
     }
 
-    public Set<String> getEmojis() {
+    public List<String> getEmojis() {
         return null;
     }
 }

@@ -13,7 +13,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import com.Zrips.CMI.CMI;
 
 public class EnderChestListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public EnderChestListener(CMI plugin) {
     }

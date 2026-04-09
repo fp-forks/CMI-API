@@ -14,7 +14,7 @@ public class reply implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eReply to last message sender", args = "[message]", regVar = { -100 }, consoleVar = { -100 }, customAlias = "r", ignoreHelpPage = true, others = false)
+    @CAnnotation(info = "Reply to last message sender", args = "[message]", regVar = { -100 }, consoleVar = { -100 }, customAlias = "r", ignoreHelpPage = true, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

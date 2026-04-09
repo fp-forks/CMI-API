@@ -8,7 +8,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import com.Zrips.CMI.CMI;
 
 public class versionCheck implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public versionCheck(CMI plugin) {
     }

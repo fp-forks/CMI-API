@@ -2,7 +2,6 @@ package com.Zrips.CMI.Modules.Selection;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
 
 import org.bukkit.Location;
@@ -12,19 +11,11 @@ import org.bukkit.util.Vector;
 import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Modules.Portals.CuboidArea;
 
-import net.Zrips.CMILib.Effects.CMIEffectManager.CMIParticle;
+import net.Zrips.CMILib.Container.CMICuboidArea;
 
 public class SelectionManager {
-    protected Map<UUID, CuboidArea> selections;
-    protected CMI plugin;
-    private HashMap<UUID, Visualizer> vMap;
-    int visualizerSidesCap;
-    int visualizerFrameCap;
-    CMIParticle selectedSpigotSides;
-    CMIParticle selectedSpigotFrame;
-    long visualizerShowFor;
-    long visualizerUpdateInterval;
-    private static int Range;
+    protected CMI plugin = null;
+    private static HashMap<UUID, CMISelectionVisualizer> playerSelection = null;
 
     public SelectionManager(CMI plugin) {
     }
@@ -36,6 +27,14 @@ public class SelectionManager {
     }
 
     public void updateLocations(Player player, Location loc1, Location loc2, boolean force) {
+    }
+
+    public static CMISelectionVisualizer getPlayerSelection(Player player) {
+        return null;
+    }
+
+    public static CMISelectionVisualizer getPlayerSelection(UUID uuid) {
+        return null;
     }
 
     public void placeLoc1(Player player, Location loc) {
@@ -53,6 +52,7 @@ public class SelectionManager {
     public void afterSelectionUpdate(Player player) {
     }
 
+    @Deprecated
     public void afterSelectionUpdate(Player player, boolean force) {
     }
 
@@ -86,10 +86,15 @@ public class SelectionManager {
         return null;
     }
 
+    @Deprecated
     public CuboidArea getSelectionCuboid(Player player) {
         return null;
     }
 
+    public void setSelectionCuboid(Player player, CMICuboidArea area) {
+    }
+
+    @Deprecated
     public void setSelectionCuboid(Player player, CuboidArea area) {
     }
 
@@ -98,6 +103,7 @@ public class SelectionManager {
         return null;
     }
 
+    @Deprecated
     public CuboidArea getSelectionCuboid(UUID uuid) {
         return null;
     }
@@ -119,29 +125,28 @@ public class SelectionManager {
     public void showSelectionInfo(Player player) {
     }
 
+    @Deprecated
     public void showSelection(Player player) {
     }
 
+    @Deprecated
     public void showBounds(Player player, Visualizer v) {
     }
 
+    @Deprecated
     public List<Location> getLocations(Location lowLoc, Location loc, Vector vector, boolean StartFromZero) {
         return null;
     }
 
-    private List<Location> getLocationsWallsByData(Location loc, Vector vector, Location lowLoc, SelectionSides Sides) {
-        return null;
-    }
-
-    private List<Location> getLocationsCornersByData(Location loc, Vector vector, Location lowLoc, SelectionSides Sides) {
-        return null;
-    }
-
+    @Deprecated
     public boolean makeBorders(Player player) {
         return false;
     }
 
     public void clearSelection(Player player) {
+    }
+
+    public void clearSelection(UUID uuid) {
     }
 
     public boolean worldEdit(Player player) {

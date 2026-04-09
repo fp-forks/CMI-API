@@ -13,56 +13,62 @@ import com.Zrips.CMI.Containers.CMIUser;
 import net.Zrips.CMILib.Items.CMIItemStack;
 
 public class HomeManager {
-    private CMI plugin;
-    HashMap<String, Integer> homeGroups;
-    private HashMap<String, HomeWorldLimit> homeLimits;
-    private boolean checkBlockbreak;
-    private boolean pickRealBlock;
-    private boolean homesWorldLimits;
-    private boolean confirmation;
-    private String defaultHomeName;
-    private String defaultBedHomeName;
-    private String homeNameRegex;
-    private int respawnImmortality;
-    private int HomesMaxGuiSlots;
-    private boolean HomesGui;
-    private boolean HomesGuiComplex;
-    private boolean guiExpanded;
-    private CMIItemStack guiBorder;
-    private CMIItemStack guiInfill;
-    private boolean guiInfoButton;
-    private int guiInfoButtonSlot;
-    private CMIItemStack guiInfoButtonItem;
-    private List<String> guiInfoButtonCommands;
-    private boolean guiCloseButton;
-    private int guiCloseButtonSlot;
-    private CMIItemStack guiCloseButtonItem;
-    private List<String> guiCloseButtonCommands;
-    private boolean guiBedButton;
-    private int guiBedButtonSlot;
-    private CMIItemStack guiBedButtonItem;
-    private boolean guiHomeButton;
-    private int guiHomeButtonSlot;
-    private CMIItemStack guiHomeButtonItem;
-    private boolean guiDeathButton;
-    private boolean guiBackButton;
-    private int guiDeathButtonSlot;
-    private CMIItemStack guiDeathButtonItem;
-    private int guiBackButtonSlot;
-    private CMIItemStack guiBackButtonItem;
-    private int guiPrevButtonSlot;
-    private int guiMiddleButtonSlot;
-    private int guiNextButtonSlot;
-    private boolean HomesBedInteraction;
-    private boolean onlyShiftBed;
-    private boolean RemoveBedLocationOnBedBreak;
-    private HashMap<String, List<String>> ReSpawnPriorityOrder;
-    private HashMap<String, HashMap<CMIUser, CmiHome>> bedHomes;
+    private CMI plugin = null;
+    HashMap<String, Integer> homeGroups = null;
+    private HashMap<String, HomeWorldLimit> homeLimits = null;
+    private boolean checkBlockbreak = false;
+    private boolean pickRealBlock = false;
+    private boolean homesWorldLimits = false;
+    private boolean confirmation = false;
+    private String defaultHomeName = null;
+    private String defaultBedHomeName = null;
+    private String homeNameRegex = null;
+    private int respawnImmortality = 0;
+    private int HomesMaxGuiSlots = 0;
+    private boolean HomesGui = false;
+    private boolean HomesGuiComplex = false;
+    private boolean guiExpanded = false;
+    private CMIItemStack guiBorder = null;
+    private CMIItemStack guiInfill = null;
+    private boolean guiInfoButton = false;
+    private int guiInfoButtonSlot = 0;
+    private CMIItemStack guiInfoButtonItem = null;
+    private List<String> guiInfoButtonCommands = null;
+    private boolean guiCloseButton = false;
+    private int guiCloseButtonSlot = 0;
+    private CMIItemStack guiCloseButtonItem = null;
+    private List<String> guiCloseButtonCommands = null;
+    private boolean guiBedButton = false;
+    private int guiBedButtonSlot = 0;
+    private CMIItemStack guiBedButtonItem = null;
+    private boolean guiHomeButton = false;
+    private int guiHomeButtonSlot = 0;
+    private CMIItemStack guiHomeButtonItem = null;
+    private boolean guiDeathButton = false;
+    private boolean guiBackButton = false;
+    private int guiDeathButtonSlot = 0;
+    private CMIItemStack guiDeathButtonItem = null;
+    private int guiBackButtonSlot = 0;
+    private CMIItemStack guiBackButtonItem = null;
+    private int guiPrevButtonSlot = 0;
+    private int guiMiddleButtonSlot = 0;
+    private int guiNextButtonSlot = 0;
+    private boolean homesBedInteraction = false;
+    private boolean onlyShiftBed = false;
+    private boolean removeBedLocationOnBedBreak = false;
+    private HashMap<String, List<String>> ReSpawnPriorityOrder = null;
+    private HashMap<String, HashMap<CMIUser, CmiHome>> bedHomes = null;
+    private boolean limitsBlockExtra = false;
+    private boolean limitsNotifyOnLogin = false;
 
     public HomeManager(CMI plugin) {
     }
 
     public void addHomeGroup(String group, int amount) {
+    }
+
+    public boolean canUseHomes(CommandSender sender) {
+        return false;
     }
 
     public int getMaxHomes(CommandSender sender) {
@@ -121,9 +127,6 @@ public class HomeManager {
 
     public boolean openComplexHomeGui(Player player, CMIUser user, int page) {
         return false;
-    }
-
-    private void homeEditor(Player player, CMIUser targetUser, CmiHome home, int page) {
     }
 
     public boolean openSimpleHomeGui(Player player, CMIUser user, int page) {
@@ -186,6 +189,14 @@ public class HomeManager {
 
     public int getHomesMaxGuiSlots() {
         return 0;
+    }
+
+    public boolean isLimitsBlockExtra() {
+        return false;
+    }
+
+    public boolean isLimitsNotifyOnLogin() {
+        return false;
     }
 
     public enum RespawnPriority {

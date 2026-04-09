@@ -14,7 +14,7 @@ public class book implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eBook editing", args = "[Author/Title/Unlock] [value]", tab = { "Author%%Title%%Unlock" }, regVar = { -100 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Book editing", args = "[Author/Title/Unlock] [value]", tab = { "Author%%Title%%Unlock" }, regVar = { -100 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

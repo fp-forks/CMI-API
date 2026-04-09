@@ -1,8 +1,8 @@
 package com.Zrips.CMI.Modules.AttachedCommands;
 
 public class itemCooldown {
-    private Long clickedOn;
-    private Integer id;
+    private Long clickedOn = null;
+    private Integer id = null;
 
     public Long getClickedOn() {
         return null;

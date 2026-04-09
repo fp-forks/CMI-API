@@ -1,11 +1,8 @@
 package com.Zrips.CMI.commands.list;
 
-import java.util.HashMap;
-
 import org.bukkit.command.CommandSender;
 
 import com.Zrips.CMI.CMI;
-import com.Zrips.CMI.Containers.PInfo;
 import com.Zrips.CMI.commands.CAnnotation;
 import com.Zrips.CMI.commands.Cmd;
 
@@ -17,12 +14,8 @@ public class checkperm implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 240, info = "&eCheck possible permission nodes", args = "(key word)", multiTab = { "[playerName]" }, regVar = { 0, 1, 2 }, consoleVar = { 0, 1, 2 }, others = false)
+    @CAnnotation(priority = 240, info = "Check possible permission nodes", args = "(key word)", multiTab = { "[playerName]" }, regVar = { 0, 1, 2 }, consoleVar = { 0, 1, 2 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
-        return null;
-    }
-
-    private Boolean show(CommandSender sender, int page, HashMap<String, PInfo> lss, String keyWord) {
         return null;
     }
 }

@@ -11,20 +11,20 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Containers.CMIUser;
 
 public class TotemManager {
-    private HashMap<UUID, TotemBossBar> totem;
-    CMI plugin;
-    private boolean TotemRemoveFromInventory;
-    private boolean TotemRequirePermission;
-    private boolean TotemCooldownUse;
-    private boolean TotemWarmupUse;
-    private boolean TotemProtectFromVoid;
-    private int TotemCooldownTime;
-    private int TotemWarmupTime;
-    private int TotemEffectRegeneration;
-    private int TotemEffectFireResistance;
-    private int TotemEffectAbsorbtion;
-    private List<String> blackListedWorlds;
-    private List<String> fullDisableInWorlds;
+    private HashMap<UUID, TotemBossBar> totem = null;
+    CMI plugin = null;
+    private boolean TotemRemoveFromInventory = false;
+    private boolean TotemRequirePermission = false;
+    private boolean TotemCooldownUse = false;
+    private boolean TotemWarmupUse = false;
+    private boolean TotemProtectFromVoid = false;
+    private int TotemCooldownTime = 0;
+    private int TotemWarmupTime = 0;
+    private int TotemEffectRegeneration = 0;
+    private int TotemEffectFireResistance = 0;
+    private int TotemEffectAbsorbtion = 0;
+    private List<String> blackListedWorlds = null;
+    private List<String> fullDisableInWorlds = null;
 
     public TotemManager(CMI plugin) {
     }
@@ -120,14 +120,6 @@ public class TotemManager {
 
     public Long getLeftCd(Player player, int cd) {
         return null;
-    }
-
-    private Long getLeftCd(Long usedOn, int cd) {
-        return null;
-    }
-
-    private static double getLeftCdPercentage(Long usedOn, int cd) {
-        return 0.0;
     }
 
     public void checkAllForTotemCd() {

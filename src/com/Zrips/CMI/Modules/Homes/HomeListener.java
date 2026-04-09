@@ -5,13 +5,18 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 
 import com.Zrips.CMI.CMI;
 
 public class HomeListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public HomeListener(CMI plugin) {
+    }
+
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
+    public void PlayerJoinEvent(PlayerJoinEvent event) {
     }
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)

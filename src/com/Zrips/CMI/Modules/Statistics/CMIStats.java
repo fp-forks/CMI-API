@@ -12,15 +12,7 @@ public class CMIStats {
         return 0;
     }
 
-    private static long getStats(CMIUser user, CMIStatistic stat) {
-        return 0;
-    }
-
     public static long getTotalTravelDistance(CMIUser user) {
-        return 0;
-    }
-
-    private static long getTotal(CMIUser user, CMIStatistic stat) {
         return 0;
     }
 }

@@ -14,9 +14,9 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import com.Zrips.CMI.CMI;
 
 public class SpawnerChargeListener implements Listener {
-    private CMI plugin;
-    Random rand;
-    static HashMap<UUID, Block> breaking;
+    private CMI plugin = null;
+    Random rand = null;
+    static HashMap<UUID, Block> breaking = null;
 
     public SpawnerChargeListener(CMI plugin) {
     }

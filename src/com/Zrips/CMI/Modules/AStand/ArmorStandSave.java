@@ -5,18 +5,17 @@ import java.util.Set;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.util.EulerAngle;
 
 import com.Zrips.CMI.Modules.AStand.ArmorStandManager.armorStandSaveOptions;
 
 public class ArmorStandSave {
-    private Player player;
-    private ArmorStand stand;
-    private Set<armorStandSaveOptions> save;
-    private String name;
-    private String serialized;
-    static String prefix;
-    static String suffix;
+    private Player player = null;
+    private ArmorStand stand = null;
+    private Set<armorStandSaveOptions> save = null;
+    private String name = null;
+    private String serialized = null;
+    static String prefix = null;
+    static String suffix = null;
 
     ArmorStandSave(Player player, ArmorStand stand, Set<armorStandSaveOptions> save) {
     }
@@ -42,19 +41,7 @@ public class ArmorStandSave {
         return null;
     }
 
-    private boolean valid(ItemStack item) {
-        return false;
-    }
-
     public String serialize() {
-        return null;
-    }
-
-    private static String getAngle(ArmorStand armor, armorStandSaveOptions apose) {
-        return null;
-    }
-
-    private static EulerAngle getAngle(armorStandSaveOptions option, String value) {
         return null;
     }
 

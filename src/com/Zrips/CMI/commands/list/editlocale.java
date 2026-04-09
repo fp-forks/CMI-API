@@ -10,18 +10,15 @@ import net.Zrips.CMILib.FileHandler.ConfigReader;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class editlocale implements Cmd {
-    private static CMITask task;
+    private static CMITask task = null;
 
     @Override
     public void getExtra(ConfigReader c) {
     }
 
     @Override
-    @CAnnotation(info = "&eEdit your locale file", args = "(keyword(-s))", regVar = { -100 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Edit your locale file", args = "(keyword(-s))", regVar = { -100 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
-    }
-
-    private static void save() {
     }
 }

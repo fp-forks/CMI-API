@@ -14,7 +14,7 @@ public class tree implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 65, info = "&eSpawn tree where you are looking", args = "(TreeType) (-p:[playerName])", tab = { "treeType" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(info = "Spawn tree where you are looking", args = "(TreeType) (-p:[playerName])", tab = { "treeType" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

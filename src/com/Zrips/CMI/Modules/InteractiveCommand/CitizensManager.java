@@ -7,7 +7,7 @@ import org.bukkit.entity.Entity;
 import com.Zrips.CMI.CMI;
 
 public class CitizensManager {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public CitizensManager(CMI plugin) {
     }

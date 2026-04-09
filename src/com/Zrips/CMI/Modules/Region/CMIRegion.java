@@ -4,8 +4,8 @@ import org.bukkit.Chunk;
 import org.bukkit.Location;
 
 public class CMIRegion {
-    private int z;
-    private int x;
+    private int z = 0;
+    private int x = 0;
 
     public CMIRegion(Location loc) {
     }

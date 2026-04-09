@@ -5,7 +5,7 @@ import org.bukkit.event.Listener;
 import com.Zrips.CMI.CMI;
 
 public class VanishListener1_21 implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public VanishListener1_21(CMI plugin) {
     }

@@ -5,8 +5,9 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.CMI;
 
 public class DiscordSRVManager {
-    private CMI plugin;
-    private String channelName;
+    private CMI plugin = null;
+    private DiscordSRVListener discordsrvListener = null;
+    private String channelName = null;
 
     public DiscordSRVManager(CMI plugin) {
     }

@@ -1,8 +1,8 @@
 package com.Zrips.CMI.Modules.ConsoleFilter;
 
 public class CMIConsoleRecord {
-    String message;
-    long time;
+    String message = null;
+    long time = 0;
 
     public CMIConsoleRecord(String message, long time) {
     }

@@ -4,11 +4,17 @@ import org.bukkit.Location;
 import org.bukkit.util.Vector;
 
 public enum CMIDirection {
-    N("North", 0, 0, -1), NE("North_East", 45, 1, -1), E("East", 90, 1, 0), SE("South_East", 135, 1, 1), S("South", 180, 0, 1), SW("South_West", 225, -1, 1), W("West", 270, -1, 0), NW("North_West", 315,
-        -1, 1);
+    N("North", 0, 0, -1),
+    NE("North_East", 45, 1, -1),
+    E("East", 90, 1, 0),
+    SE("South_East", 135, 1, 1),
+    S("South", 180, 0, 1),
+    SW("South_West", 225, -1, 1),
+    W("West", 270, -1, 0),
+    NW("North_West", 315, -1, 1);
 
-    private int angle;
-    private String name;
+    private int angle = 0;
+    private String name = null;
     private int x = 0;
     private int z = 0;
 

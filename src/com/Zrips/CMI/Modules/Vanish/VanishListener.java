@@ -18,7 +18,7 @@ import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.events.CMIPlayerVanishEvent;
 
 public class VanishListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public VanishListener(CMI plugin) {
     }
@@ -37,7 +37,7 @@ public class VanishListener implements Listener {
     }
 
     @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
-    public void CreatureSpawnEvent(org.bukkit.event.entity.SpawnerSpawnEvent event) {
+    public void SpawnerSpawnEvent(org.bukkit.event.entity.SpawnerSpawnEvent event) {
     }
 
     @EventHandler(priority = EventPriority.LOWEST)

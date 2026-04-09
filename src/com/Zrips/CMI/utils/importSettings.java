@@ -5,7 +5,7 @@ import java.util.HashMap;
 import com.Zrips.CMI.utils.EssentialsConverter.importType;
 
 public class importSettings {
-    private HashMap<importType, Boolean> map;
+    private HashMap<importType, Boolean> map = null;
 
     public importSettings set(importType type, boolean state) {
         return null;

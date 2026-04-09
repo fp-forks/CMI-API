@@ -12,7 +12,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import com.Zrips.CMI.CMI;
 
 public class PaintingListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public PaintingListener(CMI plugin) {
     }

@@ -8,7 +8,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import com.Zrips.CMI.CMI;
 
 public class SelectionListener implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public SelectionListener(CMI plugin) {
     }

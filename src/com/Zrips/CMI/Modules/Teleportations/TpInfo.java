@@ -6,11 +6,11 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.Modules.Teleportations.TeleportManager.TpAction;
 
 public class TpInfo {
-    private Player whoOffers;
-    private Player whoAccepts;
-    private TpAction action;
-    private Location loc;
-    private long when;
+    private Player whoOffers = null;
+    private Player whoAccepts = null;
+    private TpAction action = null;
+    private Location loc = null;
+    private long when = 0;
 
     public TpInfo(Player whoOffers, Player whoAccepts, TpAction action) {
     }

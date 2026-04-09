@@ -6,12 +6,12 @@ import org.bukkit.event.world.PortalCreateEvent.CreateReason;
 import org.bukkit.util.Vector;
 
 public class CMIPortalCreateEvent extends CMIPlayerCancellableEvent {
-    private int height;
-    private int width;
-    private World world;
-    private Vector lowestPoint;
-    private CreateReason reason;
-    private CMIPortalType type;
+    private int height = 0;
+    private int width = 0;
+    private World world = null;
+    private Vector lowestPoint = null;
+    private CreateReason reason = null;
+    private CMIPortalType type = null;
 
     public CMIPortalCreateEvent(Player player, World world, CreateReason reason, int height, int width) {
         super(player);

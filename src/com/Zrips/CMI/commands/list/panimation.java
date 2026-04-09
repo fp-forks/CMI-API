@@ -14,8 +14,8 @@ public class panimation implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 115, info = "&ePlay custom particle animation", args = "(variable/playerName/stopAll) (stop)", tab = { "circle;effect:flying_glyph%%playername%%stopAll",
-        "stop" }, explanation = { "Information on usage can be found at https://www.zrips.net/cmi/extra/particles/" }, regVar = { 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(priority = 115, info = "Play custom particle animation", args = "(variable/playerName/stopAll) (stop)", tab = { "circle;effect:flying_glyph%%playername%%stopAll",
+            "stop" }, explanation = { "Information on usage can be found at https://www.zrips.net/cmi/extra/particles/" }, regVar = { 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

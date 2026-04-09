@@ -8,9 +8,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
 public class CMIRayTrace {
-    Vector origin;
-    Vector direction;
-    World world;
+    Vector origin = null;
+    Vector direction = null;
+    World world = null;
 
     public CMIRayTrace(Player player) {
     }

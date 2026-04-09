@@ -1,10 +1,10 @@
 package com.Zrips.CMI.Modules.Search;
 
 public class SearchTypeItemAmount extends SearchTypeItem {
-    int stackSize;
+    int stackSize = 0;
 
     public SearchTypeItemAmount(int stackSize) {
-        super(null);
+        this(null, stackSize);
     }
 
     public SearchTypeItemAmount(SearchTypeItem parent, int stackSize) {

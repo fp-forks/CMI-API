@@ -2,8 +2,8 @@ package com.Zrips.CMI.Modules.CustomText;
 
 import java.io.File;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
@@ -15,16 +15,16 @@ import com.Zrips.CMI.Containers.CMIUser;
 import com.Zrips.CMI.Modules.ChatFilter.ChatFilterRule;
 
 public class CTextManager {
-    private LinkedHashMap<String, CText> map;
-    private HashMap<UUID, String> chatMap;
-    private CMI plugin;
-    private ChatFilterRule pageLabelRegex;
+    private Map<String, CText> map = null;
+    private HashMap<UUID, String> chatMap = null;
+    private CMI plugin = null;
+    private ChatFilterRule pageLabelRegex = null;
     public static final String directoryName = null;
 
     public CTextManager(CMI plugin) {
     }
 
-    public HashMap<String, CText> getAll() {
+    public Map<String, CText> getAll() {
         return null;
     }
 
@@ -56,14 +56,8 @@ public class CTextManager {
     public void load() {
     }
 
-    private void loadDirectory(File directory) {
-    }
-
     public CText getCTextFromFile(File file) {
         return null;
-    }
-
-    private void createDirectories(String path) {
     }
 
     public void save(CText cText) {

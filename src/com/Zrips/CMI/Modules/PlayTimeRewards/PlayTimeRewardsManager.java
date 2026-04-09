@@ -13,21 +13,21 @@ import com.Zrips.CMI.Containers.CMIUser;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class PlayTimeRewardsManager {
-    private CMI plugin;
-    private HashMap<String, PTRRepeat> repeatableRewards;
-    private TreeMap<Long, PTROneTime> oneTimeRewards;
-    private TreeMap<String, PTROneTime> oneTimeRewardsByName;
-    private CMITask sched;
-    private int interval;
-    private int OneTimeAmount;
-    private Long RewardInform;
-    private boolean Enabled;
-    private boolean ExcludeAfk;
-    public static boolean RequiresPermission;
-    private HashMap<CMIUser, Long> lastAction;
-    HashMap<UUID, Long> informMap;
-    private String fileName;
-    ConcurrentHashMap<UUID, PlaytimeClaimCache> cache;
+    private CMI plugin = null;
+    private HashMap<String, PTRRepeat> repeatableRewards = null;
+    private TreeMap<Long, PTROneTime> oneTimeRewards = null;
+    private TreeMap<String, PTROneTime> oneTimeRewardsByName = null;
+    private CMITask sched = null;
+    private int interval = 0;
+    private int OneTimeAmount = 0;
+    private Long RewardInform = null;
+    private boolean Enabled = false;
+    private boolean ExcludeAfk = false;
+    public static boolean RequiresPermission = false;
+    private HashMap<CMIUser, Long> lastAction = null;
+    HashMap<UUID, Long> informMap = null;
+    private String fileName = null;
+    ConcurrentHashMap<UUID, PlaytimeClaimCache> cache = null;
 
     public PlayTimeRewardsManager(CMI plugin) {
     }
@@ -46,9 +46,6 @@ public class PlayTimeRewardsManager {
 
     public Long getAfkAction(CMIUser user) {
         return null;
-    }
-
-    private void tasker() {
     }
 
     public void informPlayer(Player player, String rewardName) {

@@ -11,22 +11,21 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 
 import com.Zrips.CMI.CMI;
 import com.Zrips.CMI.Containers.RandomTeleport;
 
 public class RandomTeleportationManager {
-    private CMI plugin;
-    Set<String> cacheFilling;
-    private HashMap<String, RandomTeleport> randomTeleports;
-    private int randomTeleportCooldown;
-    private int randomTeleportMaxTries;
-    private List<String> randomTeleportExcludedBiomes;
-    static Random random;
+    private CMI plugin = null;
+    Set<String> cacheFilling = null;
+    private HashMap<String, RandomTeleport> randomTeleports = null;
+    private int randomTeleportCooldown = 0;
+    private int randomTeleportMaxTries = 0;
+    private List<String> randomTeleportExcludedBiomes = null;
+    static Random random = null;
     private static final String fileName = null;
-    ConcurrentHashMap<UUID, CMIRunningRandomTeleports> playerRandomTeleports;
-    String substrings;
+    ConcurrentHashMap<UUID, CMIRunningRandomTeleports> playerRandomTeleports = null;
+    String[] substrings = null;
 
     public RandomTeleportationManager(CMI plugin) {
     }
@@ -71,10 +70,6 @@ public class RandomTeleportationManager {
     }
 
     public CompletableFuture<Boolean> randomTeleport(Player player, World world) {
-        return null;
-    }
-
-    private static CompletableFuture<Boolean> teleportPlayerRandom(Player player, TeleportCause cause, CompletableFuture<CMITeleportLocation> completableFuture) {
         return null;
     }
 }

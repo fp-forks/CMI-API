@@ -14,7 +14,7 @@ public class migratedatabase implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eChanges database system and migrates all data", regVar = { 666 }, consoleVar = { 0 }, others = false)
+    @CAnnotation(info = "Changes database system and migrates all data", regVar = { 666 }, consoleVar = { 0 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

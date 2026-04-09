@@ -5,9 +5,9 @@ import org.bukkit.Location;
 import com.Zrips.CMI.Containers.CMIUser;
 
 public class traveledDistance {
-    private CMIUser user;
-    private Location loc;
-    private Long time;
+    private CMIUser user = null;
+    private Location loc = null;
+    private Long time = null;
 
     traveledDistance(CMIUser user) {
     }

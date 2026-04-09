@@ -14,8 +14,8 @@ public class helpop implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eSends message for help to staff members", args = "[message]", tab = {}, explanation = { "Requires cmi.command.helpop.inform too see messages" }, regVar = {
-        -100 }, consoleVar = { -100 }, ignoreHelpPage = true, others = false)
+    @CAnnotation(info = "Sends message for help to staff members", args = "[message]", explanation = { "Requires cmi.command.helpop.inform too see messages" }, regVar = { -100 }, consoleVar = {
+            -100 }, ignoreHelpPage = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

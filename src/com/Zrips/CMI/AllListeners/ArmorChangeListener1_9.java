@@ -7,7 +7,7 @@ import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import com.Zrips.CMI.CMI;
 
 public class ArmorChangeListener1_9 implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public ArmorChangeListener1_9(CMI plugin) {
     }

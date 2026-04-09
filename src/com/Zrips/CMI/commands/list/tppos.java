@@ -14,8 +14,8 @@ public class tppos implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 45, info = "&eTeleports to location", args = "(-p:playerName) [x] [y] [z] (world) (pitch) (yaw) (-rng:[range])", multiTab = {
-        "[currentX] [currentY] [currentZ] [worlds] [currentPitch] [currentYaw] -rng:" }, explanation = {}, regVar = { -100 }, consoleVar = { -1, -100 }, alias = true, others = true)
+    @CAnnotation(info = "Teleports to location", args = "(-p:playerName) [x] [y] [z] (world) (pitch) (yaw) (-rng:[range])", multiTab = {
+            "[currentX] [currentY] [currentZ] [worlds] [currentPitch] [currentYaw] -rng:" }, regVar = { -100 }, consoleVar = { -1, -100 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

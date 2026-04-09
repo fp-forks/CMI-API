@@ -14,9 +14,9 @@ public class bbroadcast implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eSends special message to all players on all servers", args = "(!) [message] (-s:[serverName,serverName])", explanation = {
-        "If message starts with ! then clean message will be shown", "Servers can be defined to broadcast messages only in those servers" }, regVar = { -100 }, consoleVar = {
-            -100 }, ignoreHelpPage = true, others = false)
+    @CAnnotation(priority = 48, info = "Sends special message to all players on all servers", args = "(!) [message] (-s:[serverName,serverName])", explanation = {
+            "If message starts with ! then clean message will be shown",
+            "Servers can be defined to broadcast messages only in those servers" }, regVar = { -100 }, consoleVar = { -100 }, ignoreHelpPage = true, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

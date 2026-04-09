@@ -7,9 +7,9 @@ import com.Zrips.CMI.Containers.CMIUser;
 import com.Zrips.CMI.Modules.PlayTime.PlayTimeManager.PlaytimeRange;
 
 public class CMIPlayTime {
-    TreeMap<Integer, CMIPlayDay> map;
-    private Set<CMIPlayDay> forSave;
-    private CMIUser user;
+    TreeMap<Integer, CMIPlayDay> map = null;
+    private Set<CMIPlayDay> forSave = null;
+    private CMIUser user = null;
 
     public CMIPlayTime(CMIUser user) {
     }
@@ -24,9 +24,6 @@ public class CMIPlayTime {
 
     public CMIPlayDay getPlayDayOfToday() {
         return null;
-    }
-
-    private void checkYestarday() {
     }
 
     public void addDayForSave(CMIPlayDay playDay) {

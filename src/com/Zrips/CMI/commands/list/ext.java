@@ -14,7 +14,7 @@ public class ext implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 120, info = "&eExtinguish a player", args = "(playerName) (-s)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(priority = 120, info = "Extinguish a player", args = "(playerName) (-s)", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -1,8 +1,8 @@
 package com.Zrips.CMI.Modules.PlayTimeRewards;
 
 public class PlaytimeClaimCache {
-    private long lastUpdate;
-    private int count;
+    private long lastUpdate = 0;
+    private int count = 0;
 
     public long getLastUpdate() {
         return 0;

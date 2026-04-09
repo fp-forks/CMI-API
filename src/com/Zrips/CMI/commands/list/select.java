@@ -14,8 +14,8 @@ public class select implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eManage selection area", args = "(pos1/pos2/shift/expand/contract/clear) (amount)", multiTab = { "pos1,pos2,clear", "shift,expand,contract 1" }, explanation = {}, consoleVar = {
-        666 }, others = true)
+    @CAnnotation(info = "Manage selection area", args = "(pos1/pos2/shift/expand/contract/clear) (amount)", multiTab = { "pos1,pos2,clear",
+            "shift,expand,contract 1" }, explanation = {}, consoleVar = { 666 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

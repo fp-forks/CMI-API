@@ -5,62 +5,65 @@ import java.io.Writer;
 import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.SortedMap;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 
 import com.Zrips.CMI.CMI;
+import com.Zrips.CMI.Containers.CMILeaderboard;
 import com.Zrips.CMI.Containers.CMIUser;
-
-import net.Zrips.CMILib.Version.Schedulers.CMITask;
+import com.Zrips.CMI.Modules.Economy.VaultManager.EconomySetupResponse;
 
 public class EconomyManager {
-    private CMI plugin;
-    private boolean Enabled;
-    private boolean CustomWorldsEnabled;
-    private boolean Confirmation;
-    private boolean LogEnabled;
-    private List<String> logIgnoredUsers;
-    private Double MaxChequeValue;
-    private boolean ChequePaper;
-    private boolean ChequePermission;
-    private boolean ChequeInCreative;
-    private boolean ChequeAcceptNotEncoded;
-    private boolean BalTopIncludeFakes;
-    private long ExcludeInactive;
-    private boolean BalTopDisplayWithShorts;
-    private List<String> BalTopExclude;
-    private List<String> BalTopExcludeStartingWith;
-    private HashMap<String, Double> shortAmountValues;
-    private String townyTownPrefix;
-    private String townyNationPrefix;
-    private String townyDebtPrefix;
-    private String townyClosed_economy;
-    private Boolean recalculatingTop;
+    private CMI plugin = null;
+    private boolean Enabled = false;
+    private boolean CustomWorldsEnabled = false;
+    private boolean Confirmation = false;
+    private boolean OfflinePayments = false;
+    private boolean LogEnabled = false;
+    private List<String> logIgnoredUsers = null;
+    private double MaxChequeValue = 0.0;
+    private boolean ChequePaper = false;
+    private boolean ChequePermission = false;
+    private boolean ChequeInCreative = false;
+    private boolean ChequeAcceptNotEncoded = false;
+    private boolean BalTopIncludeFakes = false;
+    private long ExcludeInactive = 0;
+    private boolean BalTopDisplayWithShorts = false;
+    private boolean BalTopLoadInAll = false;
+    private List<String> BalTopExclude = null;
+    private List<String> BalTopExcludeStartingWith = null;
+    private HashMap<String, Double> shortAmountValues = null;
+    private String townyTownPrefix = null;
+    private String townyNationPrefix = null;
+    private String townyDebtPrefix = null;
+    private String townyClosed_economy = null;
+    private boolean recalculatingTop = false;
     public final static String CMIDefaultWorld = null;
-    HashMap<String, WorldGroup> groups;
-    private WorldGroup defaultGroup;
-    private VaultManager vmanager;
-    SortedMap<Double, UUID> balTop;
-    Map<UUID, Double> balTopUsers;
-    private Double totalServerMoney;
-    Long lastRecalculated;
-    boolean locked;
-    Map<UUID, baltopUpdateCache> balanceUpdateCache;
-    int updateDelay;
-    CompletableFuture<Void> recTask;
-    DecimalFormat defaultFormat;
-    DecimalFormat shortDefaultFormat;
-    File file;
-    Writer writer;
-    boolean checkedOldFile;
-    private boolean recording;
+    HashMap<String, WorldGroup> groups = null;
+    private WorldGroup defaultGroup = null;
+    private VaultManager vmanager = null;
+    CMILeaderboard<Double> leaderboard = null;
+    private double totalServerMoney = 0.0;
+    DecimalFormat defaultFormat = null;
+    DecimalFormat shortDefaultFormat = null;
+    File file = null;
+    Writer writer = null;
+    boolean checkedOldFile = false;
+    private boolean recording = false;
 
     public EconomyManager(CMI plugin) {
     }
 
+    public EconomySetupResponse recheckEconomyPlugin() {
+        return null;
+    }
+
+    public CMILeaderboard<Double> getLeaderboard() {
+        return null;
+    }
+
+    @Deprecated
     public void setForBalTopRecalculation() {
     }
 
@@ -72,26 +75,23 @@ public class EconomyManager {
         return false;
     }
 
+    @Deprecated
     public void removeFromUpdateCache(UUID uuid) {
     }
 
     public synchronized void updateBalTop(CMIUser user) {
     }
 
-    private void forceUpdateBalTop(CMIUser user) {
-    }
-
+    @Deprecated
     public void recalculateBalTop() {
     }
 
-    private boolean startsWithExcluded(String name) {
-        return false;
-    }
-
+    @Deprecated
     public SortedMap<Double, UUID> getBalTopMap() {
         return null;
     }
 
+    @Deprecated
     public int getBalTopPlace(UUID uuid) {
         return 0;
     }
@@ -231,25 +231,8 @@ public class EconomyManager {
         return false;
     }
 
-    class baltopUpdateCache {
-        private long time;
-        private CMITask task;
-
-        public long getTime() {
-            return 0;
-        }
-
-        public baltopUpdateCache setTime(long time) {
-            return null;
-        }
-
-        public CMITask getTask() {
-            return null;
-        }
-
-        public baltopUpdateCache setTask(CMITask task) {
-            return null;
-        }
+    public boolean isOfflinePayments() {
+        return false;
     }
 
     public enum EconResponseType {
@@ -257,9 +240,9 @@ public class EconomyManager {
     }
 
     public class CMIEconomyResponse {
-        private double amount;
-        private double balance;
-        private EconResponseType type;
+        private double amount = 0.0;
+        private double balance = 0.0;
+        private EconResponseType type = null;
 
         public CMIEconomyResponse(double amount, double balance, EconResponseType type) {
         }
@@ -278,19 +261,20 @@ public class EconomyManager {
     }
 
     public class WorldGroup {
-        private Double StartingAmount;
-        private Double MinimalAmount;
-        private Double MaximumAmount;
-        private Double MinimalPay;
-        private String CurrencyName;
-        private String CurrencySymbol;
-        private String CurrencyFormat;
-        private String Placing;
-        private boolean switchPlaces;
-        private boolean UseShortNumbers;
-        private boolean fractions;
-        private HashMap<Double, String> ShortNumbersSuffixes;
-        private String name;
+        private double StartingAmount = 0.0;
+        private double MinimalAmount = 0.0;
+        private double MaximumAmount = 0.0;
+        private double MinimalPay = 0.0;
+        private String CurrencyName = null;
+        private String CurrencySymbol = null;
+        private String CurrencyFormat = null;
+        private String Placing = null;
+        private boolean switchPlaces = false;
+        private boolean UseShortNumbers = false;
+        private boolean fractions = false;
+        private HashMap<Double, String> ShortNumbersSuffixes = null;
+        private String name = null;
+        private CMIEconomyTax tax = null;
 
         public WorldGroup(String name) {
         }
@@ -397,12 +381,19 @@ public class EconomyManager {
         public WorldGroup setFractions(boolean fractions) {
             return null;
         }
+
+        public CMIEconomyTax getTax() {
+            return null;
+        }
+
+        public void setTax(CMIEconomyTax tax) {
+        }
     }
 
     public enum CMIMoneyLogType {
         Unknown, Transfer;
 
-        private boolean enabled;
+        private boolean enabled = false;
 
         CMIMoneyLogType() {
         }

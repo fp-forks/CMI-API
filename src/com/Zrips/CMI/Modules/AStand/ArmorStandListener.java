@@ -1,23 +1,22 @@
 package com.Zrips.CMI.Modules.AStand;
 
-import java.util.HashMap;
-import java.util.UUID;
-
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 
 import com.Zrips.CMI.CMI;
 
 public class ArmorStandListener implements Listener {
-    private CMI plugin;
-    public static HashMap<UUID, ArmorStandCopy> acMap;
+    private CMI plugin = null;
 
     public ArmorStandListener(CMI plugin) {
+    }
+
+    @EventHandler
+    public void onQuit(PlayerQuitEvent event) {
     }
 
     @EventHandler
@@ -30,9 +29,5 @@ public class ArmorStandListener implements Listener {
 
     @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
     public void armorStandSpawnEvent(org.bukkit.event.entity.CreatureSpawnEvent event) {
-    }
-
-    private Boolean processArmorStand(Player player, Entity ent) {
-        return null;
     }
 }

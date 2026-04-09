@@ -14,8 +14,8 @@ public class ride implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 47, info = "&eRide target entity", args = "list", multiTab = { "list" }, explanation = { " cmi.command.ride.[entityType] - to have access in riding entity" }, regVar = { 0,
-        1 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(priority = 47, info = "Ride target entity", args = "list", multiTab = { "list" }, explanation = { " cmi.command.ride.[entityType] - to have access in riding entity" }, regVar = { 0,
+            1 }, consoleVar = { 666 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

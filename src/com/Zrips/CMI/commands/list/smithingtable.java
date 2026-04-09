@@ -14,7 +14,7 @@ public class smithingtable implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eOpen smithing table", args = "(playerName)", tab = { "playername", "%%-s" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
+    @CAnnotation(info = "Open smithing table", args = "(playerName)", tab = { "playername", "%%-s" }, regVar = { 0, 1, 2 }, consoleVar = { 1, 2 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

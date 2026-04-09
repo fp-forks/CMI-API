@@ -7,11 +7,17 @@ import com.Zrips.CMI.Modules.Vanish.VanishAction;
 import com.Zrips.CMI.Modules.Vanish.VanishActionState;
 
 public class CMIVanish {
-    private UUID uuid;
-    private HashMap<VanishAction, VanishActionState> map;
-    private boolean wasCollidable;
-    private long vanishedFrom;
-    private long playtimeAtVanishStart;
+    private UUID uuid = null;
+    private HashMap<VanishAction, VanishActionState> map = null;
+    private boolean wasCollidable = false;
+    private long vanishedFrom = 0;
+    private long playtimeAtVanishStart = 0;
+
+    public CMIVanish() {
+    }
+
+    public CMIVanish(CMIUser user) {
+    }
 
     public void fromString(String line) {
     }
@@ -19,12 +25,6 @@ public class CMIVanish {
     @Override
     public String toString() {
         return null;
-    }
-
-    public CMIVanish() {
-    }
-
-    public CMIVanish(CMIUser user) {
     }
 
     public CMIUser getUser() {

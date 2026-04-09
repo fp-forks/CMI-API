@@ -6,11 +6,11 @@ import com.Zrips.CMI.Containers.CMIPlayerInventory.CMIInventorySlot;
 import com.Zrips.CMI.Modules.Animations.AnimationManager.LeatherAnimationType;
 
 public class LeatherAnimation {
-    private HashMap<Integer, LeatherAnimationType> map;
-    private Float colorValue;
-    private Float saturationValue;
-    private boolean ascending;
-    private boolean Sascending;
+    private HashMap<Integer, LeatherAnimationType> map = null;
+    private Float colorValue = null;
+    private Float saturationValue = null;
+    private boolean ascending = false;
+    private boolean Sascending = false;
 
     public LeatherAnimation() {
     }

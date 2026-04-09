@@ -9,30 +9,30 @@ import org.bukkit.entity.Player;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class ChunkPreviewInfo {
-    private CMITask scheduleTask;
-    private int currentId;
-    private File regionFiles;
-    private ArrayList<ChunkInfo> chunks;
-    private int chunksChecked;
-    private int chunksCkeckedLast;
-    private long showedInfo;
-    private boolean showInfo;
-    private boolean autoSpeed;
-    private boolean messages;
-    private Player player;
-    private String Playername;
-    private int checked;
-    private World world;
-    private int mcaX;
-    private int mcaZ;
-    private int cX;
-    private int cZ;
-    private int loaded;
-    private int found;
-    private long startTime;
-    private int speed;
-    private int range;
-    private boolean running;
+    private CMITask scheduleTask = null;
+    private int currentId = 0;
+    private File[] regionFiles = null;
+    private ArrayList<ChunkInfo> chunks = null;
+    private int chunksChecked = 0;
+    private int chunksCkeckedLast = 0;
+    private long showedInfo = 0;
+    private boolean showInfo = false;
+    private boolean autoSpeed = false;
+    private boolean messages = false;
+    private Player player = null;
+    private String Playername = null;
+    private int checked = 0;
+    private World world = null;
+    private int mcaX = 0;
+    private int mcaZ = 0;
+    private int cX = 0;
+    private int cZ = 0;
+    private int loaded = 0;
+    private int found = 0;
+    private long startTime = 0;
+    private int speed = 0;
+    private int range = 0;
+    private boolean running = false;
 
     public ChunkPreviewInfo() {
     }

@@ -19,8 +19,6 @@ public @interface CAnnotation {
     @Deprecated
     String[] tab() default {};
 
-    // ! in front prevents repeatable suggestions
-    // |number| to repeat suggestions for specified tab complete amount
     String[] multiTab() default {};
 
     int[] regVar() default { -666 };
@@ -31,18 +29,18 @@ public @interface CAnnotation {
 
     boolean hidden() default false;
 
+    boolean indevelopment() default false;
+
     boolean test() default false;
 
     boolean ignoreHelpPage() default false;
 
-    // only in cases where usage of ? in first variable results in help page, otherwise performs command
     boolean subIgnoreHelpPage() default false;
 
     String[] customAlias() default {};
 
     String[] modules() default {};
 
-    // Should player get access to this command by default
     boolean paccess() default false;
 
     Class<? extends Cmd> redirectClass() default Void.class;

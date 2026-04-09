@@ -5,18 +5,18 @@ import java.util.regex.Matcher;
 import com.Zrips.CMI.Modules.ChatFilter.ChatFilterRule;
 
 public class CMICustomLogInOutMessages {
-    private static boolean loginNameFilterUse;
-    private static boolean logoutNameFilterUse;
-    private static boolean loginDisabled;
-    private static boolean logoutDisabled;
-    private static boolean loginCustomUse;
-    private static boolean logoutCustomUse;
-    private static boolean logoutServerSwitch;
-    private static boolean loginServerSwitch;
-    private static boolean firstJoinMessageUse;
-    private static int logoutAutoHideFrom;
-    private static int loginAutoHideFrom;
-    private static ChatFilterRule loginLogoutNameFilter;
+    private static boolean loginNameFilterUse = false;
+    private static boolean logoutNameFilterUse = false;
+    private static boolean loginDisabled = false;
+    private static boolean logoutDisabled = false;
+    private static boolean loginCustomUse = false;
+    private static boolean logoutCustomUse = false;
+    private static boolean logoutServerSwitch = false;
+    private static boolean loginServerSwitch = false;
+    private static boolean firstJoinMessageUse = false;
+    private static int logoutAutoHideFrom = 0;
+    private static int loginAutoHideFrom = 0;
+    private static ChatFilterRule loginLogoutNameFilter = null;
 
     public static void loadConfig() {
     }

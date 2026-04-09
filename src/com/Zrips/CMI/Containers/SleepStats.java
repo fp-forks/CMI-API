@@ -10,31 +10,31 @@ import org.bukkit.entity.Player;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class SleepStats {
-    private World world;
-    private int speed;
-    private double sleeping;
-    private double total;
-    private double percent;
-    private int online;
-    CMITask task;
-    public static List<String> timeSpeedUpWorlds;
-    private static boolean SleepingPercentage;
-    public static boolean SleepingExcludeAfk;
-    public static boolean SleepingSpeedup;
-    public static boolean SleepingOnlyDurringNight;
-    public static boolean SleepingInform;
-    private static int SleepingBaseSpeed;
-    private static int SleepingMinBeforeSpeeding;
-    private static int SleepingMinSpeed;
-    public static int SleepingInformDelay;
-    public static int SleepingNightStartsAt;
-    public static String SleepingSpeedupInfoType;
-    public static HashMap<UUID, Long> informMap;
-
-    public static void loadConfig() {
-    }
+    private World world = null;
+    private int speed = 0;
+    private double sleeping = 0.0;
+    private double total = 0.0;
+    private double percent = 0.0;
+    private int online = 0;
+    CMITask task = null;
+    public static List<String> timeSpeedUpWorlds = null;
+    private static boolean SleepingPercentage = false;
+    public static boolean SleepingExcludeAfk = false;
+    public static boolean SleepingSpeedup = false;
+    public static boolean SleepingOnlyDurringNight = false;
+    public static boolean SleepingInform = false;
+    private static int SleepingBaseSpeed = 0;
+    private static int SleepingMinBeforeSpeeding = 0;
+    private static int SleepingMinSpeed = 0;
+    public static int SleepingInformDelay = 0;
+    public static int SleepingNightStartsAt = 0;
+    public static String SleepingSpeedupInfoType = null;
+    public static HashMap<UUID, Long> informMap = null;
 
     public SleepStats(World world) {
+    }
+
+    public static void loadConfig() {
     }
 
     public World getWorld() {

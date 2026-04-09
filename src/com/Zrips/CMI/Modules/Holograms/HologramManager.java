@@ -6,42 +6,43 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CompletableFuture;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
+import org.jetbrains.annotations.Nullable;
 
 import com.Zrips.CMI.CMI;
-import com.Zrips.CMI.Modules.Future.CMIFutureBatcher;
-import com.Zrips.CMI.Modules.Particl.CMIPEAnimationInterface;
-import com.Zrips.CMI.Modules.Portals.CMIVector3D;
-import com.Zrips.CMI.Modules.Portals.CuboidArea.ChunkRef;
 
+import net.Zrips.CMILib.Container.CMIChunkReference;
+import net.Zrips.CMILib.Container.CMIVector3D;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class HologramManager {
-    private static HashMap<String, CMIHologram> holograms;
-    protected static Map<String, Map<ChunkRef, Set<CMIHologram>>> chunkHoloRange;
-    protected static Map<String, Map<ChunkRef, Set<CMIHologram>>> chunkHoloRangeExtra;
-    private static Map<UUID, Set<CMIHologram>> playerNearHoloUpdate;
-    private static Map<UUID, Set<CMIHologram>> playerNearHoloExtra;
-    private static Map<UUID, CMIFutureBatcher> playerFutureBatcher;
-    private static Set<UUID> inPacketListener;
-    private ConcurrentHashMap<UUID, CMIAiming> aimingAt;
-    private CMIHologramLine prevPage;
-    private int prevPageLength;
-    private CMIHologramLine nextPage;
-    private int nextPageLength;
-    private int HoloRangeCheckInterval;
-    private CMITask saveScheduler;
-    private CMI plugin;
-    public static int defaultViewRange;
-    public static int defaultUpdateRange;
-    public static double defaultUpdateInterval;
-    public static double defaultpageChangeInterval;
-    public static boolean defaultsPlaceUp;
-    private String fileName;
+    private static HashMap<String, CMIHologram> holograms = null;
+    protected static Map<String, Map<CMIChunkReference, Set<CMIHologram>>> chunkHoloUpdateRange = null;
+    protected static Map<String, Map<CMIChunkReference, Set<CMIHologram>>> chunkHoloVisibilityRange = null;
+    private static Map<UUID, Set<CMIHologram>> playersInUpdateRange = null;
+    private static Map<UUID, Set<CMIHologram>> playersInVisibilityRange = null;
+    private static Set<UUID> inPacketListener = null;
+    private CMITask saveScheduler = null;
+    private CMIHologramLine autoPage = null;
+    private CMI plugin = null;
+    private String fileName = null;
+    private static int visualRange = 0;
+    private static int updateRange = 0;
+    private static int updateIntervalTicks = 0;
+    private static int pageChangeIntervalTicks = 0;
+    private static String basePrefix = null;
+    private static String hoverPrefix = null;
+    private boolean savedBackup = false;
+
+    public HologramManager(CMI plugin) {
+    }
+
+    public void onPlayerQuit(UUID uuid) {
+    }
 
     public void clearCache(UUID uuid) {
     }
@@ -49,19 +50,20 @@ public class HologramManager {
     public void clearCachedData(UUID uuid) {
     }
 
-    public HologramManager(CMI plugin) {
-    }
-
     public void stop() {
     }
 
-    public void addHologram(CMIHologram holo) {
+    public CompletableFuture<Boolean> stopAsync() {
+        return null;
     }
 
-    public void addHologram(CMIHologram holo, boolean checkForPlayers) {
+    public void add(CMIHologram holo) {
     }
 
-    public void addHologram(CMIHologram holo, boolean checkForPlayers, boolean recalculateChunks) {
+    public void add(CMIHologram holo, boolean checkForPlayers) {
+    }
+
+    public void add(CMIHologram holo, boolean checkForPlayers, boolean recalculateChunks) {
     }
 
     public void recalculateChunks() {
@@ -73,36 +75,68 @@ public class HologramManager {
     public void recalculateChunks(CMIHologram holo) {
     }
 
-    public void recalculateChunksExtra(CMIHologram holo) {
-    }
-
     public CMIHologram getByName(String name) {
         return null;
     }
 
-    public CMIHologram getByLoc(Location loc) {
+    public CMIHologram getByUpdateRange(Location loc) {
         return null;
     }
 
-    public CMIHologram getByLocExtra(Location loc) {
+    public CMIHologram getByLocation(Location loc) {
         return null;
     }
 
-    public Set<CMIHologram> getAllInRangeByLoc(Location loc) {
+    public CMIHologram getByVisibilityRange(Location loc) {
         return null;
     }
 
-    public Set<CMIHologram> getAllInRangeByLocExtra(Location loc) {
+    public Set<CMIHologram> getAllByUpdateRange(Location loc) {
         return null;
     }
 
-    public void handleHoloUpdates(Player player, Location locto) {
+    public Set<CMIHologram> getAllByVisibilityRange(Location loc) {
+        return null;
     }
 
-    public void handleHoloRangeUpdates(Player player, Location locto) {
+    public void updatePlayer(UUID uuid) {
+    }
+
+    public void updatePlayer(Player player) {
+    }
+
+    public void updatePlayer(Player player, Location locto) {
     }
 
     public void loadConfig() {
+    }
+
+    public static int getDefaultVisibilityRange() {
+        return 0;
+    }
+
+    public static int getDefaultUpdateRange() {
+        return 0;
+    }
+
+    public static int getDefaultUpdateInterval() {
+        return 0;
+    }
+
+    public static int getDefaultpageChangeInterval() {
+        return 0;
+    }
+
+    public static String getBasePrefix() {
+        return null;
+    }
+
+    public static String getHoverPrefix() {
+        return null;
+    }
+
+    public CMIHologramLine getAutoPageLine() {
+        return null;
     }
 
     public void reload() {
@@ -114,44 +148,49 @@ public class HologramManager {
     public void save() {
     }
 
-    private void saveHolograms() {
+    public CompletableFuture<Boolean> saveHologramsAsync() {
+        return null;
     }
 
-    public void removeLastHologramInRange(UUID uuid) {
+    public Boolean saveHolograms() {
+        return null;
     }
 
-    public void hideHoloForAllPlayers(CMIHologram holo) {
+    public void hideAllHologramsForPlayer(UUID uuid) {
     }
 
-    public void resetHoloForAllPlayers(CMIHologram holo) {
+    public CompletableFuture<Void> hide(CMIHologram holo) {
+        return null;
     }
 
-    public void addPlayersNearHolo(CMIHologram holo, boolean forceUpdate) {
+    public CompletableFuture<Void> reset(CMIHologram holo) {
+        return null;
     }
 
-    public void addPlayersNearHoloExtra(CMIHologram holo, boolean forceUpdate) {
+    public CompletableFuture<Void> addPlayersByUpdateRange(CMIHologram holo, boolean forceUpdate) {
+        return null;
+    }
+
+    public CompletableFuture<Void> addPlayersByVisibilityRange(CMIHologram holo, boolean forceUpdate) {
+        return null;
     }
 
     public HashMap<String, CMIHologram> getHolograms() {
         return null;
     }
 
-    public List<CMIHologram> getHologramsByDistance(Location loc) {
+    public List<CMIHologram> getHologramsSortedByDistance(Location loc) {
         return null;
     }
 
-    public void removeHolo(CMIHologram holo) {
-    }
-
-    public int getHoloCheckInterval() {
-        return 0;
+    public void remove(CMIHologram holo) {
     }
 
     public boolean isNearHolo(UUID uuid) {
         return false;
     }
 
-    public boolean rechecInteractableHolograms(UUID uuid) {
+    public boolean recheckInteractableHolograms(UUID uuid) {
         return false;
     }
 
@@ -159,16 +198,15 @@ public class HologramManager {
         return false;
     }
 
-    public void addNearHolo(UUID uuid, CMIHologram holo) {
+    public void addToUpdateRange(UUID uuid, CMIHologram holo) {
     }
 
-    public void removeNearHolo(UUID uuid, CMIHologram holo) {
+    public CompletableFuture<Void> addToVisibilityRange(UUID uuid, CMIHologram holo) {
+        return null;
     }
 
-    public void addNearHoloExtra(UUID uuid, CMIHologram holo) {
-    }
-
-    public void removeNearHoloExtra(UUID uuid, CMIHologram holo) {
+    public CompletableFuture<Void> removePlayerFromHologram(UUID uuid, CMIHologram holo) {
+        return null;
     }
 
     public void openGui(Player player, CMIHologram holo) {
@@ -177,49 +215,25 @@ public class HologramManager {
     public void hideAllHolograms() {
     }
 
+    public void hideAllHolograms(UUID uuid) {
+    }
+
+    @Nullable
     public Set<CMIHologram> getPlayerActiveHolograms(UUID uuid) {
         return null;
     }
 
-    public void addAimAt(UUID uuid, String name, CMIVector3D pos) {
-    }
-
-    public void addAimAt(UUID uuid, String name, CMIVector3D pos, double localX) {
-    }
-
-    public CMIAiming getAimAt(UUID uuid) {
+    @Nullable
+    public Map<UUID, Set<CMIHologram>> getPlayerInUpdateRangeSnapshot() {
         return null;
     }
 
-    public void removeAimAt(UUID uuid) {
-    }
-
-    public CMIHologramLine getPrevPageSection() {
+    @Nullable
+    public Set<CMIHologram> getPlayerVisibleHolograms(UUID uuid) {
         return null;
     }
 
-    public void setPrevPageSection(CMIHologramLine prevPage) {
-    }
-
-    public CMIHologramLine getNextPageSection() {
-        return null;
-    }
-
-    public void setNextPageSection(CMIHologramLine nextPage) {
-    }
-
-    public int getPrevPageLength() {
-        return 0;
-    }
-
-    public void setPrevPageLength(int prevPageLength) {
-    }
-
-    public int getNextPageLength() {
-        return 0;
-    }
-
-    public void setNextPageLength(int nextPageLength) {
+    public void updateHologramGroup(CMIHologram holo, String to) {
     }
 
     public Set<CMIHologram> getHologramsByGroup(String group) {
@@ -240,44 +254,194 @@ public class HologramManager {
     public void shiftHologramGroup(Vector vector, String group) {
     }
 
+    public void rotateHologramGroup(int yawAmount, int pitchAmount, String group, Location referencePoint) {
+    }
+
     public void rotateHologramYawGroup(int amount, String group, Location referencePoint) {
     }
 
-    class CMIAiming {
-        private String name;
-        private CMIVector3D pos;
-        private CMIPEAnimationInterface eff;
-        private double localX;
+    public CompletableFuture<CMIHologram> getLookingAt(UUID uuid) {
+        return null;
+    }
 
-        public CMIAiming(String name, CMIVector3D pos) {
+    public CompletableFuture<CMIHologram> getLookingAtHologram(UUID uuid) {
+        return null;
+    }
+
+    public CompletableFuture<CMIHologram> getLookingAtHologramApproximate(UUID uuid) {
+        return null;
+    }
+
+    @Deprecated(forRemoval = true)
+    public void addAimAt(UUID uuid, String name, CMIVector3D pos) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void addAimAt(UUID uuid, String name, CMIVector3D pos, double localX) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public CMIAiming getAimAt(UUID uuid) {
+        return null;
+    }
+
+    @Deprecated(forRemoval = true)
+    public void removeAimAt(UUID uuid) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public CMIHologramLine getPrevPageSection() {
+        return null;
+    }
+
+    @Deprecated(forRemoval = true)
+    public void setPrevPageSection(CMIHologramLine prevPage) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public CMIHologramLine getNextPageSection() {
+        return null;
+    }
+
+    @Deprecated(forRemoval = true)
+    public void setNextPageSection(CMIHologramLine nextPage) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public int getPrevPageLength() {
+        return 0;
+    }
+
+    @Deprecated(forRemoval = true)
+    public void setPrevPageLength(int prevPageLength) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public int getNextPageLength() {
+        return 0;
+    }
+
+    @Deprecated(forRemoval = true)
+    public void setNextPageLength(int nextPageLength) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void handleHoloRangeUpdates(Player player, Location locto) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void handleHoloUpdates(Player player, Location locto) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public Set<CMIHologram> getAllInRangeByLocExtra(Location loc) {
+        return null;
+    }
+
+    @Deprecated(forRemoval = true)
+    public Set<CMIHologram> getAllInRangeByLoc(Location loc) {
+        return null;
+    }
+
+    @Deprecated(forRemoval = true)
+    public CMIHologram getByLocExtra(Location loc) {
+        return null;
+    }
+
+    @Deprecated(forRemoval = true)
+    public CMIHologram getByLoc(Location loc) {
+        return null;
+    }
+
+    @Deprecated(forRemoval = true)
+    public void recalculateChunksExtra(CMIHologram holo) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void addHologram(CMIHologram holo, boolean checkForPlayers) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void addHologram(CMIHologram holo, boolean checkForPlayers, boolean recalculateChunks) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void addHologram(CMIHologram holo) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void removeNearHoloExtra(UUID uuid, CMIHologram holo) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void addNearHoloExtra(UUID uuid, CMIHologram holo) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void removeNearHolo(UUID uuid, CMIHologram holo) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void addNearHolo(UUID uuid, CMIHologram holo) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void removeHolo(CMIHologram holo) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public List<CMIHologram> getHologramsByDistance(Location loc) {
+        return null;
+    }
+
+    @Deprecated(forRemoval = true)
+    public void addPlayersNearHoloExtra(CMIHologram holo, boolean forceUpdate) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void addPlayersNearHolo(CMIHologram holo, boolean forceUpdate) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void resetHoloForAllPlayers(CMIHologram holo) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void hideHoloForAllPlayers(CMIHologram holo) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public void removeLastHologramInRange(UUID uuid) {
+    }
+
+    @Deprecated(forRemoval = true)
+    public int getHoloCheckInterval() {
+        return 0;
+    }
+
+    private class hologramChange {
+        private Set<CMIHologram> from = null;
+        private Set<CMIHologram> to = null;
+        private Set<CMIHologram> left = null;
+        private Set<CMIHologram> entered = null;
+
+        public hologramChange(Set<CMIHologram> from, Set<CMIHologram> to, Set<CMIHologram> left, Set<CMIHologram> entered) {
         }
 
-        public CMIAiming(String name, CMIVector3D pos, double localX) {
-        }
-
-        public String getName() {
+        public Set<CMIHologram> getLeft() {
             return null;
         }
 
-        public void setName(String name) {
-        }
-
-        public CMIVector3D getPos() {
+        public Set<CMIHologram> getEntered() {
             return null;
         }
 
-        public void setPos(CMIVector3D pos) {
-        }
-
-        public CMIPEAnimationInterface getEff() {
+        public Set<CMIHologram> getFrom() {
             return null;
         }
 
-        public void setEff(CMIPEAnimationInterface eff) {
-        }
-
-        public double getLocalX() {
-            return 0.0;
+        public Set<CMIHologram> getTo() {
+            return null;
         }
     }
 }

@@ -1,7 +1,6 @@
 package com.Zrips.CMI.Containers;
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -13,8 +12,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 public class CMIPlayerInventory {
-    private CMIUser user;
-    private static Method topInventory;
+    private CMIUser user = null;
+    private static Method topInventory = null;
 
     public CMIPlayerInventory(CMIUser user) {
     }
@@ -35,10 +34,6 @@ public class CMIPlayerInventory {
     }
 
     public HashMap<Integer, ItemStack> addItem(ItemStack item, CMIFullInventoryAction action, int preferredSlot) {
-        return null;
-    }
-
-    private static HashMap<Integer, ItemStack> addItem(Inventory inventory, ItemStack... items) {
         return null;
     }
 
@@ -64,10 +59,6 @@ public class CMIPlayerInventory {
     public void setItem(int index, ItemStack item) {
     }
 
-    private ItemStack[] getStorageContents() {
-        return null;
-    }
-
     public boolean has(ItemStack item, itemCheckType... checkTypes) {
         return false;
     }
@@ -84,23 +75,15 @@ public class CMIPlayerInventory {
         return 0;
     }
 
-    private int check(ItemStack item, boolean exact, itemCheckType... checkTypes) {
-        return 0;
-    }
-
     public static boolean matches(ItemStack checkingItem, ItemStack lookingFor, itemCheckType... checkTypes) {
         return false;
     }
 
-    public static boolean matches(ItemStack checkingItem, ItemStack lookingFor, boolean exact, itemCheckType... checkTypes) {
+    public static boolean sameByMaterialCustomModel(ItemStack checkingItem, ItemStack lookingFor) {
         return false;
     }
 
-    private int first(ItemStack item, boolean withAmount) {
-        return 0;
-    }
-
-    private static boolean isSimilar(ItemStack stack, ItemStack stack2) {
+    public static boolean matches(ItemStack checkingItem, ItemStack lookingFor, boolean exact, itemCheckType... checkTypes) {
         return false;
     }
 
@@ -153,10 +136,26 @@ public class CMIPlayerInventory {
         return null;
     }
 
-    public static enum CMIInventorySlot {
-        Armor(36, 39), Helmet(39), ChestPlate(38), Pants(37), Boots(36), OffHand(40), MainHand(-1), QuickBar(0, 8), PartInventory(9, 35), MainInventory(0, 35), CraftingIngredients(1, 4), CraftingResult(0);
+    @Nullable
+    public static Inventory getBottomInventory(Player player) {
+        return null;
+    }
 
-        private List<Integer> slot = new ArrayList<>();
+    public static enum CMIInventorySlot {
+        Armor(36, 39),
+        Helmet(39),
+        ChestPlate(38),
+        Pants(37),
+        Boots(36),
+        OffHand(40),
+        MainHand(-1),
+        QuickBar(0, 8),
+        PartInventory(9, 35),
+        MainInventory(0, 35),
+        CraftingIngredients(1, 4),
+        CraftingResult(0);
+
+        private List<Integer> slot = null;
 
         CMIInventorySlot(Integer from, Integer to) {
         }

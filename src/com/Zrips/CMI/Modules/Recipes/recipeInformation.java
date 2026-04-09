@@ -3,9 +3,9 @@ package com.Zrips.CMI.Modules.Recipes;
 import net.Zrips.CMILib.Recipes.CMIRecipeCraftData;
 
 public class recipeInformation {
-    private boolean exact;
-    private String customId;
-    private CMIRecipeCraftData craftData;
+    private boolean exact = false;
+    private String customId = null;
+    private CMIRecipeCraftData craftData = null;
 
     public boolean isExact() {
         return false;

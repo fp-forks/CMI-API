@@ -14,7 +14,7 @@ public class tpaall implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 40, info = "&eAsk all online players to teleport to your location", args = "", tab = { "" }, explanation = {}, regVar = { 0 }, consoleVar = { 666 }, others = false)
+    @CAnnotation(info = "Ask all online players to teleport to your location", regVar = { 0 }, consoleVar = { 666 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

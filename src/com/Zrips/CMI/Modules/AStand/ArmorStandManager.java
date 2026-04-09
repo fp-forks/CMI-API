@@ -6,27 +6,25 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.bukkit.Location;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.util.EulerAngle;
 import org.bukkit.util.Vector;
 
 import com.Zrips.CMI.CMI;
 
 import net.Zrips.CMILib.FileHandler.ConfigReader;
 import net.Zrips.CMILib.GUI.CMIGui;
-import net.Zrips.CMILib.GUI.GUIManager.GUIClickType;
 
 public class ArmorStandManager {
-    private CMI plugin;
-    private static HashMap<UUID, Entity> last;
-    private static ConcurrentHashMap<UUID, Entity> editing;
-    private LinkedHashMap<String, ArmorStandSave> savedArmorStands;
+    private CMI plugin = null;
+    private static ConcurrentHashMap<UUID, CMIArmorStandEdit> editByPlayer = null;
+    private LinkedHashMap<String, ArmorStandSave> savedArmorStands = null;
     public static final String savedArmorStandLabel = null;
-    public static boolean ArmorStandsCheckBlockPlace;
-    public static boolean TemplatesSpecificPermission;
+    public static boolean ArmorStandsCheckBlockPlace = false;
+    public static boolean TemplatesSpecificPermission = false;
+    private static double ArmorStandsMinScale = 0.0;
+    private static double ArmorStandsMaxScale = 0.0;
 
     public ArmorStandManager(CMI plugin) {
     }
@@ -41,7 +39,25 @@ public class ArmorStandManager {
     public void removeEditor(Player player) {
     }
 
+    public CMIArmorStandEdit getEditor(Player player) {
+        return null;
+    }
+
+    public CMIArmorStandEdit addEditor(Player player, Entity ent) {
+        return null;
+    }
+
+    public void addEditor(CMIArmorStandEdit edit) {
+    }
+
     public void removeEditorWithDelay(UUID uuid) {
+    }
+
+    public void disableWithDelay(UUID uuid) {
+    }
+
+    public boolean isBeingEditedBy(UUID editor, UUID uuid) {
+        return false;
     }
 
     public boolean isBeingEdited(UUID uuid) {
@@ -56,81 +72,31 @@ public class ArmorStandManager {
         return false;
     }
 
-    private static void addSaveButton(CMIGui gui, int slot, armorStandSaveOptions action) {
+    @Deprecated
+    public static void duplicate(ArmorStand source, ArmorStand target, Set<armorStandActions> copy) {
     }
 
-    private void addCopyButton(CMIGui gui, int slot, armorStandActions action) {
+    @Deprecated
+    public static void duplicateExtra(ArmorStand source, ArmorStand target, Set<armorStandExtraActions> copy) {
     }
 
-    private void addCopyButton(CMIGui gui, int slot, armorStandExtraActions action) {
-    }
-
-    public boolean openCopyWindow(Player player, ArmorStand armor) {
-        return false;
-    }
-
-    public boolean openSaveWindow(Player player, Entity ent) {
-        return false;
-    }
-
-    private void addFinalSaveButton(CMIGui gui, int slot) {
-    }
-
+    @Deprecated
     public boolean openEditor(Player player, Entity ent, boolean checkInteraction) {
         return false;
     }
 
-    private boolean openEditorInternal(Player player, Entity ent, boolean checkInteraction) {
+    @Deprecated
+    public boolean openSaveWindow(Player player, Entity ent) {
         return false;
     }
 
-    private void openDelayedEditor(Player player, Entity ent) {
-    }
-
-    private boolean hasActionAccess(Player player) {
-        return false;
-    }
-
-    private boolean hasExtraActionAccess(Player player) {
-        return false;
-    }
-
+    @Deprecated
     public boolean openPositionEditor(Player player, Entity ent) {
         return false;
     }
 
-    private int getValue(GUIClickType type) {
-        return 0;
-    }
-
-    private void setAngleButtons(CMIGui gui, ArmorStand armor, armorStandActions pose, int startSlot) {
-    }
-
+    @Deprecated
     public boolean isOk(CMIGui gui) {
-        return false;
-    }
-
-    private static double getAngle(ArmorStand armor, armorStandActions apose, armorStandPoseC coord) {
-        return 0.0;
-    }
-
-    private static EulerAngle getEulerAngle(ArmorStand armor, armorStandActions apose, armorStandPoseC coord) {
-        return null;
-    }
-
-    private static void duplicate(armorStandActions part, ArmorStand source, ArmorStand target) {
-    }
-
-    public void duplicate(ArmorStand source, ArmorStand target, Set<armorStandActions> copy) {
-    }
-
-    public void duplicateExtra(ArmorStand source, ArmorStand target, Set<armorStandExtraActions> copy) {
-    }
-
-    private static void adjustAttribute(ArmorStand source, ArmorStand target) {
-    }
-
-    private boolean canBuild(Player player, Location loc) {
         return false;
     }
 
@@ -138,18 +104,19 @@ public class ArmorStandManager {
         return false;
     }
 
+    @Deprecated
     public void changeAngle(CMIGui gui, armorStandActions apose, armorStandPoseC coord, int value) {
     }
 
+    @Deprecated
     public void changeAngle(ArmorStand armor, Player player, armorStandActions apose, armorStandPoseC coord, int value) {
     }
 
-    private static void setAngle(ArmorStand armor, armorStandActions apose, armorStandPoseC coord, EulerAngle pose) {
-    }
-
+    @Deprecated
     public void switchArmorStandArms(CMIGui gui) {
     }
 
+    @Deprecated
     public void updateArmorStandItems(CMIGui gui) {
     }
 
@@ -168,6 +135,17 @@ public class ArmorStandManager {
     }
 
     public void removeSavedArmorStand(String name) {
+    }
+
+    public void addSavedArmorStand(ArmorStandSave save) {
+    }
+
+    public static double getArmorStandsMinScale() {
+        return 0.0;
+    }
+
+    public static double getArmorStandsMaxScale() {
+        return 0.0;
     }
 
     public enum armorStandPoseC {
@@ -191,14 +169,33 @@ public class ArmorStandManager {
     }
 
     public enum armorStandSaveOptions {
-        helmet, chest, offhand, mainhand, leggings, boots, name, body, plate, size, visible, arms, gravity, glow, invulnerable, interactable, scale, head(new Vector(-30, -50, -30), new Vector(30, 50, 30)),
-        torso(new Vector(-5, -20, -5), new Vector(5, 20, 5)), leftArm(new Vector(-160, -35, -150), new Vector(20, 40, 5), new Vector(-10.0, 0.0, -10.0)), rightArm(new Vector(-160, -40, -5), new Vector(20,
-            35, 150), new Vector(-14.99, 0.0, 10.0)), leftLeg(new Vector(-85, -10, -35), new Vector(25, 10, 5), new Vector(-1.0, 0.0, -1.0)), rightLeg(new Vector(-85, -10, -5), new Vector(25, 10, 35),
-                new Vector(1.0, 0.0, 1.0));
+        helmet,
+        chest,
+        offhand,
+        mainhand,
+        leggings,
+        boots,
+        name,
+        body,
+        plate,
+        size,
+        visible,
+        arms,
+        gravity,
+        glow,
+        invulnerable,
+        interactable,
+        scale,
+        head(new Vector(-30, -50, -30), new Vector(30, 50, 30)),
+        torso(new Vector(-5, -20, -5), new Vector(5, 20, 5)),
+        leftArm(new Vector(-160, -35, -150), new Vector(20, 40, 5), new Vector(-10.0, 0.0, -10.0)),
+        rightArm(new Vector(-160, -40, -5), new Vector(20, 35, 150), new Vector(-14.99, 0.0, 10.0)),
+        leftLeg(new Vector(-85, -10, -35), new Vector(25, 10, 5), new Vector(-1.0, 0.0, -1.0)),
+        rightLeg(new Vector(-85, -10, -5), new Vector(25, 10, 35), new Vector(1.0, 0.0, 1.0));
 
-        private Vector defaults = new Vector(0D, 0D, 0D);
-        private Vector min = new Vector(0, 0, 0);
-        private Vector max = new Vector(0, 0, 0);
+        private Vector defaults = null;
+        private Vector min = null;
+        private Vector max = null;
 
         armorStandSaveOptions() {
         }
@@ -229,7 +226,7 @@ public class ArmorStandManager {
     public enum armorStandEditorSlots {
         helmet(11), chest(20), offhand(21), mainhand(19), leggings(29), boots(38);
 
-        private int slot;
+        private int slot = 0;
 
         armorStandEditorSlots(int slot) {
         }

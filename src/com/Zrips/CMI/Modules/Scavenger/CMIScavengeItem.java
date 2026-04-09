@@ -9,15 +9,16 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.Recipe;
 
 public class CMIScavengeItem {
-    private ItemStack item;
-    private Player player;
-    private Map<Enchantment, Integer> enchants;
-    int maxDurability;
-    int durability;
-    private int recipeResultAmount;
-    Recipe recipe;
+    private ItemStack item = null;
+    private Player player = null;
+    private Map<Enchantment, Integer> enchants = null;
+    int maxDurability = 0;
+    int durability = 0;
+    private int recipeResultAmount = 0;
+    Recipe recipe = null;
 
     CMIScavengeItem(ItemStack item) {
+        this(item, null);
     }
 
     CMIScavengeItem(ItemStack item, Player player) {
@@ -47,10 +48,6 @@ public class CMIScavengeItem {
     }
 
     public double getEnchantExtractionFailChance(Enchantment enchant) {
-        return 0.0;
-    }
-
-    private double format(double number) {
         return 0.0;
     }
 

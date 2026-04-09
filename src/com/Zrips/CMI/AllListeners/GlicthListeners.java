@@ -11,7 +11,7 @@ import org.bukkit.event.player.PlayerEditBookEvent;
 import com.Zrips.CMI.CMI;
 
 public class GlicthListeners implements Listener {
-    private CMI plugin;
+    private CMI plugin = null;
 
     public GlicthListeners(CMI plugin) {
     }

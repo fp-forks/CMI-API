@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class CMIPlayerTotemData {
-    private long totemCooldown;
-    private long totemWarmup;
-    private static HashMap<UUID, CMIPlayerTotemData> data;
+    private long totemCooldown = 0;
+    private long totemWarmup = 0;
+    private static HashMap<UUID, CMIPlayerTotemData> data = null;
 
     public long getTotemCooldown() {
         return 0;

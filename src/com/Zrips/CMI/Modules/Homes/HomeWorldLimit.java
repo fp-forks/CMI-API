@@ -3,8 +3,8 @@ package com.Zrips.CMI.Modules.Homes;
 import java.util.List;
 
 public class HomeWorldLimit {
-    private List<String> worlds;
-    private int limit;
+    private List<String> worlds = null;
+    private int limit = 0;
 
     public List<String> getWorlds() {
         return null;

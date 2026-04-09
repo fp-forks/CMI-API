@@ -18,14 +18,18 @@ import com.Zrips.CMI.Containers.CMIVanish;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class VanishManager {
-    private CMI plugin;
-    private Set<UUID> vanishedOnlineList;
-    private Set<UUID> vanishedList;
-    private static HashMap<UUID, CMIVanish> vanishedCache;
+    private CMI plugin = null;
+    private Set<UUID> vanishedOnlineList = null;
+    private Set<UUID> vanishedList = null;
+    private static HashMap<UUID, CMIVanish> vanishedCache = null;
     private static final String vanishBossBar = null;
-    public static String defaultString;
-    private CMITask playtimeSched;
-    List<CMIUser> playtimeList;
+    private boolean checkEnabled = false;
+    public static String defaultString = null;
+    private CMITask playtimeSched = null;
+    List<CMIUser> playtimeList = null;
+
+    public VanishManager(CMI plugin) {
+    }
 
     @Nullable
     public CMIVanish getVanish(UUID uuid) {
@@ -51,17 +55,13 @@ public class VanishManager {
 
     @Deprecated
     /**
-    * @deprecated use getVanish(UUID) instead,
-    *  this will be removed in the future
-    * @param UUID
-    * @return CMIVanish
-    */
+     * @deprecated use getVanish(UUID) instead, this will be removed in the future
+     * @param UUID
+     * @return CMIVanish
+     */
     @Nullable
     public CMIVanish getVanishRaw(UUID uuid) {
         return null;
-    }
-
-    public VanishManager(CMI plugin) {
     }
 
     public Set<UUID> getAllVanished() {
@@ -75,6 +75,9 @@ public class VanishManager {
     }
 
     public void addPlayer(UUID uuid) {
+    }
+
+    public void recheckMobSpawningCheck() {
     }
 
     public boolean nearActivePlayer(Location loc) {
@@ -122,8 +125,5 @@ public class VanishManager {
     }
 
     public void addToPlayTimePreventer(CMIUser user) {
-    }
-
-    private void playTimePreventer() {
     }
 }

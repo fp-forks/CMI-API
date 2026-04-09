@@ -4,15 +4,23 @@ import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.util.Vector;
 
-public class CMIVector3D {
-    private double x;
-    private double y;
-    private double z;
+public class CMIVector3D extends CMIVector2D {
+    private double z = 0.0;
+
+    public CMIVector3D() {
+        super(0, 0);
+    }
 
     public CMIVector3D(Vector v) {
+        super(v.getX(), v.getY());
     }
 
     public CMIVector3D(double x, double y, double z) {
+        super(x, y);
+    }
+
+    public CMIVector3D plus(double x, double y, double z) {
+        return null;
     }
 
     public CMIVector3D plus(CMIVector3D v) {
@@ -23,11 +31,12 @@ public class CMIVector3D {
         return null;
     }
 
+    @Override
     public CMIVector3D minus(Vector v) {
         return null;
     }
 
-    public CMIVector3D times(double s) {
+    public CMIVector3D minus(double x, double y, double z) {
         return null;
     }
 
@@ -43,16 +52,20 @@ public class CMIVector3D {
         return null;
     }
 
+    public CMIVector3D multiply(CMIVector3D scale) {
+        return null;
+    }
+
+    public CMIVector3D multiply(double x, double y, double z) {
+        return null;
+    }
+
     public CMIVector3D normalize() {
         return null;
     }
 
-    public CMIVector3D add(CMIVector3D other) {
-        return null;
-    }
-
-    public CMIVector3D scale(double scaleFactor) {
-        return null;
+    public double lengthSquared() {
+        return 0.0;
     }
 
     @Override
@@ -60,19 +73,7 @@ public class CMIVector3D {
         return null;
     }
 
-    public double getX() {
-        return 0.0;
-    }
-
-    public CMIVector3D setX(double x) {
-        return null;
-    }
-
-    public double getY() {
-        return 0.0;
-    }
-
-    public CMIVector3D setY(double y) {
+    public static CMIVector3D fromString(String value) {
         return null;
     }
 
@@ -86,5 +87,9 @@ public class CMIVector3D {
 
     public Location toLocation(World world) {
         return null;
+    }
+
+    public boolean isZero() {
+        return false;
     }
 }

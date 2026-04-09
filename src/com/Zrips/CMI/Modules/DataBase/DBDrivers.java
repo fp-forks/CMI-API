@@ -9,7 +9,7 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 public class DBDrivers implements Driver {
-    private Driver driver;
+    private Driver driver = null;
 
     public DBDrivers(Driver driver) {
     }

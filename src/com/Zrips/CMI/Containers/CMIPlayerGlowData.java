@@ -6,8 +6,8 @@ import java.util.UUID;
 import org.bukkit.ChatColor;
 
 public class CMIPlayerGlowData {
-    private ChatColor glow;
-    private static HashMap<UUID, CMIPlayerGlowData> glowData;
+    private ChatColor glow = null;
+    private static HashMap<UUID, CMIPlayerGlowData> glowData = null;
 
     public CMIPlayerGlowData(ChatColor glow) {
     }

@@ -14,7 +14,7 @@ public class serverlinks implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSet server links", explanation = { "Separate display name and link with ;" }, regVar = { 0 }, consoleVar = { 0 })
+    @CAnnotation(info = "Set server links", explanation = { "Separate display name and link with ;" }, regVar = { 0 }, consoleVar = { 0 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

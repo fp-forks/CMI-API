@@ -14,8 +14,8 @@ public class maintenance implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 110, info = "&eSet server into maintenance mode", args = "(true/false) (message)", tab = { "true%%false" }, explanation = {
-        "cmi.command.maintenance.bypass - to bypass maintenance mode" }, regVar = { -66 }, consoleVar = { -66 }, others = false)
+    @CAnnotation(priority = 110, info = "Set server into maintenance mode", args = "(true/false) (message)", tab = { "true%%false" }, explanation = {
+            "cmi.command.maintenance.bypass - to bypass maintenance mode" }, regVar = { -66 }, consoleVar = { -66 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

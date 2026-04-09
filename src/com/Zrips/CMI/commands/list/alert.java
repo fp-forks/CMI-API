@@ -14,8 +14,8 @@ public class alert implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 70, info = "&eAlerts administration on players login", args = "[add/list/remove] [playerName] (reason) (-s)", tab = { "add%%list%%remove", "playerName" }, explanation = {
-        "&ePermissions:", "&6command.alert.info.inform &e- to see alerts on player login" }, others = false)
+    @CAnnotation(priority = 70, info = "Alerts administration on players login", args = "[add/list/remove] [playerName] (reason) (-s)", tab = { "add%%list%%remove", "playerName" }, explanation = {
+            "{gcp}Permissions:", "{gcs}command.alert.info.inform {gcp}- to see alerts on player login" }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

@@ -5,10 +5,11 @@ import java.util.Set;
 import net.Zrips.CMILib.Colors.CMIChatColor;
 
 public class CMIPlayerMessageColor {
-    private CMIChatColor color;
-    private Set<CMIChatColor> formats;
+    private CMIChatColor color = null;
+    private Set<CMIChatColor> formats = null;
 
     public CMIPlayerMessageColor(CMIChatColor color) {
+        this(color, null);
     }
 
     public CMIPlayerMessageColor(CMIChatColor color, Set<CMIChatColor> formats) {

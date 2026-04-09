@@ -7,8 +7,8 @@ import org.bukkit.Location;
 import org.bukkit.World;
 
 public class CMIWorld {
-    private World world;
-    private TreeMap<Integer, CMIRegion> regions;
+    private World world = null;
+    private TreeMap<Integer, CMIRegion> regions = null;
 
     public CMIWorld(Chunk chunk) {
     }
@@ -47,10 +47,6 @@ public class CMIWorld {
     }
 
     public CMIRegion getRegion(int x, int z) {
-        return null;
-    }
-
-    private static Integer coordinatesToPlace(int x, int z) {
         return null;
     }
 

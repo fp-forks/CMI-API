@@ -14,7 +14,7 @@ public class saturation implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 100, info = "&eSet players saturation", args = "(playerName) [amount]", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 2, 3 }, others = true)
+    @CAnnotation(info = "Set players saturation", args = "(playerName) [amount]", tab = { "playername" }, explanation = {}, regVar = { 0, 1, 2, 3 }, consoleVar = { 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

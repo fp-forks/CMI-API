@@ -14,8 +14,8 @@ public class editwarnings implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eCheck player warnings", args = "(playerName/clearall) (clear)", tab = { "playername%%clearall", "clear%%" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
-        3 }, others = true)
+    @CAnnotation(priority = 48, info = "Check player warnings", args = "(playerName/clearall) (clear)", tab = { "playername%%clearall", "clear%%" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 1, 2,
+            3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

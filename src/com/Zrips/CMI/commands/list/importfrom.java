@@ -14,9 +14,9 @@ public class importfrom implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eImport data from other plugins", args = "[essentials/hd] [home/warp/nick/logoutlocation/money/mail]", tab = { "essentials%%hd",
-        "home%%warp%%nick%%logoutlocation%%money%%mail%%", "home%%", "warp%%", "nick%%", "logoutlocation%%", "money%%", "mail%%" }, explanation = {}, regVar = { 1, 2, 3, 4, 5, 6, 7 }, consoleVar = { 1, 2,
-            3, 4, 5, 6, 7 }, others = false)
+    @CAnnotation(info = "Import data from other plugins", args = "[essentials/hd] [home/warp/nick/logoutlocation/money/mail]", tab = { "essentials%%hd",
+            "home%%warp%%nick%%logoutlocation%%money%%mail%%", "home%%", "warp%%", "nick%%", "logoutlocation%%", "money%%",
+            "mail%%" }, explanation = {}, regVar = { 1, 2, 3, 4, 5, 6, 7 }, consoleVar = { 1, 2, 3, 4, 5, 6, 7 })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

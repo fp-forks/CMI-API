@@ -4,8 +4,10 @@ import org.bukkit.Location;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.util.Transformation;
 
+import net.Zrips.CMILib.Container.CMIVector3D;
+
 public class CMIBlockDisplay extends CMIDisplay {
-    private org.bukkit.entity.BlockDisplay td;
+    private org.bukkit.entity.BlockDisplay td = null;
 
     public CMIBlockDisplay(Location loc) {
         super(CMIDisplayType.Block, loc);
@@ -25,7 +27,13 @@ public class CMIBlockDisplay extends CMIDisplay {
         return null;
     }
 
-    public void setFacing(double pitchRadians, double yawRadians) {
+    public void setScale(CMIVector3D s) {
+    }
+
+    public void setFacing(double pitchDegrees, double yawDegrees) {
+    }
+
+    public void setFacing(CMIVector3D direction) {
     }
 
     public void setDepth(double depth) {

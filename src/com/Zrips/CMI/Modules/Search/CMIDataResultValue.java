@@ -3,7 +3,7 @@ package com.Zrips.CMI.Modules.Search;
 import java.util.UUID;
 
 public class CMIDataResultValue extends CMIDataResultPlayerBase {
-    int amount;
+    int amount = 0;
 
     public CMIDataResultValue(CMIPlayerSearchPlaceType type, UUID uuid, int amount) {
         super(type, uuid);

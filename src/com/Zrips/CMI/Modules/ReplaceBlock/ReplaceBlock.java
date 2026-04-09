@@ -5,17 +5,15 @@ import java.util.regex.Pattern;
 
 import com.Zrips.CMI.CMI;
 
+@SuppressWarnings("deprecation")
 public class ReplaceBlock {
-    public Pattern regionPattern;
-    public ConcurrentHashMap<String, BRInfo> BRInfo;
-    private CMI plugin;
+    public Pattern regionPattern = null;
+    public ConcurrentHashMap<String, BRInfo> BRInfo = null;
+    private CMI plugin = null;
 
     public ReplaceBlock(CMI plugin) {
     }
 
     public void start(BRInfo scan) {
-    }
-
-    private void loadChunk(BRInfo scan) {
     }
 }

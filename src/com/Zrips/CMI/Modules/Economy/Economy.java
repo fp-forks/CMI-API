@@ -5,12 +5,11 @@ import java.util.List;
 import org.bukkit.OfflinePlayer;
 
 import com.Zrips.CMI.CMI;
-import com.Zrips.CMI.Containers.CMIUser;
 
 import net.milkbowl.vault.economy.EconomyResponse;
 
 public class Economy {
-    static public CMI plugin;
+    static public CMI plugin = null;
     private static final String ecoName = null;
 
     public Economy(CMI pl) {
@@ -21,10 +20,6 @@ public class Economy {
     }
 
     public static String getName() {
-        return null;
-    }
-
-    private static String TrA(double amount) {
         return null;
     }
 
@@ -48,10 +43,6 @@ public class Economy {
         return 0.0;
     }
 
-    private static double getAccountBalance(CMIUser user) {
-        return 0.0;
-    }
-
     public static EconomyResponse withdrawPlayer(String playerName, double amount) {
         return null;
     }
@@ -60,19 +51,11 @@ public class Economy {
         return null;
     }
 
-    private static EconomyResponse withdraw(CMIUser user, double amount) {
-        return null;
-    }
-
     public static EconomyResponse depositPlayer(String playerName, double amount) {
         return null;
     }
 
     public static EconomyResponse depositPlayer(OfflinePlayer offlinePlayer, double amount) {
-        return null;
-    }
-
-    private static EconomyResponse deposit(CMIUser user, double amount) {
         return null;
     }
 

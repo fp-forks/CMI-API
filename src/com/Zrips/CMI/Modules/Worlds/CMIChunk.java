@@ -7,16 +7,19 @@ import org.bukkit.Chunk;
 import org.bukkit.ChunkSnapshot;
 import org.bukkit.World;
 
+import net.Zrips.CMILib.Container.CMIBiome;
+
 public class CMIChunk {
-    private Integer x;
-    private Integer z;
-    private World world;
-    private boolean generated;
-    private Color color;
-    private Color mostCommonColor;
-    private List<CMIBiome> biomes;
+    private Integer x = null;
+    private Integer z = null;
+    private World world = null;
+    private boolean generated = false;
+    private Color color = null;
+    private Color mostCommonColor = null;
+    private List<CMIBiome> biomes = null;
 
     public CMIChunk(Chunk chunk) {
+        this(chunk.getWorld(), chunk.getX(), chunk.getZ());
     }
 
     public CMIChunk(World world, int x, int z) {
@@ -31,10 +34,6 @@ public class CMIChunk {
     }
 
     public Integer getPlace() {
-        return null;
-    }
-
-    private static Integer convertBiomePlace(int x, int z) {
         return null;
     }
 
@@ -83,10 +82,6 @@ public class CMIChunk {
     }
 
     public Color getUnbluredColor() {
-        return null;
-    }
-
-    private static Color blend(Color c0, Color c1) {
         return null;
     }
 

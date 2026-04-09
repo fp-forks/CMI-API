@@ -21,8 +21,8 @@ public class merchant implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eOpen merchant trade window", args = "[type] (playerName) (level)", tab = { "merchants", "playername", "1%%2%%3%%4%%5" }, regVar = { 1, 2, 3 }, consoleVar = { 1, 2,
-        3 }, alias = true, others = true)
+    @CAnnotation(info = "Open merchant trade window", args = "[type] (playerName) (level)", tab = { "merchants", "playername", "1%%2%%3%%4%%5" }, regVar = { 1, 2, 3 }, consoleVar = { 1, 2,
+            3 }, alias = true, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

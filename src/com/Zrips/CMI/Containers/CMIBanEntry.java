@@ -3,11 +3,11 @@ package com.Zrips.CMI.Containers;
 import org.bukkit.BanEntry;
 
 public class CMIBanEntry {
-    long createdOn;
-    long banUntil;
-    String reason;
-    CMIUser bannedBy;
-    CMIUser banned;
+    long createdOn = 0;
+    long banUntil = 0;
+    String reason = null;
+    CMIUser bannedBy = null;
+    CMIUser banned = null;
 
     public CMIBanEntry(CMIUser baned) {
     }

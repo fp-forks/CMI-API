@@ -4,7 +4,7 @@ import com.Zrips.CMI.Containers.CMIUser;
 import com.Zrips.CMI.Modules.Warnings.CMIPlayerWarning;
 
 public class CMIPlayerWarnEvent extends CMIUserCancellableEvent {
-    private CMIPlayerWarning warning;
+    private CMIPlayerWarning warning = null;
 
     public CMIPlayerWarnEvent(CMIUser user, CMIPlayerWarning warning) {
         super(user);

@@ -14,8 +14,9 @@ public class search implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSearch from all players of specific items or stats", explanation = { "More information at https://www.zrips.net/cmi/extra/search/" }, regVar = { -100 }, consoleVar = {
-        -100 }, alias = true, multiTab = { "cancel", "results", "survival,creative,adventure,spectator,fly,maxhp:21", "hand,stoneaxe oversize" })
+    @CAnnotation(info = "Search from all players of specific items or stats", explanation = {
+            "<T>More information at https://www.zrips.net/cmi/extra/search/</T><URL>https://www.zrips.net/cmi/extra/search/</URL>" }, regVar = {
+                    -100 }, consoleVar = { -100 }, alias = true, multiTab = { "cancel", "results", "survival,creative,adventure,spectator,fly,maxhp:21,god", "hand,stoneaxe oversize" })
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

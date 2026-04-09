@@ -13,13 +13,13 @@ import com.Zrips.CMI.Containers.CMIUser;
 
 public class CommandsHandler implements CommandExecutor {
     public static final String label = null;
-    private static String packagePath;
-    public static int stage;
-    public static String msg;
-    private Map<String, CMICommand> commands;
-    private List<String> disabledBase;
-    private boolean testServer;
-    protected CMI plugin;
+    private static String packagePath = null;
+    public static int stage = 0;
+    public static String msg = null;
+    private Map<String, CMICommand> commands = null;
+    private List<String> disabledBase = null;
+    private boolean testServer = false;
+    protected CMI plugin = null;
 
     public CommandsHandler(CMI plugin) {
     }
@@ -53,14 +53,6 @@ public class CommandsHandler implements CommandExecutor {
         return false;
     }
 
-    private String getUsage(String cmd) {
-        return null;
-    }
-
-    private String getCommandRoot(String cmd) {
-        return null;
-    }
-
     public void sendUsage(CommandSender sender, String cmd) {
     }
 
@@ -75,10 +67,6 @@ public class CommandsHandler implements CommandExecutor {
         return null;
     }
 
-    private static HashSet<String> getClassesInSamePackageFromJar(String packageName, String jarPath) {
-        return null;
-    }
-
     public Map<String, Integer> GetCommands(CommandSender sender) {
         return null;
     }
@@ -86,24 +74,8 @@ public class CommandsHandler implements CommandExecutor {
     public void fillCommands() {
     }
 
-    private static Class<?> getClass(String cmd) {
-        return null;
-    }
-
-    private Cmd getCmdClass(String cmdName) {
-        return null;
-    }
-
-    private Cmd getBestCmdmatch(String cmdName) {
-        return null;
-    }
-
     public static int distance(String a, String b) {
         return 0;
-    }
-
-    private static Map<String, Integer> sort(Map<String, Integer> unsortMap) {
-        return null;
     }
 
     public Map<String, CMICommand> getCommands() {

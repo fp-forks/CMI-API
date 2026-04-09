@@ -1,8 +1,8 @@
 package com.Zrips.CMI.Containers;
 
 public class CMIReplyResponder {
-    private String name;
-    private Long time;
+    private String name = null;
+    private Long time = null;
 
     public CMIReplyResponder(String name, Long time) {
     }

@@ -12,7 +12,6 @@ import org.bukkit.command.Command;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.util.Vector;
@@ -40,10 +39,6 @@ public interface NMS {
     Player getPlayer(CMIUser user);
 
     void updateCollisions(Player player, boolean collision, boolean onlyTarget);
-
-    Inventory getShulkerInv(ItemStack Item);
-
-    Inventory getShulkerInv(Block block);
 
     int getTickLived(UUID uuid);
 

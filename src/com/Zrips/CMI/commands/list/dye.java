@@ -17,8 +17,8 @@ public class dye implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eDye leather armor", args = "(playerName) (red,green,blue/hexCode/colorName/random/clear/rainbow/day/biome/health) (-s)", tab = {
-        "playername%%random%%clear%%colors%%rainbow%%day%%_biome%%health" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 2, 3 }, others = true)
+    @CAnnotation(info = "Dye leather armor", args = "(playerName) (red,green,blue/hexCode/colorName/random/clear/rainbow/day/biome/health) (-s)", tab = {
+            "playername%%random%%clear%%colors%%rainbow%%day%%_biome%%health" }, regVar = { 0, 1, 2, 3 }, consoleVar = { 2, 3 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

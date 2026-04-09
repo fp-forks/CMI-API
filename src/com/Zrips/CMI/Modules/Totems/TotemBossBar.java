@@ -6,9 +6,9 @@ import com.Zrips.CMI.Modules.Particl.CMIVisualEffect;
 import com.Zrips.CMI.Modules.Totems.TotemManager.BossBarType;
 
 public class TotemBossBar {
-    private BossBar bar;
-    private BossBarType type;
-    private CMIVisualEffect effect;
+    private BossBar bar = null;
+    private BossBarType type = null;
+    private CMIVisualEffect effect = null;
 
     public TotemBossBar(BossBar bar, BossBarType type) {
     }

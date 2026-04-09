@@ -1,16 +1,17 @@
 package com.Zrips.CMI.Modules.Homes;
 
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+
+import com.Zrips.CMI.Containers.CMIUser;
+
 import net.Zrips.CMILib.Container.CMILocation;
 import net.Zrips.CMILib.Items.CMIMaterial;
 
 public class CmiHome {
-    private CMILocation loc;
-    private String name;
-    private boolean privateH;
-    private boolean bed;
-    private boolean fav;
-    private int slot;
-    private CMIMaterial material;
+    private CMILocation loc = null;
+    private String name = null;
+    private CMIHomeSettings settings = null;
 
     public CmiHome(String name, CMILocation loc) {
     }
@@ -31,6 +32,10 @@ public class CmiHome {
     }
 
     public void setPrivate(boolean privateH) {
+    }
+
+    public CMIHomeSettings getSettings() {
+        return null;
     }
 
     public CMIMaterial getIconMaterial() {
@@ -63,5 +68,8 @@ public class CmiHome {
     }
 
     public void setFavorite(boolean fav) {
+    }
+
+    public void teleportPlayerTo(CommandSender sender, Player player, CMIUser owner) {
     }
 }

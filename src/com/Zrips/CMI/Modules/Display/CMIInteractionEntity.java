@@ -1,6 +1,7 @@
 package com.Zrips.CMI.Modules.Display;
 
 import org.bukkit.Location;
+import org.bukkit.util.Transformation;
 
 public class CMIInteractionEntity extends CMIDisplay {
     public CMIInteractionEntity(Location loc) {
@@ -13,5 +14,10 @@ public class CMIInteractionEntity extends CMIDisplay {
 
     @Override
     public void setHeight(double height) {
+    }
+
+    @Override
+    public Transformation getTransformation() {
+        return null;
     }
 }

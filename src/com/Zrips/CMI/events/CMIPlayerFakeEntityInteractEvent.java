@@ -6,8 +6,8 @@ import com.Zrips.CMI.Containers.CMIInteractType;
 
 public class CMIPlayerFakeEntityInteractEvent extends CMIPlayerEvent {
     private final int id = 0;
-    private Object obj;
-    private CMIInteractType type;
+    private Object obj = null;
+    private CMIInteractType type = null;
 
     public CMIPlayerFakeEntityInteractEvent(Player player, int id, Object obj, CMIInteractType type) {
         super(player);

@@ -3,13 +3,13 @@ package com.Zrips.CMI.Modules.Permissions;
 import java.util.Set;
 
 public class PermissionInfo {
-    private String permission;
-    private boolean enabled;
-    private Long delay;
-    private Long lastChecked;
-    private Double maxValue;
-    private Double minValue;
-    private Set<String> values;
+    private String permission = null;
+    private boolean enabled = false;
+    private Long delay = null;
+    private Long lastChecked = null;
+    private Double maxValue = null;
+    private Double minValue = null;
+    private Set<String> values = null;
 
     public PermissionInfo(String permission, Long delay) {
     }

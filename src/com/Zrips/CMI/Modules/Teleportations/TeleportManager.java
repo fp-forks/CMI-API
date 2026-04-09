@@ -13,48 +13,42 @@ import org.bukkit.entity.Player;
 import com.Zrips.CMI.CMI;
 
 public class TeleportManager {
-    private CMI plugin;
-    private TreeMap<UUID, Set<TpInfo>> tpRequests;
-    private TreeMap<UUID, Set<TpInfo>> blockedRequests;
-    private boolean SafeLocationDownThenUp;
-    private int defaultTeleportInvulnerability;
-    private HashMap<String, Integer> TeleportInvulnerability;
-    private boolean DisableInvOnBlockBreakPlace;
-    private boolean DisableInvOnInteraction;
-    private boolean TeleportSwitchPlaces;
-    private boolean TpaCurrentLoc;
-    private boolean TpahereCurrentLoc;
-    private int TeleportJumpDefault;
-    private int TeleportTpaTime;
-    private int TeleportTpaWarmup;
-    private boolean TeleportTpaMove;
-    private int TeleportTpaBlock;
-    private boolean TeleportDenyConfirm;
-    private int TeleportTpaMaxDistance;
-    private int TeleportTpaHereMaxDistance;
-    private int TeleportTpBypass;
-    private int BackMinDistance;
-    private boolean BackWithWE;
-    private List<String> BackBlackList;
-    private List<String> DBackBlackList;
-    private int BackExpiration;
-    private int DeathBackExpiration;
-    private HashMap<TpAction, Boolean> BlackListedItemsEnabledFor;
-    private HashMap<Material, Integer> blockedItems;
-
-    public void loadConfig() {
-    }
+    private CMI plugin = null;
+    private TreeMap<UUID, Set<TpInfo>> tpRequests = null;
+    private TreeMap<UUID, Set<TpInfo>> blockedRequests = null;
+    private boolean SafeLocationDownThenUp = false;
+    private int defaultTeleportInvulnerability = 0;
+    private HashMap<String, Integer> TeleportInvulnerability = null;
+    private boolean DisableInvOnBlockBreakPlace = false;
+    private boolean DisableInvOnInteraction = false;
+    private boolean TeleportSwitchPlaces = false;
+    private boolean TpaCurrentLoc = false;
+    private boolean TpahereCurrentLoc = false;
+    private int TeleportJumpDefault = 0;
+    private int TeleportTpaTime = 0;
+    private int TeleportTpaWarmup = 0;
+    private boolean TeleportTpaMove = false;
+    private int TeleportTpaBlock = 0;
+    private boolean TeleportDenyConfirm = false;
+    private int TeleportTpaMaxDistance = 0;
+    private int TeleportTpaHereMaxDistance = 0;
+    private int TeleportTpBypass = 0;
+    private int BackMinDistance = 0;
+    private boolean BackWithWE = false;
+    private List<String> BackBlackList = null;
+    private List<String> DBackBlackList = null;
+    private int BackExpiration = 0;
+    private int DeathBackExpiration = 0;
+    private HashMap<TpAction, Boolean> BlackListedItemsEnabledFor = null;
+    private HashMap<Material, Integer> blockedItems = null;
 
     public TeleportManager(CMI plugin) {
     }
 
+    public void loadConfig() {
+    }
+
     public void clearRequests(Player player) {
-    }
-
-    private void clearRequests() {
-    }
-
-    private void clearBlocks() {
     }
 
     public void addTpBlock(Player whoAccepts, TpInfo ti) {

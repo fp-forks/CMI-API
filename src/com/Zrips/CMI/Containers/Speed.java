@@ -8,29 +8,21 @@ import org.bukkit.entity.Player;
 import net.Zrips.CMILib.BossBar.BossBarInfo;
 
 public class Speed {
-    private BossBarInfo bb;
-    private Player player;
-    private boolean allowBoost;
-    private boolean allowSuperBoost;
-    private boolean speedometer;
-    private List<Long> time;
-    private List<Location> loc;
-    private Long boost;
-    private Long superBoost;
-    private boolean free;
-    private boolean dura;
-    private static int amount;
-    private static int timeRange;
+    private BossBarInfo bb = null;
+    private Player player = null;
+    private boolean allowBoost = false;
+    private boolean allowSuperBoost = false;
+    private boolean speedometer = false;
+    private List<Long> time = null;
+    private List<Location> loc = null;
+    private Long boost = null;
+    private Long superBoost = null;
+    private boolean free = false;
+    private boolean dura = false;
+    private static int amount = 0;
+    private static int timeRange = 0;
 
     public Speed(Player player) {
-    }
-
-    private long getTime() {
-        return 0;
-    }
-
-    private Location getLocation() {
-        return null;
     }
 
     public double getSpeed() {

@@ -1,7 +1,7 @@
 package com.Zrips.CMI.Modules.Search;
 
 public class SearchTypeBase {
-    private SearchType type;
+    private SearchType type = null;
 
     public SearchType getType() {
         return null;

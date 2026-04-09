@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DBConnection {
-    private Connection conn;
+    private Connection conn = null;
 
     public DBConnection(Connection conn) {
     }
@@ -42,6 +42,10 @@ public class DBConnection {
     }
 
     public synchronized DatabaseMetaData getMetaData() throws SQLException {
+        return null;
+    }
+
+    public Connection getConnection() {
         return null;
     }
 }

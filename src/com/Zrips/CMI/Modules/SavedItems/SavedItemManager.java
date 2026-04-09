@@ -9,10 +9,10 @@ import org.bukkit.inventory.ItemStack;
 import com.Zrips.CMI.CMI;
 
 public class SavedItemManager {
-    private LinkedHashMap<String, LinkedHashMap<String, SavedItem>> map;
+    private LinkedHashMap<String, LinkedHashMap<String, SavedItem>> map = null;
     public static final String defaultCategory = null;
-    private CMI plugin;
-    private String fileName;
+    private CMI plugin = null;
+    public String fileName = null;
 
     public SavedItemManager(CMI plugin) {
     }

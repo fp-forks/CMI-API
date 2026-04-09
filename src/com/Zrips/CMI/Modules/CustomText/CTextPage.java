@@ -3,8 +3,8 @@ package com.Zrips.CMI.Modules.CustomText;
 import java.util.List;
 
 public class CTextPage {
-    private String label;
-    private List<String> lines;
+    private String label = null;
+    private List<String> lines = null;
 
     public CTextPage() {
     }

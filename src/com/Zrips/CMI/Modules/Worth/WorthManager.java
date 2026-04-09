@@ -5,7 +5,6 @@ import java.io.Writer;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 import org.bukkit.enchantments.Enchantment;
@@ -14,26 +13,24 @@ import org.bukkit.inventory.ItemStack;
 
 import com.Zrips.CMI.CMI;
 
-import net.Zrips.CMILib.GUI.CMIGui;
-import net.Zrips.CMILib.GUI.CMIGuiButton;
 import net.Zrips.CMILib.Items.CMIItemStack;
 import net.Zrips.CMILib.Items.CMIMaterial;
 
 public class WorthManager {
-    private CMI plugin;
-    private LinkedHashMap<CMIMaterial, List<WorthItem>> map;
-    private HashMap<Enchantment, HashMap<Integer, WorthEnchantment>> enchantMap;
-    public static String fileName;
-    File file;
-    Writer writer;
-    boolean checkedOldFile;
-    CompletableFuture<Void> saveTask;
-    List<String> badLore;
-    private boolean loreBlock;
-    private boolean requireFullDurability;
-    private boolean devalueByDurability;
-    private int autoGeneratePriceIncrease;
-    private boolean customNameBlocking;
+    private CMI plugin = null;
+    private LinkedHashMap<CMIMaterial, List<WorthItem>> map = null;
+    private HashMap<Enchantment, HashMap<Integer, WorthEnchantment>> enchantMap = null;
+    public static String fileName = null;
+    File file = null;
+    Writer writer = null;
+    boolean checkedOldFile = false;
+    CompletableFuture<Void> saveTask = null;
+    List<String> badLore = null;
+    private boolean loreBlock = false;
+    private boolean requireFullDurability = false;
+    private boolean devalueByDurability = false;
+    private int autoGeneratePriceIncrease = 0;
+    private boolean customNameBlocking = false;
 
     public WorthManager(CMI plugin) {
     }
@@ -55,16 +52,7 @@ public class WorthManager {
     public void loadEnchtWorth() {
     }
 
-    private void addSellPriceButton(CMIGui gui, CMIItemStack iih, WorthItem worth, int slot, CMIMaterial material, double change) {
-    }
-
-    private void addBuyPriceButton(CMIGui gui, CMIItemStack iih, WorthItem worth, int slot, CMIMaterial material, double change) {
-    }
-
     public void openWorthGui(Player player, CMIItemStack iih) {
-    }
-
-    private void priceLore(CMIGuiButton button, WorthItem worth) {
     }
 
     public void closeStream() {
@@ -83,9 +71,6 @@ public class WorthManager {
     }
 
     public void updatePriceInFile(WorthItem worth, WorthEnchantment enchantWorth) {
-    }
-
-    private void updateWorthInFile(Set<WorthItem> worths, Set<WorthEnchantment> enchantWorths) {
     }
 
     public WorthItem getWorth(ItemStack item) {

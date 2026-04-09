@@ -3,9 +3,9 @@ package com.Zrips.CMI.Containers;
 import org.bukkit.GameMode;
 
 public class worldFlyState {
-    private boolean state;
-    private boolean temp;
-    private GameMode mode;
+    private boolean state = false;
+    private boolean temp = false;
+    private GameMode mode = null;
 
     public worldFlyState(GameMode mode, boolean state, boolean temp) {
     }

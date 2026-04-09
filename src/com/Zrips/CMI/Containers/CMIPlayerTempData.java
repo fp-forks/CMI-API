@@ -7,16 +7,16 @@ import java.util.concurrent.ConcurrentHashMap;
 import com.Zrips.CMI.Modules.CmdCooldown.CmdCooldown;
 
 public class CMIPlayerTempData {
-    private CmdCooldown commandCooldown;
-    private String bungeeBackLocation;
-    private long lastPatrol;
-    private long playTimeOptimized;
-    private long afkImunity;
-    private long lastRespawn;
-    private long backExpiration;
-    private long deathBackExpiration;
-    private HashMap<UserDataUpdateType, Long> lastInfoUpdate;
-    private static ConcurrentHashMap<UUID, CMIPlayerTempData> playerTempData;
+    private CmdCooldown commandCooldown = null;
+    private String bungeeBackLocation = null;
+    private long lastPatrol = 0;
+    private long playTimeOptimized = 0;
+    private long afkImunity = 0;
+    private long lastRespawn = 0;
+    private long backExpiration = 0;
+    private long deathBackExpiration = 0;
+    private HashMap<UserDataUpdateType, Long> lastInfoUpdate = null;
+    private static ConcurrentHashMap<UUID, CMIPlayerTempData> playerTempData = null;
 
     public static void clearOnLogOff(UUID uuid) {
     }

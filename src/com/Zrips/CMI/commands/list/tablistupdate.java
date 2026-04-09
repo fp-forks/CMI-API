@@ -14,8 +14,8 @@ public class tablistupdate implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eForce tablist update for all or specific player", args = "(playerName) (-s)", tab = { "playerName", "-s" }, regVar = { 0, 1, 2 }, consoleVar = { 0, 1,
-        2 }, others = false)
+    @CAnnotation(priority = 48, info = "Force tablist update for all or specific player", args = "(playerName) (-s)", tab = { "playerName", "-s" }, regVar = { 0, 1, 2 }, consoleVar = { 0, 1,
+            2 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

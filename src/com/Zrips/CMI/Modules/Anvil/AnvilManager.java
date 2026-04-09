@@ -5,7 +5,7 @@ import org.bukkit.inventory.ItemStack;
 import com.Zrips.CMI.CMI;
 
 public class AnvilManager {
-    CMI plugin;
+    CMI plugin = null;
 
     public AnvilManager(CMI plugin) {
     }

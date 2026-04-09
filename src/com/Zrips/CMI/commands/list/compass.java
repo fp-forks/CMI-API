@@ -14,9 +14,9 @@ public class compass implements Cmd {
     }
 
     @Override
-    @CAnnotation(info = "&eSet players compass point to your location", args = "(targetName) (sourceName) (x) (z) (worldname) (reset) (-s)", tab = { "playername", "playername" }, explanation = {
-        "Example: /cmi compass Zhax", "/cmi compass Zhax Zrips", "/cmi compass Zhax LT_Craft 0 0 -s", "/cmi compass reset Zhax" }, regVar = { 1, 2, 3, 4, 5, 6 }, consoleVar = { 2, 3, 4, 5,
-            6 }, others = true)
+    @CAnnotation(info = "Set players compass point to your location", args = "(targetName) (sourceName) (x) (z) (worldname) (reset) (-s)", tab = { "playername", "playername" }, explanation = {
+            "Example: /cmi compass Zhax", "/cmi compass Zhax Zrips", "/cmi compass Zhax LT_Craft 0 0 -s",
+            "/cmi compass reset Zhax" }, regVar = { 1, 2, 3, 4, 5, 6 }, consoleVar = { 2, 3, 4, 5, 6 }, others = true)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

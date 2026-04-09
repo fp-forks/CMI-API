@@ -14,7 +14,7 @@ public class sameip implements Cmd {
     }
 
     @Override
-    @CAnnotation(priority = 48, info = "&eList players logged in from same ip", regVar = { 0 }, consoleVar = { 0 }, others = false)
+    @CAnnotation(info = "List players logged in from same ip", regVar = { 0 }, consoleVar = { 0 }, others = false)
     public Boolean perform(CMI plugin, CommandSender sender, String[] args) {
         return null;
     }

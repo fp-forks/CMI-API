@@ -18,29 +18,32 @@ import net.Zrips.CMILib.Items.CMIItemStack;
 import net.Zrips.CMILib.Version.Schedulers.CMITask;
 
 public class RankManager {
-    private LinkedHashMap<String, CMIRank> ranks;
-    private HashMap<UUID, Long> nextCheck;
-    private HashMap<UUID, Long> nextAutoRecalculate;
-    private HashMap<UUID, InformTimer> nextInform;
-    private CMI plugin;
-    BukkitScheduler scheduler;
-    private HashMap<UUID, CMIRank> ranksCache;
-    CMITask sched;
-    CMITask recSched;
-    HashMap<UUID, rankCache> percentCache;
-    NumberFormat formatter;
-    private String fileName;
-    private int Delay;
-    private int Recalculation;
-    private boolean OnlyHours;
-    private boolean includeMinutes;
-    private boolean async;
-    private boolean ListSamePathOnly;
-    private int PlayerDelay;
-    private boolean progressBar;
-    private boolean permissionCheck;
-    private boolean strictPermissionCheck;
-    private CMIPresetAnimations RanksEffect;
+    private LinkedHashMap<String, CMIRank> ranks = null;
+    private HashMap<UUID, Long> nextCheck = null;
+    private HashMap<UUID, Long> nextAutoRecalculate = null;
+    private HashMap<UUID, InformTimer> nextInform = null;
+    private CMI plugin = null;
+    BukkitScheduler scheduler = null;
+    private HashMap<UUID, CMIRank> ranksCache = null;
+    CMITask sched = null;
+    CMITask recSched = null;
+    HashMap<UUID, rankCache> percentCache = null;
+    NumberFormat formatter = null;
+    private String fileName = null;
+    private int Delay = 0;
+    private int Recalculation = 0;
+    private boolean OnlyHours = false;
+    private boolean includeMinutes = false;
+    private boolean async = false;
+    private boolean ListSamePathOnly = false;
+    private int PlayerDelay = 0;
+    private boolean progressBar = false;
+    private boolean permissionCheck = false;
+    private boolean strictPermissionCheck = false;
+    private CMIPresetAnimations RanksEffect = null;
+
+    public RankManager(CMI plugin) {
+    }
 
     public CMIRank getNullRank(CMIUser user) {
         return null;
@@ -57,21 +60,6 @@ public class RankManager {
     public void setRank(CMIUser user, CMIRank rank) {
     }
 
-    public RankManager(CMI plugin) {
-    }
-
-    private boolean isNextCheck(UUID uuid) {
-        return false;
-    }
-
-    private boolean isNextAutoRecalculate(UUID uuid) {
-        return false;
-    }
-
-    private boolean isNextInform(UUID uuid) {
-        return false;
-    }
-
     public void removeFromCheck(UUID uuid) {
     }
 
@@ -79,9 +67,6 @@ public class RankManager {
     }
 
     public void autoRecheck() {
-    }
-
-    private void cycle() {
     }
 
     public void run() {
@@ -110,10 +95,6 @@ public class RankManager {
         return null;
     }
 
-    private static HashMap<String, CMIItemStack> getInvContentsAmounts(Player player) {
-        return null;
-    }
-
     public boolean removeContents(Player player, LinkedHashMap<CMIItemStack, Integer> map) {
         return false;
     }
@@ -127,13 +108,6 @@ public class RankManager {
 
     public Double getStatsDonePercentage(CMIUser user, CMIRank rank) {
         return null;
-    }
-
-    private static String firstCap(String msg) {
-        return null;
-    }
-
-    private void calculate(Double v, donePercentage done, int times) {
     }
 
     public Double getOverallDonePercentage(CMIUser user, CMIRank rank) {
@@ -214,15 +188,8 @@ public class RankManager {
         return null;
     }
 
-    private String convertDistance(long distance) {
-        return null;
-    }
-
     @SuppressWarnings("unchecked")
     public void load() {
-    }
-
-    private void calculateWeight(CMIRank rank, int weight) {
     }
 
     public void loadConfig() {
@@ -257,8 +224,8 @@ public class RankManager {
     }
 
     public class rankCurrentRequirement {
-        private Long need;
-        private Long have;
+        private Long need = null;
+        private Long have = null;
 
         public rankCurrentRequirement(Long need, Long have) {
         }
@@ -279,8 +246,8 @@ public class RankManager {
     }
 
     private class donePercentage {
-        private double percent;
-        private int times;
+        private double percent = 0.0;
+        private int times = 0;
 
         public double getPercent() {
             return 0.0;
@@ -301,9 +268,9 @@ public class RankManager {
     }
 
     public class rankCache {
-        HashMap<rankupType, Double> percentage;
-        HashMap<rankupType, Long> nextPercentageCheck;
-        long time;
+        HashMap<rankupType, Double> percentage = null;
+        HashMap<rankupType, Long> nextPercentageCheck = null;
+        long time = 0;
 
         public rankCache(long time) {
         }
